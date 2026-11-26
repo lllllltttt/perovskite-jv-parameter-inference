@@ -1,12 +1,12 @@
-,0
-n_cohort,45
-rmse_full_median,2.6926307862684533
-rmse_full_mean,6.263400467609597
-rmse_full_iqr,"[np.float64(1.3967693227778515), np.float64(6.000675459787874)]"
-rmse_full_p10_p90,"[np.float64(0.5864442588946264), np.float64(13.227813174060104)]"
-r2_full_median,0.9661055760862047
-device_mae,"{'MAE_Jsc': {'median': 0.1119, 'q25': 0.0224, 'q75': 0.2518}, 'MAE_Voc': {'median': 0.03, 'q25': 0.01, 'q75': 0.04}, 'MAE_FF': {'median': 0.0141, 'q25': 0.0089, 'q75': 0.0227}, 'MAE_PCE': {'median': 0.4714, 'q25': 0.1887, 'q75': 0.928}}"
-true_control_median_rmse,1.1869648607940706e-07
-pipeline_reproducibility_failure,False
-correlations,"{'spearman(param_log10_rmse,rmse_full)': (-0.183, 0.2299), 'spearman(mean_pred_sigma,rmse_full)': (-0.078, 0.6124), 'spearman(param_log10_rmse,dPCE)': (0.247, 0.1059)}"
-inverse_ambiguity_signature_count,14
+,0
+n_cohort,45
+rmse_full_median,2.6926307862684533
+rmse_full_mean,6.263400467609597
+rmse_full_iqr,"[np.float64(1.3967693227778515), np.float64(6.000675459787874)]"
+rmse_full_p10_p90,"[np.float64(0.5864442588946264), np.float64(13.227813174060104)]"
+r2_full_median,0.9661055760862047
+device_mae,"{'MAE_Jsc': {'median': 0.1119, 'q25': 0.0224, 'q75': 0.2518}, 'MAE_Voc': {'median': 0.03, 'q25': 0.01, 'q75': 0.04}, 'MAE_FF': {'median': 0.0141, 'q25': 0.0089, 'q75': 0.0227}, 'MAE_PCE': {'median': 0.4714, 'q25': 0.1887, 'q75': 0.928}}"
+true_control_median_rmse,1.1869648607940706e-07
+pipeline_reproducibility_failure,False
+correlations,"{'spearman(param_log10_rmse,rmse_full)': (-0.183, 0.2299), 'spearman(mean_pred_sigma,rmse_full)': (-0.078, 0.6124), 'spearman(param_log10_rmse,dPCE)': (0.247, 0.1059)}"
+inverse_ambiguity_signature_count,14

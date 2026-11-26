@@ -3,7 +3,9 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 
-# unpacked release assets / regenerated outputs
-data/_assets/
-results/
+# Regenerated outputs written by code/paths.py default (repository root only;
+# the archived experiment results under code/experiments/*/results/ are data
+# that the supplementary tables are built from and are NOT ignored).
+/results/
+/data/_assets/
 *.egg-info/

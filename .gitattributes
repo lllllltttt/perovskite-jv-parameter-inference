@@ -1,0 +1,38 @@
+# Every text file is stored with LF and checked out with LF, so a fresh clone is
+# byte-identical to docs/FILE_MANIFEST_SHA256.txt on every platform.
+* text=auto eol=lf
+
+*.py    text
+*.md    text
+*.txt   text
+*.csv   text
+*.tsv   text
+*.json  text
+*.jsonl text
+*.yml   text
+*.yaml  text
+*.m     text
+*.log   text
+*.svg   text
+*.cff   text
+*.cfg   text
+*.toml  text
+*.sh    text
+*.ps1   text
+
+# Binary formats: never converted, never diffed as text
+*.h5    binary
+*.hdf5  binary
+*.mph   binary
+*.mat   binary
+*.npz   binary
+*.pkl   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.pdf   binary
+*.docx  binary
+*.pptx  binary
+*.xlsx  binary
+*.zip   binary
+*.gz    binary

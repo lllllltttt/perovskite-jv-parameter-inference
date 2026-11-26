@@ -1,0 +1,24 @@
+{
+ "description": "Expected results of the fixed 200-curve smoke-test subset.",
+ "subset": "data/examples/test_subset_200.npz (200 curves drawn with default_rng(20261127) from the 15,307 test curves)",
+ "environment": "Python 3.12.6 / TensorFlow 2.20.0 / Keras 3.15.1, CPU",
+ "mse_mean": 8.478682502754964e-06,
+ "sigma_mean": 0.13323749601840973,
+ "pearson_r": {
+  "mu_n_pvk": 0.8999759522295878,
+  "mu_p_pvk": 0.9264679142349633,
+  "tau_n_pvk": 0.882492084354938,
+  "tau_p_pvk": 0.8804870205991884,
+  "Nc_eff_pvk": 0.9313566816728938,
+  "Nv_eff_pvk": 0.9192345095236362,
+  "tau_ETL": 0.6053971067768006,
+  "tau_HTL": 0.7659518036792117,
+  "rad_c": 0.5425028232268229
+ },
+ "tolerances": {
+  "mse_relative": 0.1,
+  "sigma_absolute": 0.01,
+  "pearson_r_absolute": 0.02
+ },
+ "note": "Batch size 32/64/128/200 changes mse by <1e-11 relative; cross-TF-version drift measured at 4.9e-5 in normalized parameter units."
+}
