@@ -71,6 +71,17 @@
 
 ## Release mechanics
 
+* **Paths.** The five entry points that produce the released results —
+  `code/quickstart_inference.py`, `code/pipeline/00_extract_frozen_predictions.py`,
+  `code/pipeline/VAE_v6_eval_fixed.py`, `code/pipeline/forward_validation_unbiased.py`
+  and `code/pipeline/decoder_comsol_audit.py` — resolve every path through
+  `code/paths.py` (`JV_DATA_ROOT`, `JV_MODEL_ROOT`, `JV_RESULTS_ROOT`) and contain no
+  absolute path.  The remaining archived analysis scripts
+  (`collision_analysis.py`, `noise_robustness.py`,
+  `forward_validation_postprocess.py`, …) are shipped **as they were run**, with the
+  original `E:/project/work1` constants at the top of the file; they are preserved
+  as records of the analysis, and their outputs are shipped alongside them.  To
+  re-run one, edit the three or four path constants at its top.
 * No open-source licence has been chosen.  See `LICENSE_STATUS.md`.
 * No DOI exists.  The GitHub URL and tag `v1.0.0` are the identifiers.
 * Asset archives were compressed with `gzip -3`; unpack before use.

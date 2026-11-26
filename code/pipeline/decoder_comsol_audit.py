@@ -53,11 +53,15 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # ---------------------------------------------------------------- config
-ROOT    = r"E:/project/work1"
-DATA    = os.path.join(ROOT, "data")
-MODEL   = os.path.join(DATA, "vae-v6", "vae-v6")
-FW      = os.path.join(ROOT, "forward_validation_unbiased")
-OUT     = os.path.join(ROOT, "decoder_comsol_audit")
+import sys
+ROOT    = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(ROOT, "code"))
+import paths  # noqa: E402
+
+DATA    = paths.data_root()
+MODEL   = os.path.join(paths.model_dir(), "vae-v6")
+FW      = os.environ.get("JV_FW_DIR", os.path.join(ROOT, "forward_validation_unbiased"))
+OUT     = os.environ.get("JV_RESULTS_ROOT", os.path.join(ROOT, "decoder_comsol_audit"))
 os.makedirs(OUT, exist_ok=True)
 
 NPZ      = os.path.join(DATA, "dataset_normalized.npz")

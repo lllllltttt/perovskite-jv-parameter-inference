@@ -40,10 +40,13 @@ from scipy.stats import pearsonr, spearmanr
 # Paths
 # =====================================================
 
-BASE = r"E:\project\work1"
-NPZ_PATH = os.path.join(BASE, "data", "dataset_normalized.npz")
-MODEL_DIR = os.path.join(BASE, "data", "vae-v6", "vae-v6")
-OUTPUT_DIR = os.path.join(BASE, "evaluation_fixed")
+BASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(BASE, "code"))
+import paths  # noqa: E402
+
+NPZ_PATH = paths.data_file("dataset_normalized.npz")
+MODEL_DIR = os.path.join(paths.model_dir(), "vae-v6")
+OUTPUT_DIR = os.environ.get("JV_RESULTS_ROOT", os.path.join(BASE, "evaluation_fixed"))
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
