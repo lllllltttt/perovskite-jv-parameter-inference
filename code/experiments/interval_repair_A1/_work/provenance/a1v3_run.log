@@ -1,0 +1,62 @@
+C:\Users\Administrator\anaconda3\envs\pytorch-2.60-gpu\Lib\site-packages\sklearn\base.py:377: InconsistentVersionWarning: Trying to unpickle estimator MinMaxScaler from version 1.3.2 when using version 1.7.0rc1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\Administrator\anaconda3\envs\pytorch-2.60-gpu\Lib\site-packages\h5py\__init__.py:36: UserWarning: h5py is running against HDF5 1.14.6 when it was built against 1.14.5, this may cause problems
+  _warn(("h5py is running against HDF5 {0} when it was built against {1}, "
+WARNING:tensorflow:From C:\Users\Administrator\anaconda3\envs\pytorch-2.60-gpu\Lib\site-packages\keras\src\backend\tensorflow\core.py:232: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+E:\project\work1\supplementary_validation_v3\A1_interval_repair\scripts\a1v3_interval_repair.py:405: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(ax.get_xticklabels(), rotation=20, ha="right")
+E:\project\work1\supplementary_validation_v3\A1_interval_repair\scripts\a1v3_interval_repair.py:405: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(ax.get_xticklabels(), rotation=20, ha="right")
+hand-check interval score OK (40 at c=0.95, 4 at c=0.50)
+scaler envelope = full retained set (train+val+test, n=102046) empirical min/max, fit PRE-SPLIT on log10 params -- NOT train-only
+  param  scaler_lo_log10  scaler_hi_log10                    partition_at_min                    partition_at_max  norm_min_over_all  norm_max_over_all
+   mu_n        -6.341035        -2.651695                        params_train                         params_test                0.0                1.0
+   mu_p        -6.344862        -2.675718                          params_val              params_val+params_test                0.0                1.0
+  tau_n        -9.320572        -1.655608                          params_val                        params_train                0.0                1.0
+  tau_p        -9.348722        -1.690370                         params_test                        params_train                0.0                1.0
+     Nc        22.666518        26.348305                         params_test             params_train+params_val                0.0                1.0
+     Nv        22.634477        26.338456                        params_train                        params_train                0.0                1.0
+tau_ETL       -12.000000        -8.000000 params_train+params_val+params_test             params_train+params_val                0.0                1.0
+tau_HTL       -14.000000       -10.000000 params_train+params_val+params_test                        params_train                0.0                1.0
+  rad_c       -12.000000        -9.000000 params_train+params_val+params_test params_train+params_val+params_test                0.0                1.0
+running frozen inference on test set (n=15307) ...
+
+=== per-parameter coverage & width at each level (raw | clipped) ===
+level 0.50  cov_raw[med 0.474] cov_clip[med 0.474] | wdec clip med-mean 0.946/0.922 | raw med-mean 0.946/0.924
+level 0.80  cov_raw[med 0.797] cov_clip[med 0.797] | wdec clip med-mean 1.787/1.730 | raw med-mean 1.798/1.755
+level 0.90  cov_raw[med 0.907] cov_clip[med 0.907] | wdec clip med-mean 2.241/2.138 | raw med-mean 2.308/2.253
+level 0.95  cov_raw[med 0.958] cov_clip[med 0.958] | wdec clip med-mean 2.567/2.368 | raw med-mean 2.750/2.684
+
+@0.95 model/prior width ratios per param (clip-med | clip-mean | raw-med | raw-mean):
+         ratio_clip_med  ratio_clip_mean  ratio_raw_med  ratio_raw_mean
+param                                                                  
+mu_n              0.425            0.444          0.433           0.454
+mu_p              0.391            0.416          0.396           0.423
+tau_n             0.582            0.477          0.603           0.491
+tau_p             0.614            0.484          0.623           0.490
+Nc                0.404            0.421          0.408           0.426
+Nv                0.454            0.467          0.454           0.467
+tau_ETL           0.868            0.823          0.944           0.945
+tau_HTL           0.768            0.719          0.824           0.784
+rad_c             0.900            0.830          0.964           0.941
+
+@0.95 raw width vs envelope (frac_raw_superset_env) and sigma-clip rates:
+         wdec_raw_med  wdec_clip_med  range_dec  frac_raw_wider_than_env  frac_clipped  frac_at_ceiling1  frac_at_floor01
+param                                                                                                                    
+mu_n            1.280          1.257      3.689                    0.000         0.169               0.0              0.0
+mu_p            1.176          1.161      3.669                    0.001         0.119               0.0              0.0
+tau_n           4.031          3.887      7.665                    0.000         0.262               0.0              0.0
+tau_p           4.170          4.110      7.658                    0.000         0.150               0.0              0.0
+Nc              1.035          1.024      3.682                    0.000         0.099               0.0              0.0
+Nv              1.146          1.145      3.704                    0.000         0.011               0.0              0.0
+tau_ETL         3.596          3.304      4.000                    0.379         0.788               0.0              0.0
+tau_HTL         3.146          2.930      4.000                    0.160         0.675               0.0              0.0
+rad_c           2.750          2.567      3.000                    0.413         0.762               0.0              0.0
+
+wrote tables + figures + reusable npz under E:\project\work1\supplementary_validation_v3\A1_interval_repair
+ENVELOPE LABEL: full retained set (train+val+test, n=102046) empirical min/max, fit PRE-SPLIT on log10 params -- NOT train-only

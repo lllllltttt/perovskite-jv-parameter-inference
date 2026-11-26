@@ -1,0 +1,66 @@
+test: (15307, 131) (15307, 9)
+===== FROZEN VAE-v6 point recovery (reference anchor) =====
+mu_n_pvk     r=0.9063  MAE=0.07473  RMSE=0.10143
+mu_p_pvk     r=0.9194  MAE=0.07035  RMSE=0.09501
+tau_n_pvk    r=0.8783  MAE=0.09085  RMSE=0.12838
+tau_p_pvk    r=0.8808  MAE=0.09214  RMSE=0.12705
+Nc_eff_pvk   r=0.9090  MAE=0.05882  RMSE=0.07943
+Nv_eff_pvk   r=0.8956  MAE=0.06495  RMSE=0.08402
+tau_ETL      r=0.5936  MAE=0.18811  RMSE=0.23435
+tau_HTL      r=0.7199  MAE=0.15790  RMSE=0.20206
+rad_c        r=0.5592  MAE=0.19181  RMSE=0.24033
+mean r: 0.8069
+mean Spearman(sigma,|err|): 0.4283
+===== FROZEN VAE-v6 coverage (reference anchor) =====
+nominal=0.50  cov min/max: 0.4483 / 0.5226
+   mu_n_pvk     0.5005
+   mu_p_pvk     0.4965
+   tau_n_pvk    0.4738
+   tau_p_pvk    0.4590
+   Nc_eff_pvk   0.5226
+   Nv_eff_pvk   0.4985
+   tau_ETL      0.4592
+   tau_HTL      0.4556
+   rad_c        0.4483
+nominal=0.80  cov min/max: 0.7796 / 0.8098
+   mu_n_pvk     0.8021
+   mu_p_pvk     0.8029
+   tau_n_pvk    0.7940
+   tau_p_pvk    0.7904
+   Nc_eff_pvk   0.8098
+   Nv_eff_pvk   0.8037
+   tau_ETL      0.7971
+   tau_HTL      0.7955
+   rad_c        0.7796
+nominal=0.90  cov min/max: 0.8980 / 0.9197
+   mu_n_pvk     0.8980
+   mu_p_pvk     0.9039
+   tau_n_pvk    0.9070
+   tau_p_pvk    0.9100
+   Nc_eff_pvk   0.9032
+   Nv_eff_pvk   0.9014
+   tau_ETL      0.9197
+   tau_HTL      0.9164
+   rad_c        0.9089
+nominal=0.95  cov min/max: 0.9464 / 0.9692
+   mu_n_pvk     0.9475
+   mu_p_pvk     0.9522
+   tau_n_pvk    0.9583
+   tau_p_pvk    0.9597
+   Nc_eff_pvk   0.9464
+   Nv_eff_pvk   0.9499
+   tau_ETL      0.9692
+   tau_HTL      0.9667
+   rad_c        0.9664
+95% coverage range: 0.9464 - 0.9692
+recon mean MSE: 1.211244e-05   median MSE: 2.969464e-06
+===== FROZEN VAE-v6 sigma (mean/median per param) =====
+mu_n_pvk     mean=0.09275 median=0.08851
+mu_p_pvk     mean=0.08738 median=0.08173
+tau_n_pvk    mean=0.10912 median=0.13417
+tau_p_pvk    mean=0.10915 median=0.13890
+Nc_eff_pvk   mean=0.07479 median=0.07171
+Nv_eff_pvk   mean=0.08118 median=0.07892
+tau_ETL      mean=0.22949 median=0.22934
+tau_HTL      mean=0.19090 median=0.20064
+rad_c        mean=0.22827 median=0.23381

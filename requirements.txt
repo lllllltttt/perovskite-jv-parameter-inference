@@ -1,0 +1,10 @@
+# Versions actually used for the reproduction checks in docs/REPRODUCE.md.
+# Python 3.12.6, Windows 11, CPU only (no GPU needed for inference).
+tensorflow==2.20.0
+keras==3.15.1
+numpy==2.3.5
+scipy==1.16.3
+pandas==2.3.3
+scikit-learn==1.8.0
+matplotlib==3.10.8
+h5py==3.16.0

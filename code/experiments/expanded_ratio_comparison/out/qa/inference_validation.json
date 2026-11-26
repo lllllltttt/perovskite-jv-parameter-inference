@@ -1,0 +1,171 @@
+{
+  "checks": [
+    {
+      "check": "provenance has 20 rows (2 models x 5 seeds x 2 tests)",
+      "status": "PASS",
+      "detail": "20"
+    },
+    {
+      "check": "provenance covers every combination exactly once",
+      "status": "PASS",
+      "detail": "20"
+    },
+    {
+      "check": "input and output scalers belong to model_arm (all 20)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "recorded model/scaler/split/truth hashes match files on disk",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "archived J_scaled equals transform(archived physical J)",
+      "status": "PASS",
+      "detail": "max |diff| = 0.000e+00"
+    },
+    {
+      "check": "both models see identical Sample_ID/source_row order",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "both models see identical truth values",
+      "status": "PASS",
+      "detail": "max |diff| = 0.000e+00"
+    },
+    {
+      "check": "baselines identical across models within each common test",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "independent reference matches CSV: original/20261021 on expanded",
+      "status": "PASS",
+      "detail": "pred 3.553e-15, truth 3.553e-15, full-test out-of-range inputs 0.00%"
+    },
+    {
+      "check": "independent reference matches CSV: expanded/20261021 on original",
+      "status": "PASS",
+      "detail": "pred 3.553e-15, truth 3.553e-15, full-test out-of-range inputs 0.03%"
+    },
+    {
+      "check": "independent reference matches CSV: original/20261021 on original",
+      "status": "PASS",
+      "detail": "pred 3.553e-15, truth 3.553e-15, full-test out-of-range inputs 0.01%"
+    },
+    {
+      "check": "independent reference matches CSV: expanded/20261021 on expanded",
+      "status": "PASS",
+      "detail": "pred 3.553e-15, truth 3.553e-15, full-test out-of-range inputs 0.01%"
+    },
+    {
+      "check": "fault injection A detected (wrong output scaler)",
+      "status": "PASS",
+      "detail": "max shift 0.257 log10"
+    },
+    {
+      "check": "fault injection B detected (wrong input scaler)",
+      "status": "PASS",
+      "detail": "max shift 3.6342 log10"
+    },
+    {
+      "check": "fault injection C detected (forged scaler owner)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fault A handled by expected-exception rule",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all 300 metric rows recomputed from prediction CSVs",
+      "status": "PASS",
+      "detail": "max abs diff 6.661e-16 "
+    },
+    {
+      "check": "no undefined (zero-denominator) metrics",
+      "status": "PASS",
+      "detail": "0 flagged rows"
+    },
+    {
+      "check": "a/r algebra holds on true and predicted columns",
+      "status": "PASS",
+      "detail": "max |diff| 1.066e-14"
+    },
+    {
+      "check": "no second log10 applied (true_phys vs true_log10)",
+      "status": "PASS",
+      "detail": "max |diff| 4.330e-13"
+    },
+    {
+      "check": "coordinate magnitudes are physical log10 values",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "inputs/models/scalers/splits/config unchanged vs v1",
+      "status": "PASS",
+      "detail": "70/70 identical; diffs []"
+    },
+    {
+      "check": "raw input CSVs still match the hashes frozen in the config",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "n_checks": 23,
+  "n_failures": 0,
+  "reference_batch": [
+    {
+      "model_arm": "original",
+      "seed": 20261021,
+      "test_arm": "expanded",
+      "n_rows": 64,
+      "max_abs_pred_diff": 3.552713678800501e-15,
+      "max_abs_truth_diff": 3.552713678800501e-15,
+      "frac_input_inside_0_1_batch": 0.9990458015267175,
+      "frac_input_outside_0_1_full_test": 2.0965635227298934e-05
+    },
+    {
+      "model_arm": "expanded",
+      "seed": 20261021,
+      "test_arm": "original",
+      "n_rows": 64,
+      "max_abs_pred_diff": 3.552713678800501e-15,
+      "max_abs_truth_diff": 3.552713678800501e-15,
+      "frac_input_inside_0_1_batch": 0.9930820610687023,
+      "frac_input_outside_0_1_full_test": 0.00033964329068224275
+    },
+    {
+      "model_arm": "original",
+      "seed": 20261021,
+      "test_arm": "original",
+      "n_rows": 64,
+      "max_abs_pred_diff": 3.552713678800501e-15,
+      "max_abs_truth_diff": 3.552713678800501e-15,
+      "frac_input_inside_0_1_batch": 0.9974952290076335,
+      "frac_input_outside_0_1_full_test": 8.176597738646584e-05
+    },
+    {
+      "model_arm": "expanded",
+      "seed": 20261021,
+      "test_arm": "expanded",
+      "n_rows": 64,
+      "max_abs_pred_diff": 3.552713678800501e-15,
+      "max_abs_truth_diff": 3.552713678800501e-15,
+      "frac_input_inside_0_1_batch": 0.995706106870229,
+      "frac_input_outside_0_1_full_test": 7.547628681827617e-05
+    }
+  ],
+  "metric_recompute_max_abs_diff": 6.661338147750939e-16,
+  "coordinate_algebra_max_abs_diff": 1.0658141036401503e-14,
+  "log10_consistency_max_abs_diff": 4.3298697960381105e-13,
+  "hash_invariance": {
+    "identical": 70,
+    "total": 70,
+    "diffs": []
+  }
+}

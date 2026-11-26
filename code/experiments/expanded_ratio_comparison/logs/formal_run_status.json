@@ -1,0 +1,82 @@
+{
+  "original_20261021": {
+    "status": "completed",
+    "epochs_run": 572,
+    "best_epoch": 521,
+    "stop_reason": "early_stopping",
+    "wall_s": 255.45773315429688,
+    "error": null
+  },
+  "original_20261022": {
+    "status": "completed",
+    "epochs_run": 585,
+    "best_epoch": 534,
+    "stop_reason": "early_stopping",
+    "wall_s": 242.77578139305115,
+    "error": null
+  },
+  "original_20261023": {
+    "status": "completed",
+    "epochs_run": 473,
+    "best_epoch": 422,
+    "stop_reason": "early_stopping",
+    "wall_s": 196.4279282093048,
+    "error": null
+  },
+  "original_20261024": {
+    "status": "completed",
+    "epochs_run": 545,
+    "best_epoch": 494,
+    "stop_reason": "early_stopping",
+    "wall_s": 221.47268342971802,
+    "error": null
+  },
+  "original_20261025": {
+    "status": "completed",
+    "epochs_run": 401,
+    "best_epoch": 350,
+    "stop_reason": "early_stopping",
+    "wall_s": 159.90805292129517,
+    "error": null
+  },
+  "expanded_20261021": {
+    "status": "completed",
+    "epochs_run": 317,
+    "best_epoch": 266,
+    "stop_reason": "early_stopping",
+    "wall_s": 145.71045589447021,
+    "error": null
+  },
+  "expanded_20261022": {
+    "status": "completed",
+    "epochs_run": 503,
+    "best_epoch": 452,
+    "stop_reason": "early_stopping",
+    "wall_s": 215.81782341003418,
+    "error": null
+  },
+  "expanded_20261023": {
+    "status": "completed",
+    "epochs_run": 500,
+    "best_epoch": 449,
+    "stop_reason": "early_stopping",
+    "wall_s": 205.79896664619446,
+    "error": null
+  },
+  "expanded_20261024": {
+    "status": "completed",
+    "epochs_run": 429,
+    "best_epoch": 378,
+    "stop_reason": "early_stopping",
+    "wall_s": 176.20094752311707,
+    "error": null
+  },
+  "expanded_20261025": {
+    "status": "completed",
+    "epochs_run": 451,
+    "best_epoch": 400,
+    "stop_reason": "early_stopping",
+    "wall_s": 184.81601333618164,
+    "error": null
+  }
+}

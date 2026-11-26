@@ -1,0 +1,20 @@
+[
+  {
+    "fault": "output scaler swapped to test_arm",
+    "model_arm": "expanded",
+    "test_arm": "original",
+    "max_abs_shift": 0.2569661986669196,
+    "detected": true
+  },
+  {
+    "fault": "input scaler swapped to test_arm",
+    "model_arm": "expanded",
+    "test_arm": "original",
+    "max_abs_shift": 3.63419032843246,
+    "detected": true
+  },
+  {
+    "fault": "forged provenance row with wrong owner",
+    "detected": true
+  }
+]

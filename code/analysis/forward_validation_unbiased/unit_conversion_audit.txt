@@ -1,0 +1,111 @@
+UNIT CONVERSION AUDIT  --  VAE-v6 forward validation (unbiased cohort)
+========================================================================
+Date: 2026-08-23 (rev 2: definitive server-script evidence + local probe)
+Scope: comsol_input_parameters.csv / comsol_true_parameters.csv units
+       vs. what the COMSOL model consumed during original database generation.
+
+REVISION NOTE (rev 1 -> rev 2)
+------------------------------
+Rev 1 inferred the units from back-of-envelope physics (E5) and the MAT
+pass-through (E1). It concluded mu in m2/V/s, N in m-3, rad_c in cm3/s, and
+that the batch script should pass values VERBATIM. Two new pieces of
+evidence now pin the recipe down exactly (and change one rule):
+
+  * E6: the ORIGINAL database-generation script (server) is now available at
+    E:/project/work1/matlab&mph/run_PSC_9D_8.m. It sets every parameter with
+    an EXPLICIT SI unit string, and converts rad_c from cm3/s to m3/s.
+  * E7: a local COMSOL probe (this machine, COMSOL 6.3 + MATLAB R2024b +
+    LiveLink, model 1D_PSC_wen.mph) set one TRUE sample's params with the
+    server recipe and reproduced J_test_raw[269] EXACTLY (RMSE = 0.0000
+    mA/cm2, all 131 points identical to print precision). The full pipeline
+    is empirically validated; the 45-sample true-param control is the formal
+    gate (V3).
+
+How this was established (NOT from memory):
+--------------------------------------------
+E1. MAT pass-through (proven): the historical MAT files (9D-HTL-new/mat/)
+    stored parameter values numerically equal to the LHS-derived CSV values
+    to ~3 significant figures. (Still true, but superseded by E6 below for
+    the unit question.)
+E2. Current-density output is SI: mat-csv.py line 62 "A/m^2 -> mA/cm^2
+    (x0.1)"; MAT J[0]=67.17 A/m2 = 6.72 mA/cm2. => COMSOL output is A/m2.
+E3. Voltage grid: V = linspace(0, 1.3, 131) (pre-process.py L84); confirmed
+    by the study sweep (131-point global evaluation semi.J0_1).
+E4. LHS sampling ranges (LHS.py): mu_avg 1e-6..1e-3, DOS_avg 1e22..1e26,
+    tau_ETL 1e-12..1e-8 s, tau_HTL 1e-14..1e-10 s, rad_c 1e-12..1e-9.
+E5. Physics consistency (KEPT, now corroborated, no longer the primary
+    basis): Jsc up to 24.1 mA/cm2, PCE up to 27% are consistent with the
+    m2/V/s / m-3 / cm3/s reading. (The rev-1 back-of-envelope mobility bound
+    was superseded by E6; do not cite E5 alone for the units.)
+E6. ORIGINAL SERVER SCRIPT run_PSC_9D_8.m (AUTHORITATIVE). Parameter
+    assignment in the database-generation loop:
+        mu_n_pvk  <- sprintf('%e[m^2/(V*s)]', tbl.mu_n_pvk(i))      => m2/V/s
+        mu_p_pvk  <- sprintf('%e[m^2/(V*s)]', tbl.mu_p_pvk(i))      => m2/V/s
+        tau_n_pvk <- sprintf('%e[s]',         tbl.tau_n_pvk(i))     => s
+        tau_p_pvk <- sprintf('%e[s]',         tbl.tau_p_pvk(i))     => s
+        Nc_eff_pvk<- sprintf('%e[1/m^3]',     tbl.Nc_eff_pvk(i))    => m-3
+        Nv_eff_pvk<- sprintf('%e[1/m^3]',     tbl.Nv_eff_pvk(i))    => m-3
+        tau_ETL   <- sprintf('%e[s]',         tbl.tau_ETL_in(i))    => s
+        tau_HTL   <- sprintf('%e[s]',         tbl.tau_HTL_in(i))    => s
+        rad_c     <- sprintf('%e[m^3/s]',     tbl.rad_c_in(i)*1e-6) => cm3/s -> m3/s
+    The CSVs carry the SAME numeric convention: mu_n..Nv in m2/V/s & m-3,
+    tau_ETL/tau_HTL in s, rad_c in cm3/s (the LHS CSV *_in columns).
+E7. LOCAL EMPIRICAL CONFIRMATION (this run): for test_index=269, setting
+    the TRUE params with the E6 recipe on 1D_PSC_wen.mph and extracting
+    J via mphglobal(model,'semi.J0_1') gives J *0.1 == J_test_raw[269] to
+    ~1e-10 relative (RMSE 0.0000 mA/cm2). This proves the whole chain:
+    model version + param names + units + sweep + J expression.
+
+NOTE on the model file's own parameter table: 1D_PSC_wen.mph / 1D_PSC_稳态.mph
+store DEFAULT values like mu_n_pvk=20[cm^2/(V*s)], Nc_eff_pvk=1e19[1/cm^3].
+These defaults were NEVER what the database consumed: the generation script
+(E6) overrode every parameter with an explicit SI unit string, so the units
+actually consumed are m2/V/s, m-3, s, and m3/s for rad_c. Do not read the
+model's default-value unit labels as the consumed convention.
+
+Per-parameter table (CONSUMED convention)
+-----------------------------------------
+parameter  | CSV column (this project) | value written to COMSOL            | COMSOL unit | evidence
+mu_n_pvk   | mu_n    (m2/V/s)          | %e[m^2/(V*s)] verbatim             | m2/V/s      | E1,E4,E6,E7
+mu_p_pvk   | mu_p    (m2/V/s)          | %e[m^2/(V*s)] verbatim             | m2/V/s      | E1,E4,E6,E7
+tau_n_pvk  | tau_n   (s)               | %e[s] verbatim                     | s           | E4,E6
+tau_p_pvk  | tau_p   (s)               | %e[s] verbatim                     | s           | E4,E6
+Nc_eff_pvk | Nc      (m-3)             | %e[1/m^3] verbatim                 | m-3         | E1,E4,E6,E7
+Nv_eff_pvk | Nv      (m-3)             | %e[1/m^3] verbatim                 | m-3         | E4,E6
+tau_ETL    | tau_ETL (s)               | %e[s] verbatim                     | s           | E4,E6
+tau_HTL    | tau_HTL (s)               | %e[s] verbatim                     | s           | E4,E6
+rad_c      | rad_c   (cm3/s)           | %e[m^3/s] with value * 1e-6        | m3/s        | E1,E4,E6,E7
+
+DISCREPANCY FLAGS
+-----------------
+F1. Manuscript table (work1-manuscript.md L56-66) states mu in "cm2 V-1 s-1"
+    and Nc/Nv in "cm-3". The authoritative evidence (E6) is m2/V/s and m-3.
+    The manuscript unit labels remain documentation errors for mobility and
+    DOS. rad_c "cm3 s-1" (the CSV/input convention) agrees with the manuscript.
+F2. LHS.py header was ambiguous: "cm2/V/s (或 m2/V/s)", "cm-3 (或 m-3)",
+    "cm3/s (或 m3/s)". Resolved by E6: m2/V/s, m-3, and cm3/s (input) ->
+    m3/s (COMSOL).
+F3. The model files' DEFAULT parameter unit labels (cm2/(V*s), 1/cm3) are
+    NOT the consumed convention (see NOTE above) and must not be quoted as
+    evidence that the manuscript is correct.
+
+VERIFICATION STATUS
+-------------------
+V1. .mph global-parameter unit labels: NOT the operative quantity - the
+    generation recipe overrides with explicit SI strings (E6). RESOLVED.
+V2. rad_c handling: cm3/s (input) * 1e-6 -> m3/s (model). RESOLVED by E6.
+V3. EMPIRICAL FINAL CHECK (spec section 13): performed locally. Single
+    true-param sample (test_index 269) reproduced J_test_raw exactly
+    (E7); the full 45-sample true-param control is now running. If its
+    median RMSE vs J_test_raw exceeds 0.05 mA/cm2, the postprocess script
+    prints *** PIPELINE REPRODUCIBILITY FAILURE *** and the predicted
+    results must not be interpreted.
+
+ACTIONABLE RULE FOR THE BATCH SCRIPT (rev 2)
+--------------------------------------------
+run_forward_validation_unbiased.m must set parameters with the explicit SI
+unit strings of E6 (mu: [m^2/(V*s)], tau: [s], N: [1/m^3]) and multiply
+rad_c by 1e-6 with [m^3/s]. It must NOT pass values verbatim without units,
+and must NOT pass rad_c verbatim. J is extracted with
+mphglobal(model, 'semi.J0_1') (131 points, A/m2). (The rev-1 "verbatim, no
+scaling" rule is superseded by E6/E7.)

@@ -1,0 +1,4 @@
+model,mean_parameter_r_mean,mean_parameter_r_sd,mean_test_nll,mean_95coverage,mean_sigma_error_spearman,param_count,mean_train_time_s,mean_best_epoch,mean_stop_epoch
+vae,0.805645,0.006722,-15.259619,0.958099,0.440827,55495,0.0,902.8,935.4
+det_ae,0.805419,0.003807,-15.268743,0.957556,0.44525,54910,0.0,998.0,1000.0
+mlp,0.793474,0.00852,-14.763634,0.959082,0.420111,27826,0.0,998.6,1000.0

@@ -1,0 +1,15 @@
+{
+ "branch": "L",
+ "seed": 20260823,
+ "n_epochs": 1000,
+ "best_epoch_idx": 988,
+ "val_param_loss_min": -15.274084091186523,
+ "val_loss_min": -15.219758033752441,
+ "wall_s": 1532.7440465000109,
+ "s_per_epoch": 1.5327440465000108,
+ "perm_seed": 20260823,
+ "n_train": 71432,
+ "frozen_reference": "data/vae-v6/vae-v6/*.h5 (untouched)",
+ "tf": "2.21.0",
+ "keras": "3.14.1"
+}

@@ -1,0 +1,7 @@
+{
+  "max_abs_diff_standard_minmax": 2.980231006421974e-08,
+  "max_abs_diff_range_only": 1.0000000317636637,
+  "conclusion": "frozen normalized J equals (J - data_min_)/data_range_ (standard MinMaxScaler)",
+  "units_of_scaler": "mA cm-2",
+  "n_voltages": 131
+}

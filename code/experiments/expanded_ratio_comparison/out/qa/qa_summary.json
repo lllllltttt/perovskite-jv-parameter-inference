@@ -1,0 +1,339 @@
+{
+  "filter": {
+    "new": {
+      "n_rows": 24274,
+      "n_kept": 24274,
+      "rule1_first_current_gt0": 24274,
+      "rule2_any_negative_sign_change": 24274,
+      "rule3_all_finite": 24274,
+      "rule4_all_adjacent_steps_le_0p2": 24274
+    },
+    "old": {
+      "n_rows": 102046,
+      "n_kept": 102046,
+      "rule1_first_current_gt0": 102046,
+      "rule2_any_negative_sign_change": 102046,
+      "rule3_all_finite": 102046,
+      "rule4_all_adjacent_steps_le_0p2": 102046
+    }
+  },
+  "ids": {
+    "expanded": {
+      "n": 24274,
+      "min": 1,
+      "max": 50000,
+      "unique": 24274,
+      "declared_submitted": 50000,
+      "declared_mat_files": 49999,
+      "absent_ids": 25726
+    },
+    "original": {
+      "n": 102046,
+      "min": 2,
+      "max": 200000,
+      "unique": 102046,
+      "declared_submitted": 200000,
+      "absent_ids": 97954
+    }
+  },
+  "duplicates": {
+    "expanded": {
+      "duplicate_parameter_rows": 0,
+      "duplicate_curve_rows": 0
+    },
+    "original": {
+      "duplicate_parameter_rows": 0,
+      "duplicate_curve_rows": 0
+    },
+    "cross_batch_parameter_vectors_8sig": 0
+  },
+  "all_three_ratios_in_old_range": {
+    "expanded": {
+      "n_all_three_in_old_range": 356,
+      "share": 0.014665897668287057
+    },
+    "original": {
+      "n_all_three_in_old_range": 101913,
+      "share": 0.9986966662093566
+    }
+  },
+  "lhs_stratum_test": [
+    {
+      "dimension": "q_mu",
+      "n": 24274,
+      "bounds": "[0.05, 20]",
+      "u_min": 5.9134122968699297e-05,
+      "u_max": 1.0,
+      "unique_strata_at_50000": 24233,
+      "fraction_unique_at_50000": 0.9983109499876411,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.49666404153867916,
+      "bounds_respected": true
+    },
+    {
+      "dimension": "q_tau",
+      "n": 24274,
+      "bounds": "[0.05, 20]",
+      "u_min": 0.00011053399480390575,
+      "u_max": 0.9999956542639286,
+      "unique_strata_at_50000": 24238,
+      "fraction_unique_at_50000": 0.9985169316964654,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.49956790367286885,
+      "bounds_respected": true
+    },
+    {
+      "dimension": "q_D",
+      "n": 24274,
+      "bounds": "[0.05, 20]",
+      "u_min": 2.168176829884038e-05,
+      "u_max": 0.9999890397966779,
+      "unique_strata_at_50000": 24229,
+      "fraction_unique_at_50000": 0.9981461646205817,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.49987019699352686,
+      "bounds_respected": true
+    },
+    {
+      "dimension": "tau_ETL",
+      "n": 24274,
+      "bounds": "[1e-12, 1e-08]",
+      "u_min": 9.879749941710259e-06,
+      "u_max": 0.9999606132046264,
+      "unique_strata_at_50000": 24267,
+      "fraction_unique_at_50000": 0.999711625607646,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.4999067694752739,
+      "bounds_respected": true
+    },
+    {
+      "dimension": "tau_HTL",
+      "n": 24274,
+      "bounds": "[1e-14, 1e-10]",
+      "u_min": 1.9215830273200396e-05,
+      "u_max": 0.9999705399803327,
+      "unique_strata_at_50000": 24263,
+      "fraction_unique_at_50000": 0.9995468402405866,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.5063794096274705,
+      "bounds_respected": true
+    },
+    {
+      "dimension": "rad_c",
+      "n": 24274,
+      "bounds": "[1e-12, 1e-09]",
+      "u_min": 1.8818204392090365e-05,
+      "u_max": 0.9999435017408599,
+      "unique_strata_at_50000": 24265,
+      "fraction_unique_at_50000": 0.9996292329241163,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.49645295929076383,
+      "bounds_respected": true
+    },
+    {
+      "dimension": "g_mu",
+      "n": 24274,
+      "bounds": "[1e-06, 0.001]",
+      "u_min": 8.579412621934068e-05,
+      "u_max": 0.9999947384264631,
+      "unique_strata_at_50000": 24261,
+      "fraction_unique_at_50000": 0.9994644475570569,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.5037283742058207,
+      "bounds_respected": true
+    },
+    {
+      "dimension": "g_tau",
+      "n": 24274,
+      "bounds": "[1e-09, 0.01]",
+      "u_min": 6.677657217554358e-05,
+      "u_max": 0.9999764767423402,
+      "unique_strata_at_50000": 24272,
+      "fraction_unique_at_50000": 0.9999176073164703,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.5017719677500736,
+      "bounds_respected": true
+    },
+    {
+      "dimension": "g_D",
+      "n": 24274,
+      "bounds": "[1e+22, 1e+26]",
+      "u_min": 0.23908159253682548,
+      "u_max": 0.9999958830915885,
+      "unique_strata_at_50000": 24265,
+      "fraction_unique_at_50000": 0.9996292329241163,
+      "expected_fraction_if_iid_uniform": 0.38460125465840767,
+      "median_within_stratum_offset": 0.49886677567519655,
+      "bounds_respected": true
+    }
+  ],
+  "units": {
+    "new_rad_c_min": 1.00013e-12,
+    "new_rad_c_max": 9.996098e-10,
+    "old_rad_c_min": 1e-12,
+    "old_rad_c_max": 1e-09,
+    "rad_c_within_sampling_range": true,
+    "rad_c_would_be_1e-18_if_extra_1e-6_applied": false,
+    "new_Jsc_range_mA_cm2": [
+      0.3866588258382408,
+      24.096181468603373
+    ],
+    "old_Jsc_range_mA_cm2": [
+      0.3099431422575745,
+      24.09618235436348
+    ],
+    "new_J_global": [
+      -4576.55272299754,
+      24.096181468603373
+    ],
+    "old_J_global": [
+      -6358.761826751235,
+      24.09618235436348
+    ],
+    "n_voltage_points": 131
+  },
+  "stored_precision": {
+    "new": 17,
+    "old": 17
+  },
+  "inputs": {
+    "expanded_csv": {
+      "path": "E:\\project\\work1\\20261021\\JV_database_9D_interface_lifetimes-newratio.csv",
+      "sha256": "2664cbd7636c6cedd10ba543cb3b6154daf7fde769e87b2e44d3121fb9315f3f",
+      "shape": [
+        24274,
+        141
+      ]
+    },
+    "original_csv": {
+      "path": "E:\\project\\work1\\data\\JV_database_9D_interface_lifetimes-2.csv",
+      "sha256": "19aa6036ec4dafe67948d8fd8f55aa19bd2bec7cbd9a61267281a444815c4f26",
+      "shape": [
+        102046,
+        141
+      ]
+    },
+    "dataset_id": {
+      "expanded": "exp50k",
+      "original": "orig200k"
+    }
+  },
+  "checks": [
+    {
+      "check": "column list identical between batches",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "131 current columns in order J_000..J_130",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "9 parameter columns in canonical order",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no duplicate column names",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "new: all J finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "new: all parameters finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "new: all parameters positive",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "old: all J finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "old: all parameters finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "old: all parameters positive",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "new: delivered rows already satisfy the actual filter",
+      "status": "PASS",
+      "detail": "kept 24274/24274; rejected by rule1=0 rule2=0 rule3=0 rule4=0"
+    },
+    {
+      "check": "old: delivered rows already satisfy the actual filter",
+      "status": "PASS",
+      "detail": "kept 102046/102046; rejected by rule1=0 rule2=0 rule3=0 rule4=0"
+    },
+    {
+      "check": "new: Sample_ID unique",
+      "status": "PASS",
+      "detail": "n=24274 range=1..50000"
+    },
+    {
+      "check": "old: Sample_ID unique",
+      "status": "PASS",
+      "detail": "n=102046 range=2..200000"
+    },
+    {
+      "check": "new: Sample_ID within declared 1..50000",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "old: Sample_ID within declared 1..200000",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "new: no exact duplicate parameter vectors",
+      "status": "PASS",
+      "detail": "0 duplicate rows"
+    },
+    {
+      "check": "new: no byte-identical current curves",
+      "status": "PASS",
+      "detail": "0 duplicate rows"
+    },
+    {
+      "check": "old: no exact duplicate parameter vectors",
+      "status": "PASS",
+      "detail": "0 duplicate rows"
+    },
+    {
+      "check": "old: no byte-identical current curves",
+      "status": "PASS",
+      "detail": "0 duplicate rows"
+    },
+    {
+      "check": "no cross-batch duplicate parameter vectors (8 s.f.)",
+      "status": "PASS",
+      "detail": "0 shared vectors"
+    },
+    {
+      "check": "rad_c stored as pre-MATLAB raw value (inside 1e-12..1e-9)",
+      "status": "PASS",
+      "detail": "[1.000e-12, 9.996e-10]"
+    },
+    {
+      "check": "current magnitudes consistent with mA/cm2 after x0.1 conversion",
+      "status": "PASS",
+      "detail": "Jsc max new=24.096 old=24.096"
+    }
+  ],
+  "n_fail": 0
+}

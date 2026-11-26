@@ -1,0 +1,60 @@
+{
+  "arm": "original",
+  "seed": 20261025,
+  "run_name": "original_20261025",
+  "started_utc": "2026-10-21T14:16:25.550823+00:00",
+  "config_sha256": "2d1b87e5946286dfc6bd75d84e193d6cdba6720c116aebeec659d40a26d258a2",
+  "arm_cache_sha256": "f3ed6692ceab3f323e3f3736e0a1e81f75e2e7cfefddafd30d7cc4b7d32e7705",
+  "n_train": 16992,
+  "n_val": 3641,
+  "n_test": 3641,
+  "batch_size": 64,
+  "max_epochs": 1000,
+  "previous_status": null,
+  "env": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "deterministic_ops": true
+  },
+  "initial_weight_sha256": "f5c19fe8bc197dbeac3f5b301ea239dcca969a753177129044bca1ecfdb0b1ae",
+  "reload_max_abs_diff_z_mean": 0.0,
+  "status": "completed",
+  "finished_utc": "2026-10-21T14:19:05.458876+00:00",
+  "wall_s": 159.90805292129517,
+  "epochs_run": 401,
+  "best_epoch": 350,
+  "stopped_epoch": 400,
+  "stop_reason": "early_stopping",
+  "best_val_loss": -13.213860511779785,
+  "best_val_param_loss": -13.264803886413574,
+  "final_learning_rate": 9.999999974752427e-07,
+  "model_files": {
+    "encoder.h5": {
+      "sha256": "20ae696e22810d6ec48cfb1f86b4c97770ca15af3689fb49999c1c1d6e6bb7b3",
+      "bytes": 131024
+    },
+    "decoder.h5": {
+      "sha256": "27d1549034957acb09fe4e38edd8ace60d4c7579469ba777a234e130f31eacfb",
+      "bytes": 120984
+    },
+    "param_head.h5": {
+      "sha256": "ccaa2201d679f22c9371c75884cee956255d9692ca8d838d6be16d35a2fd2a12",
+      "bytes": 38384
+    },
+    "encoder.weights.h5": {
+      "sha256": "436f6ba9a3530c2c99705d174e5e949915c09719e4eec843632cd7f576f93bc9",
+      "bytes": 128072
+    },
+    "decoder.weights.h5": {
+      "sha256": "ef3772ade8e86ee8a0bf4d6b974144cf3f675e2be39a403f6b1f6ef1b46ec370",
+      "bytes": 121328
+    },
+    "param_head.weights.h5": {
+      "sha256": "fa3eb11778872a56b6b90a4ecabcaeaed0e50092329b310bc713bcd92eecb243",
+      "bytes": 34304
+    }
+  }
+}

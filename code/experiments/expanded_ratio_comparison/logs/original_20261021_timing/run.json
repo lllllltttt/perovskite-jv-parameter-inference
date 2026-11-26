@@ -1,0 +1,60 @@
+{
+  "arm": "original",
+  "seed": 20261021,
+  "run_name": "original_20261021_timing",
+  "started_utc": "2026-10-21T14:00:22.044973+00:00",
+  "config_sha256": "2d1b87e5946286dfc6bd75d84e193d6cdba6720c116aebeec659d40a26d258a2",
+  "arm_cache_sha256": "f3ed6692ceab3f323e3f3736e0a1e81f75e2e7cfefddafd30d7cc4b7d32e7705",
+  "n_train": 16992,
+  "n_val": 3641,
+  "n_test": 3641,
+  "batch_size": 64,
+  "max_epochs": 3,
+  "previous_status": "failed",
+  "env": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "deterministic_ops": true
+  },
+  "initial_weight_sha256": "5e1352e08f59596e16fd1e9aa64a319104d33ecf65368d68a4f2d0e6b4cf0f1c",
+  "reload_max_abs_diff_z_mean": 0.0,
+  "status": "completed",
+  "finished_utc": "2026-10-21T14:00:29.922563+00:00",
+  "wall_s": 7.877589702606201,
+  "epochs_run": 3,
+  "best_epoch": 2,
+  "stopped_epoch": 0,
+  "stop_reason": "max_epochs",
+  "best_val_loss": -8.860020637512207,
+  "best_val_param_loss": -8.999683380126953,
+  "final_learning_rate": 0.0010000000474974513,
+  "model_files": {
+    "encoder.h5": {
+      "sha256": "dd367235a43e9e9dab5f88a04fb5267cd72fe04dcad27cfc5af21f95d710b302",
+      "bytes": 131024
+    },
+    "decoder.h5": {
+      "sha256": "160b25162a9a728f8ea5b68c97a0c46d6a92361ca692a4d4cddb77c37651ed19",
+      "bytes": 120984
+    },
+    "param_head.h5": {
+      "sha256": "c74c121e2e51692645847a5e69bcee985bb41d0822a4f6cb93d85bb00f7ced0f",
+      "bytes": 38384
+    },
+    "encoder.weights.h5": {
+      "sha256": "c283e9262e36b04eca4fa272f66a95c46e48f19486db078b61f552dff1680da7",
+      "bytes": 128072
+    },
+    "decoder.weights.h5": {
+      "sha256": "52c6ad14384942332ce5aac3d18b6267847a059a91519d09a2a8868d21f11657",
+      "bytes": 121328
+    },
+    "param_head.weights.h5": {
+      "sha256": "7ccd417b871a956b7104a8d3463e259cfe8aa631aacdea1e93085b861d7f33ac",
+      "bytes": 34304
+    }
+  }
+}

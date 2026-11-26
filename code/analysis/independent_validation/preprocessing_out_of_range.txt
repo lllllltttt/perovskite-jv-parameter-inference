@@ -1,0 +1,26 @@
+Phase 2 - FROZEN PREPROCESSING OUT-OF-RANGE DIAGNOSTICS
+============================================================
+
+J scaled values outside [0,1] (fraction of all J values):
+  below 0 : 0.000006  (0.0006%)
+  above 1 : 0.000003  (0.0003%)
+  fraction of SAMPLES with >=1 out-of-range J value: 0.000176  (0.0176%)
+
+Parameter normalized values outside original [0,1] range (per param):
+  mu_n_pvk    below=0.000000 (0.0000%)   above=0.000000 (0.0000%)   any=0.000000 (0.0000%)
+  mu_p_pvk    below=0.000013 (0.0013%)   above=0.000020 (0.0020%)   any=0.000033 (0.0033%)
+  tau_n_pvk   below=0.000013 (0.0013%)   above=0.000000 (0.0000%)   any=0.000013 (0.0013%)
+  tau_p_pvk   below=0.000000 (0.0000%)   above=0.000020 (0.0020%)   any=0.000020 (0.0020%)
+  Nc_eff_pvk  below=0.000000 (0.0000%)   above=0.000000 (0.0000%)   any=0.000000 (0.0000%)
+  Nv_eff_pvk  below=0.000013 (0.0013%)   above=0.000000 (0.0000%)   any=0.000013 (0.0013%)
+  tau_ETL     below=0.000000 (0.0000%)   above=0.000000 (0.0000%)   any=0.000000 (0.0000%)
+  tau_HTL     below=0.000000 (0.0000%)   above=0.000000 (0.0000%)   any=0.000000 (0.0000%)
+  rad_c       below=0.000000 (0.0000%)   above=0.000000 (0.0000%)   any=0.000000 (0.0000%)
+
+Note: out-of-range here means outside the ORIGINAL training min/max per
+column. Small percentages indicate the new dataset sits essentially inside
+the frozen normalization envelope (mild shift).
+
+J physical extremes at which the frozen scaler saturates:
+  V=0.00  min=0.3099 max=24.0962   (new data min=0.3235 max=24.0962)
+  V=1.30  min=-6358.7618 max=-0.0000   (new data min=-6517.2233 max=-0.0000)

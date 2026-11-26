@@ -1,0 +1,39 @@
+{
+  "metric_source": {
+    "path": "E:\\project\\work1\\20261019_HC_revision_stage1_v2\\scripts\\metrics_lib.py",
+    "sha256": "97e04e267696eaec05b3ff57250776aad8e09d22c9e0f5ce2cd7e140c92d42c9"
+  },
+  "models": {},
+  "predictions": {
+    "pred_original_20261021__on_original.csv": "cd6a61de9a47218b89a6fe99edd83d9eaee7dabe166f13c58ab4b3bc1a37dc76",
+    "pred_original_20261021__on_expanded.csv": "300fc71b0f54b1955ff8dbd0e113cd02c5bbf6e5a4516487eac89a1c11e0c77e",
+    "pred_original_20261022__on_original.csv": "6237f19a8d144eb4f9a2b0d3704ae7c2bc27c69d1fa97fe423f0bf03df70243a",
+    "pred_original_20261022__on_expanded.csv": "ec748a08440821deb7c195ea6c51ce357058578818441bc15ef533e00bc7bfdd",
+    "pred_original_20261023__on_original.csv": "a348c184e6141516a5a9cf22727d29bc5be7a932157ff48ee281fa4388d4a446",
+    "pred_original_20261023__on_expanded.csv": "8abde04864c2654c8d28900a6e78d205e21fc2c7d9c491bd6ad142af20dbb8cf",
+    "pred_original_20261024__on_original.csv": "5840f058878999d0086eca5a83f43f02b5b480e126e3922a1ec62c4d22275d78",
+    "pred_original_20261024__on_expanded.csv": "23fe8bc52f1c038809442edddfb5640c50f5ee241338d95f0f5f558a9304bd25",
+    "pred_original_20261025__on_original.csv": "fb56267aeedaab821dfcc535433b57ff9c9679aed556af6c728c3deed90a2da1",
+    "pred_original_20261025__on_expanded.csv": "efc7f3af5a854f7461ddf3fb4d2851c9d43bacb9ab2b2f1b05d756112f4d2113",
+    "pred_expanded_20261021__on_original.csv": "a62e59d41e6ad0f1e7dd3f0e83dd971bd29518eb1f8f75e1420374d93510d6cb",
+    "pred_expanded_20261021__on_expanded.csv": "494977f2f5da887ed7af4a1907411b3b30c6a0f9e6f90d6535b4e1f504d8d279",
+    "pred_expanded_20261022__on_original.csv": "f5134abe7e85eca08fe18695810f562e3a888e343e9bf0eae71bfcb544009b63",
+    "pred_expanded_20261022__on_expanded.csv": "75c671a19750140f315f8df040d1d72b67b6306bb2cec27760058a445094653f",
+    "pred_expanded_20261023__on_original.csv": "0637f9c2f849116af87db0faef4349034076f785125d91b5db2fa057f1e3562f",
+    "pred_expanded_20261023__on_expanded.csv": "d30591671f7bd780db4f138f48039133381b6cadbc1ae9e8ef2a7cfd9486cd15",
+    "pred_expanded_20261024__on_original.csv": "e1855367203fae49f08455750dc0dd6ab27fe5a1d126b2b5feed0255040e2a05",
+    "pred_expanded_20261024__on_expanded.csv": "a47d8e91e59daf21ff64d01d1eb44712b86d18387bc7d6acb4d552729b57cbeb",
+    "pred_expanded_20261025__on_original.csv": "4a8b5184884ec4f9fa9ff2a6588a1481faa032bd4c60ae0c4a00a1c48b01e88f",
+    "pred_expanded_20261025__on_expanded.csv": "960ac71e72cbcb6c184ad81330d9cff40b230a5a6937e663a7effa5f81562bfd"
+  },
+  "n_rows_with_undefined_metric": 0,
+  "undefined_detail": [],
+  "n_runs": 10,
+  "seeds": [
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025
+  ]
+}

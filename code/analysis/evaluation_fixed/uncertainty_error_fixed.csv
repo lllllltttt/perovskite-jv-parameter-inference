@@ -1,0 +1,10 @@
+parameter,spearman_rho,p_value
+mu_n_pvk,0.398191,0.000e+00
+mu_p_pvk,0.334319,0.000e+00
+tau_n_pvk,0.645906,0.000e+00
+tau_p_pvk,0.621839,0.000e+00
+Nc_eff_pvk,0.353014,0.000e+00
+Nv_eff_pvk,0.244391,5.593e-207
+tau_ETL,0.377232,0.000e+00
+tau_HTL,0.464704,0.000e+00
+rad_c,0.414716,0.000e+00

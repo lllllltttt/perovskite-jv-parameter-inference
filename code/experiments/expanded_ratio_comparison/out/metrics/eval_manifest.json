@@ -1,0 +1,233 @@
+{
+  "evaluator": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\scripts\\04_evaluate.py",
+  "evaluator_sha256": "3da36b4b3172ae6ade8c82da9376d497b01f5b60412f4579c2e544929516fb22",
+  "config_sha256": "2d1b87e5946286dfc6bd75d84e193d6cdba6720c116aebeec659d40a26d258a2",
+  "metric_source": {
+    "path": "E:\\project\\work1\\20261019_HC_revision_stage1_v2\\scripts\\metrics_lib.py",
+    "sha256": "97e04e267696eaec05b3ff57250776aad8e09d22c9e0f5ce2cd7e140c92d42c9"
+  },
+  "prediction_rule": "encoder z_mean -> param_head mu; no latent sampling",
+  "baseline_rule": "Skill_MSE baseline = test arm's TRAIN mean; MAE reduction baseline = test arm's TRAIN median; R2_test = test mean; identical for both models",
+  "scaler_roundtrip": {
+    "original_20261021__on_original": 0.0,
+    "original_20261021__on_expanded": null,
+    "original_20261022__on_original": 0.0,
+    "original_20261022__on_expanded": null,
+    "original_20261023__on_original": 0.0,
+    "original_20261023__on_expanded": null,
+    "original_20261024__on_original": 0.0,
+    "original_20261024__on_expanded": null,
+    "original_20261025__on_original": 0.0,
+    "original_20261025__on_expanded": null,
+    "expanded_20261021__on_original": null,
+    "expanded_20261021__on_expanded": 0.0,
+    "expanded_20261022__on_original": null,
+    "expanded_20261022__on_expanded": 0.0,
+    "expanded_20261023__on_original": null,
+    "expanded_20261023__on_expanded": 0.0,
+    "expanded_20261024__on_original": null,
+    "expanded_20261024__on_expanded": 0.0,
+    "expanded_20261025__on_original": null,
+    "expanded_20261025__on_expanded": 0.0
+  },
+  "models": {
+    "original_20261021": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261021\\encoder.h5",
+        "sha256": "bc7f7fc85907016c7095b5dd5a497ca58a1f0be9c7987fffb968adbb2b9d3e38"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261021\\decoder.h5",
+        "sha256": "1e289f3251f879c75adc0357fa5e8a36b762088c3df8b03c243ca10b6748fe81"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261021\\param_head.h5",
+        "sha256": "03acd6d9ad632aacff2851b497a6fd9fc6f43a5df1da36595fab7c5078f97e6a"
+      }
+    },
+    "original_20261022": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261022\\encoder.h5",
+        "sha256": "9cdb06e4a6e2b78c5f49e4fc50c34862b863e8f12f0edfb0ac144ee274b730d0"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261022\\decoder.h5",
+        "sha256": "26e64ea00822981c30e422b040beb71817c16bd4e3f2093d8401403e66fed0e8"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261022\\param_head.h5",
+        "sha256": "e27a22b63ba810009ffdae6dc95cdc73ca4b863af92899b2002b43c5e51a6605"
+      }
+    },
+    "original_20261023": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261023\\encoder.h5",
+        "sha256": "48c7d7fe1829dc4a473638f777e8e83e5f901579461276062a05b0e140a80b3f"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261023\\decoder.h5",
+        "sha256": "77934c8646df558200d3e44acb98205fa2d607ae41d74ff08edff4234cdfd692"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261023\\param_head.h5",
+        "sha256": "b3754fa577a6e56d18c60dcd9af0b275503b568c2692ead659d5ea6af85badd2"
+      }
+    },
+    "original_20261024": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261024\\encoder.h5",
+        "sha256": "01b4196ffa26cbd9eae77249312e6e959ac4926669c9d6bdbf12d7b7da17793d"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261024\\decoder.h5",
+        "sha256": "d797e3c448cd049c002146020ed483165db8ba3af587c8e50bb6b0721e4168c1"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261024\\param_head.h5",
+        "sha256": "450211e793ab09d3f54b1638df03060fcbcbd3561cf181227507108fba3b055a"
+      }
+    },
+    "original_20261025": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261025\\encoder.h5",
+        "sha256": "20ae696e22810d6ec48cfb1f86b4c97770ca15af3689fb49999c1c1d6e6bb7b3"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261025\\decoder.h5",
+        "sha256": "27d1549034957acb09fe4e38edd8ace60d4c7579469ba777a234e130f31eacfb"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\original_20261025\\param_head.h5",
+        "sha256": "ccaa2201d679f22c9371c75884cee956255d9692ca8d838d6be16d35a2fd2a12"
+      }
+    },
+    "expanded_20261021": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261021\\encoder.h5",
+        "sha256": "aa5661e343f20eb11fcd2f585616e45233826e45a253670a329b7a01e5619169"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261021\\decoder.h5",
+        "sha256": "865b3ff6750ddca4a252cd4b89e2f5b8ae1624a2600b06150aed4a7eff31d723"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261021\\param_head.h5",
+        "sha256": "ccca367b5f4dcba2f83c633adf922ac3fdf2d3fbd485764c84580c97c006c70a"
+      }
+    },
+    "expanded_20261022": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261022\\encoder.h5",
+        "sha256": "c106cdd32ca440db1351cc5e6b3addda33b1d836e3a60c6ca28e2135c4254d1c"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261022\\decoder.h5",
+        "sha256": "23721784184858dc1d404ee065e8c16458920e0dd256fd3a6061044bf89e4c32"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261022\\param_head.h5",
+        "sha256": "492eb47b0d561aa7c0849163c6ab63fc0874c1e05e19706a5985863a9c7530bd"
+      }
+    },
+    "expanded_20261023": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261023\\encoder.h5",
+        "sha256": "aa85053851a0088f837281eecd9c85c5e83c8a01b9bc902a255c46b9773fa590"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261023\\decoder.h5",
+        "sha256": "b7e450705ee9dc06e44089050bac8d82d01380b6d70997b0fce1fa92e8fb7353"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261023\\param_head.h5",
+        "sha256": "61c563ff7321d2d2dcef5ea8b4a1412c2546ed20dd3747caa046a7038d33527e"
+      }
+    },
+    "expanded_20261024": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261024\\encoder.h5",
+        "sha256": "47302fdf476b1f7d5ca73af6e2cd79e0ab4e4175bae76b278fb7acc65b9a0756"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261024\\decoder.h5",
+        "sha256": "c15cf49d508de0b989bf49e8be1b954abc959232cb5103ad2fd88a3eaae33370"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261024\\param_head.h5",
+        "sha256": "59fc2f82d1b4da7c4c24fa33a54f69d258a659626a057f51b7bf755d7d6d0681"
+      }
+    },
+    "expanded_20261025": {
+      "encoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261025\\encoder.h5",
+        "sha256": "c0637eda3651412d76f53c5291b2a2fdcc57cfec01bfebc98c46fdd49a384582"
+      },
+      "decoder.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261025\\decoder.h5",
+        "sha256": "fba9a93f64761d9a89f897dfce095f5cd2c26eaaf28bc70ff6c760334f4aa0d2"
+      },
+      "param_head.h5": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\models\\expanded_20261025\\param_head.h5",
+        "sha256": "451e89970367aea0597a893dd83e69bc477b1aa1e814e43c4bd606df2fe45da0"
+      }
+    }
+  },
+  "scalers": {
+    "original": {
+      "param": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\data\\param_scaler_original.pkl",
+        "sha256": "7ffdd61eb426efe0faad6e6458eec1897910314111165f2e8d2712ee197f03fe",
+        "owner_arm": "original"
+      },
+      "current": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\data\\current_scaler_original.pkl",
+        "sha256": "a66cbd539d60c8bad52ca93a74d6fc790ab5072e1f60e9734548d6890ba51d20",
+        "owner_arm": "original"
+      }
+    },
+    "expanded": {
+      "param": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\data\\param_scaler_expanded.pkl",
+        "sha256": "857e5c0ca7f94f9b6efc48279c006abca34d8b12dfe418f78fcd2a357328ceeb",
+        "owner_arm": "expanded"
+      },
+      "current": {
+        "path": "E:\\project\\work1\\20261021_expanded_ratio_comparison_v2\\data\\current_scaler_expanded.pkl",
+        "sha256": "ba97fc40e2a70ae689516fbe7c285639dc717f61d611031af0c4907671a8de92",
+        "owner_arm": "expanded"
+      }
+    }
+  },
+  "predictions": {
+    "pred_original_20261021__on_original.csv": "2d0e38857e93c4b14b745166816cb8fc48d8d605967d2a3af1d0c21d77efbe9d",
+    "pred_original_20261021__on_expanded.csv": "5efdb776d1abf4354c8015038078ed6c5f24f11888e7abea0d714e73f027bfa1",
+    "pred_original_20261022__on_original.csv": "f8ad2f5089f3d817593b89c3654d5dd58737f6f6c3ebc8a07494641a959afbd6",
+    "pred_original_20261022__on_expanded.csv": "b482687a71ff2f5b7bf0116b2d516c6469fb9bc233a5aa47705fdbed0dd66263",
+    "pred_original_20261023__on_original.csv": "badd0f273ba8822d7c1ad8b3c081245d5bb31cb3680a2f062968ea9fc7a03f1f",
+    "pred_original_20261023__on_expanded.csv": "0ec41d06a55ec3e8d1f105cfc6af5a3a003bace08f779c7d4504f5289954ff91",
+    "pred_original_20261024__on_original.csv": "deece11d972a72e2e7866e2bd1d9e1ca882e6604715314c17e624982afe473e8",
+    "pred_original_20261024__on_expanded.csv": "417cfd54c4236be32a36806f77c6b6e449d3cd7d2eab148e9e15abc819c16849",
+    "pred_original_20261025__on_original.csv": "8c4e24c69405147ebf909e945d23ead838e9e6700ba16c6a273b8d491a150606",
+    "pred_original_20261025__on_expanded.csv": "02c6cc5f6fcc7090d5e887f9cc2d7ef6cafa96aed2ef4f4d1a4e27c2e4d8185b",
+    "pred_expanded_20261021__on_original.csv": "d82e72e585d5938f8d2b1fa7893012eb79c5a46aa5335e0a6d5f27ea54235d1c",
+    "pred_expanded_20261021__on_expanded.csv": "c5c4256967d138d98a0761db11e92d86faf19fd41e4664c4c0b4fc018cd3d648",
+    "pred_expanded_20261022__on_original.csv": "3efedaac40e2b225f48d279b01654c52d15b125fc9f89fa5ff13f397bd6c29cc",
+    "pred_expanded_20261022__on_expanded.csv": "aaf69745e0f7ae23bb069388b4c2d9b8aab3146d2ba8a09c7b250aeb2ab6d844",
+    "pred_expanded_20261023__on_original.csv": "6acdcee10b359ed19e6c2cd774ee3854f088f2630388e56f0611bc226ddf8b2b",
+    "pred_expanded_20261023__on_expanded.csv": "cce5b91f092167e68402c3f1864cd2a774f9f67f8833bbcdefa92572f0943bfc",
+    "pred_expanded_20261024__on_original.csv": "8109e8df93cb5cf017266a7377b8662c4b293f5eb98378870c38a4d5d4564c71",
+    "pred_expanded_20261024__on_expanded.csv": "45776b04f823900fbc3fe48cbaf5f5ae2e9076487d251eed8743b46dcc82ea7e",
+    "pred_expanded_20261025__on_original.csv": "32e7ddaaa794c78771f16f26d816c170fed4c2fcdc27712dad2fa25fd75b247d",
+    "pred_expanded_20261025__on_expanded.csv": "8a6d4b12ef0f59b5152f4f6486b0bcefa672beccc8759f857899648ced65e0a3"
+  },
+  "n_rows_with_undefined_metric": 0,
+  "undefined_detail": [],
+  "n_runs": 10,
+  "seeds": [
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025
+  ]
+}

@@ -1,0 +1,10 @@
+x_pos,tick_label,data_param
+0,mu_n,mu_n
+1,mu_p,mu_p
+2,tau_n,tau_n
+3,tau_p,tau_p
+4,Nc,Nc
+5,Nv,Nv
+6,tau_ETL,tau_ETL
+7,tau_HTL,tau_HTL
+8,rad_c,rad_c

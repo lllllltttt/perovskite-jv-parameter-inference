@@ -1,0 +1,369 @@
+{
+  "analysis": "random-subset stability analysis with duplicate collapse",
+  "delivery_root": "E:\\project\\work1\\20261019_NN_stability",
+  "generated_utc": "2026-10-19T06:00:30Z",
+  "seed": {
+    "base": 20261019,
+    "rng_rule": "np.random.default_rng([SEED, rep]) per replicate",
+    "random_pair_seed": 42,
+    "random_pairs_requested": 200000
+  },
+  "metric": "M1 (per-column normalized-J RMSE, full 131-point curve)",
+  "target_replicates": 1000,
+  "completed_replicates": 1000,
+  "failures": [],
+  "retries": [],
+  "timing": {
+    "wall_s_this_run": 753.4670643806458,
+    "started_utc": "2026-10-19T05:45:14Z",
+    "finished_utc": "2026-10-19T05:57:46Z",
+    "sum_elapsed_s_all_replicates": 758.9541275501251,
+    "median_s_per_replicate": 0.7560888528823853,
+    "min_s_per_replicate": 0.7235608100891113,
+    "max_s_per_replicate": 1.0302135944366455,
+    "note": "wall_s_this_run covers only the resumed run from replicate 11 to 1,000; the 10-replicate trial was timed separately at 9.0 s wall. Thread settings were left at library defaults; the measured time is not a single-core or linear-scaling claim."
+  },
+  "threads": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "os_cpu_count": 16,
+    "env_thread_vars": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null
+    },
+    "numpy_config": {
+      "blas": {
+        "name": "scipy-openblas",
+        "found": true,
+        "version": "0.3.30",
+        "detection method": "pkgconfig",
+        "include directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-q7k2ejt3/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include",
+        "lib directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-q7k2ejt3/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib",
+        "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24",
+        "pc file directory": "D:/a/numpy-release/numpy-release/.openblas"
+      },
+      "lapack": {
+        "name": "scipy-openblas",
+        "found": true,
+        "version": "0.3.30",
+        "detection method": "pkgconfig",
+        "include directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-q7k2ejt3/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include",
+        "lib directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-q7k2ejt3/cp312-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib",
+        "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24",
+        "pc file directory": "D:/a/numpy-release/numpy-release/.openblas"
+      }
+    },
+    "threadpoolctl": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 16,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-9e3e5a4229c1ca39f10dc82bba9e2b2b.dll",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 16,
+        "prefix": "vcomp",
+        "filepath": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 16,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-48c358d105077551cc9cc3ba79387ed5.dll",
+        "version": "0.3.29.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ]
+  },
+  "libraries": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.8"
+  },
+  "inputs_read_only": {
+    "dataset_normalized.npz": {
+      "path": "E:\\project\\work1\\data\\dataset_normalized.npz",
+      "sha256": "0993b312a3516b4de9463a2169ba9cdf52d313b6fb98b34429d7b99360dfa705"
+    },
+    "frozen_predictions": {
+      "path": "E:\\project\\work1\\final_figures\\scripts\\_frozen_preds.npz",
+      "sha256": "ad156cd18c1933e8a114fa8400b332205ba5b95806b9d1a78bcb880edc27d176"
+    },
+    "param_scaler.pkl": {
+      "path": "E:\\project\\work1\\data\\param_scaler.pkl",
+      "sha256": "70cdc709d7130a75b8b39aebb0e536f5bca609367efbfd7cbe9518d03cbd7025"
+    },
+    "J_scaler.pkl": {
+      "path": "E:\\project\\work1\\data\\J_scaler.pkl",
+      "sha256": "3b82a2541bd77c5949737886d8725cb350cdfb435392faa06d48c4b3fad13f3b"
+    },
+    "archived_fig3_pair_summary_v2.csv": {
+      "path": "E:\\project\\work1\\20261006\\manuscript_figures_SI_integrated_v2_layout_final\\data_used\\fig3_pair_summary_v2.csv",
+      "sha256": "34260d94ec0bf048ad1b61810d206132a889099b80abaa0e7ee23bc71daec1b4"
+    },
+    "archived_fig3_pairs_v2.csv": {
+      "path": "E:\\project\\work1\\20261006\\manuscript_figures_SI_integrated_v2_layout_final\\data_used\\fig3_pairs_v2.csv",
+      "sha256": "5493194fa38a700eb9961b7c04d241a1b37b1412fe6a45ae09fe27d076d33fba"
+    },
+    "archived_fig3_random_baseline_v2.csv": {
+      "path": "E:\\project\\work1\\20261006\\manuscript_figures_SI_integrated_v2_layout_final\\data_used\\fig3_random_baseline_v2.csv",
+      "sha256": "5230130efb9d5f5bba6a43978b973ceb30ee5cf831f5d5761febea9d5e4bb7d9"
+    },
+    "archived_lib_v2.py": {
+      "path": "E:\\project\\work1\\20261006\\figure_revision_phase1_v2_final\\scripts\\lib_v2.py",
+      "sha256": "b62571bbca8af75692f78b146b58b725e4f4bc74bd44f481eaf0d0ef30600006"
+    },
+    "archived_fig3_pair_analysis_v2.py": {
+      "path": "E:\\project\\work1\\20261006\\figure_revision_phase1_v2_final\\scripts\\fig3_pair_analysis_v2.py",
+      "sha256": "6507e8474869bd8de6d51531f2468a5b2e793a27269d235ad2f067188d93df13"
+    }
+  },
+  "reproduction": {
+    "ok": true,
+    "n_pairs": 11245,
+    "pair_sets_identical": true,
+    "max_abs_median_difference": 2.220446049250313e-16,
+    "max_abs_random_baseline_difference": 5.551115123125783e-17
+  },
+  "code": {
+    "reproduce_original.py": {
+      "path": "E:\\project\\work1\\20261019_NN_stability\\scripts\\reproduce_original.py",
+      "sha256": "789890ff69a9f6ed96003fb0c78193e8d2277db72da9192cbbc021e83fafe6d7"
+    },
+    "nn_stability.py": {
+      "path": "E:\\project\\work1\\20261019_NN_stability\\scripts\\nn_stability.py",
+      "sha256": "245759761afa357cbbe002b5c362a6a03f377bcd53c8b0cebf84831c9f6e958c"
+    },
+    "summarize.py": {
+      "path": "E:\\project\\work1\\20261019_NN_stability\\scripts\\summarize.py",
+      "sha256": "6cd9c4017c11436eabbd44289295bab6453525f6adf43ffd57057500df0135df"
+    },
+    "make_figure.py": {
+      "path": "E:\\project\\work1\\20261019_NN_stability\\scripts\\make_figure.py",
+      "sha256": "e62ec48f98a65783509a3ebc806da2876fdd0a21aae690b7c03360c3c62b52dd"
+    },
+    "qa_checks.py": {
+      "path": "E:\\project\\work1\\20261019_NN_stability\\scripts\\qa_checks.py",
+      "sha256": "69b1539f2273375ae807e9683aedba0101b4cc442ce1a024000a52bb3dbbd18d"
+    },
+    "make_manifest.py": {
+      "path": "E:\\project\\work1\\20261019_NN_stability\\scripts\\make_manifest.py",
+      "sha256": "b9708c97b0a063f05348c9873b1066e7086e169a9af8c91587d7f6905c938476"
+    },
+    "pilot_train_eval.py (patched copy)": {
+      "path": "E:\\project\\work1\\20261019_NN_stability\\pilot\\pilot_train_eval.py",
+      "sha256": "37623e8490a6d5bec68bb4d907e69372dc310fe81355e5eb8920b4eadd026bb5"
+    }
+  },
+  "outputs": [
+    {
+      "path": "QA.md",
+      "bytes": 8263,
+      "sha256": "6936b9cc02481f4734135fc8f6ee3962e066c79ca5f44ce4ad15d12b5d1391f9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6580,
+      "sha256": "40ef71048f2bf3f6bf88576bd4e6cebb7f143e31ebdbfc5198354f42045aa0ad"
+    },
+    {
+      "path": "docs/candidate_paragraphs.md",
+      "bytes": 7233,
+      "sha256": "14128812a51e0cdfaecca3f56305c1ce4d36ebe0af160802803977eb679aa018"
+    },
+    {
+      "path": "out/qa_checks.json",
+      "bytes": 5159,
+      "sha256": "c94f2ea90baa9521427e90fe62233ec44a5aa1be04ca23764067dbdf163d6008"
+    },
+    {
+      "path": "out/reproduction/input_verification.json",
+      "bytes": 1021,
+      "sha256": "5975bfc90605e875039cd966cbbe716f0e15f5324eafc8834a2082ea3358543d"
+    },
+    {
+      "path": "out/reproduction/pairs_reproduced.csv",
+      "bytes": 1685651,
+      "sha256": "39984032b5cda1d279ae1efbdf417cbaadf0756910c40a741f06a9470dc7b853"
+    },
+    {
+      "path": "out/reproduction/random_baseline_check.csv",
+      "bytes": 498,
+      "sha256": "a3d6482005396490f0b68752f3200f1b5b06bb1aca1c2cfd5c9d3ec584e8a994"
+    },
+    {
+      "path": "out/reproduction/reproduction_check.json",
+      "bytes": 600,
+      "sha256": "738d0c859044bf3d83638329b5f825f778857e7b922fd0463c9c76f59e793f97"
+    },
+    {
+      "path": "out/reproduction/s6_reproduced.csv",
+      "bytes": 3560,
+      "sha256": "34260d94ec0bf048ad1b61810d206132a889099b80abaa0e7ee23bc71daec1b4"
+    },
+    {
+      "path": "out/reproduction/s6_reproduction_check.csv",
+      "bytes": 1740,
+      "sha256": "85be7eff2bc4928bcc8b68aa0198f56855b7f8691173bc40188fe1fe02f080ce"
+    },
+    {
+      "path": "out/stability/closest01_volatility.csv",
+      "bytes": 1028,
+      "sha256": "577a1d1bbe8538f6cc629c3d8bd5b8adfcac377d60ac0176671fa114a4fb6d6e"
+    },
+    {
+      "path": "out/stability/figure_values.csv",
+      "bytes": 1890,
+      "sha256": "fd50f421985059dd4164d646f60f7186beab31145d9cd06b9f60df2cd8e3dc09"
+    },
+    {
+      "path": "out/stability/first500_vs_all1000.csv",
+      "bytes": 17965,
+      "sha256": "a31ecd2a24fca9560415147c9a29459264f68b0a96e65f9f1a2de2d981e5275b"
+    },
+    {
+      "path": "out/stability/interpretation_all_three.csv",
+      "bytes": 130,
+      "sha256": "992b24493c9235e02d9259ae4aa8444764a32f78f93004250d679ec5c4cf82c4"
+    },
+    {
+      "path": "out/stability/interpretation_by_family.csv",
+      "bytes": 2995,
+      "sha256": "c5651da7925420812b036b9304734373570c8b135ea303ae3624763b902dbcfd"
+    },
+    {
+      "path": "out/stability/make_figure_stdout.txt",
+      "bytes": 255,
+      "sha256": "eaa16a888f61158c0383351ee0c02677054f6fcda90a9f9a072a2f5431da4d0d"
+    },
+    {
+      "path": "out/stability/nn_stability_results.pdf",
+      "bytes": 26590,
+      "sha256": "bc03931ffa89fb7d5e4c279e3e9d326093cd76886b7021694548f736c0a5dac4"
+    },
+    {
+      "path": "out/stability/nn_stability_results.png",
+      "bytes": 189144,
+      "sha256": "01a6784a77e070cfaf7fe5c3886f83c932ae7d6369e5725d823638739262c43b"
+    },
+    {
+      "path": "out/stability/nn_stability_results.svg",
+      "bytes": 89662,
+      "sha256": "2766880dab7618271fad7f14196468a98174b38f211c62aec2055d0528e4a98a"
+    },
+    {
+      "path": "out/stability/per_replicate.csv",
+      "bytes": 1718906,
+      "sha256": "9436f0161dfe294ddd8d3d72d5587c3583c309f983ebc430e579b4881e5c2299"
+    },
+    {
+      "path": "out/stability/run_log.txt",
+      "bytes": 53000,
+      "sha256": "29ae877d0975d16082ce23fd513564748715574b876ea8f3cdc69122aeb11c02"
+    },
+    {
+      "path": "out/stability/run_manifest.json",
+      "bytes": 4369,
+      "sha256": "6e1bfa2ece3c9e87dd4c6d9ba9c253bf6fdc669e3227cb11e0c4efcc0f686e8b"
+    },
+    {
+      "path": "out/stability/run_stdout.txt",
+      "bytes": 2510,
+      "sha256": "16117fe801b245da2f0750f1363ffc730db1bf9703886fcec38cb7461412ce8f"
+    },
+    {
+      "path": "out/stability/summarize_stdout.txt",
+      "bytes": 10088,
+      "sha256": "8b4bb59e94a72c790c02b30ab278d2a2ab08144654a904f2e5f70b9788157488"
+    },
+    {
+      "path": "out/stability/summary.csv",
+      "bytes": 12028,
+      "sha256": "f3d298a46c00d7c5d109f7269339002dfb5e784d5392e8ed5c540a84cd866a81"
+    },
+    {
+      "path": "out/stability/summary_meta.json",
+      "bytes": 271,
+      "sha256": "a3720d0a3f1f9848f811a77ed795fba3242cf9013dc5f87ab88b9419d28efb48"
+    },
+    {
+      "path": "pilot/pilot_train_eval.py",
+      "bytes": 22874,
+      "sha256": "37623e8490a6d5bec68bb4d907e69372dc310fe81355e5eb8920b4eadd026bb5"
+    },
+    {
+      "path": "pilot/logs/exit_codes.txt",
+      "bytes": 37,
+      "sha256": "ccdcf00a0bd93550a6b31847916fe5070d9942575b185e54463e6bd6518b30be"
+    },
+    {
+      "path": "pilot/logs/selftest_fault_injection.txt",
+      "bytes": 1538,
+      "sha256": "67bb37f1ff21edbc715b132d7a663090d02b75707df6a4302f60027df31d065c"
+    },
+    {
+      "path": "pilot/logs/selftest_fault_injection_stdout.txt",
+      "bytes": 1538,
+      "sha256": "67bb37f1ff21edbc715b132d7a663090d02b75707df6a4302f60027df31d065c"
+    },
+    {
+      "path": "pilot/logs/selftest_normal.txt",
+      "bytes": 1525,
+      "sha256": "4d861e310fad9aa1fff5b2db5b79239802e0ccc487603a14aa47fa0c06104101"
+    },
+    {
+      "path": "pilot/logs/selftest_normal_stdout.txt",
+      "bytes": 1525,
+      "sha256": "4d861e310fad9aa1fff5b2db5b79239802e0ccc487603a14aa47fa0c06104101"
+    },
+    {
+      "path": "scripts/make_figure.py",
+      "bytes": 4889,
+      "sha256": "e62ec48f98a65783509a3ebc806da2876fdd0a21aae690b7c03360c3c62b52dd"
+    },
+    {
+      "path": "scripts/make_manifest.py",
+      "bytes": 6123,
+      "sha256": "b9708c97b0a063f05348c9873b1066e7086e169a9af8c91587d7f6905c938476"
+    },
+    {
+      "path": "scripts/make_zip.py",
+      "bytes": 1579,
+      "sha256": "1829043cabc59933b3495a6c66c54977623ac5f1d9d96418ea199141cf4ceaf3"
+    },
+    {
+      "path": "scripts/nn_stability.py",
+      "bytes": 12238,
+      "sha256": "245759761afa357cbbe002b5c362a6a03f377bcd53c8b0cebf84831c9f6e958c"
+    },
+    {
+      "path": "scripts/qa_checks.py",
+      "bytes": 13483,
+      "sha256": "69b1539f2273375ae807e9683aedba0101b4cc442ce1a024000a52bb3dbbd18d"
+    },
+    {
+      "path": "scripts/reproduce_original.py",
+      "bytes": 12342,
+      "sha256": "789890ff69a9f6ed96003fb0c78193e8d2277db72da9192cbbc021e83fafe6d7"
+    },
+    {
+      "path": "scripts/summarize.py",
+      "bytes": 7296,
+      "sha256": "6cd9c4017c11436eabbd44289295bab6453525f6adf43ffd57057500df0135df"
+    }
+  ],
+  "output_count": 39
+}

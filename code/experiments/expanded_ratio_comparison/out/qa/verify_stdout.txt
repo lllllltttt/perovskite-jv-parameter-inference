@@ -1,0 +1,72 @@
+﻿PASS original: split sizes 16992/3641/3641  (16992, 3641, 3641)
+PASS original: train/val/test disjoint and cover all rows
+PASS original: manifest has one row per sample with a split label
+PASS original: parameter scaler equals MinMax fitted on TRAIN only
+PASS original: current scaler equals MinMax fitted on TRAIN only
+PASS expanded: split sizes 16992/3641/3641  (16992, 3641, 3641)
+PASS expanded: train/val/test disjoint and cover all rows
+PASS expanded: manifest has one row per sample with a split label
+PASS expanded: parameter scaler equals MinMax fitted on TRAIN only
+PASS expanded: current scaler equals MinMax fitted on TRAIN only
+PASS prediction file exists pred_original_20261021__on_original.csv
+PASS pred_original_20261021__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261021__on_expanded.csv
+PASS pred_original_20261021__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261022__on_original.csv
+PASS pred_original_20261022__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261022__on_expanded.csv
+PASS pred_original_20261022__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261023__on_original.csv
+PASS pred_original_20261023__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261023__on_expanded.csv
+PASS pred_original_20261023__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261024__on_original.csv
+PASS pred_original_20261024__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261024__on_expanded.csv
+PASS pred_original_20261024__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261025__on_original.csv
+PASS pred_original_20261025__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_original_20261025__on_expanded.csv
+PASS pred_original_20261025__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261021__on_original.csv
+PASS pred_expanded_20261021__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261021__on_expanded.csv
+PASS pred_expanded_20261021__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261022__on_original.csv
+PASS pred_expanded_20261022__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261022__on_expanded.csv
+PASS pred_expanded_20261022__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261023__on_original.csv
+PASS pred_expanded_20261023__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261023__on_expanded.csv
+PASS pred_expanded_20261023__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261024__on_original.csv
+PASS pred_expanded_20261024__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261024__on_expanded.csv
+PASS pred_expanded_20261024__on_expanded.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261025__on_original.csv
+PASS pred_expanded_20261025__on_original.csv: rows equal the test split exactly
+PASS prediction file exists pred_expanded_20261025__on_expanded.csv
+PASS pred_expanded_20261025__on_expanded.csv: rows equal the test split exactly
+PASS all table-B coordinate metrics reproduce from prediction files  max abs diff 8.882e-16 over 720 values
+PASS run original_20261021 completed  epochs=572 best=521
+PASS run original_20261022 completed  epochs=585 best=534
+PASS run original_20261023 completed  epochs=473 best=422
+PASS run original_20261024 completed  epochs=545 best=494
+PASS run original_20261025 completed  epochs=401 best=350
+PASS run expanded_20261021 completed  epochs=317 best=266
+PASS run expanded_20261022 completed  epochs=503 best=452
+PASS run expanded_20261023 completed  epochs=500 best=449
+PASS run expanded_20261024 completed  epochs=429 best=378
+PASS run expanded_20261025 completed  epochs=451 best=400
+PASS ten completed runs  10
+PASS seed 20261021: identical initial weights in both arms  5e1352e08f59596e
+PASS seed 20261022: identical initial weights in both arms  aef398c9e54dc430
+PASS seed 20261023: identical initial weights in both arms  973358f4d2cf923a
+PASS seed 20261024: identical initial weights in both arms  0cd8becf1af00c47
+PASS seed 20261025: identical initial weights in both arms  f5c19fe8bc197dbe
+PASS the five seeds give five distinct initial-weight fingerprints
+PASS figure fig02_skill_and_error.png present and non-trivial  217097
+PASS figure fig03_common_test_paired.png present and non-trivial  207222
+
+70 checks, 0 FAIL

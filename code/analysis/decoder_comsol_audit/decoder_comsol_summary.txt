@@ -1,0 +1,71 @@
+DECODER-COMSOL PHYSICAL CYCLE CONSISTENCY AUDIT (VAE-v6, unbiased cohort)
+========================================================================
+cohort: 45 test samples | no retrain / no COMSOL re-run / analysis only
+
+CURVE METRICS (median across 45 samples, mA/cm^2)
+  decoder   vs target : RMSE 1.8860 | R^2 0.9853 | 0-1.0V 0.0582 | >1.0V 3.9407
+  COMSOL(pred) vs target: RMSE 2.6926 | R^2 0.9661 | 0-1.0V 0.4553 | >1.0V 5.1916
+
+TRUE-PARAM COMSOL CONTROL (pipeline gate)
+  median RMSE = 0.000000 mA/cm^2 | max = 0.000000 | samples failing >0.05 mA/cm^2: 0/45
+  control OK: unit/ordering/model are correct; any pred-target gap is real model behavior.
+
+CYCLE GAP  RMSE(J_decoder, J_COMSOL(pred))  (mA/cm^2)
+  full     median=2.5627  IQR=[1.6762,5.6433]  p90=10.3359  max=54.1045
+  0to1V    median=0.4724  IQR=[0.2188,0.8002]  p90=1.2315  max=2.3022
+  gt1V     median=5.3016  IQR=[3.2528,11.7590]  p90=21.5839  max=113.0215
+
+STATISTICS
+  H_A (decoder better than COMSOL(pred), full curve): median diff (dec-com) = -0.9246 mA/cm^2 | n(decoder better)=15/45 | Wilcoxon W=231.0 p=9.0135e-04 | rank-biserial=-0.554
+  H_B (gap grows in >1.0V): median region diff = +1.7847 | Wilcoxon p=3.3879e-02 | rank-biserial=0.362
+
+CORRELATIONS (Spearman, n=45)
+  param-error vs decoder-target RMSE         rho=-0.291  p=0.0528  -> NO CLEAR ASSOCIATION
+  param-error vs COMSOL-target RMSE          rho=-0.183  p=0.2299  -> NO CLEAR ASSOCIATION
+  param-error vs cycle gap                   rho=-0.026  p=0.8642  -> NO CLEAR ASSOCIATION
+  predicted sigma vs decoder-target RMSE     rho=-0.223  p=0.1410  -> NO CLEAR ASSOCIATION
+  predicted sigma vs COMSOL-target RMSE      rho=-0.078  p=0.6124  -> NO CLEAR ASSOCIATION
+  predicted sigma vs cycle gap               rho=+0.117  p=0.4425  -> NO CLEAR ASSOCIATION
+
+COLLISION LINKAGE
+  Claim A (similar J-V, different params): SUPPORTED
+  Claim B (close in label space does not guarantee low forward error): SUPPORTED
+  Claim C (decoder accuracy does not imply physical consistency): SUPPORTED
+  inverse-ambiguity signature (large param err, small forward err): 14/45
+
+ARCHITECTURE (from VAE-v6.py)
+  loss = recon_loss + BETA*kl + LAMBDA*param_loss (BETA=0.001, LAMBDA=1.0).
+  No term constrains F_physics(theta_hat) ~= J_target.
+  => The decoder and parameter branches are jointly trained through a shared latent
+     representation, but no explicit physical cycle-consistency loss constrains the
+     inferred parameter set to reproduce the target J-V through the forward simulator.
+     Classification: architectural limitation / missing physical closure constraint
+     (NOT a software bug; not 'the model failed').
+
+SEVEN QUESTIONS
+  Q1 decoder reconstructs target J-V well?        -> PARTIALLY SUPPORTED   (full 1.8860 | 0-1.0V 0.0582 | >1.0V 3.9407)
+  Q2 COMSOL(pred) reconstructs full J-V?         -> NOT SUPPORTED   (full 2.6926 | 0-1.0V 0.4553 | >1.0V 5.1916)
+  Q3 COMSOL(pred) mainly fails >1.0 V?            -> SUPPORTED   (0.4553 vs 5.1916)
+  Q4 significant decoder-COMSOL cycle gap?        -> SUPPORTED   (median 2.5627, p=9.0135e-04)
+  Q5 explicit physical cycle-consistency constraint? -> NO
+  Q6 decoder accuracy proves physical correctness?   -> NOT SUPPORTED
+  Q7 evidence for forward/cycle-consistency training? -> SUPPORTED
+
+DECISION
+  -> Option B
+  The cycle gap is real and systematic (median 2.56 full / 0.47 in 0-1.0 V),
+  the decoder beats COMSOL(pred) significantly (Wilcoxon p<0.001), and in the
+  operating region the decoder is ~exact (0-1.0 V RMSE 0.058) while the inferred
+  params' physical forward pass is ~8x worse (0.455). A Stage II forward-surrogate
+  + cycle-consistency loss is strongly recommended to close the physical loop.
+  NOTE: the manuscript still needs the operating-region reframing below - the
+  decoder's full-curve (>1.0 V) reconstruction is also weak; 'accurate full J-V
+  reconstruction' cannot be claimed for either branch.
+
+PAPER WORDING BOUNDARY
+  Allowed: 'The VAE accurately reconstructs J-V curves in latent space, while the
+  inferred parameter set does not necessarily reproduce the complete J-V response
+  when propagated through the original drift-diffusion simulator.'
+  Allowed: 'This discrepancy reflects the absence of an explicit physical
+  cycle-consistency constraint in the current architecture.'
+  NOT allowed: 'the decoder is physically wrong' / 'the model failed'.

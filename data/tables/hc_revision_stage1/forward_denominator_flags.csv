@@ -1,0 +1,11 @@
+check,value
+min denom full,18.83627103105887
+min denom 0-1V,0.22338195184746598
+min denom >1V,0.5218226801277991
+n denom < 1e-8 full,0.0
+n denom < 1e-8 0-1V,0.0
+n denom < 1e-8 >1V,0.0
+min mean |target| >1V,0.15315861298652006
+n R2<0 full,0.0
+n R2<0 0-1V,0.0
+n R2<0 >1V,4.0

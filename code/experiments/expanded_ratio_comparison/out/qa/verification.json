@@ -1,0 +1,356 @@
+{
+  "n_checks": 70,
+  "n_fail": 0,
+  "checks": [
+    {
+      "check": "original: split sizes 16992/3641/3641",
+      "status": "PASS",
+      "detail": "(16992, 3641, 3641)"
+    },
+    {
+      "check": "original: train/val/test disjoint and cover all rows",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "original: manifest has one row per sample with a split label",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "original: parameter scaler equals MinMax fitted on TRAIN only",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "original: current scaler equals MinMax fitted on TRAIN only",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "expanded: split sizes 16992/3641/3641",
+      "status": "PASS",
+      "detail": "(16992, 3641, 3641)"
+    },
+    {
+      "check": "expanded: train/val/test disjoint and cover all rows",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "expanded: manifest has one row per sample with a split label",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "expanded: parameter scaler equals MinMax fitted on TRAIN only",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "expanded: current scaler equals MinMax fitted on TRAIN only",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261021__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261021__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261021__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261021__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261022__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261022__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261022__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261022__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261023__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261023__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261023__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261023__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261024__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261024__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261024__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261024__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261025__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261025__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_original_20261025__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_original_20261025__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261021__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261021__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261021__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261021__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261022__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261022__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261022__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261022__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261023__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261023__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261023__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261023__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261024__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261024__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261024__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261024__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261025__on_original.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261025__on_original.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "prediction file exists pred_expanded_20261025__on_expanded.csv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "pred_expanded_20261025__on_expanded.csv: rows equal the test split exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all table-B coordinate metrics reproduce from prediction files",
+      "status": "PASS",
+      "detail": "max abs diff 6.661e-16 over 720 values"
+    },
+    {
+      "check": "run original_20261021 completed",
+      "status": "PASS",
+      "detail": "epochs=572 best=521"
+    },
+    {
+      "check": "run original_20261022 completed",
+      "status": "PASS",
+      "detail": "epochs=585 best=534"
+    },
+    {
+      "check": "run original_20261023 completed",
+      "status": "PASS",
+      "detail": "epochs=473 best=422"
+    },
+    {
+      "check": "run original_20261024 completed",
+      "status": "PASS",
+      "detail": "epochs=545 best=494"
+    },
+    {
+      "check": "run original_20261025 completed",
+      "status": "PASS",
+      "detail": "epochs=401 best=350"
+    },
+    {
+      "check": "run expanded_20261021 completed",
+      "status": "PASS",
+      "detail": "epochs=317 best=266"
+    },
+    {
+      "check": "run expanded_20261022 completed",
+      "status": "PASS",
+      "detail": "epochs=503 best=452"
+    },
+    {
+      "check": "run expanded_20261023 completed",
+      "status": "PASS",
+      "detail": "epochs=500 best=449"
+    },
+    {
+      "check": "run expanded_20261024 completed",
+      "status": "PASS",
+      "detail": "epochs=429 best=378"
+    },
+    {
+      "check": "run expanded_20261025 completed",
+      "status": "PASS",
+      "detail": "epochs=451 best=400"
+    },
+    {
+      "check": "ten completed runs",
+      "status": "PASS",
+      "detail": "10"
+    },
+    {
+      "check": "seed 20261021: identical initial weights in both arms",
+      "status": "PASS",
+      "detail": "5e1352e08f59596e"
+    },
+    {
+      "check": "seed 20261022: identical initial weights in both arms",
+      "status": "PASS",
+      "detail": "aef398c9e54dc430"
+    },
+    {
+      "check": "seed 20261023: identical initial weights in both arms",
+      "status": "PASS",
+      "detail": "973358f4d2cf923a"
+    },
+    {
+      "check": "seed 20261024: identical initial weights in both arms",
+      "status": "PASS",
+      "detail": "0cd8becf1af00c47"
+    },
+    {
+      "check": "seed 20261025: identical initial weights in both arms",
+      "status": "PASS",
+      "detail": "f5c19fe8bc197dbe"
+    },
+    {
+      "check": "the five seeds give five distinct initial-weight fingerprints",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "figure fig02_skill_and_error.png present and non-trivial",
+      "status": "PASS",
+      "detail": "217097"
+    },
+    {
+      "check": "figure fig03_common_test_paired.png present and non-trivial",
+      "status": "PASS",
+      "detail": "207435"
+    }
+  ]
+}

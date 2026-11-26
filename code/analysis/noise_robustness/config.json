@@ -1,0 +1,17 @@
+{
+  "model_dir": "E:\\project\\work1\\data\\vae-v6\\vae-v6",
+  "npz": "E:\\project\\work1\\data\\dataset_normalized.npz",
+  "n_mc": 30,
+  "seed_base": 20260823,
+  "noise_levels": [
+    0.0,
+    0.002,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "noise_scale": "level*|Jsc| per-curve constant",
+  "sigma_convention": "clip(softplus(raw)+0.01,0.01,1.0)",
+  "j_renorm": "exact per-column MinMax recovered from (J_test_raw,J_test)",
+  "test_size": 15307
+}
