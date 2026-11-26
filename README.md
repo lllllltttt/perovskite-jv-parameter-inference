@@ -15,9 +15,11 @@ J–V curve (131 voltage points, 0–1.3 V) to nine drift–diffusion parameters
 per-parameter predictive scale, using 102,046 COMSOL curves retained from a
 200,000-curve Latin hypercube campaign.
 
-**Release status.** Code and documentation: tag `v1.0.1`. The large data and
-model archives are unchanged since `v1.0.0` and are downloaded from that release
-(same files, same checksums); v1.0.1 adds no new archive.
+**Release status.** Code and documentation: the latest tag (see
+[Releases](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/latest);
+at the time of writing `v1.0.3`). The large data and model archives are
+unchanged since `v1.0.0` and are downloaded from that release — same files, same
+checksums. No later tag adds a new archive.
 
 ---
 
@@ -63,7 +65,7 @@ requirements.txt, env/environment.yml
 ## Quick start (CPU only, ~30 s)
 
 ```bash
-git clone --branch v1.0.1 https://github.com/lllllltttt/perovskite-jv-parameter-inference.git
+git clone https://github.com/lllllltttt/perovskite-jv-parameter-inference.git
 cd perovskite-jv-parameter-inference
 pip install -r requirements.txt
 
@@ -93,8 +95,8 @@ the paper and its SI.
 
 ## Large downloads
 
-All 13 archives come from the **`v1.0.0` release**; they are unchanged in
-v1.0.1. Download links, sizes and contents:
+All 13 archives come from the **`v1.0.0` release**; no later tag changed them.
+Download links, sizes and contents:
 
 | Asset | Size | Contents |
 |---|---|---|
@@ -151,7 +153,7 @@ constants at the top and need `CSV_PATH` / `OUTPUT_DIR` set before use.
 `code/analysis/`, `code/experiments/`, `code/collision_revision_v2/` and most of
 `code/figures/build/`.  They are shipped exactly as they were run, with the
 original `E:/project/work1` or `/home/student2/...` constants at the top of each
-file, and they were **not** rewritten for v1.0.1 (rewriting them would change
+file, and they were **not** rewritten in the v1.0.x releases (rewriting them would change
 the code that produced published figures without re-running those figures).
 To use one, edit the three or four path constants at its head.  Their outputs
 are shipped alongside them.
@@ -218,8 +220,8 @@ file, and run it from MATLAB.
 
 No open-source licence has been chosen; see [`LICENSE_STATUS.md`](LICENSE_STATUS.md).
 Public availability does **not** grant an open-source licence.  No DOI has been
-registered — cite the repository and the tag (`v1.0.1` for code/docs, `v1.0.0`
-for the data archives), not a DOI.
+registered — cite the repository with its released tag for the code and docs,
+and `v1.0.0` for the data archives, not a DOI.
 
 ## Contact
 
