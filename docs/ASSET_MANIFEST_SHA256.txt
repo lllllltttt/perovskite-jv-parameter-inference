@@ -1,0 +1,19 @@
+# SHA-256 of the release archives.  They are NOT in the repository.
+# Download from the release page and verify with:
+#   python code/verify_manifest.py --assets <download dir>
+# assets: 13
+# Format: <sha256>  <bytes>  assets/<name>
+
+430b2a16714b0944fbf058ae96ed3d33f1df2ae30e2d6b6dfdf3fe4c7be0009b  11322843  assets/comsol_config.tar.gz
+738b15518ae6ee03a48325919dd8474c55293059559c5049d586b8519cdff490  185132223  assets/dataset_independent_153067.tar.gz
+4c262f7925415f8d8a8df92108d6bd259b0d6311b2eabd72310b6e3d1109a5ec  261886298  assets/dataset_main_102046.tar.gz
+18e264acbe939428a92244e25104d6c8c5eac3a82b1f6a82e480b15068bacd03  462043956  assets/exp1_benchmark.tar.gz
+3c9c573b75ac742490675301a027185ae7f22d0902498465747a1481a080eddd  135765973  assets/exp2_latent.tar.gz
+7b42d3836fc3052aea22a1b8301a84fee0318fd8c023aa02396e1e796f380016  175059985  assets/expanded_ratio.tar.gz
+f7a7cf2a1ad90996ff6bdbbf527edd4b6b09f44ace21e6d5120c4cd0bab7b352  133356304  assets/figure_source.tar.gz
+d1d1e53e07a033accf4cdb4927385f69a481ee86f56b603b0b5d632135f382c7  44294  assets/hc_revision_v2.tar.gz
+d62dc2c79ba15f209a1d6a9a60cebf6f4796a13270a8af65c622e3715cc29fa6  271912515  assets/independent_validation.tar.gz
+df6345222a162f33b5a904d1ad767096bd0f9a39bcb5fa692e45ddf383e20323  11877696  assets/interval_repair_A1.tar.gz
+c75ac003c04f5c718e3ea226d31af2ecf522427377e76f3de31e84c9808c18c0  18367648  assets/pipeline_scripts.tar.gz
+ba35efd423a7ec85214e1b6ab50d989c2c7e2c8ca9c192f3d0b9076f415746c6  117974872  assets/preprocessing_control.tar.gz
+1d0fa8447d91440dd0eed5b22327ad8998e50570a339e4fab303510f7389b812  9147991  assets/submission_v8_tables.tar.gz
