@@ -38,7 +38,7 @@ no value reported in the paper changed.
   experiment result tables that Tables S10–S13 are built from are now tracked.
 * `.gitattributes` pins `eol=lf` for text and marks binaries, so a fresh clone
   is byte-identical to the manifest on any platform.
-* Checksums split into `docs/FILE_MANIFEST_SHA256.txt` (1313 tracked files,
+* Checksums split into `docs/FILE_MANIFEST_SHA256.txt` (every tracked file,
   hashed from `git archive`) and `docs/ASSET_MANIFEST_SHA256.txt` (13 archives).
 * `code/verify_manifest.py` verifies a clone and downloaded archives and
   reports ok / eol / failed / missing separately.
