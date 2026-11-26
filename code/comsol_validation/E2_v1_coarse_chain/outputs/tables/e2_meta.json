@@ -1,0 +1,7 @@
+{
+  "ok_rows": 48,
+  "failed": 0,
+  "n_groups": 6,
+  "median_mesh_rmse_range": 32.24815860703631,
+  "median_tol_rmse_range": 1.6092755110454454e-06
+}

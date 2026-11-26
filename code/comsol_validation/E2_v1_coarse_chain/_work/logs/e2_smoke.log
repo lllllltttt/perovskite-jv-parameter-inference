@@ -1,0 +1,12 @@
+
+MATLAB is now connected to a COMSOL Multiphysics Server at localhost:2041
+
+Run the commands below to access the COMSOL ModelUtil commands:
+import com.comsol.model.util.*
+smoke runAll ok nelem=112 dt=15.1 s n=131
+Jma  min=-444.6585 max=23.2874 mean=-14.2205
+Jb   min=-444.6585 max=23.2874 mean=-14.2205 n=131
+diff same-order : rmse=1.191e-07 mA/cm2  max|d|=3.362e-07
+diff flip(Jb)   : rmse=1.361e+02 mA/cm2  max|d|=4.679e+02
+Jma[1]=23.287410 Jma[61]=22.399064 Jma[131]=-444.658509  Jb[1]=23.287410 Jb[61]=22.399064 Jb[131]=-444.658509
+e2_smoke done

@@ -1,0 +1,25 @@
+{
+  "n_archived_cases": 45,
+  "n_unique_test_indices": 45,
+  "all_indices_matched": true,
+  "decoder_voltage_grid_points": 131,
+  "comsol_voltage_grid_points": 131,
+  "max_abs_voltage_grid_difference_V": 2.220446049250313e-16,
+  "target_source": "J_test_raw (frozen test target) compared with COMSOL true-parameter J",
+  "max_abs_target_difference_mA": 4.381812743758928e-07,
+  "max_per_curve_target_rmse_mA": 1.346298295809476e-07,
+  "share_definition": "window SSE summed over all 45 matched cases divided by full-sweep SSE summed over the same 45 cases; not the mean of per-curve shares",
+  "same_45_decoder_physical_sse_share": {
+    "0to1V": 0.002917993980536298,
+    "gt1V": 0.9970820060194636
+  },
+  "same_45_decoder_normalized_sse_share": {
+    "0to1V": 0.9689360645818633,
+    "gt1V": 0.031063935418136852
+  },
+  "all_test_decoder_normalized_sse_share": {
+    "0to1V": 0.7631575591789139,
+    "gt1V": 0.23684244082108602
+  },
+  "note": "The archived target curves match the COMSOL true-parameter curves to numerical precision; the same 45 test indices are used for the decoder and COMSOL shares."
+}

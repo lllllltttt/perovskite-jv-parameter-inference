@@ -1,0 +1,15 @@
+paragraph,kind,target,description,chars_before,chars_after
+14,figure,Figure1.png,replace inline image (6.80 in wide),0,0
+21,figure,Figure2.png,replace [FIGURE 2 INSERTION] placeholder (6.80 in wide),290,0
+27,figure,Figure3.png,replace [FIGURE 3 INSERTION] placeholder (6.80 in wide),222,0
+34,figure,Figure4.png,replace inline image (6.80 in wide),0,0
+41,figure,Figure5.png,replace inline image (6.80 in wide),0,0
+18,text,,name the three lower individual-parameter correlations and cite Fig. S6,612,683
+24,text,,replace the withdrawn 280-fold / 72-fold example with the final pair selection rule and the measured 443-fold / 35-fold differences,551,731
+25,text,,"resolve F3-RESULTS: verified pair counts, baseline-normalised medians, permitted conclusion",536,1093
+28,text,,resolve F3-CAPTION: per-panel Figure 3 caption,887,1596
+35,text,,extend the Figure 4 caption with the panel (c) 0-1.0 V inset and its measured values,1119,1563
+42,text,,"fix the Figure 5 caption: noise-free 0 point, no bar in panel (e), and sigma_theta not 'scale'",1123,1155
+76,text,,"resolve F3-METHODS: back-fill the tie rule, the seed-42 random baseline, the tier rounding and the Figure 3 case-selection rule the caption points to",996,1974
+30,desup,,restore the 11 pt body size (drop the paragraph-wide superscript run property; literal superscript glyphs kept as they are) (7 vertAlign removed),501,501
+32,desup,,restore the 11 pt body size (drop the paragraph-wide superscript run property; literal superscript glyphs kept as they are) (5 vertAlign removed),532,532

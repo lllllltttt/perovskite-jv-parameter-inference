@@ -1,0 +1,32 @@
+LHS prior rows: 200000   DB-2 retained rows: 102046
+DB-2 rows exactly matching stored LHS draw: 0 / 102046
+  quantity  declared_lo  declared_hi      db2_min      db2_max  frac_inside  frac_at_low_edge
+  mu_n_pvk 4.500000e-07 2.200000e-03 4.560000e-07 2.230000e-03     0.999980          0.000000
+  mu_p_pvk 4.500000e-07 2.200000e-03 4.520000e-07 2.110000e-03     1.000000          0.000000
+ tau_n_pvk 4.500000e-10 2.200000e-02 4.780000e-10 2.210000e-02     0.999990          0.000000
+ tau_p_pvk 4.500000e-10 2.200000e-02 4.480000e-10 2.040000e-02     0.999990          0.000000
+Nc_eff_pvk 4.500000e+21 2.200000e+26 4.640000e+22 2.230000e+26     0.999961          0.000000
+Nv_eff_pvk 4.500000e+21 2.200000e+26 4.310000e+22 2.180000e+26     1.000000          0.000000
+   tau_ETL 1.000000e-12 1.000000e-08 1.000000e-12 1.000000e-08     1.000000          0.000617
+   tau_HTL 1.000000e-14 1.000000e-10 1.000000e-14 1.000000e-10     1.000000          0.000657
+     rad_c 1.000000e-12 1.000000e-09 1.000000e-12 1.000000e-09     1.000000          0.000568
+    pair source    coord          min          max  log10min  log10max  log10p50
+mobility  prior s_common 1.000016e-06 9.999960e-04 -5.999993 -3.000002 -4.500002
+mobility  prior  q_ratio 2.000221e-01 4.999984e+00 -0.698922  0.698969  0.414973
+mobility    DB2 s_common 9.993198e-07 1.001319e-03 -6.000296 -2.999427 -4.442048
+mobility    DB2  q_ratio 2.000000e-01 5.020243e+00 -0.698970  0.700725  0.411951
+lifetime  prior s_common 1.000023e-09 9.999666e-03 -8.999990 -2.000015 -5.500006
+lifetime  prior  q_ratio 2.000128e-01 4.999993e+00 -0.698942  0.698969  0.414973
+lifetime    DB2 s_common 9.993998e-10 1.001084e-02 -9.000261 -1.999529 -5.937455
+lifetime    DB2  q_ratio 1.993590e-01 5.023041e+00 -0.700364  0.700967  0.415376
+     DOS  prior s_common 1.000014e+22 9.999732e+25 22.000006 25.999988 23.999996
+     DOS  prior  q_ratio 2.000180e-01 4.999985e+00 -0.698931  0.698969  0.414973
+     DOS    DB2 s_common 6.979971e+22 1.001758e+26 22.843854 26.000763 24.968928
+     DOS    DB2  q_ratio 1.995590e-01 5.018727e+00 -0.699929  0.700594  0.410372
+
+DB-2 coordinate percentiles (log10 s ; log10 q):
+  mobility log10s prior[-5.97,-3.03] DB2[-5.97,-3.03]  | log10q prior[-0.61,0.69] DB2[-0.61,0.69]
+  lifetime log10s prior[-8.93,-2.07] DB2[-8.94,-2.08]  | log10q prior[-0.61,0.69] DB2[-0.60,0.69]
+  DOS      log10s prior[22.04,25.96] DB2[23.37,25.98]  | log10q prior[-0.61,0.69] DB2[-0.61,0.69]
+
+wrote E:\project\work1\supplementary_validation\audit\auditD_sq_distributions.png

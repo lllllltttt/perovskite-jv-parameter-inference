@@ -140,8 +140,45 @@ baseline used in Table S17b.
 
 ### `figure_source.tar.gz`
 `_frozen_preds.npz` (per-sample predictions, reconstructions, predictive scales and
-device observables for all 15,307 test curves) plus the per-figure value tables and the
-figure-composition decks.  See `docs/FIGURE_SOURCE_MAP.md`.
+device observables for all 15,307 test curves) plus the per-figure value tables, the
+composed SVG artwork and the PowerPoint composition decks.  See
+`docs/FIGURE_SOURCE_MAP.md`.
+
+### `comsol_config.tar.gz`
+`dmodel.xml` extracted from `1D_PSC_wen.mph` (geometry vertices, mesh Size features,
+`range(0,0.01,1.3)` sweep), the machine-readable device-configuration extract for
+Tables S9.1–S9.4 with its 16/16 QC table, the per-row 200,000-row database closure
+audit, and the contact-property probe log.
+
+### `pipeline_scripts.tar.gz`
+The complete original `script/` folder: `LHS.py` (sampler, seed 42, N = 200,000),
+`mat-csv.py` (MAT → CSV conversion and the four retention filters),
+`pre-process.py`, the VAE training/evaluation scripts, and the analysis scripts.
+
+### `submission_v8_tables.tar.gz`
+The SI's own source tables, including `T8.2_per_sample_full_precision.csv`, the only
+file that carries the global `Sample_ID` for all 45 forward-validation cases
+(e.g. test index 595 ↔ `Sample_ID` 117995).
+
+### `hc_revision_v2.tar.gz`
+The v2 revision-stage tables behind Tables S18c–S18e, including the same-45 decoder
+shares (0.9689 / 0.0311).  The v1 tables (which carry the all-15,307 shares
+0.763 / 0.237) are **not** the values used in the final SI.
+
+---
+
+## 3. Mapping a forward-validation case to a dataset row
+
+The 45-case cohort is labelled by **zero-based test index**.  To recover the
+dataset row:
+
+```
+test_index --(data/splits/split_indices_seed42.npz: idx_test)--> database row
+database row --(JV_database_...-2.csv: Sample_ID)--------------> Sample_ID
+```
+
+`data/tables/submission_v8/T8.2_per_sample_full_precision.csv` already contains both
+columns for the 45 cases; use it rather than recomputing the join.
 
 ---
 

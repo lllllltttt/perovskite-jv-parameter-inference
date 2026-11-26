@@ -1,0 +1,17 @@
+{
+  "n_groups": 6,
+  "mesh_size_factors": [
+    2.0,
+    1.41,
+    0.71,
+    0.5
+  ],
+  "tol_levels": [
+    0.0001,
+    1e-05,
+    1e-07
+  ],
+  "stol_frozen": 1e-06,
+  "solves_per_sample": 8,
+  "total_solves": 48
+}

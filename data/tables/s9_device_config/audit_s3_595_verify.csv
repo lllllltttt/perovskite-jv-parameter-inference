@@ -1,0 +1,17 @@
+check,expected,computed,ok
+median-case test_index = 595,595,595,True
+median-case cg rounds to 2.56,2.56,2.56,True
+control = median (same 595),595,595,True
+lowest id,12058,12058,True
+Q25 id,4077,4077,True
+Q75 id,695,695,True
+highest id,14499,14499,True
+Sample_ID(595) = 117995,117995,117995,True
+Jsc_t(595) finite,True,True,True
+Sample_00595_pred.mat exists,True,True,True
+Sample_00595_pred length 131,131,131,True
+595 pred curve == A2 archive row,b52f8dc6b33fcf7967f5efbaaa8dee74d863264d9d4f7ec2d5b927325719b206,b52f8dc6b33fcf7967f5efbaaa8dee74d863264d9d4f7ec2d5b927325719b206,True
+Sample_00595_true.mat exists,True,True,True
+Sample_00595_true length 131,131,131,True
+control full RMSE ~1.2e-7,1.19e-07,1.230051091388519e-07,True
+595 true curve == A2 archive row,6a727abdd90f168c362ffef729b27b730431a487fa927a8c8a3c8deae62db0bd,6a727abdd90f168c362ffef729b27b730431a487fa927a8c8a3c8deae62db0bd,True

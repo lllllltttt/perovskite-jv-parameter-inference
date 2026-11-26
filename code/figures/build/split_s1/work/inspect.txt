@@ -1,0 +1,952 @@
+=== per-axes child census ===
+  axes_1    n=68   {'g': 68}
+  axes_2    n=68   {'g': 68}
+  axes_3    n=68   {'g': 68}
+  axes_4    n=68   {'g': 68}
+  axes_5    n=68   {'g': 68}
+  axes_6    n=68   {'g': 68}
+  axes_7    n=68   {'g': 68}
+  axes_8    n=68   {'g': 68}
+  axes_9    n=68   {'g': 68}
+  axes_10   n=105  {'g': 105}
+  axes_11   n=6    {'g': 5, 'image': 1}
+
+=== every <text> node ===
+  axes_1     parent=text_1       text='0'                                transform=
+  axes_1     parent=text_2       text='500'                              transform=
+  axes_1     parent=text_3       text='1,000'                            transform=
+  axes_1     parent=text_4       text='1,500'                            transform=
+  axes_1     parent=text_5       text='2,000'                            transform=
+  axes_1     parent=text_6       text='2,500'                            transform=
+  axes_1     parent=text_7       text='Count'                            transform=matrix(6.12323e-17 -1 1 6.12323e-17 -79.7355
+  axes_1     parent=?            text='μ n'                              transform=
+  text_1     parent=text_1       text='0'                                transform=
+  text_2     parent=text_2       text='500'                              transform=
+  text_3     parent=text_3       text='1,000'                            transform=
+  text_4     parent=text_4       text='1,500'                            transform=
+  text_5     parent=text_5       text='2,000'                            transform=
+  text_6     parent=text_6       text='2,500'                            transform=
+  text_7     parent=text_7       text='Count'                            transform=matrix(6.12323e-17 -1 1 6.12323e-17 -79.7355
+  text_8     parent=?            text='μ n'                              transform=
+  axes_2     parent=?            text='μ p'                              transform=
+  text_9     parent=?            text='μ p'                              transform=
+  axes_3     parent=?            text='τ n'                              transform=
+  text_10    parent=?            text='τ n'                              transform=
+  axes_4     parent=text_11      text='0'                                transform=
+  axes_4     parent=text_12      text='500'                              transform=
+  axes_4     parent=text_13      text='1,000'                            transform=
+  axes_4     parent=text_14      text='1,500'                            transform=
+  axes_4     parent=text_15      text='2,000'                            transform=
+  axes_4     parent=text_16      text='2,500'                            transform=
+  axes_4     parent=text_17      text='Count'                            transform=matrix(6.12323e-17 -1 1 6.12323e-17 -243.266
+  axes_4     parent=?            text='τ p'                              transform=
+  text_11    parent=text_11      text='0'                                transform=
+  text_12    parent=text_12      text='500'                              transform=
+  text_13    parent=text_13      text='1,000'                            transform=
+  text_14    parent=text_14      text='1,500'                            transform=
+  text_15    parent=text_15      text='2,000'                            transform=
+  text_16    parent=text_16      text='2,500'                            transform=
+  text_17    parent=text_17      text='Count'                            transform=matrix(6.12323e-17 -1 1 6.12323e-17 -243.266
+  text_18    parent=?            text='τ p'                              transform=
+  axes_5     parent=?            text='N c'                              transform=
+  text_19    parent=?            text='N c'                              transform=
+  axes_6     parent=?            text='N v'                              transform=
+  text_20    parent=?            text='N v'                              transform=
+  axes_7     parent=text_21      text='−12'                              transform=
+  axes_7     parent=text_22      text='−11'                              transform=
+  axes_7     parent=text_23      text='−10'                              transform=
+  axes_7     parent=text_24      text='−9'                               transform=
+  axes_7     parent=text_25      text='−8'                               transform=
+  axes_7     parent=?            text='log() 10ETL τ'                    transform=
+  axes_7     parent=text_27      text='0'                                transform=
+  axes_7     parent=text_28      text='500'                              transform=
+  axes_7     parent=text_29      text='1,000'                            transform=
+  axes_7     parent=text_30      text='1,500'                            transform=
+  axes_7     parent=text_31      text='2,000'                            transform=
+  axes_7     parent=text_32      text='Count'                            transform=matrix(6.12323e-17 -1 1 6.12323e-17 -406.797
+  axes_7     parent=?            text='τ ETL'                            transform=
+  text_21    parent=text_21      text='−12'                              transform=
+  text_22    parent=text_22      text='−11'                              transform=
+  text_23    parent=text_23      text='−10'                              transform=
+  text_24    parent=text_24      text='−9'                               transform=
+  text_25    parent=text_25      text='−8'                               transform=
+  text_26    parent=?            text='log() 10ETL τ'                    transform=
+  text_27    parent=text_27      text='0'                                transform=
+  text_28    parent=text_28      text='500'                              transform=
+  text_29    parent=text_29      text='1,000'                            transform=
+  text_30    parent=text_30      text='1,500'                            transform=
+  text_31    parent=text_31      text='2,000'                            transform=
+  text_32    parent=text_32      text='Count'                            transform=matrix(6.12323e-17 -1 1 6.12323e-17 -406.797
+  text_33    parent=?            text='τ ETL'                            transform=
+  axes_8     parent=text_34      text='−14'                              transform=
+  axes_8     parent=text_35      text='−13'                              transform=
+  axes_8     parent=text_36      text='−12'                              transform=
+  axes_8     parent=text_37      text='−11'                              transform=
+  axes_8     parent=text_38      text='−10'                              transform=
+  axes_8     parent=?            text='log() 10HTL τ'                    transform=
+  axes_8     parent=?            text='τ HTL'                            transform=
+  text_34    parent=text_34      text='−14'                              transform=
+  text_35    parent=text_35      text='−13'                              transform=
+  text_36    parent=text_36      text='−12'                              transform=
+  text_37    parent=text_37      text='−11'                              transform=
+  text_38    parent=text_38      text='−10'                              transform=
+  text_39    parent=?            text='log() 10HTL τ'                    transform=
+  text_40    parent=?            text='τ HTL'                            transform=
+  axes_9     parent=text_41      text='−12'                              transform=
+  axes_9     parent=text_42      text='−11'                              transform=
+  axes_9     parent=text_43      text='−10'                              transform=
+  axes_9     parent=text_44      text='−9'                               transform=
+  axes_9     parent=?            text='log() 10rad r'                    transform=
+  axes_9     parent=?            text='r rad'                            transform=
+  text_41    parent=text_41      text='−12'                              transform=
+  text_42    parent=text_42      text='−11'                              transform=
+  text_43    parent=text_43      text='−10'                              transform=
+  text_44    parent=text_44      text='−9'                               transform=
+  text_45    parent=?            text='log() 10rad r'                    transform=
+  text_46    parent=?            text='r rad'                            transform=
+  axes_10    parent=?            text='μ n'                              transform=
+  axes_10    parent=?            text='μ p'                              transform=
+  axes_10    parent=?            text='τ n'                              transform=
+  axes_10    parent=?            text='τ p'                              transform=
+  axes_10    parent=?            text='N c'                              transform=
+  axes_10    parent=?            text='N v'                              transform=
+  axes_10    parent=?            text='τ ETL'                            transform=
+  axes_10    parent=?            text='τ HTL'                            transform=
+  axes_10    parent=?            text='r rad'                            transform=
+  axes_10    parent=?            text='μ n'                              transform=
+  axes_10    parent=?            text='μ p'                              transform=
+  axes_10    parent=?            text='τ n'                              transform=
+  axes_10    parent=?            text='τ p'                              transform=
+  axes_10    parent=?            text='N c'                              transform=
+  axes_10    parent=?            text='N v'                              transform=
+  axes_10    parent=?            text='τ ETL'                            transform=
+  axes_10    parent=?            text='τ HTL'                            transform=
+  axes_10    parent=?            text='r rad'                            transform=
+  axes_10    parent=text_65      text='1.00'                             transform=
+  axes_10    parent=text_66      text='0.94'                             transform=
+  axes_10    parent=text_67      text='-0.04'                            transform=
+  axes_10    parent=text_68      text='-0.04'                            transform=
+  axes_10    parent=text_69      text='-0.07'                            transform=
+  axes_10    parent=text_70      text='-0.07'                            transform=
+  axes_10    parent=text_71      text='-0.03'                            transform=
+  axes_10    parent=text_72      text='0.05'                             transform=
+  axes_10    parent=text_73      text='-0.00'                            transform=
+  axes_10    parent=text_74      text='0.94'                             transform=
+  axes_10    parent=text_75      text='1.00'                             transform=
+  axes_10    parent=text_76      text='-0.04'                            transform=
+  axes_10    parent=text_77      text='-0.04'                            transform=
+  axes_10    parent=text_78      text='-0.07'                            transform=
+  axes_10    parent=text_79      text='-0.07'                            transform=
+  axes_10    parent=text_80      text='-0.03'                            transform=
+  axes_10    parent=text_81      text='0.05'                             transform=
+  axes_10    parent=text_82      text='-0.01'                            transform=
+  axes_10    parent=text_83      text='-0.04'                            transform=
+  axes_10    parent=text_84      text='-0.04'                            transform=
+  axes_10    parent=text_85      text='1.00'                             transform=
+  axes_10    parent=text_86      text='0.99'                             transform=
+  axes_10    parent=text_87      text='0.14'                             transform=
+  axes_10    parent=text_88      text='0.15'                             transform=
+  axes_10    parent=text_89      text='-0.06'                            transform=
+  axes_10    parent=text_90      text='-0.02'                            transform=
+  axes_10    parent=text_91      text='0.07'                             transform=
+  axes_10    parent=text_92      text='-0.04'                            transform=
+  axes_10    parent=text_93      text='-0.04'                            transform=
+  axes_10    parent=text_94      text='0.99'                             transform=
+  axes_10    parent=text_95      text='1.00'                             transform=
+  axes_10    parent=text_96      text='0.14'                             transform=
+  axes_10    parent=text_97      text='0.15'                             transform=
+  axes_10    parent=text_98      text='-0.07'                            transform=
+  axes_10    parent=text_99      text='-0.01'                            transform=
+  axes_10    parent=text_100     text='0.07'                             transform=
+  axes_10    parent=text_101     text='-0.07'                            transform=
+  axes_10    parent=text_102     text='-0.07'                            transform=
+  axes_10    parent=text_103     text='0.14'                             transform=
+  axes_10    parent=text_104     text='0.14'                             transform=
+  axes_10    parent=text_105     text='1.00'                             transform=
+  axes_10    parent=text_106     text='0.90'                             transform=
+  axes_10    parent=text_107     text='0.08'                             transform=
+  axes_10    parent=text_108     text='0.10'                             transform=
+  axes_10    parent=text_109     text='-0.08'                            transform=
+  axes_10    parent=text_110     text='-0.07'                            transform=
+  axes_10    parent=text_111     text='-0.07'                            transform=
+  axes_10    parent=text_112     text='0.15'                             transform=
+  axes_10    parent=text_113     text='0.15'                             transform=
+  axes_10    parent=text_114     text='0.90'                             transform=
+  axes_10    parent=text_115     text='1.00'                             transform=
+  axes_10    parent=text_116     text='0.08'                             transform=
+  axes_10    parent=text_117     text='0.10'                             transform=
+  axes_10    parent=text_118     text='-0.08'                            transform=
+  axes_10    parent=text_119     text='-0.03'                            transform=
+  axes_10    parent=text_120     text='-0.03'                            transform=
+  axes_10    parent=text_121     text='-0.06'                            transform=
+  axes_10    parent=text_122     text='-0.07'                            transform=
+  axes_10    parent=text_123     text='0.08'                             transform=
+  axes_10    parent=text_124     text='0.08'                             transform=
+  axes_10    parent=text_125     text='1.00'                             transform=
+  axes_10    parent=text_126     text='-0.01'                            transform=
+  axes_10    parent=text_127     text='0.05'                             transform=
+  axes_10    parent=text_128     text='0.05'                             transform=
+  axes_10    parent=text_129     text='0.05'                             transform=
+  axes_10    parent=text_130     text='-0.02'                            transform=
+  axes_10    parent=text_131     text='-0.01'                            transform=
+  axes_10    parent=text_132     text='0.10'                             transform=
+  axes_10    parent=text_133     text='0.10'                             transform=
+  axes_10    parent=text_134     text='-0.01'                            transform=
+  axes_10    parent=text_135     text='1.00'                             transform=
+  axes_10    parent=text_136     text='0.02'                             transform=
+  axes_10    parent=text_137     text='-0.00'                            transform=
+  axes_10    parent=text_138     text='-0.01'                            transform=
+  axes_10    parent=text_139     text='0.07'                             transform=
+  axes_10    parent=text_140     text='0.07'                             transform=
+  axes_10    parent=text_141     text='-0.08'                            transform=
+  axes_10    parent=text_142     text='-0.08'                            transform=
+  axes_10    parent=text_143     text='0.05'                             transform=
+  axes_10    parent=text_144     text='0.02'                             transform=
+  axes_10    parent=text_145     text='1.00'                             transform=
+  text_47    parent=?            text='μ n'                              transform=
+  text_48    parent=?            text='μ p'                              transform=
+  text_49    parent=?            text='τ n'                              transform=
+  text_50    parent=?            text='τ p'                              transform=
+  text_51    parent=?            text='N c'                              transform=
+  text_52    parent=?            text='N v'                              transform=
+  text_53    parent=?            text='τ ETL'                            transform=
+  text_54    parent=?            text='τ HTL'                            transform=
+  text_55    parent=?            text='r rad'                            transform=
+  text_56    parent=?            text='μ n'                              transform=
+  text_57    parent=?            text='μ p'                              transform=
+  text_58    parent=?            text='τ n'                              transform=
+  text_59    parent=?            text='τ p'                              transform=
+  text_60    parent=?            text='N c'                              transform=
+  text_61    parent=?            text='N v'                              transform=
+  text_62    parent=?            text='τ ETL'                            transform=
+  text_63    parent=?            text='τ HTL'                            transform=
+  text_64    parent=?            text='r rad'                            transform=
+  text_65    parent=text_65      text='1.00'                             transform=
+  text_66    parent=text_66      text='0.94'                             transform=
+  text_67    parent=text_67      text='-0.04'                            transform=
+  text_68    parent=text_68      text='-0.04'                            transform=
+  text_69    parent=text_69      text='-0.07'                            transform=
+  text_70    parent=text_70      text='-0.07'                            transform=
+  text_71    parent=text_71      text='-0.03'                            transform=
+  text_72    parent=text_72      text='0.05'                             transform=
+  text_73    parent=text_73      text='-0.00'                            transform=
+  text_74    parent=text_74      text='0.94'                             transform=
+  text_75    parent=text_75      text='1.00'                             transform=
+  text_76    parent=text_76      text='-0.04'                            transform=
+  text_77    parent=text_77      text='-0.04'                            transform=
+  text_78    parent=text_78      text='-0.07'                            transform=
+  text_79    parent=text_79      text='-0.07'                            transform=
+  text_80    parent=text_80      text='-0.03'                            transform=
+  text_81    parent=text_81      text='0.05'                             transform=
+  text_82    parent=text_82      text='-0.01'                            transform=
+  text_83    parent=text_83      text='-0.04'                            transform=
+  text_84    parent=text_84      text='-0.04'                            transform=
+  text_85    parent=text_85      text='1.00'                             transform=
+  text_86    parent=text_86      text='0.99'                             transform=
+  text_87    parent=text_87      text='0.14'                             transform=
+  text_88    parent=text_88      text='0.15'                             transform=
+  text_89    parent=text_89      text='-0.06'                            transform=
+  text_90    parent=text_90      text='-0.02'                            transform=
+  text_91    parent=text_91      text='0.07'                             transform=
+  text_92    parent=text_92      text='-0.04'                            transform=
+  text_93    parent=text_93      text='-0.04'                            transform=
+  text_94    parent=text_94      text='0.99'                             transform=
+  text_95    parent=text_95      text='1.00'                             transform=
+  text_96    parent=text_96      text='0.14'                             transform=
+  text_97    parent=text_97      text='0.15'                             transform=
+  text_98    parent=text_98      text='-0.07'                            transform=
+  text_99    parent=text_99      text='-0.01'                            transform=
+  text_100   parent=text_100     text='0.07'                             transform=
+  text_101   parent=text_101     text='-0.07'                            transform=
+  text_102   parent=text_102     text='-0.07'                            transform=
+  text_103   parent=text_103     text='0.14'                             transform=
+  text_104   parent=text_104     text='0.14'                             transform=
+  text_105   parent=text_105     text='1.00'                             transform=
+  text_106   parent=text_106     text='0.90'                             transform=
+  text_107   parent=text_107     text='0.08'                             transform=
+  text_108   parent=text_108     text='0.10'                             transform=
+  text_109   parent=text_109     text='-0.08'                            transform=
+  text_110   parent=text_110     text='-0.07'                            transform=
+  text_111   parent=text_111     text='-0.07'                            transform=
+  text_112   parent=text_112     text='0.15'                             transform=
+  text_113   parent=text_113     text='0.15'                             transform=
+  text_114   parent=text_114     text='0.90'                             transform=
+  text_115   parent=text_115     text='1.00'                             transform=
+  text_116   parent=text_116     text='0.08'                             transform=
+  text_117   parent=text_117     text='0.10'                             transform=
+  text_118   parent=text_118     text='-0.08'                            transform=
+  text_119   parent=text_119     text='-0.03'                            transform=
+  text_120   parent=text_120     text='-0.03'                            transform=
+  text_121   parent=text_121     text='-0.06'                            transform=
+  text_122   parent=text_122     text='-0.07'                            transform=
+  text_123   parent=text_123     text='0.08'                             transform=
+  text_124   parent=text_124     text='0.08'                             transform=
+  text_125   parent=text_125     text='1.00'                             transform=
+  text_126   parent=text_126     text='-0.01'                            transform=
+  text_127   parent=text_127     text='0.05'                             transform=
+  text_128   parent=text_128     text='0.05'                             transform=
+  text_129   parent=text_129     text='0.05'                             transform=
+  text_130   parent=text_130     text='-0.02'                            transform=
+  text_131   parent=text_131     text='-0.01'                            transform=
+  text_132   parent=text_132     text='0.10'                             transform=
+  text_133   parent=text_133     text='0.10'                             transform=
+  text_134   parent=text_134     text='-0.01'                            transform=
+  text_135   parent=text_135     text='1.00'                             transform=
+  text_136   parent=text_136     text='0.02'                             transform=
+  text_137   parent=text_137     text='-0.00'                            transform=
+  text_138   parent=text_138     text='-0.01'                            transform=
+  text_139   parent=text_139     text='0.07'                             transform=
+  text_140   parent=text_140     text='0.07'                             transform=
+  text_141   parent=text_141     text='-0.08'                            transform=
+  text_142   parent=text_142     text='-0.08'                            transform=
+  text_143   parent=text_143     text='0.05'                             transform=
+  text_144   parent=text_144     text='0.02'                             transform=
+  text_145   parent=text_145     text='1.00'                             transform=
+  axes_11    parent=text_146     text='−1.0'                             transform=
+  axes_11    parent=text_147     text='−0.5'                             transform=
+  axes_11    parent=text_148     text='0.0'                              transform=
+  axes_11    parent=text_149     text='0.5'                              transform=
+  axes_11    parent=text_150     text='1.0'                              transform=
+  axes_11    parent=?            text='Spearman\xa0 ρ'                   transform=
+  text_146   parent=text_146     text='−1.0'                             transform=
+  text_147   parent=text_147     text='−0.5'                             transform=
+  text_148   parent=text_148     text='0.0'                              transform=
+  text_149   parent=text_149     text='0.5'                              transform=
+  text_150   parent=text_150     text='1.0'                              transform=
+  text_151   parent=?            text='Spearman\xa0 ρ'                   transform=
+  text_152   parent=text_152     text='(a)'                              transform=
+  text_153   parent=text_153     text='Retained parameter distributions' transform=
+  text_154   parent=text_154     text='N = 102,046'                      transform=
+  text_155   parent=text_155     text='(b)'                              transform=
+  text_156   parent=text_156     text='Pairwise log-space Spearman correl' transform=
+total <text>: 307
+
+=== text outside axes (figure-level) ===
+  text_1: '0'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '153.285'}
+  text_2: '500'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '130.253'}
+  text_3: '1,000'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '107.22'}
+  text_4: '1,500'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '84.1876'}
+  text_5: '2,000'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '61.1551'}
+  text_6: '2,500'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '38.1226'}
+  text_7: 'Count'  attrs={'text-anchor': 'middle', 'transform': 'matrix(6.12323e-17 -1 1 6.12323e-17 -79.7355 106.304)', 'x': '13.2841', 'y': '93.0196'}
+  text_8: 'μ n'  attrs={}
+  text_9: 'μ p'  attrs={}
+  text_10: 'τ n'  attrs={}
+  text_11: '0'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '316.816'}
+  text_12: '500'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '293.783'}
+  text_13: '1,000'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '270.751'}
+  text_14: '1,500'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '247.718'}
+  text_15: '2,000'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '224.686'}
+  text_16: '2,500'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '201.653'}
+  text_17: 'Count'  attrs={'text-anchor': 'middle', 'transform': 'matrix(6.12323e-17 -1 1 6.12323e-17 -243.266 269.835)', 'x': '13.2841', 'y': '256.55'}
+  text_18: 'τ p'  attrs={}
+  text_19: 'N c'  attrs={}
+  text_20: 'N v'  attrs={}
+  text_21: '−12'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '49.9476', 'y': '489.531'}
+  text_22: '−11'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '78.4861', 'y': '489.531'}
+  text_23: '−10'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '107.025', 'y': '489.531'}
+  text_24: '−9'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '135.563', 'y': '489.531'}
+  text_25: '−8'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '164.102', 'y': '489.531'}
+  text_26: 'log() 10ETL τ'  attrs={}
+  text_27: '0'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '480.347'}
+  text_28: '500'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '453.009'}
+  text_29: '1,000'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '425.671'}
+  text_30: '1,500'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '398.334'}
+  text_31: '2,000'  attrs={'fill': '#1A1A1A', 'text-anchor': 'end', 'x': '37.7399', 'y': '370.996'}
+  text_32: 'Count'  attrs={'text-anchor': 'middle', 'transform': 'matrix(6.12323e-17 -1 1 6.12323e-17 -406.797 433.365)', 'x': '13.2841', 'y': '420.081'}
+  text_33: 'τ ETL'  attrs={}
+  text_34: '−14'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '215.699', 'y': '489.531'}
+  text_35: '−13'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '244.238', 'y': '489.531'}
+  text_36: '−12'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '272.776', 'y': '489.531'}
+  text_37: '−11'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '301.315', 'y': '489.531'}
+  text_38: '−10'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '329.853', 'y': '489.531'}
+  text_39: 'log() 10HTL τ'  attrs={}
+  text_40: 'τ HTL'  attrs={}
+  text_41: '−12'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '381.451', 'y': '489.531'}
+  text_42: '−11'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '419.502', 'y': '489.531'}
+  text_43: '−10'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '457.553', 'y': '489.531'}
+  text_44: '−9'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '495.605', 'y': '489.531'}
+  text_45: 'log() 10rad r'  attrs={}
+  text_46: 'r rad'  attrs={}
+  text_47: 'μ n'  attrs={}
+  text_48: 'μ p'  attrs={}
+  text_49: 'τ n'  attrs={}
+  text_50: 'τ p'  attrs={}
+  text_51: 'N c'  attrs={}
+  text_52: 'N v'  attrs={}
+  text_53: 'τ ETL'  attrs={}
+  text_54: 'τ HTL'  attrs={}
+  text_55: 'r rad'  attrs={}
+  text_56: 'μ n'  attrs={}
+  text_57: 'μ p'  attrs={}
+  text_58: 'τ n'  attrs={}
+  text_59: 'τ p'  attrs={}
+  text_60: 'N c'  attrs={}
+  text_61: 'N v'  attrs={}
+  text_62: 'τ ETL'  attrs={}
+  text_63: 'τ HTL'  attrs={}
+  text_64: 'r rad'  attrs={}
+  text_65: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '559.833', 'y': '57.8858'}
+  text_66: '0.94'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '600.695', 'y': '57.8858'}
+  text_67: '-0.04'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '641.557', 'y': '57.8858'}
+  text_68: '-0.04'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '682.419', 'y': '57.8858'}
+  text_69: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '723.281', 'y': '57.8858'}
+  text_70: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '764.143', 'y': '57.8858'}
+  text_71: '-0.03'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '805.005', 'y': '57.8858'}
+  text_72: '0.05'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '845.867', 'y': '57.8858'}
+  text_73: '-0.00'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '886.729', 'y': '57.8858'}
+  text_74: '0.94'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '559.833', 'y': '98.7478'}
+  text_75: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '600.695', 'y': '98.7478'}
+  text_76: '-0.04'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '641.557', 'y': '98.7478'}
+  text_77: '-0.04'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '682.419', 'y': '98.7478'}
+  text_78: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '723.281', 'y': '98.7478'}
+  text_79: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '764.143', 'y': '98.7478'}
+  text_80: '-0.03'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '805.005', 'y': '98.7478'}
+  text_81: '0.05'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '845.867', 'y': '98.7478'}
+  text_82: '-0.01'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '886.729', 'y': '98.7478'}
+  text_83: '-0.04'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '559.833', 'y': '139.61'}
+  text_84: '-0.04'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '600.695', 'y': '139.61'}
+  text_85: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '641.557', 'y': '139.61'}
+  text_86: '0.99'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '682.419', 'y': '139.61'}
+  text_87: '0.14'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '723.281', 'y': '139.61'}
+  text_88: '0.15'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '764.143', 'y': '139.61'}
+  text_89: '-0.06'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '805.005', 'y': '139.61'}
+  text_90: '-0.02'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '845.867', 'y': '139.61'}
+  text_91: '0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '886.729', 'y': '139.61'}
+  text_92: '-0.04'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '559.833', 'y': '180.472'}
+  text_93: '-0.04'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '600.695', 'y': '180.472'}
+  text_94: '0.99'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '641.557', 'y': '180.472'}
+  text_95: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '682.419', 'y': '180.472'}
+  text_96: '0.14'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '723.281', 'y': '180.472'}
+  text_97: '0.15'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '764.143', 'y': '180.472'}
+  text_98: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '805.005', 'y': '180.472'}
+  text_99: '-0.01'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '845.867', 'y': '180.472'}
+  text_100: '0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '886.729', 'y': '180.472'}
+  text_101: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '559.833', 'y': '221.334'}
+  text_102: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '600.695', 'y': '221.334'}
+  text_103: '0.14'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '641.557', 'y': '221.334'}
+  text_104: '0.14'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '682.419', 'y': '221.334'}
+  text_105: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '723.281', 'y': '221.334'}
+  text_106: '0.90'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '764.143', 'y': '221.334'}
+  text_107: '0.08'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '805.005', 'y': '221.334'}
+  text_108: '0.10'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '845.867', 'y': '221.334'}
+  text_109: '-0.08'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '886.729', 'y': '221.334'}
+  text_110: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '559.833', 'y': '262.196'}
+  text_111: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '600.695', 'y': '262.196'}
+  text_112: '0.15'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '641.557', 'y': '262.196'}
+  text_113: '0.15'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '682.419', 'y': '262.196'}
+  text_114: '0.90'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '723.281', 'y': '262.196'}
+  text_115: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '764.143', 'y': '262.196'}
+  text_116: '0.08'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '805.005', 'y': '262.196'}
+  text_117: '0.10'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '845.867', 'y': '262.196'}
+  text_118: '-0.08'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '886.729', 'y': '262.196'}
+  text_119: '-0.03'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '559.833', 'y': '303.058'}
+  text_120: '-0.03'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '600.695', 'y': '303.058'}
+  text_121: '-0.06'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '641.557', 'y': '303.058'}
+  text_122: '-0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '682.419', 'y': '303.058'}
+  text_123: '0.08'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '723.281', 'y': '303.058'}
+  text_124: '0.08'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '764.143', 'y': '303.058'}
+  text_125: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '805.005', 'y': '303.058'}
+  text_126: '-0.01'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '845.867', 'y': '303.058'}
+  text_127: '0.05'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '886.729', 'y': '303.058'}
+  text_128: '0.05'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '559.833', 'y': '343.92'}
+  text_129: '0.05'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '600.695', 'y': '343.92'}
+  text_130: '-0.02'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '641.557', 'y': '343.92'}
+  text_131: '-0.01'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '682.419', 'y': '343.92'}
+  text_132: '0.10'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '723.281', 'y': '343.92'}
+  text_133: '0.10'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '764.143', 'y': '343.92'}
+  text_134: '-0.01'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '805.005', 'y': '343.92'}
+  text_135: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '845.867', 'y': '343.92'}
+  text_136: '0.02'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '886.729', 'y': '343.92'}
+  text_137: '-0.00'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '559.833', 'y': '384.782'}
+  text_138: '-0.01'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '600.695', 'y': '384.782'}
+  text_139: '0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '641.557', 'y': '384.782'}
+  text_140: '0.07'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '682.419', 'y': '384.782'}
+  text_141: '-0.08'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '723.281', 'y': '384.782'}
+  text_142: '-0.08'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '764.143', 'y': '384.782'}
+  text_143: '0.05'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '805.005', 'y': '384.782'}
+  text_144: '0.02'  attrs={'fill': '#1A1A1A', 'text-anchor': 'middle', 'x': '845.867', 'y': '384.782'}
+  text_145: '1.00'  attrs={'fill': '#FFFFFF', 'text-anchor': 'middle', 'x': '886.729', 'y': '384.782'}
+  text_146: '−1.0'  attrs={'x': '935.76', 'y': '406.06'}
+  text_147: '−0.5'  attrs={'x': '935.76', 'y': '314.12'}
+  text_148: '0.0'  attrs={'x': '935.76', 'y': '222.181'}
+  text_149: '0.5'  attrs={'x': '935.76', 'y': '130.241'}
+  text_150: '1.0'  attrs={'x': '935.76', 'y': '38.3015'}
+  text_151: 'Spearman\xa0 ρ'  attrs={}
+  text_152: '(a)'  attrs={'fill': '#1A1A1A', 'x': '44.2399', 'y': '15.2077'}
+  text_153: 'Retained parameter distributions'  attrs={'fill': '#1A1A1A', 'x': '72.3199', 'y': '14.3578'}
+  text_154: 'N = 102,046'  attrs={'fill': '#555555', 'x': '315.68', 'y': '13.2841'}
+  text_155: '(b)'  attrs={'fill': '#1A1A1A', 'x': '539.402', 'y': '15.2077'}
+  text_156: 'Pairwise log-space Spearman correlation'  attrs={'fill': '#1A1A1A', 'x': '567.482', 'y': '14.4797'}
+
+=== <image> elements ===
+  id=imagefa9cc3ee70 parent=None x=539.402 y=-35.2765 w=367.92 h=367.92 href=data:image/png;base64,iVBORw0KGgoAAAANSU
+  id=image902f0ce13f parent=axes_11 x=907.2 y=-34.56 w=21.6 h=367.92 href=data:image/png;base64,iVBORw0KGgoAAAANSU
+
+=== defs content ===
+  defs under root: []
+  defs under root: ['clipPath', 'clipPath', 'clipPath', 'clipPath', 'clipPath', 'clipPath', 'clipPath', 'clipPath', 'clipPath', 'clipPath']
+  defs under line2d_1: ['path']
+  defs under line2d_5: ['path']
+  defs under line2d_90: ['path']
+
+=== axes_10 (heatmap) tree ===
+<g> axes_10 n=105
+  <g> patch_587 n=1
+    <path>
+  <g> n=1
+    <image> imagefa9cc3ee70
+  <g> matplotlib.axis_19 n=9
+    <g> xtick_39 n=2
+      <g> line2d_56
+      <g> text_47 n=1
+    <g> xtick_40 n=2
+      <g> line2d_57
+      <g> text_48 n=1
+    <g> xtick_41 n=2
+      <g> line2d_58
+      <g> text_49 n=1
+    <g> xtick_42 n=2
+      <g> line2d_59
+      <g> text_50 n=1
+    <g> xtick_43 n=2
+      <g> line2d_60
+      <g> text_51 n=1
+    <g> xtick_44 n=2
+      <g> line2d_61
+      <g> text_52 n=1
+    <g> xtick_45 n=2
+      <g> line2d_62
+      <g> text_53 n=1
+    <g> xtick_46 n=2
+      <g> line2d_63
+      <g> text_54 n=1
+    <g> xtick_47 n=2
+      <g> line2d_64
+      <g> text_55 n=1
+  <g> matplotlib.axis_20 n=9
+    <g> ytick_52 n=2
+      <g> line2d_65
+      <g> text_56 n=1
+    <g> ytick_53 n=2
+      <g> line2d_66
+      <g> text_57 n=1
+    <g> ytick_54 n=2
+      <g> line2d_67
+      <g> text_58 n=1
+    <g> ytick_55 n=2
+      <g> line2d_68
+      <g> text_59 n=1
+    <g> ytick_56 n=2
+      <g> line2d_69
+      <g> text_60 n=1
+    <g> ytick_57 n=2
+      <g> line2d_70
+      <g> text_61 n=1
+    <g> ytick_58 n=2
+      <g> line2d_71
+      <g> text_62 n=1
+    <g> ytick_59 n=2
+      <g> line2d_72
+      <g> text_63 n=1
+    <g> ytick_60 n=2
+      <g> line2d_73
+      <g> text_64 n=1
+  <g> line2d_74 n=1
+    <path>
+  <g> line2d_75 n=1
+    <path>
+  <g> line2d_76 n=1
+    <path>
+  <g> line2d_77 n=1
+    <path>
+  <g> line2d_78 n=1
+    <path>
+  <g> line2d_79 n=1
+    <path>
+  <g> line2d_80 n=1
+    <path>
+  <g> line2d_81 n=1
+    <path>
+  <g> line2d_82 n=1
+    <path>
+  <g> line2d_83 n=1
+    <path>
+  <g> line2d_84 n=1
+    <path>
+  <g> line2d_85 n=1
+    <path>
+  <g> line2d_86 n=1
+    <path>
+  <g> line2d_87 n=1
+    <path>
+  <g> line2d_88 n=1
+    <path>
+  <g> line2d_89 n=1
+    <path>
+  <g> patch_588 n=1
+    <path>
+  <g> patch_589 n=1
+    <path>
+  <g> patch_590 n=1
+    <path>
+  <g> patch_591 n=1
+    <path>
+  <g> text_65 n=1
+    <text>
+  <g> text_66 n=1
+    <text>
+  <g> text_67 n=1
+    <text>
+  <g> text_68 n=1
+    <text>
+  <g> text_69 n=1
+    <text>
+  <g> text_70 n=1
+    <text>
+  <g> text_71 n=1
+    <text>
+  <g> text_72 n=1
+    <text>
+  <g> text_73 n=1
+    <text>
+  <g> text_74 n=1
+    <text>
+  <g> text_75 n=1
+    <text>
+  <g> text_76 n=1
+    <text>
+  <g> text_77 n=1
+    <text>
+  <g> text_78 n=1
+    <text>
+  <g> text_79 n=1
+    <text>
+  <g> text_80 n=1
+    <text>
+  <g> text_81 n=1
+    <text>
+  <g> text_82 n=1
+    <text>
+  <g> text_83 n=1
+    <text>
+  <g> text_84 n=1
+    <text>
+  <g> text_85 n=1
+    <text>
+  <g> text_86 n=1
+    <text>
+  <g> text_87 n=1
+    <text>
+  <g> text_88 n=1
+    <text>
+  <g> text_89 n=1
+    <text>
+  <g> text_90 n=1
+    <text>
+  <g> text_91 n=1
+    <text>
+  <g> text_92 n=1
+    <text>
+  <g> text_93 n=1
+    <text>
+  <g> text_94 n=1
+    <text>
+  <g> text_95 n=1
+    <text>
+  <g> text_96 n=1
+    <text>
+  <g> text_97 n=1
+    <text>
+  <g> text_98 n=1
+    <text>
+  <g> text_99 n=1
+    <text>
+  <g> text_100 n=1
+    <text>
+  <g> text_101 n=1
+    <text>
+  <g> text_102 n=1
+    <text>
+  <g> text_103 n=1
+    <text>
+  <g> text_104 n=1
+    <text>
+  <g> text_105 n=1
+    <text>
+  <g> text_106 n=1
+    <text>
+  <g> text_107 n=1
+    <text>
+  <g> text_108 n=1
+    <text>
+  <g> text_109 n=1
+    <text>
+  <g> text_110 n=1
+    <text>
+  <g> text_111 n=1
+    <text>
+  <g> text_112 n=1
+    <text>
+  <g> text_113 n=1
+    <text>
+  <g> text_114 n=1
+    <text>
+  <g> text_115 n=1
+    <text>
+  <g> text_116 n=1
+    <text>
+  <g> text_117 n=1
+    <text>
+  <g> text_118 n=1
+    <text>
+  <g> text_119 n=1
+    <text>
+  <g> text_120 n=1
+    <text>
+  <g> text_121 n=1
+    <text>
+  <g> text_122 n=1
+    <text>
+  <g> text_123 n=1
+    <text>
+  <g> text_124 n=1
+    <text>
+  <g> text_125 n=1
+    <text>
+  <g> text_126 n=1
+    <text>
+  <g> text_127 n=1
+    <text>
+  <g> text_128 n=1
+    <text>
+  <g> text_129 n=1
+    <text>
+  <g> text_130 n=1
+    <text>
+  <g> text_131 n=1
+    <text>
+  <g> text_132 n=1
+    <text>
+  <g> text_133 n=1
+    <text>
+  <g> text_134 n=1
+    <text>
+  <g> text_135 n=1
+    <text>
+  <g> text_136 n=1
+    <text>
+  <g> text_137 n=1
+    <text>
+  <g> text_138 n=1
+    <text>
+  <g> text_139 n=1
+    <text>
+  <g> text_140 n=1
+    <text>
+  <g> text_141 n=1
+    <text>
+  <g> text_142 n=1
+    <text>
+  <g> text_143 n=1
+    <text>
+  <g> text_144 n=1
+    <text>
+  <g> text_145 n=1
+    <text>
+
+=== axes_11 (colorbar) tree ===
+<g> axes_11 n=6
+  <g> patch_592 n=1
+    <path>
+  <image> image902f0ce13f
+  <g> matplotlib.axis_21
+  <g> matplotlib.axis_22 n=6
+    <g> ytick_61 n=2
+      <g> line2d_90 n=2
+      <g> text_146 n=1
+    <g> ytick_62 n=2
+      <g> line2d_91 n=1
+      <g> text_147 n=1
+    <g> ytick_63 n=2
+      <g> line2d_92 n=1
+      <g> text_148 n=1
+    <g> ytick_64 n=2
+      <g> line2d_93 n=1
+      <g> text_149 n=1
+    <g> ytick_65 n=2
+      <g> line2d_94 n=1
+      <g> text_150 n=1
+    <g> text_151 n=1
+      <g> n=1
+  <g> LineCollection_1
+  <g> patch_593 n=1
+    <path>
+
+=== axes_1 tree ===
+<g> axes_1 n=68
+  <g> patch_2 n=1
+    <path>
+  <g> matplotlib.axis_1 n=4
+    <g> xtick_1 n=1
+      <g> line2d_1 n=2
+    <g> xtick_2 n=1
+      <g> line2d_2 n=1
+    <g> xtick_3 n=1
+      <g> line2d_3 n=1
+    <g> xtick_4 n=1
+      <g> line2d_4 n=1
+  <g> matplotlib.axis_2 n=7
+    <g> ytick_1 n=2
+      <g> line2d_5 n=2
+      <g> text_1 n=1
+    <g> ytick_2 n=2
+      <g> line2d_6 n=1
+      <g> text_2 n=1
+    <g> ytick_3 n=2
+      <g> line2d_7 n=1
+      <g> text_3 n=1
+    <g> ytick_4 n=2
+      <g> line2d_8 n=1
+      <g> text_4 n=1
+    <g> ytick_5 n=2
+      <g> line2d_9 n=1
+      <g> text_5 n=1
+    <g> ytick_6 n=2
+      <g> line2d_10 n=1
+      <g> text_6 n=1
+    <g> text_7 n=1
+      <text>
+  <g> patch_3 n=1
+    <path>
+  <g> patch_4 n=1
+    <path>
+  <g> patch_5 n=1
+    <path>
+  <g> patch_6 n=1
+    <path>
+  <g> patch_7 n=1
+    <path>
+  <g> patch_8 n=1
+    <path>
+  <g> patch_9 n=1
+    <path>
+  <g> patch_10 n=1
+    <path>
+  <g> patch_11 n=1
+    <path>
+  <g> patch_12 n=1
+    <path>
+  <g> patch_13 n=1
+    <path>
+  <g> patch_14 n=1
+    <path>
+  <g> patch_15 n=1
+    <path>
+  <g> patch_16 n=1
+    <path>
+  <g> patch_17 n=1
+    <path>
+  <g> patch_18 n=1
+    <path>
+  <g> patch_19 n=1
+    <path>
+  <g> patch_20 n=1
+    <path>
+  <g> patch_21 n=1
+    <path>
+  <g> patch_22 n=1
+    <path>
+  <g> patch_23 n=1
+    <path>
+  <g> patch_24 n=1
+    <path>
+  <g> patch_25 n=1
+    <path>
+  <g> patch_26 n=1
+    <path>
+  <g> patch_27 n=1
+    <path>
+  <g> patch_28 n=1
+    <path>
+  <g> patch_29 n=1
+    <path>
+  <g> patch_30 n=1
+    <path>
+  <g> patch_31 n=1
+    <path>
+  <g> patch_32 n=1
+    <path>
+  <g> patch_33 n=1
+    <path>
+  <g> patch_34 n=1
+    <path>
+  <g> patch_35 n=1
+    <path>
+  <g> patch_36 n=1
+    <path>
+  <g> patch_37 n=1
+    <path>
+  <g> patch_38 n=1
+    <path>
+  <g> patch_39 n=1
+    <path>
+  <g> patch_40 n=1
+    <path>
+  <g> patch_41 n=1
+    <path>
+  <g> patch_42 n=1
+    <path>
+  <g> patch_43 n=1
+    <path>
+  <g> patch_44 n=1
+    <path>
+  <g> patch_45 n=1
+    <path>
+  <g> patch_46 n=1
+    <path>
+  <g> patch_47 n=1
+    <path>
+  <g> patch_48 n=1
+    <path>
+  <g> patch_49 n=1
+    <path>
+  <g> patch_50 n=1
+    <path>
+  <g> patch_51 n=1
+    <path>
+  <g> patch_52 n=1
+    <path>
+  <g> patch_53 n=1
+    <path>
+  <g> patch_54 n=1
+    <path>
+  <g> patch_55 n=1
+    <path>
+  <g> patch_56 n=1
+    <path>
+  <g> patch_57 n=1
+    <path>
+  <g> patch_58 n=1
+    <path>
+  <g> patch_59 n=1
+    <path>
+  <g> patch_60 n=1
+    <path>
+  <g> patch_61 n=1
+    <path>
+  <g> patch_62 n=1
+    <path>
+  <g> patch_63 n=1
+    <path>
+  <g> patch_64 n=1
+    <path>
+  <g> patch_65 n=1
+    <path>
+  <g> patch_66 n=1
+    <path>
+  <g> text_8 n=1
+    <g> n=1
+      <text> n=2
+
+=== distinct styles/colours ===

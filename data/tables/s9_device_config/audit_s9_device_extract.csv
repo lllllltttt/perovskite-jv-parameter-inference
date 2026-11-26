@@ -1,0 +1,15 @@
+scope,id,label,entities,domains,params,cite,ok
+material,mat1,C60,"7,5",,(domain: S9.1),S9.1,True
+material,mat2,PVK,"7,3",,(domain: S9.1),S9.1,True
+material,mat3,HTL,"7,1",,(domain: S9.1),S9.1,True
+material,mat4,SnO2,"7,6",,(domain: S9.1),S9.1,True
+material,mat5,C60&PVK,"7,4",,(domain: S9.1),S9.1,True
+material,mat6,HTL&PVK,"7,2",,(domain: S9.1),S9.1,True
+feature,adm1,HTL,"7,1",,NAc=1.8e18[1/cm^3]; domain=[1]; impurityType=acceptor,S9.1 HTL doping,True
+feature,adm2,C60,"7,4,5",,"NDc=1e17[1/cm^3]; domain=[4, 5]; impurityType=donor",S9.1 C60 doping (domains 4/5),True
+feature,adm3,SnO2,"7,6",,NDc=1e16[1/cm^3]; domain=[6]; impurityType=donor,S9.1 SnO2 doping,True
+feature,mc1,Ag,"-7,-1,7",,ContactType=ohmic; SpecifyBarrierHeight=ideal; SpecifyUsing=richardsons; TerminalName=1; V0=0[V],S9.4 Ag,True
+feature,mc2,FTO,"-7,-1,1",,ContactType=ohmic; SpecifyBarrierHeight=ideal; SpecifyUsing=richardsons; TerminalName=2; V0=V_app,S9.4 FTO,True
+feature,dir1,直接复合 1,"7,3",,C=rad_c; domain=[3],S9.3 radiative on PVK,True
+feature,udg1,用户定义产生 1,"7,3",,Gn=G_pvk; Gp=G_pvk; domain=[3],S9.3 generation on PVK,True
+feature,tar1,陷阱辅助复合 1,"7,1,2,3,4,5,6",,"Delta_Et=0[V]; E0in=0[V]; SpecifyNeutralEnergyLevel=Midgap; domain=[1, 2, 3, 4, 5, 6]",S9.3 midgap SRH six domains,True

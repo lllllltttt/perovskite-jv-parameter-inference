@@ -1,0 +1,20 @@
+cohort test-indices uniquely mapped to DB-2 row: 45 / 45
+stored Jsc_t == raw Jsc (abs): True
+stored Voc_t == grid-node voc: True
+stored Voc_t == interp voc: False
+max |stored_voc - interp|: 0.00970800000000005
+max |stored_ff - interp_ff|: 0.005409778253608222
+stored PCE == grid PCE: True
+ test_index  raw_log10_rmse  norm_log10_rmse   stored  equals_raw  equals_norm
+      12058        0.716356         0.124938 0.716356        True        False
+       4077        1.065694         0.154440 1.065694        True        False
+        595        0.458088         0.140807 0.458088        True        False
+        695        0.721442         0.170966 0.721442        True        False
+      14499        1.112783         0.238576 1.112783        True        False
+        595        0.458088         0.140807 0.458088        True        False
+ test_index  n_db_cand  db_row  lhs_sample_id   Jsc_raw  jsc_grid  voc_grid  ff_grid  pce_grid  voc_interp  ff_interp  pce_interp  stored_Jsc_t  stored_Voc_t  stored_FF_t  stored_PCE_t  stored_param_rmse
+        595          1   60145       117995.0  3.169725  3.169725      1.01 0.261042  0.835704    1.000917   0.263411    0.835704      3.169725          1.01     0.261042      0.835704           0.458088
+        695          1   75704       148302.0 24.062380 24.062380      1.21 0.723164 21.055273    1.203177   0.727265   21.055273     24.062380          1.21     0.723164     21.055273           0.721442
+       4077          1   56253       110449.0 24.068121 24.068121      1.26 0.605341 18.357472    1.255680   0.607424   18.357472     24.068121          1.26     0.605341     18.357472           1.065694
+      12058          1   26759        52446.0 23.945825 23.945825      1.17 0.586775 16.439446    1.167119   0.588223   16.439446     23.945825          1.17     0.586775     16.439446           0.716356
+      14499          1   78998       154812.0 24.062846 24.062846      1.05 0.756456 19.112619    1.046258   0.759162   19.112619     24.062846          1.05     0.756456     19.112619           1.112783

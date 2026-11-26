@@ -1,0 +1,11 @@
+[E2 inverse v3] pure inference over 66 existing curves; 0 COMSOL solves
+run 2026-09-08: python scripts/e2v3_inverse_repair.py
+inputs (read-only): v1 E2 curves row_*.csv (48) + v2 E2 curves (18);
+  frozen scalers/encoder/param_head; data/dataset_normalized.npz (window sub voc)
+fixes: z=d_mu_norm/sigma (z_ref/z_current split); per-param denorm
+  mu_log10=mu_norm*R+Lmin, sigma_log10=sigma_norm*R, d_mu_log10=d_mu_norm*R,
+  mu_point_phys=10**mu_log10; tol separated to same-mesh direct pairs
+key: sigma clip hits 0/66; tol 0/6 curves (4 same-mesh pairs); fine mesh
+  10/12 curves but PER-PARAM max|z_ref| 0.3-0.7 for ALL params -> round-2
+  'good params <=0.04sigma' refuted (was raw |d_mu| from buggy z=d col);
+  window-substitution attribution 6/6 follows >1V-tail parent

@@ -86,17 +86,20 @@ All files are attached to the release
 [`v1.0.0`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/tag/v1.0.0).
 SHA-256 values for every asset are in `docs/FILE_MANIFEST_SHA256.txt`.
 
-| Asset | Size (packed) | Contents |
+| Asset | Size | Contents |
 |---|---|---|
-| [`dataset_main_102046.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/dataset_main_102046.tar.gz) | — | The 102,046-curve retained dataset, the 200,000-row LHS design, preprocessed arrays and both scalers |
-| [`dataset_independent_153067.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/dataset_independent_153067.tar.gz) | — | The separately generated 153,067-curve same-domain cohort (Table S14) |
-| [`exp1_benchmark.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/exp1_benchmark.tar.gz) | — | Leakage-free multi-seed benchmark, incl. 15 trained models (Table S13) |
-| [`exp2_latent.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/exp2_latent.tar.gz) | — | Latent-uncertainty decomposition, 500 draws (Table S12) |
-| [`expanded_ratio.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/expanded_ratio.tar.gz) | — | Two-arm ratio-range comparison, both arms' data and ten models (Tables S19–S25, Figs. S9–S11) |
-| [`preprocessing_control.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/preprocessing_control.tar.gz) | — | H/L/T preprocessing-scope control runs (Tables S15–S17) |
-| [`interval_repair_A1.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/interval_repair_A1.tar.gz) | — | Empirical-quantile interval baseline (Table S17b) |
-| [`independent_validation.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/independent_validation.tar.gz) | — | Preprocessed independent cohort and its evaluation |
-| [`figure_source.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/figure_source.tar.gz) | — | `_frozen_preds.npz`, per-figure value tables, figure-composition decks |
+| [`dataset_main_102046.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/dataset_main_102046.tar.gz) | 262 MB | The 102,046-curve retained dataset, the 200,000-row LHS design, preprocessed arrays, both scalers and the recorded split indices |
+| [`dataset_independent_153067.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/dataset_independent_153067.tar.gz) | 185 MB | The separately generated 153,067-curve same-domain cohort (Table S14) |
+| [`exp1_benchmark.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/exp1_benchmark.tar.gz) | 462 MB | Leakage-free multi-seed benchmark, incl. 15 trained models (Table S13) |
+| [`exp2_latent.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/exp2_latent.tar.gz) | 136 MB | Latent-uncertainty decomposition, 500 draws (Table S12) |
+| [`expanded_ratio.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/expanded_ratio.tar.gz) | 175 MB | Two-arm ratio-range comparison, both arms' data and ten models (Tables S19–S25, Figs. S9–S11) |
+| [`preprocessing_control.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/preprocessing_control.tar.gz) | 118 MB | H/L/T preprocessing-scope control runs (Tables S15–S17) |
+| [`interval_repair_A1.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/interval_repair_A1.tar.gz) | 12 MB | Empirical-quantile interval baseline (Table S17b) |
+| [`independent_validation.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/independent_validation.tar.gz) | 272 MB | Preprocessed independent cohort and its evaluation |
+| [`comsol_config.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/comsol_config.tar.gz) | 11 MB | `dmodel.xml` extracted from the `.mph`, device-configuration extract and QC, 200k-database closure audit |
+| [`figure_source.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/figure_source.tar.gz) | 133 MB | `_frozen_preds.npz`, per-panel value tables, composed SVG artwork and the PowerPoint decks |
+| [`pipeline_scripts.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/pipeline_scripts.tar.gz) | 18 MB | The complete original `script/` folder, including the LHS sampler and the CSV builder |
+| [`submission_v8_tables.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/submission_v8_tables.tar.gz) | 9 MB | Source tables cited by the SI, incl. `T8.2_per_sample_full_precision.csv` |
 
 Unpack them next to the repository and point the code at the result:
 
@@ -139,14 +142,30 @@ licence file is distributed here.**  Everything else runs in Python.
 `code/comsol/` contains:
 
 * `1D_PSC_wen.mph` — the one-dimensional drift–diffusion model (FTO / HTL /
-  perovskite / C₆₀ / SnO₂ / Ag, 131-point voltage sweep).
+  perovskite / C₆₀ / SnO₂ / Ag, 131-point voltage sweep).  The file records
+  `COMSOL 6.3.0.290 (win64)` and uses the base COMSOL plus the **Semiconductor
+  Module**.
 * `run_PSC_9D_5.m` … `run_PSC_9D_8.m` — the MATLAB LiveLink batch drivers that
   read a table of parameter sets, solve the model and write the J–V curve.
+* `code/analysis/forward_validation_unbiased/run_forward_validation_unbiased.m` —
+  the 45-case back-substitution driver (COMSOL 6.3 + MATLAB R2024b + LiveLink 6.3).
 
-To use them, install COMSOL Multiphysics 6.3 with LiveLink for MATLAB, adjust the
-`addpath` line and the file paths at the top of the `.m` file, and run it from
-MATLAB.  The model file is provided so that the geometry, mesh and solver settings
-can be inspected without rerunning the campaign.
+`code/comsol_validation/` holds the four mesh and inversion studies behind
+Tables S18a/b (coarse chain, `m = 0.35/0.25`, fine mesh `m = 0.18/0.125`, and the
+fixed-reference recomputation), with the raw 131-point curves and the tables built
+from them.
+
+To use the drivers, install COMSOL Multiphysics 6.3 with the Semiconductor Module
+and LiveLink for MATLAB, adjust the `addpath` line and the file paths at the top of
+the `.m` file, and run it from MATLAB.  The model file is provided so that the
+geometry, mesh and solver settings can be inspected without rerunning the campaign.
+
+**Known provenance gap.**  The four archived database drivers read
+`PSC_LHS_9D_interface_lifetimes_300000_5.csv` and write the *independent* campaign.
+The driver that generated the main 102,046-curve database, and the 300,000-row LHS
+design behind the independent cohort, are **not** on disk and could not be
+recovered.  The 200,000-row design used for the main dataset *is* included, and the
+retained database was verified to close against it (102,046/102,046 rows).
 
 ---
 

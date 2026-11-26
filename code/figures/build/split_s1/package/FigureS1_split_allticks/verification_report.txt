@@ -1,0 +1,103 @@
+==============================================================================
+A  wording: only tick numbers may remain
+==============================================================================
+  PASS  S1a_01_mu_n        10 numbers, no wording
+  PASS  S1a_02_mu_p         9 numbers, no wording
+  PASS  S1a_03_tau_n        9 numbers, no wording
+  PASS  S1a_04_tau_p       10 numbers, no wording
+  PASS  S1a_05_N_c          8 numbers, no wording
+  PASS  S1a_06_N_v          8 numbers, no wording
+  PASS  S1a_07_tau_ETL     10 numbers, no wording
+  PASS  S1a_08_tau_HTL     10 numbers, no wording
+  PASS  S1a_09_r_rad        9 numbers, no wording
+
+==============================================================================
+B  canvas: nine identical pieces
+==============================================================================
+  PASS  S1a_01_mu_n        canvas 171.840 x 139.200  offset (39.360, 8.880)
+  PASS  S1a_02_mu_p        canvas 171.840 x 139.200  offset (39.360, 8.880)
+  PASS  S1a_03_tau_n       canvas 171.840 x 139.200  offset (39.360, 8.880)
+  PASS  S1a_04_tau_p       canvas 171.840 x 139.200  offset (39.360, 8.880)
+  PASS  S1a_05_N_c         canvas 171.840 x 139.200  offset (39.360, 8.880)
+  PASS  S1a_06_N_v         canvas 171.840 x 139.200  offset (39.360, 8.880)
+  PASS  S1a_07_tau_ETL     canvas 171.840 x 139.200  offset (39.360, 8.880)
+  PASS  S1a_08_tau_HTL     canvas 171.840 x 139.200  offset (39.360, 8.880)
+  PASS  S1a_09_r_rad       canvas 171.840 x 139.200  offset (39.360, 8.880)
+
+==============================================================================
+C  retained artwork identical to the source
+==============================================================================
+  PASS  S1a_01_mu_n        189 elements, nothing changed or lost
+  PASS  S1a_02_mu_p        154 elements, nothing changed or lost
+  PASS  S1a_03_tau_n       154 elements, nothing changed or lost
+  PASS  S1a_04_tau_p       185 elements, nothing changed or lost
+  PASS  S1a_05_N_c         156 elements, nothing changed or lost
+  PASS  S1a_06_N_v         156 elements, nothing changed or lost
+  PASS  S1a_07_tau_ETL     193 elements, nothing changed or lost
+  PASS  S1a_08_tau_HTL     168 elements, nothing changed or lost
+  PASS  S1a_09_r_rad       162 elements, nothing changed or lost
+
+==============================================================================
+D  tick marks and numbers, per panel, against script + data
+==============================================================================
+  PASS  S1a_01_mu_n        x: 4 marks, 4 numbers ['−6', '−5', '−4', '−3']
+  PASS  S1a_01_mu_n        y: 6 marks, 6 numbers ['0', '500', '1,000', '1,500', '2,000', '2,500'] (ylim 0-2500.00)
+  PASS  S1a_02_mu_p        x: 4 marks, 4 numbers ['−6', '−5', '−4', '−3']
+  PASS  S1a_02_mu_p        y: 5 marks, 5 numbers ['0', '500', '1,000', '1,500', '2,000'] (ylim 0-2345.70)
+  PASS  S1a_03_tau_n       x: 4 marks, 4 numbers ['−8', '−6', '−4', '−2']
+  PASS  S1a_03_tau_n       y: 5 marks, 5 numbers ['0', '500', '1,000', '1,500', '2,000'] (ylim 0-2444.40)
+  PASS  S1a_04_tau_p       x: 4 marks, 4 numbers ['−8', '−6', '−4', '−2']
+  PASS  S1a_04_tau_p       y: 6 marks, 6 numbers ['0', '500', '1,000', '1,500', '2,000', '2,500'] (ylim 0-2500.00)
+  PASS  S1a_05_N_c         x: 4 marks, 4 numbers ['23', '24', '25', '26']
+  PASS  S1a_05_N_c         y: 4 marks, 4 numbers ['0', '1,000', '2,000', '3,000'] (ylim 0-3264.45)
+  PASS  S1a_06_N_v         x: 4 marks, 4 numbers ['23', '24', '25', '26']
+  PASS  S1a_06_N_v         y: 4 marks, 4 numbers ['0', '1,000', '2,000', '3,000'] (ylim 0-3289.65)
+  PASS  S1a_07_tau_ETL     x: 5 marks, 5 numbers ['−12', '−11', '−10', '−9', '−8']
+  PASS  S1a_07_tau_ETL     y: 5 marks, 5 numbers ['0', '500', '1,000', '1,500', '2,000'] (ylim 0-2106.30)
+  PASS  S1a_08_tau_HTL     x: 5 marks, 5 numbers ['−14', '−13', '−12', '−11', '−10']
+  PASS  S1a_08_tau_HTL     y: 5 marks, 5 numbers ['0', '500', '1,000', '1,500', '2,000'] (ylim 0-2163.00)
+  PASS  S1a_09_r_rad       x: 4 marks, 4 numbers ['−12', '−11', '−10', '−9']
+  PASS  S1a_09_r_rad       y: 5 marks, 5 numbers ['0', '500', '1,000', '1,500', '2,000'] (ylim 0-2151.45)
+
+==============================================================================
+E  nothing else moved: 600-dpi diff vs the source piece
+==============================================================================
+  PASS  S1a_01_mu_n        diff   8056 px, all inside the added ink
+  PASS  S1a_02_mu_p        diff  33847 px, all inside the added ink
+  PASS  S1a_03_tau_n       diff  34084 px, all inside the added ink
+  PASS  S1a_04_tau_p       diff   8293 px, all inside the added ink
+  PASS  S1a_05_N_c         diff  33676 px, all inside the added ink
+  PASS  S1a_06_N_v         diff  33699 px, all inside the added ink
+  PASS  S1a_07_tau_ETL     diff      0 px, all inside the added ink
+  PASS  S1a_08_tau_HTL     diff  25837 px, all inside the added ink
+  PASS  S1a_09_r_rad       diff  25745 px, all inside the added ink
+
+==============================================================================
+F  margins: every piece fully inside its canvas
+==============================================================================
+  PASS  S1a_01_mu_n        margins L36.12 T6.00 R0.43 B12.16  clearance 2.88 pt
+  PASS  S1a_02_mu_p        margins L36.12 T0.48 R0.43 B12.16  clearance 3.00 pt
+  PASS  S1a_03_tau_n       margins L36.12 T0.48 R0.43 B12.16  clearance 3.00 pt
+  PASS  S1a_04_tau_p       margins L36.12 T6.00 R0.43 B12.16  clearance 2.88 pt
+  PASS  S1a_05_N_c         margins L36.12 T0.48 R0.43 B12.16  clearance 3.00 pt
+  PASS  S1a_06_N_v         margins L36.12 T0.48 R0.43 B12.16  clearance 3.00 pt
+  PASS  S1a_07_tau_ETL     margins L36.12 T0.48 R0.67 B12.16  clearance 3.00 pt
+  PASS  S1a_08_tau_HTL     margins L36.12 T0.48 R3.91 B12.16  clearance 3.00 pt
+  PASS  S1a_09_r_rad       margins L36.12 T0.48 R0.67 B12.16  clearance 3.00 pt
+
+==============================================================================
+G  bar heights: count / ylim reproduces every painted bar top
+==============================================================================
+  PASS  S1a_01_mu_n        60 bars, max top deviation 0.0008 pt
+  PASS  S1a_02_mu_p        60 bars, max top deviation 0.0007 pt
+  PASS  S1a_03_tau_n       60 bars, max top deviation 0.0009 pt
+  PASS  S1a_04_tau_p       60 bars, max top deviation 0.0009 pt
+  PASS  S1a_05_N_c         60 bars, max top deviation 0.0011 pt
+  PASS  S1a_06_N_v         60 bars, max top deviation 0.0011 pt
+  PASS  S1a_07_tau_ETL     60 bars, max top deviation 0.0005 pt
+  PASS  S1a_08_tau_HTL     60 bars, max top deviation 0.0005 pt
+  PASS  S1a_09_r_rad       60 bars, max top deviation 0.0005 pt
+
+==============================================================================
+RESULT: ALL PASS   (0 failures)
+==============================================================================

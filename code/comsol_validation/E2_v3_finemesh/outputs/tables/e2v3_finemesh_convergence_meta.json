@@ -1,0 +1,28 @@
+{
+  "n_reps": 6,
+  "grades": [
+    "m0.35",
+    "m0.25",
+    "m0.18",
+    "m0.125"
+  ],
+  "criteria": {
+    "dVoc_mV": 2.0,
+    "dJsc_pct": 0.05,
+    "dPmax_pct": 0.1,
+    "rmse_le1": 0.1,
+    "rmse_le1_tight": 0.05
+  },
+  "last_two": {
+    "pair": "m0.18->m0.125",
+    "device_metrics_generation_window_converged": true,
+    "max_dVoc_mV": 0.21882869729283883,
+    "max_dJsc_pct": 0.0010427166890558015,
+    "max_dPmax_pct": 0.002088069285648237,
+    "max_rmse_le1": 0.0009890271047298031,
+    "gt1_segment": "median |J| denom rel 0.786% (max 0.866%)",
+    "gt1_relative_1pct_converged": true
+  },
+  "forward_verdict": "device metrics + <=1V generation segment: converged within budget at the last two grades",
+  "gt1_verdict": ">1 V segment within 1% rel at m0.125"
+}

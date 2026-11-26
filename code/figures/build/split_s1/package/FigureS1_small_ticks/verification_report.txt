@@ -1,0 +1,102 @@
+==============================================================================
+A  typography: numbers only, Arial 4.8, normal weight
+==============================================================================
+  PASS  S1a_01_mu_n        10 numbers, all Arial 4.8 / normal
+  PASS  S1a_02_mu_p         9 numbers, all Arial 4.8 / normal
+  PASS  S1a_03_tau_n        9 numbers, all Arial 4.8 / normal
+  PASS  S1a_04_tau_p       10 numbers, all Arial 4.8 / normal
+  PASS  S1a_05_N_c          8 numbers, all Arial 4.8 / normal
+  PASS  S1a_06_N_v          8 numbers, all Arial 4.8 / normal
+  PASS  S1a_07_tau_ETL     10 numbers, all Arial 4.8 / normal
+  PASS  S1a_08_tau_HTL     10 numbers, all Arial 4.8 / normal
+  PASS  S1a_09_r_rad        9 numbers, all Arial 4.8 / normal
+
+==============================================================================
+B  canvas: nine identical pieces
+==============================================================================
+  PASS  S1a_01_mu_n        148.280 x 130.760 pt, plot offset (19.66, 4.30)
+  PASS  S1a_02_mu_p        148.280 x 130.760 pt, plot offset (19.66, 4.30)
+  PASS  S1a_03_tau_n       148.280 x 130.760 pt, plot offset (19.66, 4.30)
+  PASS  S1a_04_tau_p       148.280 x 130.760 pt, plot offset (19.66, 4.30)
+  PASS  S1a_05_N_c         148.280 x 130.760 pt, plot offset (19.66, 4.30)
+  PASS  S1a_06_N_v         148.280 x 130.760 pt, plot offset (19.66, 4.30)
+  PASS  S1a_07_tau_ETL     148.280 x 130.760 pt, plot offset (19.66, 4.30)
+  PASS  S1a_08_tau_HTL     148.280 x 130.760 pt, plot offset (19.66, 4.30)
+  PASS  S1a_09_r_rad       148.280 x 130.760 pt, plot offset (19.66, 4.30)
+
+==============================================================================
+C  artwork: every non-text element identical to the source
+==============================================================================
+  PASS  S1a_01_mu_n        183 elements (text excluded)
+  PASS  S1a_02_mu_p        154 elements (text excluded)
+  PASS  S1a_03_tau_n       154 elements (text excluded)
+  PASS  S1a_04_tau_p       179 elements (text excluded)
+  PASS  S1a_05_N_c         156 elements (text excluded)
+  PASS  S1a_06_N_v         156 elements (text excluded)
+  PASS  S1a_07_tau_ETL     183 elements (text excluded)
+  PASS  S1a_08_tau_HTL     163 elements (text excluded)
+  PASS  S1a_09_r_rad       158 elements (text excluded)
+
+==============================================================================
+D  tick marks and numbers vs script + data
+==============================================================================
+  PASS  S1a_01_mu_n        x 4/4  y 6/6  ['−6', '−5', '−4', '−3'] | ['0', '500', '1,000', '1,500', '2,000', '2,500']
+  PASS  S1a_02_mu_p        x 4/4  y 5/5  ['−6', '−5', '−4', '−3'] | ['0', '500', '1,000', '1,500', '2,000']
+  PASS  S1a_03_tau_n       x 4/4  y 5/5  ['−8', '−6', '−4', '−2'] | ['0', '500', '1,000', '1,500', '2,000']
+  PASS  S1a_04_tau_p       x 4/4  y 6/6  ['−8', '−6', '−4', '−2'] | ['0', '500', '1,000', '1,500', '2,000', '2,500']
+  PASS  S1a_05_N_c         x 4/4  y 4/4  ['23', '24', '25', '26'] | ['0', '1,000', '2,000', '3,000']
+  PASS  S1a_06_N_v         x 4/4  y 4/4  ['23', '24', '25', '26'] | ['0', '1,000', '2,000', '3,000']
+  PASS  S1a_07_tau_ETL     x 5/5  y 5/5  ['−12', '−11', '−10', '−9', '−8'] | ['0', '500', '1,000', '1,500', '2,000']
+  PASS  S1a_08_tau_HTL     x 5/5  y 5/5  ['−14', '−13', '−12', '−11', '−10'] | ['0', '500', '1,000', '1,500', '2,000']
+  PASS  S1a_09_r_rad       x 4/4  y 5/5  ['−12', '−11', '−10', '−9'] | ['0', '500', '1,000', '1,500', '2,000']
+
+==============================================================================
+E  graphics unchanged: text-free 600-dpi raster vs the previous round
+==============================================================================
+  PASS  S1a_01_mu_n        0 differing pixels (bars, frame, tick marks)
+  PASS  S1a_02_mu_p        0 differing pixels (bars, frame, tick marks)
+  PASS  S1a_03_tau_n       0 differing pixels (bars, frame, tick marks)
+  PASS  S1a_04_tau_p       0 differing pixels (bars, frame, tick marks)
+  PASS  S1a_05_N_c         0 differing pixels (bars, frame, tick marks)
+  PASS  S1a_06_N_v         0 differing pixels (bars, frame, tick marks)
+  PASS  S1a_07_tau_ETL     0 differing pixels (bars, frame, tick marks)
+  PASS  S1a_08_tau_HTL     0 differing pixels (bars, frame, tick marks)
+  PASS  S1a_09_r_rad       0 differing pixels (bars, frame, tick marks)
+
+==============================================================================
+F  margins: every piece fully inside its canvas
+==============================================================================
+  PASS  S1a_01_mu_n        ink 27.22..170.26 x 33.66..159.18  clearance 2.52 pt
+  PASS  S1a_02_mu_p        ink 192.97..336.01 x 34.98..159.18  clearance 2.60 pt
+  PASS  S1a_03_tau_n       ink 358.72..501.76 x 34.98..159.18  clearance 2.60 pt
+  PASS  S1a_04_tau_p       ink 27.22..170.26 x 197.19..322.71  clearance 2.52 pt
+  PASS  S1a_05_N_c         ink 192.97..336.01 x 198.51..322.71  clearance 2.60 pt
+  PASS  S1a_06_N_v         ink 358.72..501.76 x 198.51..322.71  clearance 2.60 pt
+  PASS  S1a_07_tau_ETL     ink 27.22..170.26 x 362.04..486.24  clearance 2.60 pt
+  PASS  S1a_08_tau_HTL     ink 192.97..336.01 x 362.04..486.24  clearance 2.60 pt
+  PASS  S1a_09_r_rad       ink 358.72..501.76 x 362.04..486.24  clearance 2.60 pt
+
+==============================================================================
+G  bar heights still count / ylim
+==============================================================================
+  PASS  S1a_01_mu_n        60 bars, max top deviation 0.0008 pt
+  PASS  S1a_02_mu_p        60 bars, max top deviation 0.0007 pt
+  PASS  S1a_03_tau_n       60 bars, max top deviation 0.0009 pt
+  PASS  S1a_04_tau_p       60 bars, max top deviation 0.0009 pt
+  PASS  S1a_05_N_c         60 bars, max top deviation 0.0011 pt
+  PASS  S1a_06_N_v         60 bars, max top deviation 0.0011 pt
+  PASS  S1a_07_tau_ETL     60 bars, max top deviation 0.0005 pt
+  PASS  S1a_08_tau_HTL     60 bars, max top deviation 0.0005 pt
+  PASS  S1a_09_r_rad       60 bars, max top deviation 0.0005 pt
+
+==============================================================================
+H  tick-number size relative to plot width
+==============================================================================
+  reference SI Figure S4 : 8.0 pt on a 211.00 pt plot = 3.79 % (em)
+  previous round         : 12.0 pt on a 125.569 pt plot = 9.56 % (em)
+  this round             : 4.80 pt on a 125.569 pt plot = 3.82 % (em)
+  PASS  matches the reference proportion (measured ink ratio 0.97)
+
+==============================================================================
+RESULT: ALL PASS   (0 failures)
+==============================================================================

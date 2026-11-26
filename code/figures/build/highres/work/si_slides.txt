@@ -1,0 +1,242 @@
+====================================================================================================
+SLIDE 1
+  TXT '(a)   Retained parameter distributions (N=102,046)'
+  GRP
+    PIC 图形 6                   2.06 x 1.81 in @ (0.25,0.66) png=image1.png(396x348 9KB) svg=image2.svg(16KB)
+    PIC 图形 28                  2.06 x 1.81 in @ (2.33,0.66) png=image3.png(396x348 8KB) svg=image4.svg(16KB)
+    PIC 图形 32                  2.06 x 1.81 in @ (4.44,0.66) png=image5.png(396x348 8KB) svg=image6.svg(16KB)
+    PIC 图形 58                  2.06 x 1.81 in @ (0.25,4.59) png=image7.png(396x348 8KB) svg=image8.svg(16KB)
+    PIC 图形 60                  2.06 x 1.81 in @ (2.34,4.59) png=image9.png(396x348 8KB) svg=image10.svg(16KB)
+    PIC 图形 62                  2.06 x 1.81 in @ (4.39,4.59) png=image11.png(396x348 8KB) svg=image12.svg(16KB)
+    PIC 图形 56                  2.06 x 1.81 in @ (4.44,2.63) png=image13.png(396x348 8KB) svg=image14.svg(15KB)
+    PIC 图形 54                  2.06 x 1.81 in @ (2.33,2.63) png=image15.png(396x348 8KB) svg=image16.svg(15KB)
+    PIC 图形 36                  2.06 x 1.81 in @ (0.25,2.63) png=image17.png(396x348 8KB) svg=image18.svg(16KB)
+    PIC 图形 2                   5.92 x 5.31 in @ (7.20,0.80) png=image19.png(1136x1020 95KB) svg=image20.svg(21KB)
+    TXT '(b)   Pairwise log-space Spearman correlation'
+    TXT 'Spearman ρ'
+====================================================================================================
+SLIDE 2
+  GRP
+    PIC 图形 3                   5.27 x 4.03 in @ (1.04,1.73) png=image48.png(1012x774 18KB) svg=image49.svg(8KB)
+    PIC 图形 5                   5.27 x 4.03 in @ (6.28,1.73) png=image50.png(1012x774 17KB) svg=image51.svg(7KB)
+    TXT 'Recoverability Pearson r'
+    TXT '(b)   Raw-space sensitivity reference'
+    TXT 'μₙ'
+    TXT 'μp'
+    TXT 'J-V sensitivity, Sraw'
+    TXT 'J-V sensitivity, Slog'
+    TXT 'τn'
+    TXT 'τp'
+    TXT 'Nc'
+    TXT 'Nv'
+    TXT 'τETL'
+    TXT 'τHTL'
+    TXT 'rrad'
+    TXT 'τHTL'
+    TXT 'τETL'
+    TXT 'rrad'
+    TXT 'Nc'
+    TXT 'Nv'
+    TXT 'τp'
+    TXT 'τn'
+    TXT 'μp'
+    TXT 'μₙ'
+    TXT '(a)   Adopted log-space sensitivity'
+    TXT 'Spearman ρs = 0.533, p = 0.139'
+    TXT 'Spearman ρs = 0.683, p = 0.042'
+====================================================================================================
+SLIDE 3
+  GRP
+    TXT '(a1)   cycle-gap lowest'
+    TXT '(a2)   cycle-gap Q25'
+    TXT '(a3)   cycle-gap median'
+    TXT '(a4)   cycle-gap Q75'
+    TXT '(a5)   cycle-gap highest'
+    TXT '(a6)   true-param control'
+    TXT 'J(mA/cm2)'
+    TXT 'J(mA/cm2)'
+    TXT 'Voltage(V)'
+    TXT 'Voltage(V)'
+    TXT 'Voltage(V)'
+    PIC 图形 2                   3.15 x 2.36 in @ (1.49,-1.43) png=image52.png(604x454 15KB) svg=image53.svg(5KB)
+    PIC 图形 16                  3.15 x 2.36 in @ (4.61,-1.43) png=image54.png(604x454 14KB) svg=image55.svg(5KB)
+    PIC 图形 18                  3.15 x 2.36 in @ (7.62,-1.43) png=image56.png(604x454 16KB) svg=image57.svg(5KB)
+    PIC 图形 20                  3.15 x 2.36 in @ (1.49,1.20) png=image58.png(604x454 18KB) svg=image59.svg(5KB)
+    PIC 图形 24                  3.15 x 2.36 in @ (7.64,1.20) png=image60.png(604x454 15KB) svg=image61.svg(5KB)
+    TXT 'target'
+    TXT 'decoder'
+    TXT 'COMSOL (pred)'
+    TXT 'COMSOL (true)'
+    TXT 'target'
+    PIC 图形 33                  9.24 x 4.74 in @ (1.53,3.98) png=image62.png(1860x954 57KB) svg=image63.svg(8KB)
+    TXT 'Voltage(V)'
+    TXT 'Noise floor = 0.21 mA/cm2'
+    TXT '(b)'
+    TXT 'RMSE across 45 samples  (mA/cm2)'
+    PIC 图形 28                  3.15 x 2.36 in @ (4.63,1.20) png=image64.png(604x454 22KB) svg=image65.svg(10KB)
+====================================================================================================
+SLIDE 4
+  GRP
+    PIC 图形 2                   4.42 x 2.36 in @ (2.12,1.16) png=image66.png(578x308 5KB) svg=image67.svg(7KB)
+    PIC 图形 5                   4.42 x 2.36 in @ (6.67,1.16) png=image68.png(578x308 14KB) svg=image69.svg(14KB)
+    PIC 图形 7                   4.42 x 2.36 in @ (2.12,4.13) png=image70.png(578x308 14KB) svg=image71.svg(13KB)
+    PIC 图形 9                   4.42 x 2.36 in @ (6.67,4.14) png=image72.png(578x308 13KB) svg=image73.svg(13KB)
+    TXT 'median 2.56'
+    TXT 'cycle gap (mA/cm2)'
+    TXT 'cycle gap (mA/cm2)'
+    TXT 'cycle gap (mA/cm2)'
+    TXT 'mean predicted σ'
+    TXT 'param log10-RMSE (post-hoc)'
+    TXT 'cycle gap, full 0-1.3V (mA/cm2 )'
+    TXT '(c1)'
+    TXT '(c2)'
+    TXT '(c3)'
+    TXT '(c4)'
+    TXT 'ρ = 0.12 (p = 0.44)'
+    TXT 'ρ = -0.03 (p = 0.86)'
+    TXT '0-1.0V'
+    TXT '>1.0V'
+    TXT '0.47'
+    TXT '5.3'
+    TXT 'Distribution of cycle gaps'
+    TXT 'Voltage-window comparison'
+    TXT 'Cycle gap versus parameter error'
+    TXT 'Cycle gap versus predicted uncertainty'
+====================================================================================================
+SLIDE 5
+  TXT 'Predictive-scale distributions'
+  GRP
+    PIC 图形 50                  2.82 x 1.97 in @ (7.98,4.88) png=image74.png(648x452 15KB) svg=image75.svg(22KB)
+    PIC 图形 48                  2.82 x 1.97 in @ (5.11,4.88) png=image76.png(648x452 14KB) svg=image77.svg(22KB)
+    PIC 图形 46                  2.82 x 1.97 in @ (2.26,4.88) png=image78.png(648x452 16KB) svg=image79.svg(23KB)
+    PIC 图形 44                  2.82 x 1.97 in @ (7.98,2.70) png=image80.png(648x452 13KB) svg=image81.svg(23KB)
+    PIC 图形 42                  2.82 x 1.97 in @ (5.11,2.70) png=image82.png(648x452 13KB) svg=image83.svg(22KB)
+    PIC 图形 40                  2.82 x 1.97 in @ (2.26,2.70) png=image84.png(648x452 14KB) svg=image85.svg(23KB)
+    PIC 图形 38                  2.82 x 1.97 in @ (7.98,0.63) png=image86.png(648x452 13KB) svg=image87.svg(22KB)
+    PIC 图形 36                  2.82 x 1.97 in @ (5.11,0.63) png=image88.png(648x452 14KB) svg=image89.svg(21KB)
+    PIC 图形 25                  2.82 x 1.97 in @ (2.26,0.63) png=image90.png(648x452 13KB) svg=image91.svg(22KB)
+    TXT 'Predictive scale, σθ'
+    TXT 'Predictive scale, σθ'
+    TXT 'Predictive scale, σθ'
+    TXT 'mean = 0.093'
+    TXT 'mean = 0.087'
+    TXT 'mean = 0.109'
+    TXT 'mean = 0.109'
+    TXT 'mean = 0.075'
+    TXT 'mean = 0.081'
+    TXT 'mean = 0.229'
+    TXT 'mean = 0.191'
+    TXT 'mean = 0.228'
+====================================================================================================
+SLIDE 6
+  GRP
+    PIC 图形 53                  2.48 x 2.01 in @ (7.88,4.88) png=image101.png(576x466 106KB) svg=image102.svg(1849KB)
+    PIC 图形 51                  2.48 x 2.01 in @ (5.35,4.88) png=image103.png(576x466 108KB) svg=image104.svg(1848KB)
+    PIC 图形 49                  2.48 x 2.01 in @ (2.81,4.88) png=image105.png(576x466 131KB) svg=image106.svg(1848KB)
+    PIC 图形 47                  2.48 x 2.01 in @ (7.88,2.76) png=image107.png(576x466 58KB) svg=image108.svg(1846KB)
+    PIC 图形 45                  2.48 x 2.01 in @ (5.35,2.76) png=image109.png(576x466 56KB) svg=image110.svg(1846KB)
+    PIC 图形 32                  2.48 x 2.01 in @ (2.81,2.76) png=image111.png(576x466 66KB) svg=image112.svg(1847KB)
+    PIC 图形 30                  2.48 x 2.01 in @ (7.88,0.63) png=image113.png(576x466 76KB) svg=image114.svg(1846KB)
+    PIC 图形 28                  2.48 x 2.01 in @ (5.35,0.63) png=image115.png(576x466 62KB) svg=image116.svg(1846KB)
+    PIC 图形 26                  2.48 x 2.01 in @ (2.81,0.63) png=image117.png(576x466 71KB) svg=image118.svg(1848KB)
+    TXT 'Normalized absolute error'
+    TXT 'Predictive-scale versus absolute error'
+    TXT 'Normalized absolute error'
+    TXT 'Normalized absolute error'
+    TXT 'ρ = 0.398'
+    TXT 'ρ = 0.334'
+    TXT 'ρ = 0.646'
+    TXT 'ρ = 0.622'
+    TXT 'ρ = 0.353'
+    TXT 'ρ = 0.244'
+    TXT 'ρ = 0.377'
+    TXT 'ρ = 0.465'
+    TXT 'ρ = 0.415'
+====================================================================================================
+SLIDE 7
+  GRP
+    PIC 图形 4                   2.27 x 2.03 in @ (3.19,0.31) png=image128.png(436x390 106KB) svg=image129.svg(514KB)
+    PIC 图形 3                   2.27 x 2.03 in @ (5.30,2.27) png=image130.png(436x390 85KB) svg=image131.svg(399KB)
+    PIC 图形 5                   2.27 x 2.03 in @ (7.41,2.27) png=image132.png(436x390 87KB) svg=image133.svg(413KB)
+    PIC 图形 15                  2.27 x 2.03 in @ (5.30,0.31) png=image134.png(436x390 103KB) svg=image135.svg(497KB)
+    PIC 图形 17                  2.27 x 2.03 in @ (7.41,0.31) png=image136.png(436x390 96KB) svg=image137.svg(459KB)
+    PIC 图形 2                   2.27 x 2.03 in @ (3.18,2.27) png=image138.png(436x390 94KB) svg=image139.svg(451KB)
+    PIC 图形 6                   2.27 x 2.03 in @ (3.18,4.24) png=image140.png(436x390 136KB) svg=image141.svg(685KB)
+    PIC 图形 10                  2.27 x 2.03 in @ (5.30,4.24) png=image142.png(436x390 130KB) svg=image143.svg(634KB)
+    PIC 图形 14                  2.27 x 2.03 in @ (7.41,4.24) png=image144.png(436x390 133KB) svg=image145.svg(676KB)
+    TXT 'Predicted normalized log10 parameter'
+    TXT 'ρ = 0.906'
+    TXT 'ρ = 0.919'
+    TXT 'ρ = 0.878'
+    TXT 'ρ = 0.881'
+    TXT 'ρ = 0.909'
+    TXT 'ρ = 0.896'
+    TXT 'ρ = 0.594'
+    TXT 'ρ = 0.720'
+    TXT 'ρ = 0.559'
+    TXT 'True normalized log10 parameter'
+====================================================================================================
+SLIDE 8
+  GRP
+    PIC 图形 7                   2.49 x 1.97 in @ (5.02,1.45) png=image146.png(400x316 13KB) svg=image147.svg(24KB)
+    PIC 图形 9                   2.49 x 1.97 in @ (5.02,3.86) png=image148.png(400x316 13KB) svg=image149.svg(25KB)
+    PIC 图形 11                  2.49 x 1.97 in @ (7.53,1.46) png=image150.png(400x316 13KB) svg=image151.svg(24KB)
+    PIC 图形 13                  2.49 x 1.97 in @ (7.53,3.91) png=image152.png(400x316 12KB) svg=image153.svg(25KB)
+    TXT '(a)      mobility'
+    TXT '(d)      mobility'
+    TXT '(b)     lifetime'
+    TXT '(e)     lifetime'
+    TXT '(c)       DOS'
+    TXT '(f)       DOS'
+    TXT 'cumulative fraction'
+    TXT '| Δcoord | / random median'
+    PIC 图形 4                   2.49 x 1.97 in @ (2.41,1.47) png=image154.png(400x316 16KB) svg=image155.svg(50KB)
+    PIC 图片 8                   2.49 x 1.97 in @ (2.40,3.86) png=image156.png(548x433 26KB)
+====================================================================================================
+SLIDE 9
+  GRP
+    PIC 图形 32                  3.35 x 2.68 in @ (7.94,3.65) png=image163.png(644x514 13KB) svg=image164.svg(12KB)
+    PIC 图形 25                  3.35 x 2.68 in @ (7.94,0.68) png=image165.png(644x514 15KB) svg=image166.svg(17KB)
+    PIC 图形 9                   3.29 x 2.64 in @ (1.32,3.65) png=image167.png(632x506 13KB) svg=image168.svg(12KB)
+    PIC 图形 3                   3.29 x 2.64 in @ (1.32,0.68) png=image169.png(632x506 17KB) svg=image170.svg(19KB)
+    TXT 'probability density(per decade)'
+    TXT 'probability density'
+    TXT 'mobility ratio'
+    TXT 'lifetime ratio'
+    TXT 'DOS ratio'
+    TXT 'original 0.2-5 (n=102046)'
+    TXT 'expanded 0.05-20 (n=24274)'
+    TXT 'old ratio range 0.2-5'
+    PIC 图形 17                  3.35 x 2.68 in @ (4.65,0.68) png=image177.png(644x514 17KB) svg=image178.svg(21KB)
+    PIC 图形 29                  3.35 x 2.68 in @ (4.65,3.65) png=image179.png(644x514 13KB) svg=image180.svg(12KB)
+====================================================================================================
+SLIDE 10
+  GRP
+    PIC 图形 3                   5.54 x 3.94 in @ (0.96,1.27) png=image181.png(636x452 17KB) svg=image182.svg(26KB)
+    PIC 图形 5                   5.54 x 3.94 in @ (7.06,1.27) png=image183.png(636x452 13KB) svg=image184.svg(23KB)
+    TXT 'SkillMSE'
+    TXT 'RMSE (log10 units)'
+    TXT 'original 0.2-5 (own test)'
+    TXT 'expanded 0.05-20 (own test)'
+    TXT '(a) MSE skill score'
+    TXT '(b) Log-space RMSE'
+====================================================================================================
+SLIDE 11
+  GRP
+    PIC 图形 7                   5.68 x 3.94 in @ (0.99,1.69) png=image190.png(652x452 14KB) svg=image191.svg(16KB)
+    PIC 图形 9                   5.68 x 3.94 in @ (6.65,1.69) png=image192.png(652x452 13KB) svg=image193.svg(15KB)
+    TXT 'Δ RMSE (log10 units)'
+    TXT '(a)   common original-range test'
+    TXT '(b)     common expanded-range test'
+    TXT '0.093'
+    TXT '0.225'
+    TXT '0.130'
+    TXT '0.243'
+    TXT '0.072'
+    TXT '0.290'
+    TXT '-0.115'
+    TXT '-0.216'
+    TXT '-0.105'
+    TXT '-0.224'
+    TXT '-0.102'
+    TXT '-0.274'

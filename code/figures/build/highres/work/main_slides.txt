@@ -1,0 +1,209 @@
+====================================================================================================
+SLIDE 1
+  TXT '修改后'
+  GRP
+    TXT '(a) Physical model and parameterization'
+    TXT '(b) Inference network (autoencoder)'
+    TXT 'Nine inference targets'
+    TXT 'paired electron-hole parameters'
+    TXT 'MobilityBulk lifetimeDensity of statesDirectly sampled'
+    TXT 'Schematic, not to scale. FTO and Ag are contact boundaries; '
+    TXT 'Ag'
+    TXT 'C60'
+    TXT 'Perovskite'
+    TXT 'HTL'
+    TXT 'FTO'
+    GRP
+    GRP
+    TXT '0.01 nm'
+    TXT '0.01 nm'
+    TXT 'Archived J-V curves · fixed training/validation/test splitno'
+    GRP
+    TXT 'Encoder'
+    GRP
+    TXT 'Decoderreconstructs the J-V curve from z'
+    GRP
+    TXT 'reconstructed J-V'
+    TXT 'parameter vector'
+    TXT 'z'
+    TXT 'latent'
+    TXT 'J-V input'
+    TXT '(c) Three complementary evaluations      Evaluation of predi'
+====================================================================================================
+SLIDE 2
+  GRP
+    TXT 'MAE reduction vstraining-median baseline'
+    PIC 图片 8                   1.90 x 2.02 in @ (7.64,0.81) png=image16.png(2100x2235 411KB)
+    PIC 图片 1                   1.90 x 1.77 in @ (3.80,0.98) png=image17.png(2100x2235 374KB)
+    PIC 图片 12                  1.90 x 1.77 in @ (5.74,0.93) png=image18.png(2100x2235 543KB)
+    PIC 图片 657                 1.90 x 1.77 in @ (3.79,3.06) png=image19.png(2100x2235 376KB)
+    PIC 图片 658                 1.90 x 1.77 in @ (5.74,3.04) png=image20.png(2100x2235 419KB)
+    PIC 图片 659                 1.90 x 1.77 in @ (7.66,3.04) png=image21.png(2100x2235 321KB)
+    TXT 'True 𝑎'
+    TXT 'Predicted 𝑎'
+    TXT 'ρ = 0.925'
+    TXT 'ρ = 0.352'
+    TXT 'ρ = 0.882'
+    TXT 'ρ = 0.925'
+    TXT 'ρ = 0.429'
+    TXT 'ρ = 0.266'
+    TXT 'Mobility, μn , μp  (m2 V-1 s-1)'
+    TXT 'Bulk lifetime, τn, τp (s)'
+    TXT 'Density of states, Nc, Nv (m-3)'
+    TXT 'True 𝑟'
+    TXT 'Predicted 𝑟'
+    TXT 'True 𝑟'
+    TXT 'Predicted 𝑟'
+    TXT 'Predicted 𝑟'
+    TXT '(a1)'
+    TXT '(a2)'
+    TXT '(a3)'
+    TXT '(b1)'
+    TXT '(b2)'
+    TXT '(b3)'
+    TXT 'True 𝑟'
+    TXT 'Predicted 𝑎'
+    TXT 'Predicted 𝑎'
+    TXT 'True 𝑎'
+    TXT 'True 𝑎'
+    TXT '(a) Shared scale 𝑎'
+    TXT '(b) Electron-hole log-ratio 𝑟'
+    TXT 'Mobility, μn , μp  (m2 V-1 s-1)'
+    TXT 'Bulk lifetime, τn, τp (s)'
+    TXT 'Density of states, Nc, Nv (m-3)'
+    PIC 图片 5                   0.60 x 2.48 in @ (9.62,2.61) png=image22.png(540x2235 38KB)
+    PIC 图片 6                   0.60 x 2.48 in @ (9.62,0.54) png=image23.png(540x2235 38KB)
+    TXT '(c)'
+    TXT '(d)'
+    TXT 'Pearson correlation ρ(true vs predicted)'
+    GRP
+      CHART/FRAME
+    GRP
+      CHART/FRAME
+    TXT '𝑟'
+    TXT '𝑎'
+====================================================================================================
+SLIDE 3
+  TXT 'not randomly drawn typical cases. Panel (c): descriptive onl'
+  TXT 'Cases (a),(b) :deliberately extreme members of the closest 1'
+  TXT 'Median absolute difference relative to random pairs'
+  GRP
+    PIC 图片 15                  3.53 x 2.89 in @ (6.43,3.40) png=image24.png(1980x1620 42KB)
+    PIC 图片 1                   3.53 x 2.89 in @ (2.93,0.50) png=image25.png(634x518 14KB) svg=image26.svg(12KB)
+    PIC 图片 4                   3.53 x 2.89 in @ (6.42,0.50) png=image27.png(1980x1620 42KB)
+    PIC 图片 5                   3.53 x 2.89 in @ (2.93,3.39) png=image28.png(1980x1620 91KB)
+    TXT 'J(mA/cm2)'
+    TXT 'Voltage (V)'
+    TXT 'Voltage (V)'
+    TXT '(a)'
+    TXT '(b)'
+    TXT '(c)'
+    TXT '(d)'
+    TXT 'Mobility log-ratio'
+    TXT 'Bulk lifetime log-ratio'
+    TXT 'Jj-Ji(mA/cm2)'
+====================================================================================================
+SLIDE 4
+  GRP
+    GRP
+      GRP
+        GRP
+        GRP
+          GRP
+            TXT '−1500'
+          GRP
+            TXT '−1000'
+          GRP
+            TXT '−500'
+          GRP
+            TXT '0'
+        GRP
+          GRP
+            GRP
+              TXT '0.0'
+            GRP
+              TXT '0.5'
+            GRP
+              TXT '1.0'
+          GRP
+            GRP
+              TXT '12'
+            GRP
+              TXT '18'
+            GRP
+              TXT '24'
+      GRP
+        GRP
+          GRP
+            TXT '0.0'
+          GRP
+            TXT '0.5'
+          GRP
+            TXT '1.0'
+        GRP
+          GRP
+            TXT '-198'
+          GRP
+            TXT '0'
+          GRP
+            TXT '198'
+    PIC 图片 8                   2.60 x 2.44 in @ (3.53,3.44) png=image30.png(1560x1464 59KB)
+    PIC 图片 6                   2.13 x 2.11 in @ (5.59,1.10) png=image31.png(1913x1899 89KB)
+    PIC 图片 4                   2.13 x 2.11 in @ (3.45,1.10) png=image32.png(1913x1899 122KB)
+    TXT '(a)'
+    TXT 'Lowest cycle gap'
+    TXT '(b)'
+    TXT 'Median cycle gap'
+    TXT '(c)'
+    TXT 'Highest cycle gap'
+    TXT 'J(mA/cm2)'
+    PIC 图片 19                  1.68 x 1.00 in @ (6.37,3.44) png=image33.png(1008x600 17KB)
+    PIC 图片 20                  1.68 x 1.00 in @ (8.30,4.59) png=image34.png(1008x600 25KB)
+    PIC 图片 22                  1.68 x 1.00 in @ (6.35,4.59) png=image35.png(1008x600 21KB)
+    PIC 图片 23                  1.68 x 1.00 in @ (8.30,3.44) png=image36.png(1008x600 24KB)
+    TXT '|ΔJsc|'
+    TXT '|ΔVoc|'
+    TXT '|ΔFF|'
+    TXT '|ΔPCE|'
+    TXT 'n=45 per window'
+    TXT 'J-V RMSE (mA/cm2)'
+    TXT 'Absolute error (mA/cm²)'
+    TXT 'Full curve(0-1.3 V)'
+    TXT '0-1.0 V'
+    TXT '> 1.0 V'
+    TXT 'Absolute error(pp)'
+    TXT '1.6'
+    TXT '0.471'
+    TXT '0.112'
+    TXT '0.022'
+    TXT '2.69'
+    TXT '0.455'
+    TXT '5.19'
+    TXT '(d)'
+    TXT '(e)'
+    TXT 'ΔJ(mA/cm2)'
+    TXT 'J(mA/cm2)'
+    TXT 'Absolute error(pp)'
+    TXT 'Absolute error(V)'
+====================================================================================================
+SLIDE 5
+  GRP
+    PIC 图片 7                   3.41 x 2.56 in @ (8.29,3.96) png=image37.png(1200x900 71KB)
+    PIC 图片 4                   2.92 x 2.56 in @ (7.09,0.64) png=image38.png(1200x1050 69KB)
+    PIC 图片 5                   3.40 x 2.56 in @ (1.61,3.95) png=image39.png(1200x900 84KB)
+    PIC 图片 6                   3.41 x 2.56 in @ (4.99,3.95) png=image40.png(1200x900 103KB)
+    TXT '(a)'
+    TXT 'Nominal level (%)'
+    TXT '(b)'
+    TXT '95% interval score (log10 units)'
+    TXT '(c)'
+    TXT '(d)'
+    TXT '(e)'
+    TXT 'Current noise (% of |Jsc|)'
+    TXT 'Current noise (% of |Jsc|)'
+    TXT 'Current noise (% of |Jsc|)'
+    TXT 'Pearson correlation (ρ)'
+    TXT 'Coverage of 95% intervals'
+    TXT 'Change in mean σθ (% of its clean-input value)'
+    TXT 'Empirical coverage'
+    PIC 图片 2                   2.92 x 2.56 in @ (3.57,0.64) png=image41.png(1200x1050 120KB)

@@ -1,0 +1,8 @@
+
+MATLAB is now connected to a COMSOL Multiphysics Server at localhost:2041
+
+Run the commands below to access the COMSOL ModelUtil commands:
+import com.comsol.model.util.*
+[¾¯¸æ: The file "E:\project\work1\matlab&mph\1D_PSC_wen.mph" is read-only] 
+E2 mesh bases size=(6.89,1.06) size1=(3.55,0.53)
+e2_comsol_batch done

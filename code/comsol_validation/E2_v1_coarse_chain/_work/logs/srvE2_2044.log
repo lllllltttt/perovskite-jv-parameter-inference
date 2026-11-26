@@ -1,0 +1,6 @@
+COMSOL Multiphysics server 6.3 (开发版本: 290) 开始在端口 2044 上监听
+使用控制台命令 'close' 以退出程序
+2026-09-07 20:33:51 用户名为 'luantian' 的 LiveLink? for MATLAB? 客户端已从 'WIN-003JBAB6VIH' 登录
+Loading model: E:\project\work1\matlab&mph\1D_PSC_wen.mph
+Tag: Model
+2026-09-07 20:40:22 从 'WIN-003JBAB6VIH' 登录的用户名为 'luantian' 的 LiveLink? for MATLAB? 客户端 已断开连接

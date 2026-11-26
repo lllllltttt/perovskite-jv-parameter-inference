@@ -1,0 +1,128 @@
+﻿source,paragraph,section,reference,resolves_to,target_kind,defined_at,context,status
+manuscript,11,Simulation domain and probabilistic inversion,Fig. 1,Figure 1,main figure,figures/Figure1.*,"ce FTO / HTL / perovskite / C₆₀ / SnO₂ / Ag (Fig. 1), where FTO denotes fluorine-doped tin oxide",ok
+manuscript,11,Simulation domain and probabilistic inversion,Table 1,Table 1,main table,manuscript paragraph 55,and the radiative recombination coefficient (Table 1).,ok
+manuscript,15,Simulation domain and probabilistic inversion,Figure 1,Figure 1,main figure,figures/Figure1.*,Figure 1. Device model and evaluation of single-curve,ok
+manuscript,17,Recoverability of individual parameters and paired coordinates,Fig. 2,Figure 2,main figure,figures/Figure2.*,"ility, bulk lifetime, and density of states (Fig. 2). The shared-scale coordinate is the mean of",ok
+manuscript,17,Recoverability of individual parameters and paired coordinates,Fig. 2g,Figure 2g,main figure,figures/Figure2.*,"352, and 0.266 for the corresponding ratios (Fig. 2g and Table S11).",ok
+manuscript,17,Recoverability of individual parameters and paired coordinates,Table S11,Table S11,SI table,SI paragraph 79,66 for the corresponding ratios (Fig. 2g and Table S11).,ok
+manuscript,18,Recoverability of individual parameters and paired coordinates,Fig. S6,Figure S6,SI figure,SI paragraph 133,"me, and 0.559 for the radiative coefficient (Fig. S6). Absolute errors also remain appreciable: t",ok
+manuscript,18,Recoverability of individual parameters and paired coordinates,Table S16,Table S16,SI table,SI paragraph 96,"s are 0.70 and 0.71 in physical log₁₀ units (Table S16), corresponding to geometric mean multiplica",ok
+manuscript,19,Recoverability of individual parameters and paired coordinates,Fig. 2h,Figure 2h,main figure,figures/Figure2.*,"but by only 8%, 3%, and 1% for their ratios (Fig. 2h and Table S11). Thus, under the evaluated sa",ok
+manuscript,19,Recoverability of individual parameters and paired coordinates,Table S11,Table S11,SI table,SI paragraph 79,"8%, 3%, and 1% for their ratios (Fig. 2h and Table S11). Thus, under the evaluated sampling distrib",ok
+manuscript,20,Recoverability of individual parameters and paired coordinates,Table S14,Table S14,SI table,SI paragraph 88,"7 curves evaluated with the unchanged model (Table S14). Shared-scale correlations are 0.925, 0.883",ok
+manuscript,22,Recoverability of individual parameters and paired coordinates,Figure 2,Figure 2,main figure,figures/Figure2.*,Figure 2. Recovery of shared electron–hole scales and,ok
+manuscript,24,Parameter variation among similar J–V curves,Fig. 3,Figure 3,main figure,figures/Figure3.*,ombinations. The two representative pairs in Fig. 3 were selected from the closest 1% of correct,ok
+manuscript,24,Parameter variation among similar J–V curves,Table S6,Table S6,SI table,SI paragraph 18,"of 35 in the HTL-side interfacial lifetime (Table S6, T6.7). Other parameters also differ within",ok
+manuscript,25,Parameter variation among similar J–V curves,Fig. 3c,Figure 3c,main figure,figures/Figure3.*,and 0.944 for the corresponding log-ratios (Fig. 3c). Under this distance metric and simulated s,ok
+manuscript,25,Parameter variation among similar J–V curves,Table S6,Table S6,SI table,SI paragraph 18,"le subsets of the same pairs are reported in Table S6 (T6.8), and the full distribution of each co",ok
+manuscript,25,Parameter variation among similar J–V curves,Fig. S7,Figure S7,SI figure,SI paragraph 136,against its random-pair baseline is shown in Fig. S7. These comparisons are descriptive: they do,ok
+manuscript,26,Parameter variation among similar J–V curves,Table S10,Table S10,SI table,SI paragraph 75,ows produce different pairings and rankings (Table S10). Physical-current residuals therefore accom,ok
+manuscript,26,Parameter variation among similar J–V curves,Fig. 3,Figure 3,main figure,figures/Figure3.*,"efore accompany the representative curves in Fig. 3, while the population comparison evaluates e",ok
+manuscript,28,Parameter variation among similar J–V curves,Figure 3,Figure 3,main figure,figures/Figure3.*,Figure 3. Parameter variation among neighbouring J–V,ok
+manuscript,30,Forward simulation of inferred parameters,Fig. 4,Figure 4,main figure,figures/Figure4.*,ons independently of decoder reconstruction (Fig. 4). Forty-five test samples were selected acro,ok
+manuscript,31,Forward simulation of inferred parameters,Fig. 4a,Figure 4a,main figure,figures/Figure4.*,se more closely than the high-bias response (Fig. 4a–d). Median current RMSE is 2.69 mA cm⁻² over,ok
+manuscript,32,Forward simulation of inferred parameters,Fig. 4e,Figure 4e,main figure,figures/Figure4.*,"or (FF), and 0.471 percentage points in PCE (Fig. 4e and Table S8). Current-error and short-circu",ok
+manuscript,32,Forward simulation of inferred parameters,Table S8,Table S8,SI table,SI paragraph 58,0.471 percentage points in PCE (Fig. 4e and Table S8). Current-error and short-circuit-current su,ok
+manuscript,33,Forward simulation of inferred parameters,Fig. S3,Figure S3,SI figure,SI paragraph 118,decoder and COMSOL outputs is 2.56 mA cm⁻² (Fig. S3). The two outputs share a latent representat,ok
+manuscript,35,Forward simulation of inferred parameters,Figure 4,Figure 4,main figure,figures/Figure4.*,Figure 4. Physical response of inferred parameter com,ok
+manuscript,37,Predictive intervals and their response to perturbations,Fig. 5,Figure 5,main figure,figures/Figure5.*,"certainty available without the input curve (Fig. 5). At the nominal 95% level, the model interv",ok
+manuscript,37,Predictive intervals and their response to perturbations,Fig. 5a,Figure 5a,main figure,figures/Figure5.*,uantile intervals already cover 0.947–0.958 (Fig. 5a and Tables S2 and S17). Coverage alone there,ok
+manuscript,37,Predictive intervals and their response to perturbations,Tables S2,Table S2,SI table,SI paragraph 8,rvals already cover 0.947–0.958 (Fig. 5a and Tables S2 and S17). Coverage alone therefore provides,ok
+manuscript,38,Predictive intervals and their response to perturbations,Fig. 5b,Figure 5b,main figure,figures/Figure5.*,TL-side lifetime improves from 3.89 to 3.33 (Fig. 5b and Tables S17 and S17b). The near-nominal c,ok
+manuscript,38,Predictive intervals and their response to perturbations,Tables S17,Table S17,SI table,SI paragraph 98,time improves from 3.89 to 3.33 (Fig. 5b and Tables S17 and S17b). The near-nominal coverage thus ac,ok
+manuscript,39,Predictive intervals and their response to perturbations,Table S3,Table S3,SI table,SI paragraph 11,"65, and the weakest for densities of states (Table S3 and Figs. S4–S5). Across nominal interval le",ok
+manuscript,39,Predictive intervals and their response to perturbations,Figs. S4,Figure S4,SI figure,SI paragraph 127,"eakest for densities of states (Table S3 and Figs. S4–S5). Across nominal interval levels, coverag",ok
+manuscript,39,Predictive intervals and their response to perturbations,Table S2,Table S2,SI table,SI paragraph 8,"0.780–0.810 at 80%, and 0.898–0.920 at 90% (Table S2). These results distinguish error ranking fr",ok
+manuscript,40,Predictive intervals and their response to perturbations,Fig. 5c,Figure 5c,main figure,figures/Figure5.*,"7, while the predicted scales change little (Fig. 5c–e and Table S7). The intervals learned from",ok
+manuscript,40,Predictive intervals and their response to perturbations,Table S7,Table S7,SI table,SI paragraph 44,redicted scales change little (Fig. 5c–e and Table S7). The intervals learned from noise-free simu,ok
+manuscript,42,Predictive intervals and their response to perturbations,Figure 5,Figure 5,main figure,figures/Figure5.*,Figure 5. Predictive intervals and the effect of curr,ok
+manuscript,48,Discussion,Table S13,Table S13,SI table,SI paragraph 85,ross the two reported software environments (Table S13). The median latent contribution to predicti,ok
+manuscript,48,Discussion,Table S12,Table S12,SI table,SI paragraph 83,"e variance is only 0.05% for the main model (Table S12), supporting its deterministic evaluation wi",ok
+manuscript,53,Device model and physical parameters,Table S9,Table S9,SI table,SI paragraph 68,d recombination assignments are specified in Table S9. Generation in the perovskite was spatially,ok
+manuscript,54,Device model and physical parameters,Table 1,Table 1,main table,manuscript paragraph 55,Table 1 summarizes the target parameters and generat,ok
+manuscript,55,Table 1 Target parameters and sampling ranges,Table 1,Table 1,main table,manuscript paragraph 55,Table 1 Target parameters and sampling ranges,ok
+manuscript,60,Sampling prior and data selection,Table 1,Table 1,main table,manuscript paragraph 55,ent were sampled directly over the ranges in Table 1. The sampling variables followed a product p,ok
+manuscript,64,Partitioning and preprocessing,Tables S15,Table S15,SI table,SI paragraph 94,model using training-only normalization (T; Tables S15–S17). The three evaluations use the same tes,ok
+manuscript,69,Network and training,Table S12,Table S12,SI table,SI paragraph 83,ution of 0.05% of total predictive variance (Table S12). All main point predictions and intervals u,ok
+manuscript,71,Parameter and coordinate evaluation,Table S16,Table S16,SI table,SI paragraph 96,"AEs in Results and the per-parameter MAEs of Table S16 are in physical log₁₀ units, as are the coor",ok
+manuscript,73,Parameter and coordinate evaluation,Table S11,Table S11,SI table,SI paragraph 79,"Emodel/MAEmedian. The squared-error skill in Table S11 is 1 − MSEmodel/MSEmean, where the baseline",ok
+manuscript,73,Parameter and coordinate evaluation,Table S4,Table S4,SI table,SI paragraph 13,og₁₀ coordinates. The variance comparison in Table S4 uses Var(a)/Var(r/2) on the test set; this i,ok
+manuscript,74,Parameter and coordinate evaluation,Table S5,Table S5,SI table,SI paragraph 16,and current across the 131 voltage columns (Table S5). This distribution-dependent index summariz,ok
+manuscript,76,Curve similarity and parameter ambiguity,Fig. 3,Figure 3,main figure,figures/Figure3.*,"%, 1%, 0.5% and 0.1%. The two pairs shown in Fig. 3 were taken from the closest 1% subset (n = 1",ok
+manuscript,79,Forward validation and numerical checks,Table S8,Table S8,SI table,SI paragraph 58,d the cycle gap. The parameter log₁₀-RMSE in Table S8 is computed in physical log₁₀ parameter spac,ok
+manuscript,80,Forward validation and numerical checks,Tables S18a,Table S18a,SI table,SI paragraph 107,"ximately 112 elements in the reference mesh (Tables S18a and S18b). Between adjacent fine meshes, abs",ok
+manuscript,83,Predictive intervals and robustness,Table S2,Table S2,SI table,SI paragraph 8,"in model and the same 15,307 test samples as Table S2.",ok
+manuscript,84,Predictive intervals and robustness,Table S7,Table S7,SI table,SI paragraph 44,"nd voltage offsets were assessed separately (Table S7). A separately generated cohort of 153,067 r",ok
+manuscript,84,Predictive intervals and robustness,Table S14,Table S14,SI table,SI paragraph 88,", normalization refitting, or recalibration (Table S14). Its sampling seed could not be recovered f",ok
+manuscript,84,Predictive intervals and robustness,Table S13,Table S13,SI table,SI paragraph 85,"ds per model, and two software environments (Table S13).",ok
+manuscript,86,Data and code availability,Figures 1,Figure 1,main figure,figures/Figure1.*,nd analysis scripts. Include source data for Figures 1–5 and the supplementary tables included in t,ok
+SI,3,Supplementary Information,Table S1,Table S1,SI table,SI paragraph 3,"Table S1. Sampling latent variables, ranges, and cons",ok
+SI,8,Supplementary Information,Table S2,Table S2,SI table,SI paragraph 8,Table S2. Full 9×4 calibration table (50/80/90/95% no,ok
+SI,11,Supplementary Information,Table S3,Table S3,SI table,SI paragraph 11,Table S3. Predictive-scale statistics per parameter (,ok
+SI,13,Supplementary Information,Table S4,Table S4,SI table,SI paragraph 13,Table S4. Correlation structure of the sampling prior,ok
+SI,16,Supplementary Information,Table S5,Table S5,SI table,SI paragraph 16,Table S5. J–V association indices Si=1131V​|Pearson(l,ok
+SI,16,Supplementary Information,Fig. S6,Figure S6,SI figure,SI paragraph 133,"reference, and the recoverability Pearson r (Fig. S6). The manuscript adopts the log10 version, w",ok
+SI,18,Supplementary Information,Table S6,Table S6,SI table,SI paragraph 18,Table S6. Full collision statistics: dJ and dΘ distri,ok
+SI,18,Supplementary Information,Fig. 3,Figure 3,main figure,figures/Figure3.*,"tiers, the two curve pairs of the main-text Fig. 3 (T6.7), and five archived supplementary coll",ok
+SI,26,Supplementary Information,Fig. 3,Figure 3,main figure,figures/Figure3.*,"hey are not the pairs drawn in the main-text Fig. 3, which are tabulated separately in T6.7; cas",ok
+SI,26,Supplementary Information,Fig. 3,Figure 3,main figure,figures/Figure3.*,T6.7; case E happens to be the same pair as Fig. 3(a) and is given there in physical units.,ok
+SI,32,Supplementary Information,Fig. 3,Figure 3,main figure,figures/Figure3.*,". The two curve pairs drawn in the main-text Fig. 3, in physical values. Case (a): zero-based te",ok
+SI,33,Supplementary Information,Fig. 3,Figure 3,main figure,figures/Figure3.*,"to pair 3396 / 13213, which is not drawn in Fig. 3.",ok
+SI,42,Supplementary Information,Fig. 3c,Figure 3c,main figure,figures/Figure3.*,"coordinate differences in T6.7 and T6.8, in Fig. 3c and in Fig. S7. Differences of physical log₁",ok
+SI,42,Supplementary Information,Fig. S7,Figure S7,SI figure,SI paragraph 136,"ferences in T6.7 and T6.8, in Fig. 3c and in Fig. S7. Differences of physical log₁₀ values are in",ok
+SI,44,Supplementary Information,Table S7,Table S7,SI table,SI paragraph 44,"Table S7. Noise-robustness tables: Pearson, MAE, pred",ok
+SI,58,Supplementary Information,Table S8,Table S8,SI table,SI paragraph 58,Table S8. Forward-validation per-sample results (45 s,ok
+SI,68,Supplementary Information,Table S9,Table S9,SI table,SI paragraph 68,Table S9. COMSOL forward-model reproducibility. The f,ok
+SI,70,Supplementary Information,Table 1,Table 1,main table,manuscript paragraph 55,d DOS parameters — the sampled quantities of Table 1 — as well as the PVK band structure (band ga,ok
+SI,70,Supplementary Information,Table 1,Table 1,main table,manuscript paragraph 55,"s, DOS in m⁻³, rad_c value ×10⁻⁶ in m³ s⁻¹); Table 1 reports the consumed SI convention.",ok
+SI,75,Supplementary Information,Table S10,Table S10,SI table,SI paragraph 75,Table S10. Collision robustness across alternative J–V,ok
+SI,79,Supplementary Information,Table S11,Table S11,SI table,SI paragraph 79,Table S11. Coordinate-level recoverability of the six,ok
+SI,83,Supplementary Information,Table S12,Table S12,SI table,SI paragraph 83,Table S12. Latent-uncertainty decomposition of the Gau,ok
+SI,85,Supplementary Information,Table S13,Table S13,SI table,SI paragraph 85,Table S13. Leakage-free multi-seed baseline benchmark.,ok
+SI,85,Supplementary Information,Table S15,Table S15,SI table,SI paragraph 94,has a mean 95% interval coverage of 0.9574 (Table S15); the corresponding per-parameter statistics,ok
+SI,85,Supplementary Information,Table S17,Table S17,SI table,SI paragraph 98,"ing per-parameter statistics are reported in Table S17. Mean Spearman(σ, |error|), averaged over th",ok
+SI,86,Supplementary Information,Table S13,Table S13,SI table,SI paragraph 85,"by the multi-seed, multi-family benchmark of Table S13, and the contribution of encoder-posterior s",ok
+SI,86,Supplementary Information,Table S12,Table S12,SI table,SI paragraph 83,to the predictive variance is decomposed in Table S12.,ok
+SI,88,Supplementary Information,Table S14,Table S14,SI table,SI paragraph 88,Table S14. Same-domain independent replication of the,ok
+SI,91,Supplementary Information,Tables S10,Table S10,SI table,SI paragraph 75,archived analysis package and summarized in Tables S10–S14. The remaining validated robustness and,ok
+SI,91,Supplementary Information,Tables S15,Table S15,SI table,SI paragraph 94,n the frozen architecture and training rule (Tables S15–S17) and the numerical robustness of the for,ok
+SI,91,Supplementary Information,Tables S18a,Table S18a,SI table,SI paragraph 107,device metrics and of the frozen inversion (Tables S18a and S18b).,ok
+SI,93,Supplementary Information,Table S7,Table S7,SI table,SI paragraph 44,"redictive intervals and robustness""; note to Table S7). The single-run control that compares this",ok
+SI,93,Supplementary Information,Tables S15,Table S15,SI table,SI paragraph 94,e architecture and training rule is given in Tables S15–S17.,ok
+SI,94,Supplementary Information,Table S15,Table S15,SI table,SI paragraph 94,Table S15. Preprocessing-scope control on the frozen a,ok
+SI,94,Supplementary Information,Table S16,Table S16,SI table,SI paragraph 96,es. Per-parameter point metrics are given in Table S16 and per-parameter 95% interval statistics in,ok
+SI,94,Supplementary Information,Table S17,Table S17,SI table,SI paragraph 98,and per-parameter 95% interval statistics in Table S17. Intervals and errors are reported in physic,ok
+SI,94,Supplementary Information,Table S2,Table S2,SI table,SI paragraph 8,lipped. Empirical-coverage definitions match Table S2 (the frozen run's full calibration table) an,ok
+SI,94,Supplementary Information,Table S14,Table S14,SI table,SI paragraph 88,"the frozen run's full calibration table) and Table S14, so the coverage values for the Historical r",ok
+SI,94,Supplementary Information,Table S2,Table S2,SI table,SI paragraph 8,ot directly comparable across that boundary. Table S2 reports mean/median interval widths in the m,ok
+SI,94,Supplementary Information,Tables S15,Table S15,SI table,SI paragraph 94,"units), whereas the intervals and scores of Tables S15–S17 are computed in physical log10 units. A",ok
+SI,96,Supplementary Information,Table S16,Table S16,SI table,SI paragraph 96,Table S16. Per-parameter point-recovery metrics of the,ok
+SI,96,Supplementary Information,Fig. S6,Figure S6,SI figure,SI paragraph 133,"ared directly with the normalized-scale r of Fig. S6, whereas the two MAE definitions differ and",ok
+SI,96,Supplementary Information,Table S15,Table S15,SI table,SI paragraph 94,nd are not interchangeable. Run labels as in Table S15. Group structure and hierarchy are preserved,ok
+SI,98,Supplementary Information,Table S17,Table S17,SI table,SI paragraph 98,Table S17. Per-parameter 95% predictive-interval stati,ok
+SI,100,Supplementary Information,Table S2,Table S2,SI table,SI paragraph 8,"tabulated for the frozen (Historical) run in Table S2, which reports them in the min–max-normalize",ok
+SI,101,Supplementary Information,Table S17,Table S17,SI table,SI paragraph 98,Supplementary note accompanying Table S17.,ok
+SI,102,Supplementary Information,Tables S15,Table S15,SI table,SI paragraph 94,construction and the two senses of clipping. Tables S15–S17 report intervals μ±zcσ in physical log10,ok
+SI,102,Supplementary Information,Table S2,Table S2,SI table,SI paragraph 8,ude with the normalized-coordinate widths of Table S2 without the per-parameter scale conversion n,ok
+SI,104,Supplementary Information,Table S1,Table S1,SI table,SI paragraph 3,or used to generate the simulation database (Table S1). (i) Empirical-quantile prior (the A1 analy,ok
+SI,104,Supplementary Information,Table S17b,Table S17b,SI table,SI paragraph 105,"and standard deviation, also in log₁₀ units. Table S17b reports both at nominal 95% on the same fixe",ok
+SI,104,Supplementary Information,Table S17,Table S17,SI table,SI paragraph 98,at nominal 95% on the same fixed test set as Table S17. The empirical-quantile baseline tracks its,ok
+SI,105,Supplementary Information,Table S17b,Table S17b,SI table,SI paragraph 105,Table S17b. Training-set prior baselines at nominal 95%,ok
+SI,105,Supplementary Information,Tables S15,Table S15,SI table,SI paragraph 94,"95), evaluated on the same fixed test set as Tables S15–S17. “Coverage” is the measured frequency wi",ok
+SI,105,Supplementary Information,Table S1,Table S1,SI table,SI paragraph 3,d neither equals the joint sampling prior of Table S1.,ok
+SI,107,Supplementary Information,Table S18a,Table S18a,SI table,SI paragraph 107,Table S18a. Numerical robustness of the forward device,ok
+SI,108,Supplementary Information,Table S18b,Table S18b,SI table,SI paragraph 108,Table S18b. High-bias (>1.0 V) residual differences bet,ok
+SI,108,Supplementary Information,Table S18a,Table S18a,SI table,SI paragraph 107,"same six samples and the same mesh chain as Table S18a (Methods, ""Forward validation and numerical",ok
+SI,109,Supplementary Information,Tables S18a,Table S18a,SI table,SI paragraph 107,Supplementary note accompanying Tables S18a and S18b. Selection and reference states. Th,ok
+SI,110,Supplementary Information,Tables S18a,Table S18a,SI table,SI paragraph 107,ed cohort. The 0-1.0 V and >1.0 V windows of Tables S18a and S18b are fixed grid windows of the share,ok
+SI,113,Supplementary Information,Figure S1,Figure S1,SI figure,SI paragraph 113,Figure S1. Exploratory data analysis of the retained d,ok
+SI,116,Supplementary Information,Figure S2,Figure S2,SI figure,SI paragraph 116,Figure S2. Recoverability vs. correlation-based J–V as,ok
+SI,118,Supplementary Information,Figure S3,Figure S3,SI figure,SI paragraph 118,Figure S3. Decoder–COMSOL cycle-consistency check: rep,ok
+SI,118,Supplementary Information,Figure S3,Figure S3,SI figure,SI paragraph 118,"Forward simulation of inferred parameters""). Figure S3 comprises three panels:",ok
+SI,127,Supplementary Information,Figure S4,Figure S4,SI figure,SI paragraph 127,Figure S4. Per-parameter predictive-scale distribution,ok
+SI,130,Supplementary Information,Figure S5,Figure S5,SI figure,SI paragraph 130,Figure S5. Per-parameter uncertainty–error density plo,ok
+SI,133,Supplementary Information,Figure S6,Figure S6,SI figure,SI paragraph 133,Figure S6. Predicted versus true values of the nine in,ok
+SI,133,Supplementary Information,Fig. 2,Figure 2,main figure,figures/Figure2.*,ter parities that the coordinate analysis of Fig. 2 and Table S11 aggregates into shared-scale a,ok
+SI,133,Supplementary Information,Table S11,Table S11,SI table,SI paragraph 79,s that the coordinate analysis of Fig. 2 and Table S11 aggregates into shared-scale and log-ratio c,ok
+SI,133,Supplementary Information,Table S14,Table S14,SI table,SI paragraph 88,those reported for the original test set in Table S14.,ok
+SI,136,Supplementary Information,Figure S7,Figure S7,SI figure,SI paragraph 136,Figure S7. Empirical cumulative distributions of the s,ok

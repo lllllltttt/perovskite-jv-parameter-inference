@@ -1,0 +1,4 @@
+panel,test_index,selection,n_points,v_min,v_max,cycle_gap,rmse_decoder,rmse_comsol,max_abs_resid_decoder,max_abs_resid_comsol,residual_definition,unit,source
+a,12058,lowest cycle gap,131,0.0,1.3,0.2675194930181261,0.7528205544799814,0.6450129846618481,4.107254374688569,3.5416629303558196,dJ = J_method - J_target,mA cm^-2,decoder_comsol_audit/decoder_comsol_metrics_per_sample.csv
+b,595,median cycle gap,131,0.0,1.3,2.562703102113902,2.9789975747518764,4.593575160493588,20.88868468664147,20.955306142434573,dJ = J_method - J_target,mA cm^-2,decoder_comsol_audit/decoder_comsol_metrics_per_sample.csv
+c,14499,highest cycle gap,131,0.0,1.3,54.10451317210106,3.317709309374264,54.25777415593237,21.489451007772686,197.84933494505503,dJ = J_method - J_target,mA cm^-2,decoder_comsol_audit/decoder_comsol_metrics_per_sample.csv
