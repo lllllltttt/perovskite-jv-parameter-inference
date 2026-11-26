@@ -203,3 +203,19 @@ Do not mix them: absolute skill values are not comparable across these rows.
   generated from the *predicted* parameters, over the stated voltage window.
 * **COMSOL back-substitution error** is the difference between that COMSOL(pred) curve
   and the *target* curve — a different quantity from the cycle gap.
+
+## 5. Device metrics — units in the per-sample tables
+
+`Figure4e_per_sample.csv`, `T8.2_per_sample_full_precision.csv` and
+`device_metrics()` report four device quantities whose units differ:
+
+| metric | column unit | note |
+|---|---|---|
+| `Jsc` | mA cm⁻² | |
+| `Voc` | V | interpolated downward crossing, 2+ decimals (not rounded to 0.01 V) |
+| `FF` | **dimensionless fraction** | multiply by 100 **once** for percentage points |
+| `PCE` | **percentage points** | already in pp — do **not** multiply again |
+
+The paper quotes FF as "1.6 percentage points" (0.015533 × 100 = 1.5533) and PCE
+as "0.471 percentage points" (0.471401 as stored).  The (e)-panel script
+`fig4e_ff_pp.py` applies the ×100 to FF only.

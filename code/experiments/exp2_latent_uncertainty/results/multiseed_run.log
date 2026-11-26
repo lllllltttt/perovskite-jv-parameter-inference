@@ -1,0 +1,24 @@
+C:\Users\Administrator\anaconda3\envs\pytorch-2.60-gpu\Lib\site-packages\h5py\__init__.py:36: UserWarning: h5py is running against HDF5 1.14.6 when it was built against 1.14.5, this may cause problems
+  _warn(("h5py is running against HDF5 {0} when it was built against {1}, "
+WARNING:tensorflow:From C:\Users\Administrator\anaconda3\envs\pytorch-2.60-gpu\Lib\site-packages\keras\src\backend\tensorflow\core.py:232: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+WARNING:absl:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+seed 20260824 done (0.2 min)
+seed 20260825 done (0.1 min)
+seed 20260826 done (0.1 min)
+seed 20260827 done (0.1 min)
+seed 20260828 done (0.1 min)
+Traceback (most recent call last):
+  File "E:\project\work1\reviewer_experiments\exp2_latent_uncertainty_decomposition\scripts\multiseed.py", line 120, in <module>
+    "%.6f" % r.get("delta_pearson", "")])
+    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: must be real number, not str

@@ -40,11 +40,15 @@ Notes:
 * The frozen pickles were written by scikit-learn 1.3.2; loading them under 1.8.0
   emits an `InconsistentVersionWarning`.  The refitted scaler agrees to machine
   precision, so the warning is benign for this data.
-* The manuscript states that partition membership "cannot be reproduced from the
-  documented splitting seed".  In this release it *is* recorded explicitly in
-  `data/splits/split_indices_seed42.npz`, and that reconstruction was verified to
-  reproduce the frozen arrays exactly.  The archive is therefore the authoritative
-  record; the note in the Methods remains true for the seed alone.
+* The train/validation/test **row indices and their `Sample_ID` mapping are
+  archived** in `data/splits/split_indices_seed42.npz`.  They can also be
+  rebuilt from three documented ingredients together: the retained CSV **row
+  order**, the two-step `train_test_split` (30 % then 50/50) and `random_state
+  = 42`.  Knowing the seed alone is not sufficient — the row order and the
+  split calls are part of the recipe.  The archived indices were verified to
+  reproduce the frozen arrays element-wise.  The manuscript's Methods now state
+  this (v1.0.1); the earlier sentence "cannot be reproduced from the documented
+  splitting seed" was ambiguous and has been replaced.
 * `Sample_ID` is the 1-based row of the 200,000-row LHS design.  Joining on it
   reproduces `mu_n_pvk`, `mu_p_pvk`, `tau_ETL`, `tau_HTL` and `rad_c` to the three
   significant digits stored in the retained CSV.
@@ -84,10 +88,42 @@ reported digit.
 | random-pair baseline | `code/collision_revision_v2/source_data/fig3_random_pairs.csv.gz` | 199,985 | 199,985 |
 | mean Pearson r at 0% noise | `analysis/noise_robustness/noise_metrics_all.csv` | 0.8069 | 0.807 |
 | forward-validation RMSE median | `analysis/forward_validation_unbiased/forward_metrics_summary.csv` | 2.6926 mA cm⁻² | 2.69 |
-| \|ΔJsc\|, \|ΔVoc\|, \|ΔFF\|, \|ΔPCE\| medians | ibid. | 0.1119, 0.030, 0.0141, 0.4714 | 0.112, 0.030, 0.014, 0.471 |
+| \|ΔJsc\| median (n = 45) | `figures/build/fig4_de/data_used/Figure4e_per_sample.csv` | 0.111897 mA cm⁻² | 0.112 |
+| \|ΔVoc\| median (n = 44) | ibid. | **0.022439 V** | 0.022 |
+| \|ΔFF\| median (n = 44) | ibid. | **0.015533 (dimensionless)** = 1.5533 percentage points | 1.6 pp |
+| \|ΔPCE\| median (n = 44) | ibid. | **0.471401 percentage points** (the PCE column is already in pp) | 0.471 pp |
 
 The superseded collision table (7,666 pairs, `analysis/collision_analysis_superseded/`)
 is shipped for provenance only and is **not** the analysis used in the paper.
+
+### Device metrics: which table is authoritative
+
+The device deviations quoted in the paper, drawn in Figure 4e and tabulated in
+Table S8 are computed by `code/device_metrics.py` with the **interpolated**
+downward zero crossing and **44 of 45 cases** for Voc, FF and PCE (one
+back-substituted curve has no downward crossing inside 0–1.3 V).  The same four
+medians are obtained independently from the SI's own per-sample table
+(`data/tables/submission_v8/T8.2_per_sample_full_precision.csv`):
+
+| metric | n | median |
+|---|---|---|
+| Jsc (mA cm⁻²) | 45 | 0.111897 |
+| Voc (V) | 44 | 0.022439 |
+| FF (dimensionless) | 44 | 0.015533 → 1.5533 pp |
+| PCE (percentage points) | 44 | 0.471401 |
+
+**Superseded:** `analysis/forward_validation_unbiased/forward_metrics_summary.csv`
+holds a `device_mae` block with Voc median 0.030 V and FF median 0.0141.  That
+block was produced by `forward_validation_postprocess.py`, which rounds Voc to
+0.01 V before differencing and keeps the undefined-FF case in the sample; it is
+therefore *not* the source of any published number and is not a verification
+input.  The file is kept unchanged for provenance (see the `SUPERSEDED.md` next
+to it).  Do not "correct" the paper towards it.
+
+**Units.** FF is a dimensionless fraction; multiplying by 100 once gives
+percentage points (1.5533 pp).  PCE is already stored in percentage points, so
+its deviation (0.471401) must **not** be multiplied again.  The (e) panel script
+`fig4e_ff_pp.py` applies the ×100 to FF only.
 
 ## 4. Quickstart — **verified**
 
@@ -121,3 +157,42 @@ release preparation:
 * **Batch order / initial weights of the historical training run** — the paper says
   this was not recorded, and nothing in this release changes that.  See
   `docs/KNOWN_LIMITATIONS.md`.
+
+## 7. Voc extraction (fixed in v1.0.1)
+
+`code/pipeline/00_extract_frozen_predictions.py` used to derive the device
+observables with two defects:
+
+1. it took the **first sign change of either direction**, so a reverse-bias tail
+   (negative → positive) would have been mistaken for an open-circuit crossing;
+2. it called `np.interp(0, [J_k, J_k+1], [V_k, V_k+1])`, whose x-argument (the
+   current) decreases along the sweep.  `np.interp` requires an increasing
+   argument, so the result was one grid node rather than the linear root — for
+   `J = [1, -1]` over `V = [1.26, 1.27]` it returns 1.27 V instead of 1.265 V.
+
+The canonical extractor is now `code/device_metrics.py`: first **downward**
+crossing, unique linear root, NaN for every dependent metric when no crossing
+exists, NaN propagation for non-finite currents.  It is bit-identical
+(≤ 1e-12) to the archived `v2lib.device_metrics` that produced Figure 4e and
+Table S8, checked on all 15,307 test curves and all 90 forward-validation
+curves.
+
+**Impact on published results: none.**  On the 15,307 test curves every first
+sign change is downward, so only defect 2 acted, and only on the `voc` and `ff`
+arrays of `_frozen_preds.npz`:
+
+| array | max abs change | note |
+|---|---|---|
+| `voc` | 1.0e-2 V | one grid step, always towards the true root |
+| `ff` | 8.0e-3 | follows from the Voc change |
+| `pce` | 3.6e-15 | invariant: `FF = Pmax/(Jsc·Voc)` cancels Voc |
+| everything else | 0 | identical |
+| `fig2b_repr_indices` | none | selection is PCE-based, and PCE is unchanged |
+
+No figure, table or statistic in the paper depends on the old `voc`/`ff` arrays;
+the published device metrics come from the corrected extractor path.  The
+frozen `_frozen_preds.npz` is **not** overwritten — the recomputed file was
+written to a separate directory and compared item by item.
+
+The boundary cases above are covered by `code/tests/test_device_metrics.py`
+(`python -m unittest discover -s code/tests`).

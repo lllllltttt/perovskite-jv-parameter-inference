@@ -71,17 +71,27 @@
 
 ## Release mechanics
 
-* **Paths.** The five entry points that produce the released results —
-  `code/quickstart_inference.py`, `code/pipeline/00_extract_frozen_predictions.py`,
-  `code/pipeline/VAE_v6_eval_fixed.py`, `code/pipeline/forward_validation_unbiased.py`
-  and `code/pipeline/decoder_comsol_audit.py` — resolve every path through
-  `code/paths.py` (`JV_DATA_ROOT`, `JV_MODEL_ROOT`, `JV_RESULTS_ROOT`) and contain no
-  absolute path.  The remaining archived analysis scripts
-  (`collision_analysis.py`, `noise_robustness.py`,
-  `forward_validation_postprocess.py`, …) are shipped **as they were run**, with the
-  original `E:/project/work1` constants at the top of the file; they are preserved
-  as records of the analysis, and their outputs are shipped alongside them.  To
-  re-run one, edit the three or four path constants at its top.
+* **Paths.** Only a defined subset runs without editing (README, "Which scripts
+  run as-is"): the smoke test, the full-metric verifier, the manifest verifier,
+  `device_metrics.py`, the tests, and four pipeline entry points
+  (`00_extract_frozen_predictions`, `VAE_v6_eval_fixed`,
+  `forward_validation_unbiased`, `decoder_comsol_audit`).  Those resolve every
+  path through `code/paths.py` (`JV_DATA_ROOT`, `JV_MODEL_ROOT`,
+  `JV_RESULTS_ROOT`).
+  The bulk of the archived scripts under `code/analysis/`, `code/experiments/`,
+  `code/collision_revision_v2/` and `code/figures/build/` are shipped **as they
+  were run**, with the original `E:/project/work1` or `/home/student2/...`
+  constants at the top of the file; their outputs are shipped alongside them.
+  They were deliberately not rewritten in v1.0.1 — changing them would alter
+  the code that produced published figures without re-running those figures.
+  `code/pipeline/pre-process.py` and `VAE-v6.py` also need `CSV_PATH` /
+  `OUTPUT_DIR` editing.  Do not describe the repository as "all paths
+  configurable"; it is not.
+* **Device metrics.** Use `code/device_metrics.py` (interpolated downward
+  crossing).  `analysis/forward_validation_unbiased/forward_metrics_summary.csv`
+  contains a rounded-Voc device block that is superseded (see the
+  `SUPERSEDED.md` beside it and `docs/REPRODUCE.md` §3).
 * No open-source licence has been chosen.  See `LICENSE_STATUS.md`.
-* No DOI exists.  The GitHub URL and tag `v1.0.0` are the identifiers.
+* No DOI exists.  The identifiers are the repository URL and the tags
+  `v1.0.1` (code/docs) and `v1.0.0` (data archives).
 * Asset archives were compressed with `gzip -3`; unpack before use.

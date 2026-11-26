@@ -1,20 +1,35 @@
-"""Minimal, self-contained reproduction check (no COMSOL, no retraining).
+# -*- coding: utf-8 -*-
+"""SMOKE TEST -- not a reproduction of the paper.
+
+This script checks that the frozen model loads and behaves as documented on a
+fixed 200-curve subset of the held-out test set that ships with the repository
+(``data/examples/test_subset_200.npz``).  It cannot reproduce any published
+number: the paper's accuracy figures are computed on all 15,307 test curves.
+For those, run ``code/verify_frozen_metrics.py`` with the full dataset.
+
+What is asserted
+----------------
+* array shapes and finiteness;
+* mean reconstruction MSE in normalized J space against the stored expected
+  value, within 10 %;
+* mean predictive scale against the stored value, within 0.01;
+* per-parameter Pearson r against the stored values, within 0.02.
+
+Why these tolerances
+--------------------
+On a fixed TensorFlow build the computation is deterministic: re-running with
+batch sizes 32 / 64 / 128 / 200 changes the mean MSE by 7e-12 relative and
+leaves every r bit-identical.  Across TensorFlow versions the archived run and
+this one differ by at most 4.9e-5 in normalized parameter units, which is
+~2e-6 relative on the reconstruction.  The bands above are therefore more than
+1,000x the observed numerical drift, while a wrong checkpoint, wrong subset or
+wrong scaler changes these values by orders of magnitude.
 
 Run from the repository root:
 
     python code/quickstart_inference.py
-
-It loads the frozen VAE-v6 encoder / decoder / parameter head, runs inference on
-a fixed 200-curve subset of the held-out test set that ships with the
-repository, and recomputes the two headline quantities quoted in the paper:
-
-  * mean and median reconstruction MSE in normalized J space
-    (paper: 1.211e-5 / 2.969e-6; see Results, "Simulation domain ...")
-  * per-parameter Pearson r between predicted and true parameters, normalized
-    log10 space (paper Table 2)
-
-The script exits non-zero if the numbers drift outside the published tolerance.
 """
+import json
 import os
 import sys
 
@@ -31,6 +46,9 @@ tf.get_logger().setLevel("ERROR")
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
 
 SIGMA_MIN, SIGMA_MAX = 0.01, 1.0
+MSE_RTOL = 0.10
+SIGMA_ATOL = 0.01
+R_ATOL = 0.02
 
 
 class Sampling(layers.Layer):
@@ -41,9 +59,21 @@ class Sampling(layers.Layer):
 
 
 def main():
+    exp = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                      "..", "data", "examples",
+                                      "expected_smoke_results.json"),
+                         encoding="utf-8"))
     sub = np.load(paths.data_file("examples", "test_subset_200.npz"), allow_pickle=True)
     J = sub["J_test"].astype(np.float32)
     P = sub["params_test"]
+
+    print("SMOKE TEST on a fixed 200-curve subset (not the paper's 15,307 curves)")
+    failures = []
+
+    if J.shape != (200, 131) or P.shape != (200, 9):
+        failures.append(f"unexpected shapes J={J.shape} params={P.shape}")
+    if not (np.all(np.isfinite(J)) and np.all(np.isfinite(P))):
+        failures.append("non-finite values in the example subset")
 
     enc = keras.models.load_model(paths.model_file("encoder.h5"),
                                   custom_objects={"Sampling": Sampling}, compile=False)
@@ -56,23 +86,43 @@ def main():
     mu = out[0]
     sigma = np.clip(tf.nn.softplus(out[1]).numpy() + SIGMA_MIN, SIGMA_MIN, SIGMA_MAX)
 
-    per_curve = np.mean((J - recon) ** 2, axis=1)
-    print(f"reconstruction MSE  mean={per_curve.mean():.6e}  median={np.median(per_curve):.6e}")
-    print(f"predictive scale    mean={sigma.mean():.4f}  (normalized units)")
+    for name, arr in (("z_mean", z_mean), ("recon", recon), ("param_mu", mu),
+                      ("sigma", sigma)):
+        if not np.all(np.isfinite(arr)):
+            failures.append(f"non-finite output in {name}")
+
+    mse = float(np.mean((J - recon) ** 2))
+    sig = float(sigma.mean())
+    r = {str(n): float(np.corrcoef(mu[:, i], P[:, i])[0, 1])
+         for i, n in enumerate(sub["param_names"])}
+
+    print(f"\n{'quantity':34s} {'measured':>12s} {'expected':>12s} {'delta':>10s}")
+    dm = abs(mse - exp["mse_mean"]) / exp["mse_mean"]
+    print(f"{'mean reconstruction MSE':34s} {mse:12.4e} {exp['mse_mean']:12.4e} {dm:9.2%}")
+    if dm > MSE_RTOL:
+        failures.append(f"mean MSE {mse:.4e} is {dm:.1%} from the expected value")
+    ds = abs(sig - exp["sigma_mean"])
+    print(f"{'mean predictive scale':34s} {sig:12.5f} {exp['sigma_mean']:12.5f} {ds:10.4f}")
+    if ds > SIGMA_ATOL:
+        failures.append(f"mean sigma {sig:.5f} differs by {ds:.4f}")
 
     print("\nper-parameter Pearson r (normalized log10 space):")
-    r = {}
-    for i, name in enumerate(sub["param_names"]):
-        r[str(name)] = float(np.corrcoef(mu[:, i], P[:, i])[0, 1])
-        print(f"  {name:12s} {r[str(name)]:.4f}")
+    for n in exp["pearson_r"]:
+        d = abs(r[n] - exp["pearson_r"][n])
+        flag = "" if d <= R_ATOL else "  <-- FAIL"
+        print(f"  {n:12s} {r[n]:8.4f}   expected {exp['pearson_r'][n]:.4f}   "
+              f"|d| {d:.4f}{flag}")
+        if d > R_ATOL:
+            failures.append(f"r[{n}] {r[n]:.4f} differs from {exp['pearson_r'][n]:.4f}")
 
-    # the six bulk parameters must fall inside the published 0.878-0.919 band
-    bulk = ["mu_n_pvk", "mu_p_pvk", "tau_n_pvk", "tau_p_pvk", "Nc_eff_pvk", "Nv_eff_pvk"]
-    lo, hi = min(r[k] for k in bulk), max(r[k] for k in bulk)
-    ok = 0.85 <= lo and hi <= 0.95
-    print(f"\nbulk-parameter r range on this 200-curve subset: {lo:.3f}-{hi:.3f}")
-    print("PASS" if ok else "FAIL: outside the expected range")
-    return 0 if ok else 1
+    if failures:
+        print("\nFAIL")
+        for f in failures:
+            print("  -", f)
+        return 1
+    print("\nPASS: frozen model loads and reproduces the smoke-test expectations.")
+    print("For the paper's 15,307-curve metrics run code/verify_frozen_metrics.py")
+    return 0
 
 
 if __name__ == "__main__":

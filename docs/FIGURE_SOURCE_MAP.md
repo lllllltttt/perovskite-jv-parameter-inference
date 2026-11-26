@@ -61,6 +61,20 @@ matplotlib export in the final version.
 * **Every panel layout** — panel letters, titles, annotation placement and font
   choices live in the `.pptx` decks.
 
+## Shared library and the extractor
+
+The figure-build scripts import two shared modules:
+
+* `v2lib` — vendored at `code/comsol_validation/_tools/v2lib.py`.  The archived
+  scripts add `<BASE>/supplementary_validation_v2/_tools` to `sys.path`; when
+  running them from a clone, edit that line.  Its `device_metrics` is the
+  published convention, now re-implemented and tested as
+  `code/device_metrics.py` (the two agree to 1e-12).
+* `_frozen_preds.npz` — produced by the single canonical extractor
+  `code/pipeline/00_extract_frozen_predictions.py` (see
+  `code/figures/README_EXTRACTOR.md`).  The figure scripts read it from their own
+  directory.
+
 ## Panel-level source data
 
 `code/figures/build/*/data_used/` holds the exact arrays each panel was drawn from,

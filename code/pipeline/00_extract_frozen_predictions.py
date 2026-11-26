@@ -33,6 +33,7 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 # JV_DATA_ROOT / JV_MODEL_ROOT to point at unpacked release assets instead.
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import paths  # noqa: E402
+import device_metrics as dm  # noqa: E402
 
 NPZ_PATH = paths.data_file("dataset_normalized.npz")
 MODEL_DIR = os.path.join(paths.model_dir(), "vae-v6")
@@ -60,22 +61,26 @@ def sigma_fixed(raw):
 
 
 def device_observables(J_raw):
-    """Jsc, Voc, FF, PCE from physical J-V (mA/cm^2) on V_GRID (frozen protocol)."""
-    N = J_raw.shape[0]
-    jsc = np.abs(J_raw[:, 0])
-    voc = np.full(N, np.nan)
-    for i in range(N):
-        s = np.diff(np.sign(J_raw[i]))
-        k0 = np.where(s)[0]
-        if len(k0):
-            k = k0[0]
-            voc[i] = np.interp(0.0, [J_raw[i, k], J_raw[i, k + 1]], [V_GRID[k], V_GRID[k + 1]])
-    pv = J_raw * V_GRID[None, :]
-    pv = np.where(pv > 0, pv, np.nan)
-    pmax = np.nanmax(pv, axis=1)
-    ff = np.where((voc > 0) & (jsc * voc > 0), pmax / (jsc * voc), np.nan)
-    pce = jsc * voc * ff
-    return jsc, voc, ff, pce
+    """Jsc, Voc, FF, PCE for a stack of physical J-V curves (mA cm^-2).
+
+    Delegates to ``code/device_metrics.py``, the same convention the published
+    Figure 4e / Table S8 numbers use: the FIRST DOWNWARD zero crossing,
+    linearly interpolated; NaN for every dependent metric when there is none.
+
+    History: this function used to take the first sign change of either
+    direction and feed ``np.interp`` an argument array that decreases, which
+    both mis-handles a reverse-bias tail and is not the linear root.  On the
+    15,307 test curves every first change is downward, so only the
+    interpolation was affected (|dV_oc| <= 0.01 V, one grid step).  PCE is
+    invariant (FF = Pmax/(Jsc*Voc) cancels Voc), so the Figure 2b sample
+    selection and every published device metric are unchanged.  See
+    docs/REPRODUCE.md, "Voc extraction".
+    """
+    res = [dm.device_metrics(j) for j in J_raw]
+    return (np.array([r["Jsc"] for r in res]),
+            np.array([r["Voc"] for r in res]),
+            np.array([r["FF"] for r in res]),
+            np.array([r["PCE"] for r in res]))
 
 
 def main():
