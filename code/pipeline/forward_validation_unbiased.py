@@ -49,10 +49,14 @@ from tensorflow.keras import layers
 # ------------------------------------------------------------------
 # Config
 # ------------------------------------------------------------------
-ROOT        = r"E:/project/work1"
-DATA_DIR    = os.path.join(ROOT, "data")
-MODEL_DIR   = os.path.join(DATA_DIR, "vae-v6", "vae-v6")
-OUT_DIR     = os.path.join(ROOT, "forward_validation_unbiased")
+ROOT        = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import sys  # noqa: E402
+sys.path.insert(0, os.path.join(ROOT, "code"))
+import paths  # noqa: E402
+
+DATA_DIR    = paths.data_root()
+MODEL_DIR   = os.path.join(paths.model_dir(), "vae-v6")
+OUT_DIR     = os.environ.get("JV_RESULTS_ROOT", os.path.join(ROOT, "forward_validation_unbiased"))
 
 NPZ_PATH        = os.path.join(DATA_DIR, "dataset_normalized.npz")
 PARAM_SCALER    = os.path.join(DATA_DIR, "param_scaler.pkl")

@@ -21,6 +21,7 @@ PCE nearest each tercile median) — deterministic, no seed.
 
 import os
 import pickle
+import sys
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
@@ -28,11 +29,17 @@ from tensorflow.keras import layers
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
-BASE = r"E:\project\work1"
-NPZ_PATH = os.path.join(BASE, "data", "dataset_normalized.npz")
-MODEL_DIR = os.path.join(BASE, "data", "vae-v6", "vae-v6")
-PARAM_SCALER = os.path.join(BASE, "data", "param_scaler.pkl")
-OUT_NPZ = os.path.join(BASE, "final_figures", "scripts", "_frozen_preds.npz")
+# Paths are resolved relative to the repository (see code/paths.py); set
+# JV_DATA_ROOT / JV_MODEL_ROOT to point at unpacked release assets instead.
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import paths  # noqa: E402
+
+NPZ_PATH = paths.data_file("dataset_normalized.npz")
+MODEL_DIR = os.path.join(paths.model_dir(), "vae-v6")
+PARAM_SCALER = paths.scaler_file("param_scaler.pkl")
+OUT_NPZ = os.environ.get(
+    "JV_OUT_NPZ", os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                               "_frozen_preds.npz"))
 
 V_GRID = np.linspace(0.0, 1.3, 131)
 
