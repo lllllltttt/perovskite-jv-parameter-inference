@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.0.3 — 2026-11-27
+
+Documentation bookkeeping only; code, data and manifests are identical in
+content to v1.0.1.  The README no longer pins a tag name in its "release
+status" line (inside the v1.0.2 tree it still named v1.0.1) and the clone
+command no longer uses `--branch`.  **Use this tag** when citing the code and
+documentation; the data archives remain those of v1.0.0.
+
+## v1.0.2 — 2026-11-27
+
+Correction of one sentence in this file.  v1.0.1 said
+`docs/FILE_MANIFEST_SHA256.txt` covered "1313 tracked files" while the manifest
+at that tag lists 1314 — the count was taken before the changelog itself was
+added.  The tag was not moved; this one carries the corrected wording.  Code
+and data identical to v1.0.1.
+
 ## v1.0.1 — 2026-11-27
 
 Docs, code and verification only. **No archived data or model file changed**, and
