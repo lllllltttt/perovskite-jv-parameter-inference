@@ -1,0 +1,56 @@
+Figure S7 拆图交付：S7a–S7f 六个独立子图 + 删除文字清单
+2026-11-17
+======================================================================
+
+来源：E:/project/work1/20261024_final_figures_svg/si/FigureS7.svg（未改动）
+画布 149.720 × 118.280 pt（1248 × 986 px @600 dpi）；绘图区 127.620 × 98.513 pt；六格完全一致。
+
+一、顺序与各自内容
+----------------------------------------------------------------------
+  S7a  a_μ   mobility  横轴 0–3  nearest-neighbour 曲线 蓝色 #0072b2，random pairs 曲线灰色
+  S7b  r_μ   mobility  横轴 0–5  nearest-neighbour 曲线 橙色 #d55e00，random pairs 曲线灰色
+  S7c  a_τ   lifetime  横轴 0–3  nearest-neighbour 曲线 蓝色 #0072b2，random pairs 曲线灰色
+  S7d  r_τ   lifetime  横轴 0–5  nearest-neighbour 曲线 橙色 #d55e00，random pairs 曲线灰色
+  S7e  a_D   DOS       横轴 0–4  nearest-neighbour 曲线 蓝色 #0072b2，random pairs 曲线灰色
+  S7f  r_D   DOS       横轴 0–5  nearest-neighbour 曲线 橙色 #d55e00，random pairs 曲线灰色
+
+二、删掉的文字（原文，可直接复制）
+----------------------------------------------------------------------
+  axes_1   (a) $a_{\mu}$ mobility
+  axes_1   $|\Delta\mathrm{coord}|$ / random median
+  axes_1   cumulative fraction
+  axes_2   (b) $r_{\mu}$ mobility
+  axes_2   $|\Delta\mathrm{coord}|$ / random median
+  axes_3   (c) $a_{\tau}$ lifetime
+  axes_3   $|\Delta\mathrm{coord}|$ / random median
+  axes_4   (d) $r_{\tau}$ lifetime
+  axes_4   $|\Delta\mathrm{coord}|$ / random median
+  axes_4   cumulative fraction
+  axes_5   (e) $a_{D}$ DOS
+  axes_5   $|\Delta\mathrm{coord}|$ / random median
+  axes_6   (f) $r_{D}$ DOS
+  axes_6   $|\Delta\mathrm{coord}|$ / random median
+  整图       x axis: absolute difference in the coordinate, divided by the median absolute difference of the same coordinate over the 199,985 random pairs (seed 42); 1 (dotted) is therefore the random-pair median. Every value of both sets is drawn — no truncation, no dropped points — and each panel is scaled to the full range of its own two groups, so the six x ranges differ.
+
+三、曲线的颜色 / 线宽 / 线型
+  S7a 的图例**已保留**（两行：random pairs / nearest-neighbour pairs，含线段示例，
+  位于绘图区右下角，原样未动）；S7b–S7f 本来就没有图例。其余五格若要补图例，
+  按下面对应的颜色画即可。
+----------------------------------------------------------------------
+  random pairs            #9A9A9A  1.3 pt  实线   （六格都有）
+  nearest-neighbour 对    #0072B2  1.6 pt  实线   （S7a / S7c / S7e，a 类坐标）
+                          #D55E00  1.6 pt  实线   （S7b / S7d / S7f，r 类坐标）
+  x = 1 竖直参考线        #555555  点线（dash 1,1.65）
+  曲线均为累计分布，未平滑、未截断、未重采样。
+
+四、保留与核对
+----------------------------------------------------------------------
+  · 每格保留两条累计分布曲线 + x=1 竖线 + 四周边框 + 全部刻度线与刻度数字。
+  · 纵轴每格都是 0.0 / 0.2 / 0.4 / 0.6 / 0.8 / 1.0 六个数字齐全（顶部 1.0 在内）。
+  · 横轴保持各自范围，没有统一：S7a 0–3、S7b 0–5、S7c 0–3、S7d 0–5、S7e 0–4、S7f 0–5。
+  · 刻度数字已全部转为矢量轮廓，PowerPoint 里不依赖字体。
+  · 与源图同窗口 600 dpi 逐像素比较：差异全部落在文字/图例墨迹内，曲线、边框、
+    参考线、刻度线一个像素没动（掩膜外 0 px）。
+  · 曲线路径与源图逐条相同（d + style 完全一致）。
+  · 最小留边 2.40 pt，顶部 1.0 与横轴最右刻度完整无裁切。
+  · PNG 为白底。

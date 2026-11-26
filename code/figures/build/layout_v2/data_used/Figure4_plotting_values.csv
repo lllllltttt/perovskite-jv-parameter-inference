@@ -1,0 +1,11 @@
+panel,item,value,unit,n,sample_id_db,definition,source
+a-c,test index 12058 (lowest),0.2675194930181261,mA cm$^{-2}$,1,52446.0,"cycle gap = RMSE(decoder, COMSOL); index is a zero-based row index into the frozen test set, not a database Sample_ID",decoder_comsol_audit/decoder_comsol_metrics_per_sample.csv
+a-c,test index 595 (median),2.562703102113902,mA cm$^{-2}$,1,117995.0,"cycle gap = RMSE(decoder, COMSOL); index is a zero-based row index into the frozen test set, not a database Sample_ID",decoder_comsol_audit/decoder_comsol_metrics_per_sample.csv
+a-c,test index 14499 (highest),54.10451317210106,mA cm$^{-2}$,1,154812.0,"cycle gap = RMSE(decoder, COMSOL); index is a zero-based row index into the frozen test set, not a database Sample_ID",decoder_comsol_audit/decoder_comsol_metrics_per_sample.csv
+d,rmse_full,2.6926307862684533,mA cm$^{-2}$,45,,per-sample J-V RMSE,forward_validation_unbiased/forward_metrics_per_sample.csv
+d,rmse_le1,0.4553486052477993,mA cm$^{-2}$,45,,per-sample J-V RMSE,forward_validation_unbiased/forward_metrics_per_sample.csv
+d,rmse_gt1,5.191599960977726,mA cm$^{-2}$,45,,per-sample J-V RMSE,forward_validation_unbiased/forward_metrics_per_sample.csv
+e,abs_dJsc,0.111897,mA cm$^{-2}$,45,,"median |predicted - target|; unified continuous linear zero-crossing (v2lib.device_metrics, voc_mode='interp')","forward_validation_unbiased/comsol_{true,pred}/Sample_*.mat"
+e,abs_dVoc,0.022439,V,44,,"median |predicted - target|; unified continuous linear zero-crossing (v2lib.device_metrics, voc_mode='interp')","forward_validation_unbiased/comsol_{true,pred}/Sample_*.mat"
+e,abs_dFF,0.015533,-,44,,"median |predicted - target|; unified continuous linear zero-crossing (v2lib.device_metrics, voc_mode='interp')","forward_validation_unbiased/comsol_{true,pred}/Sample_*.mat"
+e,abs_dPCE,0.471401,percentage points,44,,"median |predicted - target|; unified continuous linear zero-crossing (v2lib.device_metrics, voc_mode='interp')","forward_validation_unbiased/comsol_{true,pred}/Sample_*.mat"

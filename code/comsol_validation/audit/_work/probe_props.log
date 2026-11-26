@@ -1,0 +1,21 @@
+
+MATLAB is now connected to a COMSOL Multiphysics Server at localhost:2039
+
+Run the commands below to access the COMSOL ModelUtil commands:
+import com.comsol.model.util.*
+--- mc1 label=Ag ---
+  TerminalName = 1
+  TerminalType = Voltage
+  V0 = 0[V]
+  ContactType = ohmic
+  Phi_B = 0.67[V]
+  Phi = 4.5[V]
+  ContactResistance = 0
+--- mc2 label=FTO ---
+  TerminalName = 2
+  TerminalType = Voltage
+  V0 = V_app
+  ContactType = ohmic
+  Phi_B = 0.67[V]
+  Phi = 4.5[V]
+  ContactResistance = 0

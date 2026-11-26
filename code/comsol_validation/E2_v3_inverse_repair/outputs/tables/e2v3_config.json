@@ -1,0 +1,14 @@
+{
+  "n_rows_loaded": 78,
+  "sources": [
+    "curves",
+    "curves",
+    "curves"
+  ],
+  "sens_z_threshold": 0.1,
+  "main_criterion": "abs(z_ref)>0.1 with z_ref=d_mu_norm/sigma_ref_norm (sigma of frozen m=1 ref curve); z_current=d_mu_norm/sigma_current_norm reported as secondary",
+  "denorm": "mu_log10[j]=mu_norm[j]*R[j]+Lmin[j]; sigma_log10[j]=sigma_norm[j]*R[j]; d_mu_log10[j]=d_mu_norm[j]*R[j]; mu_point_phys=10**mu_log10",
+  "clip": "sigma=clip(softplus(raw)+0.01,0.01,1) in norm space; per-row clip_hi_any/clip_lo_any flags recorded",
+  "corrected_claims": "see e2v3_corrected_claims.csv (5 round-2 over-reaches re-stated against corrected tables)",
+  "window_substitution": "reframed as ATTRIBUTION diagnostic only (not an independent reverse-model proof)"
+}

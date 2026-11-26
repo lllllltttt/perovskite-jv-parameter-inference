@@ -1,0 +1,8 @@
+check,expected,computed,ok
+q1 all stored skill_rmse == 1-(rmse_m/rmse_p)^2,0.0,9.84040230647687e-07,True
+q2 a_mu stored skill is MSE/R2 form 0.856,0.856,0.855637,True
+q2 a_mu would-be RMSE-ratio skill ~0.620 (name is a misnomer),0.62,0.6200480922710163,True
+q3 a-skill SI range 0.78-0.86 (min),0.78,0.777412,True
+q3 a-skill SI range 0.78-0.86 (max),0.86,0.855637,True
+q3 r-skill SI range 0.07-0.18 (max),0.18,0.183836,True
+q3 a_mu Pearson 0.925 (SI T11),0.925,0.925047,True

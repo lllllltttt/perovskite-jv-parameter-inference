@@ -1,0 +1,10 @@
+index,key,label_plain,family,pair_role,color_hex,marker,marker_size_pt,panels,legend_row
+0,mu_n_pvk,mu_n,mu,dark,#004488,o,3.2,"a,c,d,e",1
+1,mu_p_pvk,mu_p,mu,light,#6BA0D2,s,3.2,"a,c,d,e",1
+2,tau_n_pvk,tau_n,tau_el,dark,#A85400,o,3.2,"a,c,d,e",2
+3,tau_p_pvk,tau_p,tau_el,light,#D08F45,s,3.2,"a,c,d,e",2
+4,Nc_eff_pvk,Nc,N,dark,#06695A,o,3.2,"a,c,d,e",3
+5,Nv_eff_pvk,Nv,N,light,#55AE9C,s,3.2,"a,c,d,e",3
+6,tau_ETL,tau_ETL,tau_etl,dark,#5B2C83,o,3.2,"a,c,d,e",4
+7,tau_HTL,tau_HTL,tau_etl,light,#A98BC9,s,3.2,"a,c,d,e",4
+8,rad_c,rad_c,rad,alone,#333333,o,3.2,"a,c,d,e",5

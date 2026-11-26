@@ -1,0 +1,10 @@
+parameter,unit,pearson_r,n_test,space,source
+mu_n_pvk,$\mu_n$,0.906268,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"
+mu_p_pvk,$\mu_p$,0.919434,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"
+tau_n_pvk,$\tau_n$,0.878266,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"
+tau_p_pvk,$\tau_p$,0.880803,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"
+Nc_eff_pvk,$N_c$,0.909047,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"
+Nv_eff_pvk,$N_v$,0.895604,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"
+tau_ETL,$\tau_\mathrm{ETL}$,0.593605,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"
+tau_HTL,$\tau_\mathrm{HTL}$,0.719923,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"
+rad_c,$r_\mathrm{rad}$,0.559174,15307,normalized log10 (model space),"final_figures/scripts/_frozen_preds.npz (params_test, param_mu); rho cross-checked against evaluation_fixed/parameter_metrics.csv"

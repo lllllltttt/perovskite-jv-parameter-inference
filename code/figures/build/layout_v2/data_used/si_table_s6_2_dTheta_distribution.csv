@@ -1,0 +1,11 @@
+statistic,value,quantity
+Count,11245.0,d_Theta (RMSE over 9 normalized log parameters)
+Mean,0.21095931417244504,d_Theta (RMSE over 9 normalized log parameters)
+Std,0.08425101794356835,d_Theta (RMSE over 9 normalized log parameters)
+Min,0.01951223996005776,d_Theta (RMSE over 9 normalized log parameters)
+25%,0.14791092425207888,d_Theta (RMSE over 9 normalized log parameters)
+50%,0.20206833745666977,d_Theta (RMSE over 9 normalized log parameters)
+75%,0.2662585397352694,d_Theta (RMSE over 9 normalized log parameters)
+90%,0.32466759194732775,d_Theta (RMSE over 9 normalized log parameters)
+99%,0.4341200304480554,d_Theta (RMSE over 9 normalized log parameters)
+Max,0.6174730394347271,d_Theta (RMSE over 9 normalized log parameters)

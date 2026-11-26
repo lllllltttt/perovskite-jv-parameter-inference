@@ -48,6 +48,11 @@ Notes:
 * `Sample_ID` is the 1-based row of the 200,000-row LHS design.  Joining on it
   reproduces `mu_n_pvk`, `mu_p_pvk`, `tau_ETL`, `tau_HTL` and `rad_c` to the three
   significant digits stored in the retained CSV.
+* Independent cross-check: the SI's own per-sample table
+  (`T8.2_per_sample_full_precision.csv`) records test index 595 ↔ `Sample_ID`
+  117995, and `data/splits/split_indices_seed42.npz` gives `sample_id_test[595] =
+  117995`.  An independently produced table therefore agrees with the reconstructed
+  partition.
 
 ## 2. Frozen model loading and inference — **verified**
 

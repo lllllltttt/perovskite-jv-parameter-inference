@@ -1,0 +1,129 @@
+﻿Figure S1 (ticks-kept version)  automatic verification  2026-11-16
+=================================================================
+A  wording: Count / parameter names / axis titles / panel numbers /
+   "N = 102,046" / "Spearman rho" -- zero occurrences in all ten SVGs;
+   the heat map keeps exactly 81 in-cell numbers + 5 colour-bar numbers.
+B  element-by-element: every retained element of each piece is identical
+   to the corresponding element of the source SVG (10/10 pieces), i.e.
+   nothing was redrawn, re-coloured or re-scaled.
+C  tick marks: every <use> tick marker of the source axes is present
+   (10/10 pieces, exact counts).
+D  crop: each piece rendered at 600 dpi and compared, pixel by pixel,
+   with the same axes rendered from the source in the same window;
+   all differences lie inside the ink of the deleted text (mask dilated
+   4 px) -- 0 pixels changed anywhere else. No ink is closer than
+   2.88 pt to a crop edge, so nothing is clipped.
+E  SVG canvas and PNG pixel size agree (600 dpi, 1 px tolerance).
+F  the nine histograms share one canvas and one plot-area offset
+   (39.36, 8.88) pt.
+
+-- log follows ------------------------------------------------
+
+== A  every piece: wording ==
+  S1a_01_mu_n        texts=6   use=10 banned=- leaked=-
+  PASS  S1a_01_mu_n: all explanatory wording gone
+  S1a_02_mu_p        texts=0   use=4  banned=- leaked=-
+  PASS  S1a_02_mu_p: all explanatory wording gone
+  S1a_03_tau_n       texts=0   use=4  banned=- leaked=-
+  PASS  S1a_03_tau_n: all explanatory wording gone
+  S1a_04_tau_p       texts=6   use=10 banned=- leaked=-
+  PASS  S1a_04_tau_p: all explanatory wording gone
+  S1a_05_N_c         texts=0   use=4  banned=- leaked=-
+  PASS  S1a_05_N_c: all explanatory wording gone
+  S1a_06_N_v         texts=0   use=4  banned=- leaked=-
+  PASS  S1a_06_N_v: all explanatory wording gone
+  S1a_07_tau_ETL     texts=10  use=10 banned=- leaked=-
+  PASS  S1a_07_tau_ETL: all explanatory wording gone
+  S1a_08_tau_HTL     texts=5   use=5  banned=- leaked=-
+  PASS  S1a_08_tau_HTL: all explanatory wording gone
+  S1a_09_r_rad       texts=4   use=4  banned=- leaked=-
+  PASS  S1a_09_r_rad: all explanatory wording gone
+  S1b_heatmap_numbers texts=86  use=5  banned=- leaked=-
+  PASS  S1b_heatmap_numbers: all explanatory wording gone
+  PASS  S1b_heatmap_numbers: 81 in-cell numbers + 5 colour-bar numbers
+
+== B  retained subtree identical to the source (minus deleted ids) ==
+  PASS  S1a_01_mu_n: 189 elements identical apart from the deletions
+  PASS  S1a_02_mu_p: 154 elements identical apart from the deletions
+  PASS  S1a_03_tau_n: 154 elements identical apart from the deletions
+  PASS  S1a_04_tau_p: 185 elements identical apart from the deletions
+  PASS  S1a_05_N_c: 156 elements identical apart from the deletions
+  PASS  S1a_06_N_v: 156 elements identical apart from the deletions
+  PASS  S1a_07_tau_ETL: 193 elements identical apart from the deletions
+  PASS  S1a_08_tau_HTL: 168 elements identical apart from the deletions
+  PASS  S1a_09_r_rad: 162 elements identical apart from the deletions
+  PASS  S1b_heatmap_numbers: 286 elements identical apart from the deletions
+
+== C  tick marks: piece vs source ==
+  S1a_01_mu_n        use piece=10 source=10
+  PASS  S1a_01_mu_n: all 10 tick-mark <use> kept
+  S1a_02_mu_p        use piece=4  source=4 
+  PASS  S1a_02_mu_p: all 4 tick-mark <use> kept
+  S1a_03_tau_n       use piece=4  source=4 
+  PASS  S1a_03_tau_n: all 4 tick-mark <use> kept
+  S1a_04_tau_p       use piece=10 source=10
+  PASS  S1a_04_tau_p: all 10 tick-mark <use> kept
+  S1a_05_N_c         use piece=4  source=4 
+  PASS  S1a_05_N_c: all 4 tick-mark <use> kept
+  S1a_06_N_v         use piece=4  source=4 
+  PASS  S1a_06_N_v: all 4 tick-mark <use> kept
+  S1a_07_tau_ETL     use piece=10 source=10
+  PASS  S1a_07_tau_ETL: all 10 tick-mark <use> kept
+  S1a_08_tau_HTL     use piece=5  source=5 
+  PASS  S1a_08_tau_HTL: all 5 tick-mark <use> kept
+  S1a_09_r_rad       use piece=4  source=4 
+  PASS  S1a_09_r_rad: all 4 tick-mark <use> kept
+  S1b_heatmap_numbers use piece=5  source=5 
+  PASS  S1b_heatmap_numbers: all 5 tick-mark <use> kept
+
+== D  crop: 600 dpi render vs the source in the same window ==
+  S1a_01_mu_n        1432x1160  diff=8800   outside-mask=0      margins L3.24 R6.48 T2.88 B12.12 pt  (mask 2 groups)
+  PASS  S1a_01_mu_n: nothing changed outside the deleted text
+  PASS  S1a_01_mu_n: no ink touches the crop edge (min 2.88 pt)
+  S1a_02_mu_p        1432x1160  diff=2888   outside-mask=0      margins L38.88 R6.48 T8.40 B12.12 pt  (mask 1 groups)
+  PASS  S1a_02_mu_p: nothing changed outside the deleted text
+  PASS  S1a_02_mu_p: no ink touches the crop edge (min 6.48 pt)
+  S1a_03_tau_n       1432x1160  diff=1802   outside-mask=0      margins L38.88 R6.48 T8.40 B12.12 pt  (mask 1 groups)
+  PASS  S1a_03_tau_n: nothing changed outside the deleted text
+  PASS  S1a_03_tau_n: no ink touches the crop edge (min 6.48 pt)
+  S1a_04_tau_p       1432x1160  diff=8304   outside-mask=0      margins L3.24 R6.48 T2.88 B12.12 pt  (mask 2 groups)
+  PASS  S1a_04_tau_p: nothing changed outside the deleted text
+  PASS  S1a_04_tau_p: no ink touches the crop edge (min 2.88 pt)
+  S1a_05_N_c         1432x1160  diff=2354   outside-mask=0      margins L38.88 R6.48 T8.40 B12.12 pt  (mask 1 groups)
+  PASS  S1a_05_N_c: nothing changed outside the deleted text
+  PASS  S1a_05_N_c: no ink touches the crop edge (min 6.48 pt)
+  S1a_06_N_v         1432x1160  diff=2261   outside-mask=0      margins L38.88 R6.48 T8.40 B12.12 pt  (mask 1 groups)
+  PASS  S1a_06_N_v: nothing changed outside the deleted text
+  PASS  S1a_06_N_v: no ink touches the crop edge (min 6.48 pt)
+  S1a_07_tau_ETL     1432x1160  diff=9946   outside-mask=0      margins L3.24 R6.24 T8.40 B3.00 pt  (mask 3 groups)
+  PASS  S1a_07_tau_ETL: nothing changed outside the deleted text
+  PASS  S1a_07_tau_ETL: no ink touches the crop edge (min 3.00 pt)
+  S1a_08_tau_HTL     1432x1160  diff=3889   outside-mask=0      margins L35.52 R3.00 T8.40 B3.00 pt  (mask 2 groups)
+  PASS  S1a_08_tau_HTL: nothing changed outside the deleted text
+  PASS  S1a_08_tau_HTL: no ink touches the crop edge (min 3.00 pt)
+  S1a_09_r_rad       1432x1160  diff=3708   outside-mask=0      margins L35.52 R6.24 T8.40 B3.00 pt  (mask 2 groups)
+  PASS  S1a_09_r_rad: nothing changed outside the deleted text
+  PASS  S1a_09_r_rad: no ink touches the crop edge (min 3.00 pt)
+  S1b_heatmap_numbers 3550x3188  diff=40274  outside-mask=0      margins L3.00 R2.88 T3.00 B2.88 pt  (mask 19 groups)
+  PASS  S1b_heatmap_numbers: nothing changed outside the deleted text
+  PASS  S1b_heatmap_numbers: no ink touches the crop edge (min 2.88 pt)
+
+== E  PNG matches the SVG canvas ==
+  PASS  S1a_01_mu_n        171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1a_02_mu_p        171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1a_03_tau_n       171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1a_04_tau_p       171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1a_05_N_c         171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1a_06_N_v         171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1a_07_tau_ETL     171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1a_08_tau_HTL     171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1a_09_r_rad       171.840 x 139.200 pt -> 1432x1160 px
+  PASS  S1b_heatmap_numbers 426.000 x 382.560 pt -> 3550x3188 px
+
+== F  nine histograms share one canvas and one plot position ==
+  PASS  identical canvas: {(1432, 1160)}
+  plot-area offset inside the canvas: [(39.36, 8.88)]
+  PASS  all nine plot areas at the same offset [(39.36, 8.88)] pt
+  canvas 171.840 x 139.200 pt, plot area 125.569 x 115.162 pt, margins L39.36 R6.91 T8.88 B15.16
+
+ALL PASS

@@ -1,0 +1,4 @@
+worker port=2062 chunk=E:\project\work1\supplementary_validation_v3\E2_finemesh\_work\chunks\e2v3_fm_chunk_1.csv rows=3 model loaded 08-Sep-2026 07:21:20
+row 203 ti 5808 mesh/m0.125 m 0.12 stol 1e-06 status ok nelem 710 dt 107.9 s
+row 204 ti 7693 mesh/m0.18 m 0.18 stol 1e-06 status ok nelem 501 dt 89.3 s
+row 205 ti 7693 mesh/m0.125 m 0.12 stol 1e-06 status ok nelem 710 dt 113.5 s

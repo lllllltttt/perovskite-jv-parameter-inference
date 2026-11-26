@@ -1,0 +1,67 @@
+{
+  "source": "si_table_s10_tiers_v2.csv",
+  "all_metric_ids": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6"
+  ],
+  "alternative_metric_ids": [
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6"
+  ],
+  "primary_metric": "M1",
+  "ranges": {
+    "all six metrics (M1-M6)": {
+      "metric_ids": "M1;M2;M3;M4;M5;M6",
+      "n_metrics": 6,
+      "n_unique_pairs_min": 11036,
+      "n_unique_pairs_max": 11245,
+      "closest1_median_min": 0.1451696048291795,
+      "closest1_median_max": 0.1885251601807498,
+      "closest01_median_min": 0.1040562278323882,
+      "closest01_median_max": 0.2124523769162472
+    },
+    "five alternatives (M2-M6)": {
+      "metric_ids": "M2;M3;M4;M5;M6",
+      "n_metrics": 5,
+      "n_unique_pairs_min": 11036,
+      "n_unique_pairs_max": 11212,
+      "closest1_median_min": 0.1508595061632908,
+      "closest1_median_max": 0.1885251601807498,
+      "closest01_median_min": 0.1133340199535757,
+      "closest01_median_max": 0.2124523769162472
+    }
+  },
+  "per_metric_n_unique_pairs": {
+    "M1": 11245,
+    "M2": 11060,
+    "M3": 11104,
+    "M4": 11208,
+    "M5": 11212,
+    "M6": 11036
+  },
+  "per_metric_closest1_median": {
+    "M1": 0.1451696048291795,
+    "M2": 0.1885251601807498,
+    "M3": 0.1807695772027487,
+    "M4": 0.1508595061632908,
+    "M5": 0.1508595061632908,
+    "M6": 0.1838089189016926
+  },
+  "per_metric_closest01_median": {
+    "M1": 0.1040562278323882,
+    "M2": 0.2124523769162472,
+    "M3": 0.1502078079613656,
+    "M4": 0.1133340199535757,
+    "M5": 0.1133340199535757,
+    "M6": 0.1595064529839964
+  },
+  "random_pair_median_dTheta": 0.3490210418605764,
+  "note": "The archived metric-summary CSV contains M1-M5 only; the complete six-metric inventory is in the tier table.  Ranges are explicitly filtered by metric ID."
+}

@@ -1,0 +1,7 @@
+
+MATLAB is now connected to a COMSOL Multiphysics Server at localhost:2044
+
+Run the commands below to access the COMSOL ModelUtil commands:
+import com.comsol.model.util.*
+E2 mesh bases size=(6.89,1.06) size1=(3.55,0.53)
+e2_comsol_batch done

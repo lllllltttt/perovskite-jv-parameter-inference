@@ -1,0 +1,17 @@
+worker port=2041 chunk=E:\project\work1\supplementary_validation\E2\_work\chunks\e2_chunk_0.csv rows=12 qc=1 model loaded 07-Sep-2026 20:24:30
+worker port=2041 chunk=E:\project\work1\supplementary_validation\E2\_work\chunks\e2_chunk_0.csv rows=12 qc=1 model loaded 07-Sep-2026 20:25:52
+worker port=2041 chunk=E:\project\work1\supplementary_validation\E2\_work\chunks\e2_chunk_0.csv rows=12 qc=1 model loaded 07-Sep-2026 20:34:08
+QC study.run row 0 nelem 112 dt 35.8 s
+row 0 ti 5808 ref/ref m 1.00 stol 1e-06 status ok nelem 112 dt 32.7 s
+row 1 ti 5808 mesh/m2.00 m 2.00 stol 1e-06 status ok nelem 68 dt 29.2 s
+row 2 ti 5808 mesh/m1.41 m 1.41 stol 1e-06 status ok nelem 87 dt 28.6 s
+row 3 ti 5808 mesh/m0.71 m 0.71 stol 1e-06 status ok nelem 146 dt 30.3 s
+row 4 ti 5808 mesh/m0.50 m 0.50 stol 1e-06 status ok nelem 195 dt 28.9 s
+row 5 ti 5808 tol/stol0.0001 m 1.00 stol 1e-04 status ok nelem 112 dt 24.9 s
+row 6 ti 5808 tol/stol1e-05 m 1.00 stol 1e-05 status ok nelem 112 dt 25.4 s
+row 7 ti 5808 tol/stol1e-07 m 1.00 stol 1e-07 status ok nelem 112 dt 32.5 s
+row 8 ti 3741 ref/ref m 1.00 stol 1e-06 status ok nelem 112 dt 29.1 s
+row 9 ti 3741 mesh/m2.00 m 2.00 stol 1e-06 status ok nelem 68 dt 20.6 s
+  progress 10/12
+row 10 ti 3741 mesh/m1.41 m 1.41 stol 1e-06 status ok nelem 87 dt 20.2 s
+row 11 ti 3741 mesh/m0.71 m 0.71 stol 1e-06 status ok nelem 146 dt 19.0 s

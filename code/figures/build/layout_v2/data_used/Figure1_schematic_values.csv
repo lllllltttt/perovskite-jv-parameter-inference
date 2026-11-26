@@ -1,0 +1,10 @@
+item,value,unit,source
+LHS draws,200000.0,draws,"script/LHS.py (qmc.LatinHypercube, seed 42)"
+g sampling law,,-,"script/LHS.py: log-uniform per pair (mu 1e-6-1e-3, tau 1e-9-1e-2, DOS 1e22-1e26)"
+q sampling law,,-,script/LHS.py: uniform on 0.2-5
+tau_ETL range,,s,script/LHS.py: log-uniform 1e-12-1e-8
+tau_HTL range,,s,script/LHS.py: log-uniform 1e-14-1e-10
+r_rad range,,cm3 s-1,script/LHS.py: log-uniform 1e-12-1e-9
+retained curves,102046.0,curves,"archived retention (51.0% of 200,000)"
+train / val / test,,curves,"archived split: 71,432 / 15,307 / 15,307"
+x domain,530.0,nm,"COMSOL 1D model: x = 0-530 nm, six volume domains"

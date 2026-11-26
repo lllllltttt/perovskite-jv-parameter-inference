@@ -1,0 +1,199 @@
+panel,item,level,value,unit,source
+a,mu_n_pvk,0.5,0.50049,coverage,existing_tables/main_model_calibration_S2.csv
+a,mu_n_pvk,0.8,0.802051,coverage,existing_tables/main_model_calibration_S2.csv
+a,mu_n_pvk,0.9,0.898021,coverage,existing_tables/main_model_calibration_S2.csv
+a,mu_n_pvk,0.95,0.947475,coverage,existing_tables/main_model_calibration_S2.csv
+SI,mu_n_pvk,,0.398191,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,mu_n_pvk_model,0.95,1.6911090263023207,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,mu_n_pvk_baseline,0.95,3.174343396982885,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,mu_n_pvk,0.0,0.9062677727341382,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_n_pvk,0.0,0.947475011432678,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_n_pvk,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,mu_n_pvk,0.2,0.9014160022980668,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_n_pvk,0.2,0.9427821693778444,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_n_pvk,0.2,-0.03875642691557463,% change,noise_robustness/noise_uncertainty_summary.csv
+c,mu_n_pvk,0.5,0.8818315798881013,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_n_pvk,0.5,0.9217351538511792,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_n_pvk,0.5,-0.16074866684745917,% change,noise_robustness/noise_uncertainty_summary.csv
+c,mu_n_pvk,1.0,0.8407308951989293,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_n_pvk,1.0,0.8745976786219813,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_n_pvk,1.0,-0.4556943403728808,% change,noise_robustness/noise_uncertainty_summary.csv
+c,mu_n_pvk,2.0,0.7669160828650112,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_n_pvk,2.0,0.7905881840552252,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_n_pvk,2.0,-1.0712866555361724,% change,noise_robustness/noise_uncertainty_summary.csv
+a,mu_p_pvk,0.5,0.496505,coverage,existing_tables/main_model_calibration_S2.csv
+a,mu_p_pvk,0.8,0.802901,coverage,existing_tables/main_model_calibration_S2.csv
+a,mu_p_pvk,0.9,0.9039,coverage,existing_tables/main_model_calibration_S2.csv
+a,mu_p_pvk,0.95,0.952244,coverage,existing_tables/main_model_calibration_S2.csv
+SI,mu_p_pvk,,0.334319,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,mu_p_pvk_model,0.95,1.5387683026765948,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,mu_p_pvk_baseline,0.95,3.17335061452964,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,mu_p_pvk,0.0,0.9194341990351982,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_p_pvk,0.0,0.9522440713399098,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_p_pvk,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,mu_p_pvk,0.2,0.9146877377905736,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_p_pvk,0.2,0.9464798240456436,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_p_pvk,0.2,7.957877802116922e-06,% change,noise_robustness/noise_uncertainty_summary.csv
+c,mu_p_pvk,0.5,0.8953964538313604,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_p_pvk,0.5,0.9205744648417936,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_p_pvk,0.5,0.033121824309410595,% change,noise_robustness/noise_uncertainty_summary.csv
+c,mu_p_pvk,1.0,0.8548118987223622,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_p_pvk,1.0,0.8704971581629323,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_p_pvk,1.0,0.11627397381744206,% change,noise_robustness/noise_uncertainty_summary.csv
+c,mu_p_pvk,2.0,0.7822518090320038,Pearson r,noise_robustness/noise_metrics_all.csv
+d,mu_p_pvk,2.0,0.787970645238562,coverage,noise_robustness/noise_calibration_summary.csv
+e,mu_p_pvk,2.0,0.1455490168326773,% change,noise_robustness/noise_uncertainty_summary.csv
+a,tau_n_pvk,0.5,0.473836,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_n_pvk,0.8,0.79395,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_n_pvk,0.9,0.907036,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_n_pvk,0.95,0.95832,coverage,existing_tables/main_model_calibration_S2.csv
+SI,tau_n_pvk,,0.645906,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,tau_n_pvk_model,0.95,3.883600448071404,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,tau_n_pvk_baseline,0.95,6.997206846507029,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,tau_n_pvk,0.0,0.878266379965613,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_n_pvk,0.0,0.958319723002548,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_n_pvk,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_n_pvk,0.2,0.8767330452468636,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_n_pvk,0.2,0.955691295921256,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_n_pvk,0.2,-0.0814134497980339,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_n_pvk,0.5,0.8697810459544162,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_n_pvk,0.5,0.94305655364648,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_n_pvk,0.5,-0.35182065224442116,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_n_pvk,1.0,0.8520191671884572,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_n_pvk,1.0,0.909074279741295,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_n_pvk,1.0,-0.9361162887488585,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_n_pvk,2.0,0.8135269217338816,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_n_pvk,2.0,0.8378040547897476,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_n_pvk,2.0,-2.113810174305111,% change,noise_robustness/noise_uncertainty_summary.csv
+a,tau_p_pvk,0.5,0.459006,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_p_pvk,0.8,0.790357,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_p_pvk,0.9,0.910041,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_p_pvk,0.95,0.959692,coverage,existing_tables/main_model_calibration_S2.csv
+SI,tau_p_pvk,,0.621839,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,tau_p_pvk_model,0.95,3.839047211891412,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,tau_p_pvk_baseline,0.95,6.973871484312975,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,tau_p_pvk,0.0,0.8808027572352151,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_p_pvk,0.0,0.9596916443457242,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_p_pvk,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_p_pvk,0.2,0.8793019705247652,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_p_pvk,0.2,0.9578580605823044,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_p_pvk,0.2,-0.03668073762393432,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_p_pvk,0.5,0.8724686102842932,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_p_pvk,0.5,0.9481261296574552,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_p_pvk,0.5,-0.14837237432388578,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_p_pvk,1.0,0.8545673897687123,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_p_pvk,1.0,0.9200757823218134,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_p_pvk,1.0,-0.3435218077084218,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_p_pvk,2.0,0.8145354639332515,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_p_pvk,2.0,0.8579887197578451,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_p_pvk,2.0,-0.5885448664214786,% change,noise_robustness/noise_uncertainty_summary.csv
+a,Nc_eff_pvk,0.5,0.522637,coverage,existing_tables/main_model_calibration_S2.csv
+a,Nc_eff_pvk,0.8,0.80976,coverage,existing_tables/main_model_calibration_S2.csv
+a,Nc_eff_pvk,0.9,0.903247,coverage,existing_tables/main_model_calibration_S2.csv
+a,Nc_eff_pvk,0.95,0.946364,coverage,existing_tables/main_model_calibration_S2.csv
+SI,Nc_eff_pvk,,0.353014,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,Nc_eff_pvk_model,0.95,1.3591680178637198,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,Nc_eff_pvk_baseline,0.95,2.7814041791164943,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,Nc_eff_pvk,0.0,0.9090466130976688,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nc_eff_pvk,0.0,0.9463644084405828,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nc_eff_pvk,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,Nc_eff_pvk,0.2,0.9029906891742392,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nc_eff_pvk,0.2,0.9395657760066202,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nc_eff_pvk,0.2,-0.010545031278382376,% change,noise_robustness/noise_uncertainty_summary.csv
+c,Nc_eff_pvk,0.5,0.8775813376896677,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nc_eff_pvk,0.5,0.9059384595283204,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nc_eff_pvk,0.5,-0.04063868301737961,% change,noise_robustness/noise_uncertainty_summary.csv
+c,Nc_eff_pvk,1.0,0.8220158125794089,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nc_eff_pvk,1.0,0.8364277781407199,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nc_eff_pvk,1.0,-0.09600009722843247,% change,noise_robustness/noise_uncertainty_summary.csv
+c,Nc_eff_pvk,2.0,0.7213782008716412,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nc_eff_pvk,2.0,0.7225082206397944,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nc_eff_pvk,2.0,-0.3473664003545075,% change,noise_robustness/noise_uncertainty_summary.csv
+a,Nv_eff_pvk,0.5,0.498465,coverage,existing_tables/main_model_calibration_S2.csv
+a,Nv_eff_pvk,0.8,0.803685,coverage,existing_tables/main_model_calibration_S2.csv
+a,Nv_eff_pvk,0.9,0.901352,coverage,existing_tables/main_model_calibration_S2.csv
+a,Nv_eff_pvk,0.95,0.949892,coverage,existing_tables/main_model_calibration_S2.csv
+SI,Nv_eff_pvk,,0.244391,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,Nv_eff_pvk_model,0.95,1.4346264382015244,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,Nv_eff_pvk_baseline,0.95,2.8374317822453787,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,Nv_eff_pvk,0.0,0.8956043186417962,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nv_eff_pvk,0.0,0.949892206180179,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nv_eff_pvk,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,Nv_eff_pvk,0.2,0.890500964629085,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nv_eff_pvk,0.2,0.9442368415321968,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nv_eff_pvk,0.2,-0.006015730540291589,% change,noise_robustness/noise_uncertainty_summary.csv
+c,Nv_eff_pvk,0.5,0.8688583299298771,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nv_eff_pvk,0.5,0.9203741207726314,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nv_eff_pvk,0.5,-0.05059326367907975,% change,noise_robustness/noise_uncertainty_summary.csv
+c,Nv_eff_pvk,1.0,0.8199901233777177,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nv_eff_pvk,1.0,0.8694910825112692,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nv_eff_pvk,1.0,-0.1596507517047215,% change,noise_robustness/noise_uncertainty_summary.csv
+c,Nv_eff_pvk,2.0,0.727789252904748,Pearson r,noise_robustness/noise_metrics_all.csv
+d,Nv_eff_pvk,2.0,0.7771629537684285,coverage,noise_robustness/noise_calibration_summary.csv
+e,Nv_eff_pvk,2.0,-0.49756788630916077,% change,noise_robustness/noise_uncertainty_summary.csv
+a,tau_ETL,0.5,0.459202,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_ETL,0.8,0.797086,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_ETL,0.9,0.91971,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_ETL,0.95,0.969164,coverage,existing_tables/main_model_calibration_S2.csv
+SI,tau_ETL,,0.377232,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,tau_ETL_model,0.95,3.994252470430611,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,tau_ETL_baseline,0.95,3.897954073790321,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,tau_ETL,0.0,0.5936044696049128,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_ETL,0.0,0.969164434572418,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_ETL,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_ETL,0.2,0.5891396335477057,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_ETL,0.2,0.9673678709087348,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_ETL,0.2,0.02388275221163401,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_ETL,0.5,0.5688107436862833,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_ETL,0.5,0.9579059689466692,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_ETL,0.5,0.11011648883003904,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_ETL,1.0,0.5152392083903375,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_ETL,1.0,0.9336186058665968,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_ETL,1.0,0.2643220814392636,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_ETL,2.0,0.4062628615534435,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_ETL,2.0,0.8837503538686006,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_ETL,2.0,0.3460340140864756,% change,noise_robustness/noise_uncertainty_summary.csv
+a,tau_HTL,0.5,0.455609,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_HTL,0.8,0.795453,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_HTL,0.9,0.916443,coverage,existing_tables/main_model_calibration_S2.csv
+a,tau_HTL,0.95,0.966682,coverage,existing_tables/main_model_calibration_S2.csv
+SI,tau_HTL,,0.464704,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,tau_HTL_model,0.95,3.3329917216776797,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,tau_HTL_baseline,0.95,3.892599920965365,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,tau_HTL,0.0,0.7199229141552381,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_HTL,0.0,0.9666819102371464,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_HTL,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_HTL,0.2,0.7166801312252766,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_HTL,0.2,0.9643082685481588,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_HTL,0.2,-0.026378856263684605,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_HTL,0.5,0.7022044852592259,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_HTL,0.5,0.9539753054158228,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_HTL,0.5,-0.18745600759486847,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_HTL,1.0,0.662558452206821,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_HTL,1.0,0.9272054180004792,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_HTL,1.0,-0.7043286015828595,% change,noise_robustness/noise_uncertainty_summary.csv
+c,tau_HTL,2.0,0.5755110992313459,Pearson r,noise_robustness/noise_metrics_all.csv
+d,tau_HTL,2.0,0.8687615687811677,coverage,noise_robustness/noise_calibration_summary.csv
+e,tau_HTL,2.0,-2.336447773806384,% change,noise_robustness/noise_uncertainty_summary.csv
+a,rad_c,0.5,0.448292,coverage,existing_tables/main_model_calibration_S2.csv
+a,rad_c,0.8,0.779643,coverage,existing_tables/main_model_calibration_S2.csv
+a,rad_c,0.9,0.908865,coverage,existing_tables/main_model_calibration_S2.csv
+a,rad_c,0.95,0.966421,coverage,existing_tables/main_model_calibration_S2.csv
+SI,rad_c,,0.414716,Spearman rho,existing_tables/main_model_sigma_spearman.csv
+b,rad_c_model,0.95,2.9675366726577135,log10 units,existing_tables/S15_S17_preprocessing_control_metrics.csv (Historical only)
+b,rad_c_baseline,0.95,2.9270810715988893,log10 units,existing_tables/S17b_interval_score_model_vs_empirical_baseline.csv
+c,rad_c,0.0,0.5591744376104717,Pearson r,noise_robustness/noise_metrics_all.csv
+d,rad_c,0.0,0.9664205918860652,coverage,noise_robustness/noise_calibration_summary.csv
+e,rad_c,0.0,0.0,% change,noise_robustness/noise_uncertainty_summary.csv
+c,rad_c,0.2,0.556547828949548,Pearson r,noise_robustness/noise_metrics_all.csv
+d,rad_c,0.2,0.9637529670521112,coverage,noise_robustness/noise_calibration_summary.csv
+e,rad_c,0.2,-0.022660986112070725,% change,noise_robustness/noise_uncertainty_summary.csv
+c,rad_c,0.5,0.5446724280709545,Pearson r,noise_robustness/noise_metrics_all.csv
+d,rad_c,0.5,0.9547788593453972,coverage,noise_robustness/noise_calibration_summary.csv
+e,rad_c,0.5,-0.12761489906145673,% change,noise_robustness/noise_uncertainty_summary.csv
+c,rad_c,1.0,0.5136686782326999,Pearson r,noise_robustness/noise_metrics_all.csv
+d,rad_c,1.0,0.9322728163585288,coverage,noise_robustness/noise_calibration_summary.csv
+e,rad_c,1.0,-0.46154484556080055,% change,noise_robustness/noise_uncertainty_summary.csv
+c,rad_c,2.0,0.4406966001772903,Pearson r,noise_robustness/noise_metrics_all.csv
+d,rad_c,2.0,0.8869994120337101,coverage,noise_robustness/noise_calibration_summary.csv
+e,rad_c,2.0,-1.738827962596304,% change,noise_robustness/noise_uncertainty_summary.csv

@@ -1,0 +1,12 @@
+﻿ref,quantity,spec_value,definition,computed_value,match,note
+R1,max |dV_oc|,~0.219 mV,"adjacent pair m0.18->m0.125, max over 6 reps of |Voc_f-Voc_c| (mV, voc_mode=interp)",0.21882869729283883,True,frozen verdict row value 0.218829 mV
+R2,max |dP_max|,~0.0021%,"adjacent pair m0.18->m0.125, max over 6 reps of |Pmax_f-Pmax_c|/|Pmax_c|*100",0.002088069285648237,True,frozen verdict row value 0.002088 %
+R3,fixed-gen0-window max RMSE,~0.00255 mA/cm2,"adjacent pair m0.18->m0.125, window gen0 = {V <= voc_ref} (fixed m=1 voc_ref), max over 6 reps of sqrt(mean((J_a-J_b)^2)); best candidate (pair,window) = (m0.18->m0.125, gen0), rep 14912",0.0025501837450165707,True,closest row: rep 14912 value 0.0025502; 5/6 reps have voc_ref>1 so gen0 extends past 1 V and captures near-Voc tail; R3 exceeds the <=1 V max (0.000989) because of that.
+R4a,>1 V relative RMSE median,~0.786%,"pair m0.18->m0.125, median over 6 reps of rmse_gt1/denom_gt1*100 with denom_gt1 = mean_{V>1}|(J_a+J_b)/2|",0.7862286760543387,True,frozen verdict med 0.786229
+R4b,>1 V relative RMSE max,~0.866%,same definition; max over 6 reps (rep 5808),0.8662047349715759,True,frozen verdict max 0.866205
+R5a,>1 V absolute RMSE median,~0.474 mA/cm2,"pair m0.18->m0.125, median over 6 reps of rmse_gt1 (mA/cm2)",0.4738232948750969,True,frozen verdict med 0.473823
+R5b,>1 V absolute RMSE max,~2.914 mA/cm2,same definition; max over 6 reps (rep 7693),2.913862149869263,True,frozen verdict max 2.913862
+R3c_m035_25_gen0,R3 alternate candidate,-,pair m0.35->m0.25 gen0 max,0.0074089812724882215,False,not the 0.00255 figure; shown for provenance of wording
+R3c_full,R3 alternate candidate,-,max over all pairs full-window,4.050001896107809,False,not the 0.00255 figure; shown for provenance of wording
+R3c_le1,R3 alternate candidate,-,max over all pairs le1-window,0.0019564319967875017,False,not the 0.00255 figure; shown for provenance of wording
+R3c_gt1,R3 alternate candidate,-,max over all pairs gt1-window,8.46311433096632,False,not the 0.00255 figure; shown for provenance of wording

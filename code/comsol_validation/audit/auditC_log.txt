@@ -1,0 +1,51 @@
+
+MATLAB is now connected to a COMSOL Multiphysics Server at localhost:2039
+
+Run the commands below to access the COMSOL ModelUtil commands:
+import com.comsol.model.util.*
+loaded E:\project\work1\matlab&mph\1D_PSC_wen.mph
+vertex-coord matrix size: [1 7]
+  vertex   1   x =       0.000000   (nm: 0.000000)
+  vertex   2   x =      20.000000   (nm: 19999999999.999996)
+  vertex   3   x =      20.010000   (nm: 20009999999.999996)
+  vertex   4   x =     490.000000   (nm: 490000000000.000000)
+  vertex   5   x =     490.010000   (nm: 490010000000.000000)
+  vertex   6   x =     510.000000   (nm: 510000000000.000061)
+  vertex   7   x =     530.000000   (nm: 530000000000.000000)
+
+contact facts (physics semi):
+  [mc1] label=Ag  selection entities={7}
+        TerminalName           = NA
+        TerminalType           = NA
+        V0                     = NA
+        ContactType            = NA
+        SpecifyUsing           = NA
+        SpecifyBarrierHeight   = NA
+        Phi_B                  = NA
+        Phi                    = NA
+        vsnin                  = NA
+        vspin                  = NA
+        Astar_n                = NA
+        Astar_p                = NA
+        ContactResistance      = NA
+        rho_c                  = NA
+  [mc2] label=FTO  selection entities={1}
+        TerminalName           = NA
+        TerminalType           = NA
+        V0                     = NA
+        ContactType            = NA
+        SpecifyUsing           = NA
+        SpecifyBarrierHeight   = NA
+        Phi_B                  = NA
+        Phi                    = NA
+        vsnin                  = NA
+        vspin                  = NA
+        Astar_n                = NA
+        Astar_p                = NA
+        ContactResistance      = NA
+        rho_c                  = NA
+
+toolchain check: solved test_index=269 in 15.6 s
+  J(0) = 224.131230 A/m^2   (frozen DB J_test_raw[269] = 22.413123 A/m^2)
+  vs stored Sample_00269_true.mat: rmse = 1.080e-06  max|d| = 2.916e-06  (n=131)
+auditC_live_probe done

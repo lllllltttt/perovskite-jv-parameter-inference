@@ -1,0 +1,5 @@
+worker port=2043 chunk=E:\project\work1\supplementary_validation_v2\E2_mesh_and_inference\_work\chunks\e2v2_chunk_2.csv rows=4 qc=0 model loaded 07-Sep-2026 22:14:27
+row 102 ti 3741 tol/m0.25_stol1e-7 m 0.25 stol 1e-07 status ok nelem 367 dt 48.6 s
+row 106 ti 7693 mesh/m0.35 m 0.35 stol 1e-06 status ok nelem 269 dt 40.2 s
+row 110 ti 8874 mesh/m0.25 m 0.25 stol 1e-06 status ok nelem 367 dt 36.3 s
+row 114 ti 14179 tol/m0.25_stol1e-7 m 0.25 stol 1e-07 status ok nelem 367 dt 29.1 s

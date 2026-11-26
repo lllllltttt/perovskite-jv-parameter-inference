@@ -1,0 +1,17 @@
+check,ok
+six materials mat1..mat6 present,True
+"material names == S9.1 set (mat1=C60, mat2=PVK, mat3=HTL, mat4=SnO2, mat5=C60&PVK, mat6=HTL&PVK)",True
+material mat1 (C60) domain set == S9.1 {domain 5},True
+material mat2 (PVK) domain set == S9.1 {domain 3},True
+material mat3 (HTL) domain set == S9.1 {domain 1},True
+material mat4 (SnO2) domain set == S9.1 {domain 6},True
+material mat5 (C60&PVK) domain set == S9.1 {domain 4},True
+material mat6 (HTL&PVK) domain set == S9.1 {domain 2},True
+"adm1 Doping (S9.1 HTL doping): name='HTL' entities='7,1' -- params+scope match S9.1 HTL doping",True
+"adm2 Doping (S9.1 C60 doping (domains 4/5)): name='C60' entities='7,4,5' -- params+scope match S9.1 C60 doping (domains 4/5)",True
+"adm3 Doping (S9.1 SnO2 doping): name='SnO2' entities='7,6' -- params+scope match S9.1 SnO2 doping",True
+"mc1 Contact (S9.4 Ag): name='Ag' entities='-7,-1,7' -- params+scope match S9.4 Ag",True
+"mc2 Contact (S9.4 FTO): name='FTO' entities='-7,-1,1' -- params+scope match S9.4 FTO",True
+"dir1 Radiative (S9.3 radiative on PVK): name='直接复合 1' entities='7,3' -- params+scope match S9.3 radiative on PVK",True
+"udg1 Generation (S9.3 generation on PVK): name='用户定义产生 1' entities='7,3' -- params+scope match S9.3 generation on PVK",True
+"tar1 SRH (S9.3 midgap SRH six domains): name='陷阱辅助复合 1' entities='7,1,2,3,4,5,6' -- params+scope match S9.3 midgap SRH six domains",True

@@ -1,0 +1,2 @@
+n_pairs,n_test,archived_pairs,archived_distinct_samples,distinct_samples,samples_in_multiple_pairs,max_pairs_per_sample,median_dJ,median_dTheta
+11245,15307,7666,12487,15307,5859,5,0.002862081096027706,0.20206833745666977

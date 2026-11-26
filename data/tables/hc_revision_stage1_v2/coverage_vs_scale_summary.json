@@ -1,0 +1,8 @@
+{
+  "n_parameters": 9,
+  "spearman_sigma_coverage": 0.9288784237188525,
+  "spearman_p_coverage": 0.0002945257641989606,
+  "spearman_sigma_abs_dev": 0.8786687791935092,
+  "spearman_p_abs_dev": 0.0018157963245634217,
+  "scope": "cross-parameter association over nine parameters; descriptive, not sample-level calibration"
+}

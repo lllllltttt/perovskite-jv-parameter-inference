@@ -1,0 +1,7 @@
+quantity,value,archived_value
+"Spearman(d_J, d_Theta)",0.1544580392876967,0.1576
+"Pearson(d_J, d_Theta)",0.07319325042018397,0.0785
+Random-pair d_Theta median,0.3490210418605764,0.349
+Nearest-neighbour d_Theta median,0.20206833745666977,0.1999
+Random-pair d_J median,0.11716800980301174,0.1172
+Nearest-neighbour d_J median,0.002862081096027706,0.00267
