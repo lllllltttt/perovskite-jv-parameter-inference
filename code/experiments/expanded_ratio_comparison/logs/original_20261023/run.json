@@ -1,0 +1,60 @@
+{
+  "arm": "original",
+  "seed": 20261023,
+  "run_name": "original_20261023",
+  "started_utc": "2026-10-21T14:09:18.020381+00:00",
+  "config_sha256": "2d1b87e5946286dfc6bd75d84e193d6cdba6720c116aebeec659d40a26d258a2",
+  "arm_cache_sha256": "f3ed6692ceab3f323e3f3736e0a1e81f75e2e7cfefddafd30d7cc4b7d32e7705",
+  "n_train": 16992,
+  "n_val": 3641,
+  "n_test": 3641,
+  "batch_size": 64,
+  "max_epochs": 1000,
+  "previous_status": null,
+  "env": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "deterministic_ops": true
+  },
+  "initial_weight_sha256": "973358f4d2cf923aeace961a7cd369cbfab81f1aacc0ce854be2d57dd59e3dd6",
+  "reload_max_abs_diff_z_mean": 0.0,
+  "status": "completed",
+  "finished_utc": "2026-10-21T14:12:34.448309+00:00",
+  "wall_s": 196.4279282093048,
+  "epochs_run": 473,
+  "best_epoch": 422,
+  "stopped_epoch": 472,
+  "stop_reason": "early_stopping",
+  "best_val_loss": -13.216789245605469,
+  "best_val_param_loss": -13.268375396728516,
+  "final_learning_rate": 9.999999974752427e-07,
+  "model_files": {
+    "encoder.h5": {
+      "sha256": "48c7d7fe1829dc4a473638f777e8e83e5f901579461276062a05b0e140a80b3f",
+      "bytes": 131024
+    },
+    "decoder.h5": {
+      "sha256": "77934c8646df558200d3e44acb98205fa2d607ae41d74ff08edff4234cdfd692",
+      "bytes": 120984
+    },
+    "param_head.h5": {
+      "sha256": "b3754fa577a6e56d18c60dcd9af0b275503b568c2692ead659d5ea6af85badd2",
+      "bytes": 38384
+    },
+    "encoder.weights.h5": {
+      "sha256": "ecacad92d96300168e605678bc96a843335e2fb128098cda9391b118b1ce812e",
+      "bytes": 128072
+    },
+    "decoder.weights.h5": {
+      "sha256": "d395b4924be79838a232ad6eccc85bfae0fccdd9eb3998c6c92a2977dcc2621e",
+      "bytes": 121328
+    },
+    "param_head.weights.h5": {
+      "sha256": "c068ec35d33c68b5a7fcb3ca091777187ef46a9b348e30abba403fa8ae26e0bb",
+      "bytes": 34304
+    }
+  }
+}

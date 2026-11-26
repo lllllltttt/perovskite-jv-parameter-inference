@@ -1,0 +1,47 @@
+{
+  "n_test": 15307,
+  "n_retained_all": 102046,
+  "levels": [
+    0.5,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "scaler_fit": "full retained set (train+val+test, n=102046) empirical min/max, fit PRE-SPLIT on log10 params -- NOT train-only",
+  "scaler_fit_note": "fitted PRE-SPLIT on log10 params of the full retained set; test lies in [0,1] BY CONSTRUCTION -> cov_raw==cov_clip is exact but not independent evidence of in-envelope behaviour; frozen scaler unchanged",
+  "interval_score": "Gneiting-Raftery Eq43: w + 2/(1-c)*(outside penalty)",
+  "envelope_note": "[0,1] = full-retained-set (train+val+test) empirical min/max, not the full generative support",
+  "env_lo_log10": [
+    -6.341035157335565,
+    -6.3448615651886175,
+    -9.320572103387882,
+    -9.348721986001856,
+    22.666517980554882,
+    22.634477270160733,
+    -12.0,
+    -14.0,
+    -12.0
+  ],
+  "env_hi_log10": [
+    -2.6516951369518393,
+    -2.6757175447023074,
+    -1.655607726314889,
+    -1.6903698325741008,
+    26.34830486304816,
+    26.338456493604603,
+    -8.0,
+    -10.0,
+    -9.0
+  ],
+  "R_decades": [
+    3.6893400203837254,
+    3.66914402048631,
+    7.664964377072993,
+    7.658352153427755,
+    3.6817868824932773,
+    3.70397922344387,
+    4.0,
+    4.0,
+    3.0
+  ]
+}

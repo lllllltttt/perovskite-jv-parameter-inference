@@ -1,0 +1,60 @@
+{
+  "arm": "expanded",
+  "seed": 20261024,
+  "run_name": "expanded_20261024",
+  "started_utc": "2026-10-21T14:10:32.117849+00:00",
+  "config_sha256": "2d1b87e5946286dfc6bd75d84e193d6cdba6720c116aebeec659d40a26d258a2",
+  "arm_cache_sha256": "b9bcd14a05c245596f9658fbaaf4fab36f1914db9e63c24a16cd878b199cb95e",
+  "n_train": 16992,
+  "n_val": 3641,
+  "n_test": 3641,
+  "batch_size": 64,
+  "max_epochs": 1000,
+  "previous_status": null,
+  "env": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "deterministic_ops": true
+  },
+  "initial_weight_sha256": "0cd8becf1af00c47ad14651ac34c7abd841ded3e3b6b6e7d047f6ca38ec08622",
+  "reload_max_abs_diff_z_mean": 0.0,
+  "status": "completed",
+  "finished_utc": "2026-10-21T14:13:28.318796+00:00",
+  "wall_s": 176.20094752311707,
+  "epochs_run": 429,
+  "best_epoch": 378,
+  "stopped_epoch": 428,
+  "stop_reason": "early_stopping",
+  "best_val_loss": -13.746484756469727,
+  "best_val_param_loss": -13.796638488769531,
+  "final_learning_rate": 9.999999974752427e-07,
+  "model_files": {
+    "encoder.h5": {
+      "sha256": "47302fdf476b1f7d5ca73af6e2cd79e0ab4e4175bae76b278fb7acc65b9a0756",
+      "bytes": 131024
+    },
+    "decoder.h5": {
+      "sha256": "c15cf49d508de0b989bf49e8be1b954abc959232cb5103ad2fd88a3eaae33370",
+      "bytes": 120984
+    },
+    "param_head.h5": {
+      "sha256": "59fc2f82d1b4da7c4c24fa33a54f69d258a659626a057f51b7bf755d7d6d0681",
+      "bytes": 38384
+    },
+    "encoder.weights.h5": {
+      "sha256": "003a1439f6c3acd5800cdd452579944db2ffe32c5da10d0a66f85d51253c7e66",
+      "bytes": 128072
+    },
+    "decoder.weights.h5": {
+      "sha256": "69382fb3fc2868499de18393917f7470fb1b4659d29fb927cd0b59f422d15a62",
+      "bytes": 121328
+    },
+    "param_head.weights.h5": {
+      "sha256": "5a2beaecba69b3ab83082c64dcc9c1a0ac76de5a99cdaacc30aec1c0da6f172e",
+      "bytes": 34304
+    }
+  }
+}

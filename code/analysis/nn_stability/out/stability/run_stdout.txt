@@ -1,0 +1,45 @@
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:463: InconsistentVersionWarning: Trying to unpickle estimator MinMaxScaler from version 1.3.2 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+completed before run: 10; running 990 replicates (11..1000)
+rep 25/1000  n_unique=9657 n_pairs=7083  0.75s
+rep 50/1000  n_unique=9668 n_pairs=7094  0.77s
+rep 75/1000  n_unique=9744 n_pairs=7138  0.79s
+rep 100/1000  n_unique=9720 n_pairs=7128  0.77s
+rep 125/1000  n_unique=9675 n_pairs=7057  0.76s
+rep 150/1000  n_unique=9669 n_pairs=7059  0.77s
+rep 175/1000  n_unique=9614 n_pairs=7042  0.76s
+rep 200/1000  n_unique=9703 n_pairs=7063  0.75s
+rep 225/1000  n_unique=9681 n_pairs=7133  0.77s
+rep 250/1000  n_unique=9679 n_pairs=7066  0.76s
+rep 275/1000  n_unique=9671 n_pairs=7094  0.74s
+rep 300/1000  n_unique=9671 n_pairs=7081  0.75s
+rep 325/1000  n_unique=9671 n_pairs=7100  0.77s
+rep 350/1000  n_unique=9676 n_pairs=7083  0.78s
+rep 375/1000  n_unique=9696 n_pairs=7113  0.76s
+rep 400/1000  n_unique=9631 n_pairs=7037  0.78s
+rep 425/1000  n_unique=9659 n_pairs=7071  0.75s
+rep 450/1000  n_unique=9656 n_pairs=7087  0.76s
+rep 475/1000  n_unique=9676 n_pairs=7075  0.75s
+rep 500/1000  n_unique=9684 n_pairs=7105  0.76s
+rep 525/1000  n_unique=9669 n_pairs=7119  0.75s
+rep 550/1000  n_unique=9771 n_pairs=7132  0.76s
+rep 575/1000  n_unique=9659 n_pairs=7092  0.76s
+rep 600/1000  n_unique=9712 n_pairs=7103  0.78s
+rep 625/1000  n_unique=9668 n_pairs=7098  0.78s
+rep 650/1000  n_unique=9631 n_pairs=7066  0.74s
+rep 675/1000  n_unique=9633 n_pairs=7047  0.74s
+rep 700/1000  n_unique=9714 n_pairs=7125  0.75s
+rep 725/1000  n_unique=9648 n_pairs=7076  0.75s
+rep 750/1000  n_unique=9655 n_pairs=7112  0.75s
+rep 775/1000  n_unique=9669 n_pairs=7086  0.76s
+rep 800/1000  n_unique=9669 n_pairs=7066  0.75s
+rep 825/1000  n_unique=9701 n_pairs=7100  0.75s
+rep 850/1000  n_unique=9608 n_pairs=7037  0.74s
+rep 875/1000  n_unique=9686 n_pairs=7065  0.75s
+rep 900/1000  n_unique=9601 n_pairs=7033  0.72s
+rep 925/1000  n_unique=9598 n_pairs=6988  0.74s
+rep 950/1000  n_unique=9673 n_pairs=7112  0.73s
+rep 975/1000  n_unique=9655 n_pairs=7049  0.74s
+rep 1000/1000  n_unique=9673 n_pairs=7042  0.75s
+completed: 1000 failures: 0 retries: 0 elapsed 753.5 s

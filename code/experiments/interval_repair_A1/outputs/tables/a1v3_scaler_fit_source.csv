@@ -1,0 +1,10 @@
+param,scaler_lo_log10,scaler_hi_log10,partition_at_min,partition_at_max,norm_min_over_all,norm_max_over_all
+mu_n,-6.341035157335565,-2.6516951369518393,params_train,params_test,0.0,1.0
+mu_p,-6.3448615651886175,-2.6757175447023074,params_val,params_val+params_test,0.0,1.0
+tau_n,-9.320572103387882,-1.655607726314889,params_val,params_train,0.0,1.0
+tau_p,-9.348721986001856,-1.6903698325741008,params_test,params_train,0.0,1.0
+Nc,22.666517980554882,26.34830486304816,params_test,params_train+params_val,0.0,1.0
+Nv,22.634477270160733,26.338456493604603,params_train,params_train,0.0,1.0
+tau_ETL,-12.0,-8.0,params_train+params_val+params_test,params_train+params_val,0.0,1.0
+tau_HTL,-14.0,-10.0,params_train+params_val+params_test,params_train,0.0,1.0
+rad_c,-12.0,-9.0,params_train+params_val+params_test,params_train+params_val+params_test,0.0,1.0

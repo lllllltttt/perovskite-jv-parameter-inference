@@ -1,0 +1,22 @@
+﻿# formal driver log (timing probe excluded: 3-epoch probe, weights discarded)
+[14:00:44] start original 20261021
+[14:00:44] start expanded 20261021
+[14:03:16] end   expanded 20261021 rc=0 wall=152s
+[14:03:16] start expanded 20261022
+[14:05:06] end   original 20261021 rc=0 wall=262s
+[14:05:06] start original 20261022
+[14:06:57] end   expanded 20261022 rc=0 wall=221s
+[14:06:57] start expanded 20261023
+[14:09:13] end   original 20261022 rc=0 wall=248s
+[14:09:13] start original 20261023
+[14:10:27] end   expanded 20261023 rc=0 wall=211s
+[14:10:27] start expanded 20261024
+[14:12:34] end   original 20261023 rc=0 wall=201s
+[14:12:34] start original 20261024
+[14:13:28] end   expanded 20261024 rc=0 wall=181s
+[14:13:28] start expanded 20261025
+[14:16:21] end   original 20261024 rc=0 wall=226s
+[14:16:21] start original 20261025
+[14:16:38] end   expanded 20261025 rc=0 wall=190s
+[14:19:05] end   original 20261025 rc=0 wall=165s
+[14:19:06] DONE {"original_20261021": "completed", "original_20261022": "completed", "original_20261023": "completed", "original_20261024": "completed", "original_20261025": "completed", "expanded_20261021": "completed", "expanded_20261022": "completed", "expanded_20261023": "completed", "expanded_20261024": "completed", "expanded_20261025": "completed"}

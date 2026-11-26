@@ -1,0 +1,19 @@
+check,expected,computed,ok
+q1 interval score @c=0.95 (=0.4+40*0.3),12.4,12.399999999999991,True
+q1 interval score @c=0.50 (=0.4+4*0.3),1.6,1.6,True
+q2 mu_n@.95 clip coverage (recomputed),0.947475011432678,0.9474750114326779,True
+q3 mu_n@.95 clip median width dec (recomputed),1.2568408066723185,1.2568408066723185,True
+q4 mu_n@.95 width ratio model/prior (recomputed),0.4250853162313254,0.42508531623132545,True
+q5 mu_n@.95 prior test coverage (recomputed),0.9498268765924088,0.9498268765924087,True
+q6 cov_raw-cov_clip forced equal (recomputed),0.0,0.0,True
+q6b test true_oor_frac == 0 (by construction),True,True,True
+q7a Nc test reaches normalized 0 (=scaler min),True,True,True
+q7b Nc train min strictly above 0 (NOT a scaler-min partition),True,True,True
+q7c every param scaler-min attained by a partition (proof table),True,True,True
+q7d multiple partitions hold scaler edges (train/val/test all touch at least one edge),True,True,True
+q7e Nc scaler log10 min == test log10 min (not train),22.666517980554882,22.666517980554882,True
+q8a round-2 alphabetical sort would misalign data (bug real),True,True,True
+q8b correspondence table tick==data==PARAM_NAMES in order,True,True,True
+q8c figure data series == canonical PARAM_NAMES order (@0.95),True,True,True
+q9 clip median width <= raw median width (all param/level),True,True,True
+q10 frozen-inference reproducibility vs round-2,True,True,True

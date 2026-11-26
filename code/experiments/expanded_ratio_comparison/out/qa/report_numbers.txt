@@ -1,0 +1,126 @@
+﻿
+=== TABLE A (own distribution), coordinates ===
+a_mu   skill_mse    orig   0.7641 ± 0.0070 | exp   0.7796 ± 0.0061
+a_mu   rmse         orig   0.4257 ± 0.0064 | exp   0.4085 ± 0.0056
+a_mu   mae          orig   0.3182 ± 0.0047 | exp   0.3089 ± 0.0051
+a_mu   pearson      orig   0.8742 ± 0.0040 | exp   0.8830 ± 0.0034
+a_mu   r2_test      orig   0.7641 ± 0.0070 | exp   0.7796 ± 0.0061
+r_mu   skill_mse    orig   0.1410 ± 0.0114 | exp   0.1409 ± 0.0102
+r_mu   rmse         orig   0.2985 ± 0.0020 | exp   0.3796 ± 0.0023
+r_mu   mae          orig   0.2346 ± 0.0016 | exp   0.2893 ± 0.0027
+r_mu   pearson      orig   0.3758 ± 0.0151 | exp   0.3761 ± 0.0136
+r_mu   r2_test      orig   0.1410 ± 0.0114 | exp   0.1406 ± 0.0102
+a_tau  skill_mse    orig   0.7417 ± 0.0034 | exp   0.7238 ± 0.0034
+a_tau  rmse         orig   1.0376 ± 0.0069 | exp   1.0716 ± 0.0066
+a_tau  mae          orig   0.7690 ± 0.0067 | exp   0.7857 ± 0.0083
+a_tau  pearson      orig   0.8612 ± 0.0020 | exp   0.8507 ± 0.0020
+a_tau  r2_test      orig   0.7416 ± 0.0034 | exp   0.7235 ± 0.0034
+r_tau  skill_mse    orig   0.0729 ± 0.0116 | exp   0.1262 ± 0.0343
+r_tau  rmse         orig   0.3068 ± 0.0019 | exp   0.3808 ± 0.0074
+r_tau  mae          orig   0.2415 ± 0.0016 | exp   0.2872 ± 0.0062
+r_tau  pearson      orig   0.2972 ± 0.0160 | exp   0.3681 ± 0.0303
+r_tau  r2_test      orig   0.0728 ± 0.0116 | exp   0.1262 ± 0.0343
+a_D    skill_mse    orig   0.7027 ± 0.0290 | exp   0.6539 ± 0.0107
+a_D    rmse         orig   0.3714 ± 0.0181 | exp   0.3857 ± 0.0060
+a_D    mae          orig   0.2828 ± 0.0138 | exp   0.2974 ± 0.0050
+a_D    pearson      orig   0.8385 ± 0.0173 | exp   0.8087 ± 0.0064
+a_D    r2_test      orig   0.7026 ± 0.0290 | exp   0.6538 ± 0.0107
+r_D    skill_mse    orig   0.0491 ± 0.0097 | exp   0.0888 ± 0.0037
+r_D    rmse         orig   0.3221 ± 0.0016 | exp   0.4049 ± 0.0008
+r_D    mae          orig   0.2576 ± 0.0017 | exp   0.3013 ± 0.0008
+r_D    pearson      orig   0.2249 ± 0.0190 | exp   0.2993 ± 0.0068
+r_D    r2_test      orig   0.0490 ± 0.0097 | exp   0.0887 ± 0.0037
+
+=== TABLE A, nine parameters (skill/rmse) ===
+Nc_eff_pvk   skill_mse  orig   0.6754 ± 0.0276 | exp   0.6195 ± 0.0101
+Nc_eff_pvk   rmse       orig   0.4024 ± 0.0171 | exp   0.4298 ± 0.0057
+Nv_eff_pvk   skill_mse  orig   0.6572 ± 0.0276 | exp   0.5804 ± 0.0105
+Nv_eff_pvk   rmse       orig   0.4073 ± 0.0163 | exp   0.4413 ± 0.0055
+mu_n_pvk     skill_mse  orig   0.7286 ± 0.0067 | exp   0.7224 ± 0.0052
+mu_n_pvk     rmse       orig   0.4642 ± 0.0057 | exp   0.4686 ± 0.0044
+mu_p_pvk     skill_mse  orig   0.7589 ± 0.0075 | exp   0.7694 ± 0.0073
+mu_p_pvk     rmse       orig   0.4375 ± 0.0068 | exp   0.4315 ± 0.0068
+rad_c        skill_mse  orig   0.2320 ± 0.0036 | exp   0.2704 ± 0.0064
+rad_c        rmse       orig   0.7677 ± 0.0018 | exp   0.7440 ± 0.0032
+tau_ETL      skill_mse  orig   0.2578 ± 0.0096 | exp   0.2859 ± 0.0159
+tau_ETL      rmse       orig   1.0033 ± 0.0065 | exp   0.9873 ± 0.0110
+tau_HTL      skill_mse  orig   0.4191 ± 0.0120 | exp   0.3559 ± 0.0119
+tau_HTL      rmse       orig   0.8976 ± 0.0092 | exp   0.9402 ± 0.0087
+tau_n_pvk    skill_mse  orig   0.7333 ± 0.0033 | exp   0.7159 ± 0.0028
+tau_n_pvk    rmse       orig   1.0537 ± 0.0066 | exp   1.0969 ± 0.0055
+tau_p_pvk    skill_mse  orig   0.7419 ± 0.0035 | exp   0.7200 ± 0.0040
+tau_p_pvk    rmse       orig   1.0440 ± 0.0072 | exp   1.0798 ± 0.0077
+
+=== TABLE B paired differences (expanded - original) ===
+original coo   a_D          dSkill -0.9601 (sd 0.2968) +0/-5
+original coo   a_mu         dSkill -0.8996 (sd 0.1947) +0/-5
+original coo   a_tau        dSkill -0.3320 (sd 0.0807) +0/-5
+original coo   r_D          dSkill -1.4050 (sd 0.1886) +0/-5
+original coo   r_mu         dSkill -1.3160 (sd 0.2861) +0/-5
+original coo   r_tau        dSkill -1.8318 (sd 1.9393) +0/-5
+original par   Nc_eff_pvk   dSkill -0.9825 (sd 0.2119) +0/-5
+original par   Nv_eff_pvk   dSkill -0.9871 (sd 0.3569) +0/-5
+original par   mu_n_pvk     dSkill -0.9224 (sd 0.1859) +0/-5
+original par   mu_p_pvk     dSkill -0.9041 (sd 0.2425) +0/-5
+original par   rad_c        dSkill -0.5039 (sd 0.0229) +0/-5
+original par   tau_ETL      dSkill -0.4145 (sd 0.3023) +0/-5
+original par   tau_HTL      dSkill -0.6231 (sd 0.2326) +0/-5
+original par   tau_n_pvk    dSkill -0.3363 (sd 0.0419) +0/-5
+original par   tau_p_pvk    dSkill -0.3457 (sd 0.1444) +0/-5
+expanded coo   a_D          dSkill +0.8049 (sd 0.1759) +5/-0
+expanded coo   a_mu         dSkill +0.8135 (sd 0.1255) +5/-0
+expanded coo   a_tau        dSkill +0.5207 (sd 0.0723) +5/-0
+expanded coo   r_D          dSkill +1.1897 (sd 0.1257) +5/-0
+expanded coo   r_mu         dSkill +1.1075 (sd 0.0550) +5/-0
+expanded coo   r_tau        dSkill +0.6199 (sd 0.1709) +5/-0
+expanded par   Nc_eff_pvk   dSkill +0.6247 (sd 0.0664) +5/-0
+expanded par   Nv_eff_pvk   dSkill +1.0680 (sd 0.2768) +5/-0
+expanded par   mu_n_pvk     dSkill +1.0440 (sd 0.1599) +5/-0
+expanded par   mu_p_pvk     dSkill +0.6182 (sd 0.0811) +5/-0
+expanded par   rad_c        dSkill +0.8185 (sd 0.1283) +5/-0
+expanded par   tau_ETL      dSkill +0.3408 (sd 0.0395) +5/-0
+expanded par   tau_HTL      dSkill +0.6567 (sd 0.0872) +5/-0
+expanded par   tau_n_pvk    dSkill +0.4696 (sd 0.0674) +5/-0
+expanded par   tau_p_pvk    dSkill +0.5747 (sd 0.0771) +5/-0
+
+=== TABLE B raw values on the common tests ===
+-- common original test --
+a_mu   original skill  0.7641±0.0070  rmse  0.4257  mae  0.3182  baseMSE   0.7683
+a_mu   expanded skill -0.1355±0.1964  rmse  0.9315  mae  0.7186  baseMSE   0.7683
+r_mu   original skill  0.1410±0.0114  rmse  0.2985  mae  0.2346  baseMSE   0.1037
+r_mu   expanded skill -1.1750±0.2871  rmse  0.4741  mae  0.3628  baseMSE   0.1037
+a_tau  original skill  0.7417±0.0034  rmse  1.0376  mae  0.7690  baseMSE   4.1678
+a_tau  expanded skill  0.4097±0.0806  rmse  1.5658  mae  1.2617  baseMSE   4.1678
+r_tau  original skill  0.0729±0.0116  rmse  0.3068  mae  0.2415  baseMSE   0.1015
+r_tau  expanded skill -1.7588±1.9321  rmse  0.5087  mae  0.3809  baseMSE   0.1015
+a_D    original skill  0.7027±0.0290  rmse  0.3714  mae  0.2828  baseMSE   0.4647
+a_D    expanded skill -0.2574±0.3215  rmse  0.7592  mae  0.5704  baseMSE   0.4647
+r_D    original skill  0.0491±0.0097  rmse  0.3221  mae  0.2576  baseMSE   0.1091
+r_D    expanded skill -1.3559±0.1812  rmse  0.5068  mae  0.3862  baseMSE   0.1091
+-- common expanded test --
+a_mu   original skill -0.0339±0.1248  rmse  0.8834  mae  0.6619  baseMSE   0.7572
+a_mu   expanded skill  0.7796±0.0061  rmse  0.4085  mae  0.3089  baseMSE   0.7572
+r_mu   original skill -0.9667±0.0553  rmse  0.5742  mae  0.4994  baseMSE   0.1677
+r_mu   expanded skill  0.1409±0.0102  rmse  0.3796  mae  0.2893  baseMSE   0.1677
+a_tau  original skill  0.2032±0.0714  rmse  1.8189  mae  1.4794  baseMSE   4.1585
+a_tau  expanded skill  0.7238±0.0034  rmse  1.0716  mae  0.7857  baseMSE   4.1585
+r_tau  original skill -0.4936±0.1709  rmse  0.4973  mae  0.4182  baseMSE   0.1660
+r_tau  expanded skill  0.1262±0.0343  rmse  0.3808  mae  0.2872  baseMSE   0.1660
+a_D    original skill -0.1510±0.1777  rmse  0.7017  mae  0.5430  baseMSE   0.4299
+a_D    expanded skill  0.6539±0.0107  rmse  0.3857  mae  0.2974  baseMSE   0.4299
+r_D    original skill -1.1010±0.1264  rmse  0.6146  mae  0.5408  baseMSE   0.1799
+r_D    expanded skill  0.0888±0.0037  rmse  0.4049  mae  0.3013  baseMSE   0.1799
+
+=== per-seed spread (min..max) of Skill, coordinates ===
+original a_mu   skill_mse   0.7561 ..  0.7750 (mean 0.7641)
+original r_mu   skill_mse   0.1254 ..  0.1556 (mean 0.1410)
+original a_tau  skill_mse   0.7388 ..  0.7471 (mean 0.7417)
+original r_tau  skill_mse   0.0625 ..  0.0877 (mean 0.0729)
+original a_D    skill_mse   0.6713 ..  0.7286 (mean 0.7027)
+original r_D    skill_mse   0.0366 ..  0.0638 (mean 0.0491)
+expanded a_mu   skill_mse   0.7703 ..  0.7842 (mean 0.7796)
+expanded r_mu   skill_mse   0.1263 ..  0.1518 (mean 0.1409)
+expanded a_tau  skill_mse   0.7188 ..  0.7266 (mean 0.7238)
+expanded r_tau  skill_mse   0.0704 ..  0.1547 (mean 0.1262)
+expanded a_D    skill_mse   0.6417 ..  0.6675 (mean 0.6539)
+expanded r_D    skill_mse   0.0832 ..  0.0928 (mean 0.0888)

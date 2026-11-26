@@ -1,0 +1,22 @@
+{
+  "n_test": 15307,
+  "n_voltage": 131,
+  "voltage_last": 1.3,
+  "n_test_expected": 15307,
+  "n_voltage_expected": 131,
+  "shapes_ok": true,
+  "param_raw_vs_scaler_inverse_max_abs": 7.105427357601002e-15,
+  "param_alignment_ok": true,
+  "frozen_J_vs_dataset_J_max_abs": 2.980231017524204e-08,
+  "frozen_J_float32_ok": true,
+  "J_inverse_vs_raw_max_abs": 0.00018949842802129524,
+  "J_inverse_max_rel_to_span": 2.9802310142750162e-08,
+  "input_sha256": {
+    "dataset_normalized.npz": "0993b312a3516b4de9463a2169ba9cdf52d313b6fb98b34429d7b99360dfa705",
+    "_frozen_preds.npz": "ad156cd18c1933e8a114fa8400b332205ba5b95806b9d1a78bcb880edc27d176",
+    "param_scaler.pkl": "70cdc709d7130a75b8b39aebb0e536f5bca609367efbfd7cbe9518d03cbd7025",
+    "J_scaler.pkl": "3b82a2541bd77c5949737886d8725cb350cdfb435392faa06d48c4b3fad13f3b"
+  },
+  "archived_reference_dir": "E:\\project\\work1\\20261006\\manuscript_figures_SI_integrated_v2_layout_final\\data_used",
+  "jsc_matches_raw_at_zero_voltage_max_abs": 0.0
+}

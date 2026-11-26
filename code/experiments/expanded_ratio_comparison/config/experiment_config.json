@@ -1,0 +1,219 @@
+{
+  "experiment_id": "20261021_expanded_ratio_comparison",
+  "created_utc": "2026-10-21",
+  "question": "Under identical data volume, network, loss and training rules, does widening the linear-uniform ratio prior from 0.2-5 to 0.05-20 change recovery of the shared scales and the ratio coordinates?",
+  "design": {
+    "arms": {
+      "original": {
+        "dataset_id": "orig200k",
+        "ratio_prior": [
+          0.2,
+          5.0
+        ],
+        "n_available": 102046,
+        "n_used": 24274,
+        "selection": "random subset without replacement; numpy.random.default_rng(20261021).choice(102046, 24274, replace=False), then sorted ascending"
+      },
+      "expanded": {
+        "dataset_id": "exp50k",
+        "ratio_prior": [
+          0.05,
+          20.0
+        ],
+        "n_available": 24274,
+        "n_used": 24274,
+        "selection": "all delivered valid rows"
+      }
+    },
+    "shared_scale_priors_unchanged": {
+      "mu_avg": [
+        1e-06,
+        0.001
+      ],
+      "tau_avg": [
+        1e-09,
+        0.01
+      ],
+      "DOS_avg": [
+        1e+22,
+        1e+26
+      ],
+      "tau_interface_ETL": [
+        1e-12,
+        1e-08
+      ],
+      "tau_interface_HTL": [
+        1e-14,
+        1e-10
+      ],
+      "rad_c": [
+        1e-12,
+        1e-09
+      ]
+    },
+    "ratio_sampling": "linear uniform in q within the stated range",
+    "split": {
+      "counts": {
+        "train": 16992,
+        "val": 3641,
+        "test": 3641
+      },
+      "ratios": [
+        0.7,
+        0.15,
+        0.15
+      ],
+      "rule": "one seeded permutation per arm (numpy default_rng with the recorded seed), first 16,992 train, next 3,641 validation, last 3,641 test; identical counts in both arms",
+      "seeds": {
+        "original": [
+          20261021,
+          101
+        ],
+        "expanded": [
+          20261021,
+          102
+        ]
+      },
+      "shared_by_all_training_seeds": true,
+      "leakage_control": "no exact duplicate parameter vector or byte-identical current curve exists within or across the two arms, so no duplicate group assignment is required; verified in data QA"
+    },
+    "common_test_sets": {
+      "original_range_test": "original-arm test rows (3,641)",
+      "expanded_range_test": "expanded-arm test rows (3,641)"
+    },
+    "training_seeds": [
+      20261021,
+      20261022,
+      20261023,
+      20261024,
+      20261025
+    ],
+    "n_training_runs": 10
+  },
+  "architecture": {
+    "source": "script/VAE-v6.py (frozen main-paper model VAE-v6)",
+    "input_dim": 131,
+    "latent_dim": 9,
+    "n_param": 9,
+    "encoder": [
+      "Dense128 relu",
+      "Dense64 relu",
+      "z_mean:9",
+      "z_log_var:9",
+      "Sampling: z_mean + exp(0.5*z_log_var)*eps"
+    ],
+    "decoder": [
+      "Dense64 relu",
+      "Dense128 relu",
+      "Dense131 sigmoid"
+    ],
+    "param_head": [
+      "Dense64 relu",
+      "Dense32 relu",
+      "mu:9",
+      "sigma_raw:9 (bias initialiser -3.0)"
+    ],
+    "sigma_transform": "clip(softplus(raw)+0.01, 0.01, 1.0)",
+    "loss": "recon_loss (mean of summed squared error over 131 points) + 0.001*KL + 1.0*GaussianNLL"
+  },
+  "training": {
+    "optimizer": "Adam(learning_rate=1e-3)",
+    "batch_size": 64,
+    "max_epochs": 1000,
+    "early_stopping": {
+      "monitor": "val_param_loss",
+      "patience": 50,
+      "restore_best_weights": true,
+      "min_delta": "Keras default (0)"
+    },
+    "reduce_lr_on_plateau": {
+      "monitor": "val_loss",
+      "factor": 0.5,
+      "patience": 15,
+      "min_lr": 1e-06
+    },
+    "checkpoint": {
+      "monitor": "val_loss",
+      "save_best_only": true
+    },
+    "shuffle": "tf.data shuffle(buffer=n_train, seed=<training seed>, reshuffle_each_iteration=True)",
+    "init_and_order": "keras.utils.set_random_seed(<training seed>) before model construction in both arms; identical train-set size and shuffle seed give the same batch order where the framework permits it; residual framework non-determinism is reported",
+    "no_hyperparameter_search": true
+  },
+  "preprocessing": {
+    "parameters": "log10 of all nine parameters (all nine had max/min > 100 in the frozen pipeline), then MinMaxScaler fitted on the arm's TRAIN partition only",
+    "current": "per-voltage MinMaxScaler fitted on the arm's TRAIN partition only",
+    "val_test": "transform only; no clipping to [0,1]",
+    "difference_from_frozen_main_model": "the frozen main model's scalers were fitted on the full 102,046-row retained set before splitting; here both scalers are train-only, so normalisation and loss weighting differ from the frozen model. Conclusions are drawn between the two matched retrained models, not against the frozen model."
+  },
+  "evaluation": {
+    "point_prediction": "encoder z_mean -> param_head mu (no latent sampling), identical for both arms",
+    "space": "physical log10 parameter space after inverse transform",
+    "coordinates": [
+      "a_mu",
+      "r_mu",
+      "a_tau",
+      "r_tau",
+      "a_D",
+      "r_D"
+    ],
+    "metrics": [
+      "pearson",
+      "mae",
+      "rmse",
+      "r2_test",
+      "skill_mse",
+      "mae_reduction"
+    ],
+    "definitions_source": "20261019_HC_revision_stage1_v2/scripts/metrics_lib.py::metrics (archived, imported verbatim)",
+    "table_A": "each arm's model on its own test set with its own train baselines",
+    "table_B": "same-test-set comparison with the test arm's train mean/median baselines used for both models",
+    "summary": "per-seed values, mean +/- sample SD across the five seeds, and paired per-seed differences",
+    "no_significance_tests": true
+  },
+  "guardrails": [
+    "no manuscript or SI edit",
+    "no COMSOL run",
+    "no overwrite of raw CSV, frozen model, frozen scalers or frozen split",
+    "no claim of universal non-identifiability if no improvement is found",
+    "out-of-distribution evaluations are labelled as such"
+  ],
+  "inputs": {
+    "expanded_csv": {
+      "path": "E:\\project\\work1\\20261021\\JV_database_9D_interface_lifetimes-newratio.csv",
+      "sha256": "2664cbd7636c6cedd10ba543cb3b6154daf7fde769e87b2e44d3121fb9315f3f"
+    },
+    "original_csv": {
+      "path": "E:\\project\\work1\\data\\JV_database_9D_interface_lifetimes-2.csv",
+      "sha256": "19aa6036ec4dafe67948d8fd8f55aa19bd2bec7cbd9a61267281a444815c4f26"
+    },
+    "frozen_main_model": {
+      "dir": "E:\\project\\work1\\data\\vae-v6\\vae-v6",
+      "note": "read for architecture provenance only; not used for fitting"
+    },
+    "metric_source": {
+      "path": "E:\\project\\work1\\20261019_HC_revision_stage1_v2\\scripts\\metrics_lib.py",
+      "sha256": "97e04e267696eaec05b3ff57250776aad8e09d22c9e0f5ce2cd7e140c92d42c9"
+    }
+  },
+  "realised": {
+    "n_used": {
+      "original": 24274,
+      "expanded": 24274
+    },
+    "split_sizes": {
+      "original": {
+        "train": 16992,
+        "val": 3641,
+        "test": 3641
+      },
+      "expanded": {
+        "train": 16992,
+        "val": 3641,
+        "test": 3641
+      }
+    },
+    "scaler_fit_partition": "train only",
+    "train_seed_master": 20261021
+  }
+}

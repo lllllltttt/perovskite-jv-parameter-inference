@@ -1,0 +1,20 @@
+{
+  "pair_set": {
+    "n_pairs_reproduced": 11245,
+    "n_pairs_archived": 11245,
+    "pair_sets_identical": true,
+    "archived_only": 0,
+    "reproduced_only": 0,
+    "directed_links": 15307,
+    "mutual_nearest_pairs": 8124,
+    "curves_touched": 15307,
+    "curves_in_multiple_pairs": 5859,
+    "max_pairs_per_curve": 5
+  },
+  "median_statistics_max_abs_difference": 2.220446049250313e-16,
+  "median_statistics_match": true,
+  "random_baseline_max_abs_difference": 5.551115123125783e-17,
+  "random_baseline_match": true,
+  "tier_counts_match": true,
+  "reproduction_ok": true
+}

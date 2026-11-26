@@ -1,0 +1,60 @@
+{
+  "arm": "expanded",
+  "seed": 20261022,
+  "run_name": "expanded_20261022",
+  "started_utc": "2026-10-21T14:03:20.749287+00:00",
+  "config_sha256": "2d1b87e5946286dfc6bd75d84e193d6cdba6720c116aebeec659d40a26d258a2",
+  "arm_cache_sha256": "b9bcd14a05c245596f9658fbaaf4fab36f1914db9e63c24a16cd878b199cb95e",
+  "n_train": 16992,
+  "n_val": 3641,
+  "n_test": 3641,
+  "batch_size": 64,
+  "max_epochs": 1000,
+  "previous_status": null,
+  "env": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "deterministic_ops": true
+  },
+  "initial_weight_sha256": "aef398c9e54dc4302d144df724d18787797df385d1d4d6bac012d9432e283d08",
+  "reload_max_abs_diff_z_mean": 0.0,
+  "status": "completed",
+  "finished_utc": "2026-10-21T14:06:56.567110+00:00",
+  "wall_s": 215.81782341003418,
+  "epochs_run": 503,
+  "best_epoch": 452,
+  "stopped_epoch": 502,
+  "stop_reason": "early_stopping",
+  "best_val_loss": -13.879045486450195,
+  "best_val_param_loss": -13.928362846374512,
+  "final_learning_rate": 9.999999974752427e-07,
+  "model_files": {
+    "encoder.h5": {
+      "sha256": "c106cdd32ca440db1351cc5e6b3addda33b1d836e3a60c6ca28e2135c4254d1c",
+      "bytes": 131024
+    },
+    "decoder.h5": {
+      "sha256": "23721784184858dc1d404ee065e8c16458920e0dd256fd3a6061044bf89e4c32",
+      "bytes": 120984
+    },
+    "param_head.h5": {
+      "sha256": "492eb47b0d561aa7c0849163c6ab63fc0874c1e05e19706a5985863a9c7530bd",
+      "bytes": 38384
+    },
+    "encoder.weights.h5": {
+      "sha256": "252c7a6bff11d3a2260264e3d542982b17ad651b868d8d08d539a03b8cd19972",
+      "bytes": 128072
+    },
+    "decoder.weights.h5": {
+      "sha256": "8f7120dabf16ed8bb44c0cdc407f5d6a68fde317bff10db261704e0e444900d4",
+      "bytes": 121328
+    },
+    "param_head.weights.h5": {
+      "sha256": "80cd745ff8e5623c38422324615729aa72cf342e335f125350666ba457e007d4",
+      "bytes": 34304
+    }
+  }
+}

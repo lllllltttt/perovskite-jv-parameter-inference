@@ -1,0 +1,3 @@
+wrote E:\project\work1\20261019_NN_stability\out\stability\nn_stability_results.png
+wrote E:\project\work1\20261019_NN_stability\out\stability\nn_stability_results.pdf
+wrote E:\project\work1\20261019_NN_stability\out\stability\nn_stability_results.svg

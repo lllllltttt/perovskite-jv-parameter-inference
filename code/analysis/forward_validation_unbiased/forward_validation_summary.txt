@@ -1,0 +1,30 @@
+FORWARD VALIDATION SUMMARY (unbiased cohort, VAE-v6)
+==============================================================
+cohort: 45 test samples | PCE-tercile stratified, fixed seed | COMSOL(pred) vs J_test_raw
+curve metrics: median RMSE=2.6926 mA/cm2 | mean=6.2634 | IQR=[1.3968,6.0007] | P10-P90=[0.5864,13.2278]
+median R^2 (full curve) = 0.9661
+region RMSE (analysis convention, V=1.0V boundary): 0-1.0V median=0.4553 | >1.0V median=5.1916
+device-metric |COMSOL(pred)-target| (median / q25 / q75):
+   MAE_Jsc  0.1119 / 0.0224 / 0.2518
+   MAE_Voc  0.0300 / 0.0100 / 0.0400
+   MAE_FF   0.0141 / 0.0089 / 0.0227
+   MAE_PCE  0.4714 / 0.1887 / 0.9280
+true-param control: median RMSE = 0.00000 mA/cm2
+   control OK: COMSOL(true params) reproduces target (unit/ordering/model consistent).
+post-hoc (interpretation only, not used for selection):
+   spearman(param_log10_rmse,rmse_full) = -0.183 (p=0.2299)
+   spearman(mean_pred_sigma,rmse_full) = -0.078 (p=0.6124)
+   spearman(param_log10_rmse,dPCE) = 0.247 (p=0.1059)
+inverse-ambiguity signature (large param error, small forward error): 14 / 45 samples
+
+SCIENTIFIC CONCLUSIONS
+A. FORWARD CONSISTENCY -> NOT SUPPORTED
+   median J-V RMSE 2.693 mA/cm2 across an unbiased cohort (interpretation: predicted param combinations reproduce the target curves; judged against the 1%-of-Jsc measurement-noise RMSE ~0.21 mA/cm2).
+B. UNIQUE RECOVERY -> NOT SUPPORTED
+   Forward consistency does not prove the recovered parameters are the unique true values (simulator-equivalent parameters can forward-reproduce J-V).
+C. COLLISION CONSISTENCY -> SUPPORTED
+   Spearman(param-space error, forward J-V RMSE) = -0.183 (weak => substantially different params can yield similar J-V; aligns with the collision analysis).
+D. PRACTICAL METRIC PRESERVATION -> SUPPORTED
+   median |ΔPCE|=0.471 pct-pts, |ΔJsc|=0.112 mA/cm2 (reasonable device-level preservation).
+
+SUBMISSION WORDING BOUNDARY: may state 'Forward COMSOL re-simulation confirmed that the inferred parameter combinations reproduce the target J-V responses with low device-level discrepancy across an unbiased test cohort.' Must NOT state 'proves the inferred parameters are physically correct' or 'uniquely recovers the true material parameters'.

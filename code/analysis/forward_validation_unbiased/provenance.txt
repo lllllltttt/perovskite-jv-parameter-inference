@@ -1,0 +1,82 @@
+PROVENANCE  --  forward_validation_unbiased
+============================================
+Generated: 2026-08-23 by script/forward_validation_unbiased.py (prep)
+                   + run_forward_validation_unbiased.m (COMSOL batch, LOCAL)
+Purpose:   trace every COMSOL output MAT back to: sample_id, test_index,
+           original (LHS) sample id, model version, parameter input file,
+           voltage grid, source (pred/true).
+
+EXECUTION STATUS (rev 2)
+------------------------
+The COMSOL batch was executed LOCALLY on 2026-08-23 (COMSOL 6.3 at
+E:\comsol6_3\COMSOL63\Multiphysics, MATLAB R2024b, LiveLink for MATLAB 6.3,
+COMSOL server comsolmphserver.exe -port 2039). Model loaded from
+E:\project\work1\matlab&mph\1D_PSC_wen.mph  (the model copied from the
+server that generated the database; original server script
+run_PSC_9D_8.m is in the same folder and was replicated exactly).
+
+Identifier scheme
+-----------------
+* sample_id      = test_index (row index into the npz test set, 0..15306).
+                  This is the value stored as the MAT "Index" field and used as
+                  the MAT filename.
+* test_index     = same as sample_id (they are the same number).
+* original LHS Sample_ID (1..200000, LHS design table): NOT recoverable from
+  local files. Reason below.
+
+Why the original LHS Sample_ID is not recoverable locally
+---------------------------------------------------------
+The database params were written to MAT at ~3 significant figures by the
+server MATLAB script (e.g. LHS 4.478262e-06 -> MAT 4.48e-06; 2.925323e22 ->
+2.93e22). params_test_raw therefore carries ~3-sig-fig rounding. Matching it
+against the full-precision LHS CSV (PSC_LHS_9D_interface_lifetimes_200000_3.csv)
+succeeds for only 145/15307 rows at the finest lossless tolerance, and at a
+coarser tolerance the match is not unique (LHS log10 spacing ~1e-5 << rounding
+~1e-3). => original_sample_id column is left NaN (flagged).
+
+Server-side recovery recipe (optional, if the LHS id is needed):
+  On the server, the filtered database CSV JV_database_9D_interface_lifetimes-2.csv
+  contains the authoritative Sample_ID column. Join comsol_true_parameters.csv
+  to that CSV on the 9 physical columns with a relative tolerance ~1e-3
+  (nearest-neighbor; matches will be approximate because of the rounding).
+
+MAT file naming and contents (created by run_forward_validation_unbiased.m)
+---------------------------------------------------------------------------
+comsol_pred/Sample_<sample_id:05d>_pred.mat   (source = 'pred')
+comsol_true/Sample_<sample_id:05d>_true.mat   (source = 'true', control)
+
+Every MAT stores:
+  Index           int     sample_id (= test_index)
+  source          char    'pred' | 'true'
+  test_index      int     sample_id
+  model_version   char    'VAE_v6_unbiased_fwd_2026-08-23'
+  param_input_file char   'comsol_input_parameters.csv' | 'comsol_true_parameters.csv'
+  V_grid          double  [0 .. 1.3] 131 points (matches dataset)
+  mu_n_pvk ... rad_c       the 9 assigned parameter values (CSV values, i.e.
+                          mu/N in m2/V/s & m-3, tau in s, rad_c in cm3/s as stored)
+  J               double  COMSOL current density, A/m2 (131 pts)
+                          convert *0.1 -> mA/cm2 to compare with J_test_raw.
+
+MODEL & RECIPE (server-exact, verified)
+---------------------------------------
+* Model : 1D_PSC_wen.mph  (study tag 'std1'; sweep V=0..1.3 V, 131 pts).
+* Params: assigned with EXPLICIT SI unit strings exactly as run_PSC_9D_8.m:
+      mu_n_pvk/mu_p_pvk    %e[m^2/(V*s)]      Nc/Nv       %e[1/m^3]
+      tau_n/tau_p/tau_ETL/tau_HTL  %e[s]      rad_c       %e[m^3/s] value*1e-6
+* J     : mphglobal(model, 'semi.J0_1'), 131-point global evaluation, A/m2.
+* Control: single-sample check (test_index 269) reproduced J_test_raw[269]
+  exactly (RMSE 0.0000 mA/cm2). Full details in unit_conversion_audit.txt.
+
+Comparison anchor
+-----------------
+Target curves for forward comparison: npz['J_test_raw'][sample_id] in mA/cm2 on
+V = linspace(0,1.3,131) (pre-process.py L84). Multiply COMSOL J by 0.1 to get
+mA/cm2 before computing metrics.
+
+Old-file safety
+---------------
+comsol_pred/ and comsol_true/ are NEW directories. The MATLAB script refuses to
+overwrite any existing MAT (errors if the target file already exists). No old
+forward-validation files (9D-HTL-new/mat/*.mat, forward_validation* CSV/plots)
+are touched. run_PSC_9D_*.m and 1D_PSC_wen.mph in matlab&mph/ are the user's
+server copies and are NOT modified.

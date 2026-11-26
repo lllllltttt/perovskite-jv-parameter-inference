@@ -1,0 +1,9 @@
+{
+  "min": 0.011164903265230652,
+  "max": 0.7923242561643762,
+  "lower_bound": 0.01,
+  "upper_bound": 1.0,
+  "lower_engaged": false,
+  "upper_engaged": false,
+  "space": "normalized log10 coordinates of the frozen scaler"
+}

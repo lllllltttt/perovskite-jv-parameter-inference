@@ -1,0 +1,18 @@
+{
+  "full": {
+    "n_points": 5895,
+    "r2_pooled": 0.9722627631654003,
+    "note": "pooled over all cases and voltages; not a per-curve R2"
+  },
+  "0to1V": {
+    "n_points": 4545,
+    "r2_pooled": 0.9904973286353363,
+    "note": "pooled over all cases and voltages; not a per-curve R2"
+  },
+  "gt1V": {
+    "n_points": 1350,
+    "r2_pooled": 0.9685039379194277,
+    "note": "pooled over all cases and voltages; not a per-curve R2"
+  },
+  "note": "R2 computed on pooled residuals around the pooled mean; report only as a pooled summary"
+}

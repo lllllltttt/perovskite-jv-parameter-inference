@@ -1,0 +1,16 @@
+{
+  "model_dir": "E:/project/work1\\data\\vae-v6\\vae-v6",
+  "npz": "E:/project/work1\\data\\dataset_normalized.npz",
+  "cohort_size": 45,
+  "strategy": "PCE tercile stratified random, fixed seed",
+  "seed": 20260823,
+  "n_per_bin": 15,
+  "pce_edges": [
+    13.520694,
+    18.413523
+  ],
+  "voltage_grid": "linspace(0,1.3,131)",
+  "sigma_convention": "clip(softplus(raw)+0.01, 0.01, 1.0)",
+  "selection_uses_parameter_error": false,
+  "note": "parameter error computed post-hoc ONLY"
+}

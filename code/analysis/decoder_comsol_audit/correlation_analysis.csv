@@ -1,0 +1,7 @@
+pair,var_a,var_b,spearman_rho,p_value,n,verdict
+param-error vs decoder-target RMSE,param_log10_rmse,rmse_decoder,-0.2906,0.05276,45,NO CLEAR ASSOCIATION
+param-error vs COMSOL-target RMSE,param_log10_rmse,rmse_comsol,-0.1826,0.22989,45,NO CLEAR ASSOCIATION
+param-error vs cycle gap,param_log10_rmse,cycle_gap,-0.0262,0.86425,45,NO CLEAR ASSOCIATION
+predicted sigma vs decoder-target RMSE,mean_pred_sigma,rmse_decoder,-0.2229,0.14104,45,NO CLEAR ASSOCIATION
+predicted sigma vs COMSOL-target RMSE,mean_pred_sigma,rmse_comsol,-0.0776,0.61237,45,NO CLEAR ASSOCIATION
+predicted sigma vs cycle gap,mean_pred_sigma,cycle_gap,0.1174,0.4425,45,NO CLEAR ASSOCIATION

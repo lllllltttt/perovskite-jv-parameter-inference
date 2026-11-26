@@ -1,0 +1,7 @@
+{
+  "n_reps": 1000,
+  "seed_base": 20261019,
+  "random_pair_seed": 42,
+  "analysis": "random-subset stability analysis with duplicate collapse",
+  "percentile_note": "2.5th/97.5th percentiles are descriptive resampling percentile ranges, not confidence intervals"
+}

@@ -1,0 +1,60 @@
+{
+  "arm": "expanded",
+  "seed": 20261023,
+  "run_name": "expanded_20261023",
+  "started_utc": "2026-10-21T14:07:01.502217+00:00",
+  "config_sha256": "2d1b87e5946286dfc6bd75d84e193d6cdba6720c116aebeec659d40a26d258a2",
+  "arm_cache_sha256": "b9bcd14a05c245596f9658fbaaf4fab36f1914db9e63c24a16cd878b199cb95e",
+  "n_train": 16992,
+  "n_val": 3641,
+  "n_test": 3641,
+  "batch_size": 64,
+  "max_epochs": 1000,
+  "previous_status": null,
+  "env": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "deterministic_ops": true
+  },
+  "initial_weight_sha256": "973358f4d2cf923aeace961a7cd369cbfab81f1aacc0ce854be2d57dd59e3dd6",
+  "reload_max_abs_diff_z_mean": 0.0,
+  "status": "completed",
+  "finished_utc": "2026-10-21T14:10:27.301184+00:00",
+  "wall_s": 205.79896664619446,
+  "epochs_run": 500,
+  "best_epoch": 449,
+  "stopped_epoch": 499,
+  "stop_reason": "early_stopping",
+  "best_val_loss": -13.729839324951172,
+  "best_val_param_loss": -13.78005313873291,
+  "final_learning_rate": 9.999999974752427e-07,
+  "model_files": {
+    "encoder.h5": {
+      "sha256": "aa85053851a0088f837281eecd9c85c5e83c8a01b9bc902a255c46b9773fa590",
+      "bytes": 131024
+    },
+    "decoder.h5": {
+      "sha256": "b7e450705ee9dc06e44089050bac8d82d01380b6d70997b0fce1fa92e8fb7353",
+      "bytes": 120984
+    },
+    "param_head.h5": {
+      "sha256": "61c563ff7321d2d2dcef5ea8b4a1412c2546ed20dd3747caa046a7038d33527e",
+      "bytes": 38384
+    },
+    "encoder.weights.h5": {
+      "sha256": "bcedabfbf095370f371060ed2e46788244cf70cc04454ea156167c11836fc727",
+      "bytes": 128072
+    },
+    "decoder.weights.h5": {
+      "sha256": "68b08fa8061814f68a8c3a1562fa1e277383292f81cbdd4a5725822eff0a161b",
+      "bytes": 121328
+    },
+    "param_head.weights.h5": {
+      "sha256": "adb9899b9716e1800e2c09d0d68ff8ba8f3475ec29a40acf9186fa163fb137c1",
+      "bytes": 34304
+    }
+  }
+}

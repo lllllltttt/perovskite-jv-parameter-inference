@@ -1,0 +1,192 @@
+[
+  {
+    "check": "reproduction pair set is identical (11,245)",
+    "pass_": true,
+    "detail": "{\"n_pairs_reproduced\": 11245, \"n_pairs_archived\": 11245, \"pair_sets_identical\": true, \"archived_only\": 0, \"reproduced_only\": 0, \"directed_links\": 15307, \"mutual_nearest_pairs\": 8124, \"curves_touched\": 15307, \"curves_in_multiple_pairs\": 5859, \"max_pairs_per_curve\": 5}"
+  },
+  {
+    "check": "reproduction S6 medians match archived table",
+    "pass_": true,
+    "detail": "max abs diff 2.22e-16"
+  },
+  {
+    "check": "reproduction random baseline matches (seed 42, 199,985 pairs)",
+    "pass_": true,
+    "detail": "max abs diff 5.55e-17"
+  },
+  {
+    "check": "input shapes 15,307 x 131",
+    "pass_": true,
+    "detail": "n_test=15307 n_voltage=131"
+  },
+  {
+    "check": "curve/parameter row alignment",
+    "pass_": true,
+    "detail": "param max abs 7.11e-15; jsc max abs 0"
+  },
+  {
+    "check": "a = mean and r = difference of physical log10 parameters",
+    "pass_": true,
+    "detail": "single log10 of raw parameter values"
+  },
+  {
+    "check": "1,000 consecutive replicates",
+    "pass_": true,
+    "detail": "rows=1000"
+  },
+  {
+    "check": "no missing or non-finite values in per-replicate table",
+    "pass_": true,
+    "detail": "0 NaN, 0 non-finite"
+  },
+  {
+    "check": "tier sizes follow archived k=max(1,round(n*frac))",
+    "pass_": true,
+    "detail": ""
+  },
+  {
+    "check": "random-pair baselines positive and normalized medians positive",
+    "pass_": true,
+    "detail": "baseline min 0.262; normalized min 0.0572"
+  },
+  {
+    "check": "unique subset smaller than 15,307 and non-empty",
+    "pass_": true,
+    "detail": "n_unique 9516..9791"
+  },
+  {
+    "check": "replicate 1 reproduces exactly",
+    "pass_": true,
+    "detail": "mismatches: []"
+  },
+  {
+    "check": "replicate 500 reproduces exactly",
+    "pass_": true,
+    "detail": "mismatches: []"
+  },
+  {
+    "check": "replicate 1000 reproduces exactly",
+    "pass_": true,
+    "detail": "mismatches: []"
+  },
+  {
+    "check": "summary matches per-replicate table",
+    "pass_": true,
+    "detail": "max abs diff 4.44e-16"
+  },
+  {
+    "check": "summary carries original full-sample values",
+    "pass_": true,
+    "detail": "n_pairs original=11245.0"
+  },
+  {
+    "check": "first-500 vs all-1000 table is consistent",
+    "pass_": true,
+    "detail": "max abs diff 1.11e-16"
+  },
+  {
+    "check": "figure values match the CSV tables",
+    "pass_": true,
+    "detail": "max abs diff 2.22e-16"
+  },
+  {
+    "check": "figure png exists",
+    "pass_": true,
+    "detail": "184.7 KB"
+  },
+  {
+    "check": "figure pdf exists",
+    "pass_": true,
+    "detail": "26.0 KB"
+  },
+  {
+    "check": "figure svg exists",
+    "pass_": true,
+    "detail": "87.6 KB"
+  },
+  {
+    "check": "normal selftest: 9 PASS, 0 failures, exit 0",
+    "pass_": true,
+    "detail": "PASS=9 FAILURES=0 exit=0"
+  },
+  {
+    "check": "fault injection: exactly the injected case fails, exit non-zero",
+    "pass_": true,
+    "detail": "PASS=8 FAILURES=1 exit=1"
+  },
+  {
+    "check": "production make_split still rejects n=2 outside selftest",
+    "pass_": true,
+    "detail": ""
+  },
+  {
+    "check": "input unchanged: dataset_normalized.npz",
+    "pass_": true,
+    "detail": "0993b312a3516b4d"
+  },
+  {
+    "check": "input unchanged: _frozen_preds.npz",
+    "pass_": true,
+    "detail": "ad156cd18c1933e8"
+  },
+  {
+    "check": "input unchanged: param_scaler.pkl",
+    "pass_": true,
+    "detail": "70cdc709d7130a75"
+  },
+  {
+    "check": "input unchanged: J_scaler.pkl",
+    "pass_": true,
+    "detail": "3b82a2541bd77c59"
+  },
+  {
+    "check": "no solver, training or network imports in analysis scripts",
+    "pass_": true,
+    "detail": "imports: argparse, ast, csv, hashlib, importlib, json, matplotlib, numpy, os, pandas, pickle, platform, re, sys, threadpoolctl, time, traceback, zipfile"
+  },
+  {
+    "check": "run manifest: 1,000 completed, no failures or retries",
+    "pass_": true,
+    "detail": "completed=1000 failures=0 retries=0"
+  },
+  {
+    "check": "deliverable exists: docs/candidate_paragraphs.md",
+    "pass_": true,
+    "detail": "7.0 KB"
+  },
+  {
+    "check": "deliverable exists: QA.md",
+    "pass_": true,
+    "detail": "8.1 KB"
+  },
+  {
+    "check": "deliverable exists: README.md",
+    "pass_": true,
+    "detail": "6.4 KB"
+  },
+  {
+    "check": "deliverable exists: out\\stability\\summary.csv",
+    "pass_": true,
+    "detail": "11.7 KB"
+  },
+  {
+    "check": "deliverable exists: out\\stability\\closest01_volatility.csv",
+    "pass_": true,
+    "detail": "1.0 KB"
+  },
+  {
+    "check": "deliverable exists: out\\stability\\interpretation_by_family.csv",
+    "pass_": true,
+    "detail": "2.9 KB"
+  },
+  {
+    "check": "deliverable exists: out\\stability\\interpretation_all_three.csv",
+    "pass_": true,
+    "detail": "0.1 KB"
+  },
+  {
+    "check": "deliverable exists: out\\stability\\run_manifest.json",
+    "pass_": true,
+    "detail": "4.3 KB"
+  }
+]

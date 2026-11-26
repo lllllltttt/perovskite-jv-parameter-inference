@@ -1,0 +1,57 @@
+{
+  "results": [
+    {
+      "arm": "original",
+      "n_train": 512,
+      "n_val": 128,
+      "epochs": 2,
+      "initial_val_loss": 1032.7523193359375,
+      "final_val_loss": 171.21722412109375,
+      "loss_decreased": true,
+      "loss_history_keys": [
+        "kl_loss",
+        "loss",
+        "param_loss",
+        "recon_loss",
+        "val_kl_loss",
+        "val_loss",
+        "val_param_loss",
+        "val_recon_loss"
+      ],
+      "gradients_all_present": true,
+      "gradient_global_norm": 6537.87255859375,
+      "save_load_zmean_max_abs_diff": 0.0,
+      "inverse_transform_finite": true,
+      "prediction_median_relative_error_val": 0.9941031779182716,
+      "param_log10_scaler_range_ok": true,
+      "test_rows_touched": 0
+    },
+    {
+      "arm": "expanded",
+      "n_train": 512,
+      "n_val": 128,
+      "epochs": 2,
+      "initial_val_loss": 970.3897705078125,
+      "final_val_loss": 161.72125244140625,
+      "loss_decreased": true,
+      "loss_history_keys": [
+        "kl_loss",
+        "loss",
+        "param_loss",
+        "recon_loss",
+        "val_kl_loss",
+        "val_loss",
+        "val_param_loss",
+        "val_recon_loss"
+      ],
+      "gradients_all_present": true,
+      "gradient_global_norm": 6489.9560546875,
+      "save_load_zmean_max_abs_diff": 0.0,
+      "inverse_transform_finite": true,
+      "prediction_median_relative_error_val": 0.9943138874274204,
+      "param_log10_scaler_range_ok": true,
+      "test_rows_touched": 0
+    }
+  ],
+  "n_failed": 0
+}

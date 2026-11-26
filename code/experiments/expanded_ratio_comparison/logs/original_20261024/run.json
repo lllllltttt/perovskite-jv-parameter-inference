@@ -1,0 +1,60 @@
+{
+  "arm": "original",
+  "seed": 20261024,
+  "run_name": "original_20261024",
+  "started_utc": "2026-10-21T14:12:39.247830+00:00",
+  "config_sha256": "2d1b87e5946286dfc6bd75d84e193d6cdba6720c116aebeec659d40a26d258a2",
+  "arm_cache_sha256": "f3ed6692ceab3f323e3f3736e0a1e81f75e2e7cfefddafd30d7cc4b7d32e7705",
+  "n_train": 16992,
+  "n_val": 3641,
+  "n_test": 3641,
+  "batch_size": 64,
+  "max_epochs": 1000,
+  "previous_status": null,
+  "env": {
+    "python": "3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "deterministic_ops": true
+  },
+  "initial_weight_sha256": "0cd8becf1af00c47ad14651ac34c7abd841ded3e3b6b6e7d047f6ca38ec08622",
+  "reload_max_abs_diff_z_mean": 0.0,
+  "status": "completed",
+  "finished_utc": "2026-10-21T14:16:20.720513+00:00",
+  "wall_s": 221.47268342971802,
+  "epochs_run": 545,
+  "best_epoch": 494,
+  "stopped_epoch": 544,
+  "stop_reason": "early_stopping",
+  "best_val_loss": -13.554413795471191,
+  "best_val_param_loss": -13.60580825805664,
+  "final_learning_rate": 9.999999974752427e-07,
+  "model_files": {
+    "encoder.h5": {
+      "sha256": "01b4196ffa26cbd9eae77249312e6e959ac4926669c9d6bdbf12d7b7da17793d",
+      "bytes": 131024
+    },
+    "decoder.h5": {
+      "sha256": "d797e3c448cd049c002146020ed483165db8ba3af587c8e50bb6b0721e4168c1",
+      "bytes": 120984
+    },
+    "param_head.h5": {
+      "sha256": "450211e793ab09d3f54b1638df03060fcbcbd3561cf181227507108fba3b055a",
+      "bytes": 38384
+    },
+    "encoder.weights.h5": {
+      "sha256": "3e8ed2c13639157093a9354c7e746e0b323d4087b5570b03cb8f7fe4217d215b",
+      "bytes": 128072
+    },
+    "decoder.weights.h5": {
+      "sha256": "9f7e3996b77d37306172a505917bb147f6589a83d4eab1ac61a21157848b3d1e",
+      "bytes": 121328
+    },
+    "param_head.weights.h5": {
+      "sha256": "c4ed86c006b4de26e6f64c4e1c16c0de045c3fe456bfc624aa8242caa4141e6c",
+      "bytes": 34304
+    }
+  }
+}
