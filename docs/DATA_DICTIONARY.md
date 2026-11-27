@@ -106,8 +106,28 @@ training-only-scaling control is Table S15–S17.
 ### `dataset_independent_153067.tar.gz`
 `JV_database_9D_interface_lifetimes-3.csv` (388 MB) — the separately generated
 same-domain cohort of 153,067 curves used for Table S14.  Same 141-column layout,
-independent `Sample_ID` numbering (1 … 300,000, i.e. drawn from a separate 300,000-curve
-campaign).  No retraining or scaler refit was applied to this cohort.
+independent `Sample_ID` numbering (1 … 300,000, i.e. drawn from a separate
+300,000-curve campaign).  No retraining or scaler refit was applied to this cohort.
+
+### `design_independent_300000.tar.gz` (release v1.0.5)
+`PSC_LHS_9D_interface_lifetimes_300000_5.csv` (51 MB) — the sampling design of
+that cohort, 300,000 rows × 19 columns:
+
+| Columns | Meaning |
+|---|---|
+| `Sample_ID` | 1 … 300,000, unique and increasing; equal to the row number and to the `Sample_ID` of the retained cohort |
+| `mu_avg`, `mu_ratio`, `tau_avg`, `tau_ratio`, `DOS_avg`, `DOS_ratio` | the six sampled bulk coordinates: shared scale and electron–hole ratio for mobility, bulk lifetime and density of states |
+| `tau_ETL`, `tau_HTL` | the two sampled interface lifetimes (s) |
+| `rad_c` | the sampled radiative coefficient (cm³ s⁻¹) |
+| `mu_n_pvk` … `rad_c` | the nine constructed parameters, stored directly (not as g/q), in the units of Table 1 |
+| `tau_ETL_in`, `tau_HTL_in`, `rad_c_in` | the values written to COMSOL; `rad_c_in` is multiplied by 10⁻⁶ in the driver (→ m³ s⁻¹) |
+
+Column naming differs from the older `PSC_LHS_9D_interface_lifetimes_200000_3.csv`
+shipped in `dataset_main_102046.tar.gz`, which uses `tau_interface_ETL`,
+`tau_interface_HTL`, `tau_interface_ETL_in`, `tau_interface_HTL_in` for the same
+quantities.  The 153,067 retained rows equal these design values rounded to
+three significant digits; `code/verify_source_provenance.py` reproduces that
+comparison.
 
 ### `independent_validation.tar.gz`
 `preprocessed_independent.npz` plus the scripts and result tables in

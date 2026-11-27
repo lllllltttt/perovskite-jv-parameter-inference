@@ -47,6 +47,15 @@
 * Per-sample tables index the **zero-based test position** 0 … 15306, not
   `Sample_ID`.  Mapping between them goes through
   `data/splits/split_indices_seed42.npz`.
+* Both sampling designs are archived: the 200,000-row table (in
+  `dataset_main_102046.tar.gz`, columns `tau_interface_*`) and the 300,000-row
+  table (`design_independent_300000.tar.gz`, columns `tau_ETL`/`tau_HTL`).  The
+  column names differ between the two files for the same quantities.  The
+  retained curves match their design tables to three significant digits; see
+  `docs/SOURCE_VERIFICATION.md`.
+* The server-side `Sample_*.mat` output of the two campaigns is not archived.
+  The derived CSV tables, the 45 forward-validation curves and the mesh-study
+  outputs are.
 
 ## Analysis conventions that changed during the project
 

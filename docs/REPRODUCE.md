@@ -124,6 +124,18 @@ percentage points (1.5533 pp).  PCE is already stored in percentage points, so
 its deviation (0.471401) must **not** be multiplied again.  The (e) panel script
 `fig4e_ff_pp.py` applies the ×100 to FF only.
 
+**Design tables versus retained curves — verified.** `code/verify_source_provenance.py`
+joins each retained cohort to its design table on `Sample_ID`:
+
+| pair | joined | max relative difference | exact after 3-significant-digit rounding |
+|---|---|---|---|
+| main, 200,000-row design | 102,046 / 102,046 | 4.97e-3 | 102,039–102,043 per parameter |
+| independent, 300,000-row design | 153,067 / 153,067 | 2.9e-16 | 153,067 / 153,067, all nine |
+
+The main-cohort rows that are not bit-identical after rounding are exact ties at
+the fourth digit (e.g. `7.145e-06 → 7.15e-06`): the CSV writer rounded half up,
+`numpy.round` rounds half to even.
+
 ## 4. Quickstart — **verified**
 
 `python code/quickstart_inference.py` runs against `data/examples/test_subset_200.npz`
@@ -144,18 +156,21 @@ release preparation:
 * figure regeneration — the panel scripts and the composed layout decks are
   included, but no figure was re-rendered during release preparation.
 
-## 6. Steps that need COMSOL or an unrecovered file
+## 6. Steps that need COMSOL
 
 * **COMSOL back-substitution, cycle gap, mesh study** (Table S18a–e, Figs. S3–S4,
   Table S9).  The model file, the drivers, the input parameter vectors and the
   archived outputs are included.  Rerunning them requires COMSOL Multiphysics
   6.3 with the Semiconductor Module and LiveLink for MATLAB.
-* **Main simulation campaign.**  The 200,000-row sampling design, the 102,046
-  retained curves and the archived analysis are included.  The batch driver that
-  produced the retained database was not recovered, so the campaign cannot be
-  re-solved exactly as it was run.
-* **Independent cohort.**  The 153,067 retained curves and their evaluation are
-  included; the original 300,000-row sampling design was not recovered.
+* **Main simulation campaign.**  The 200,000-row design, the four MATLAB
+  segments that ran it (`code/comsol/main_200k/`, rows 1–200,000), the model
+  file and the 102,046 retained curves are included.  Two constants in the
+  recovered scripts differ from the archived companions — the input filename and
+  the `tau_ETL_in` column names, and the output directory name — and are
+  recorded in `docs/SOURCE_VERIFICATION.md`.
+* **Independent cohort.**  The 153,067 retained curves, their evaluation, the
+  300,000-row design (`design_independent_300000.tar.gz`) and the four MATLAB
+  segments (`code/comsol/independent_300k/`) are included.
 * **Batch order and initial weights of the historical training run.**  Not
   recorded.  The final weights are archived, and loading them reproduces the
   reported numbers.

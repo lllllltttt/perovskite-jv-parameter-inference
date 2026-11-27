@@ -95,7 +95,8 @@ the paper and its SI.
 
 ## Large downloads
 
-All 13 archives come from the **`v1.0.0` release**; no later tag changed them.
+Thirteen archives come from the **`v1.0.0` release** and are unchanged; one
+(`design_independent_300000.tar.gz`) is attached to **v1.0.5**.
 Download links, sizes and contents:
 
 | Asset | Size | Contents |
@@ -113,6 +114,7 @@ Download links, sizes and contents:
 | [`pipeline_scripts.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/pipeline_scripts.tar.gz) | 18 MB | Complete original `script/` folder (LHS sampler, CSV builder, training) |
 | [`submission_v8_tables.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/submission_v8_tables.tar.gz) | 9 MB | SI source tables incl. `T8.2_per_sample_full_precision.csv` |
 | [`hc_revision_v2.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.0/hc_revision_v2.tar.gz) | 44 KB | v2 tables behind Tables S18c–S18e |
+| [`design_independent_300000.tar.gz`](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/download/v1.0.5/design_independent_300000.tar.gz) | 16 MB | 300,000-row sampling design of the independent cohort (v1.0.5) |
 
 Verify what you downloaded:
 
@@ -184,27 +186,36 @@ current results use `VAE_v6_eval_fixed.py`.
 | Data generation from scratch | **yes** | 200,000-row design and drivers included; the main-database batch driver is not available |
 
 The archived models, inputs and drivers support rerunning the 45-case
-back-substitution and mesh studies with COMSOL Multiphysics 6.3, the
-Semiconductor Module and LiveLink for MATLAB.  For the main simulation campaign,
-the 200,000-row sampling design and retained curves are available, but the
-original batch driver was not recovered.  The retained independent-cohort curves
-are available; its original 300,000-row sampling design was not recovered.
+back-substitution, the mesh studies and both simulation campaigns with COMSOL
+Multiphysics 6.3, the Semiconductor Module and LiveLink for MATLAB.  The
+200,000-row design of the main campaign and the 300,000-row design of the
+independent cohort are archived alongside the retained curves, and the four
+MATLAB segments of each campaign are in `code/comsol/`.
 
 ---
 
 ## COMSOL inputs
 
-`code/comsol/` contains `1D_PSC_wen.mph` (COMSOL 6.3.0.290, base COMSOL plus the
-Semiconductor Module; FTO / HTL / perovskite / C₆₀ / SnO₂ / Ag, 131-point sweep)
-and the MATLAB LiveLink drivers `run_PSC_9D_5..8.m`.
+`code/comsol/` contains the shared model and the drivers of both simulation
+campaigns (details in `code/comsol/README.md`):
+
+* `1D_PSC_wen.mph` — COMSOL 6.3.0.290, base COMSOL plus the Semiconductor
+  Module; FTO / HTL / perovskite / C₆₀ / SnO₂ / Ag, 131-point sweep.
+* `main_200k/run_PSC_9D_5..8.m` — the four segments of the 200,000-row campaign
+  that produced the main database (rows 1–50,000 / 50,001–100,000 /
+  100,001–150,000 / 150,001–200,000; ports 2036–2039).
+* `independent_300k/run_PSC_9D_5..8.m` — the four segments of the independent
+  campaign (rows 1–75,000 … 225,001–300,000; ports 2036–2039), whose design
+  table is the asset `design_independent_300000.tar.gz`.
+
 `code/analysis/forward_validation_unbiased/run_forward_validation_unbiased.m` is
-the 45-case back-substitution driver (COMSOL 6.3 + MATLAB R2024b + LiveLink 6.3).
-`code/comsol_validation/` holds the mesh and inversion studies behind
+the 45-case back-substitution driver (COMSOL 6.3 + MATLAB R2024b + LiveLink 6.3),
+and `code/comsol_validation/` holds the mesh and inversion studies behind
 Tables S18a/b.
 
-To use them, install COMSOL 6.3 with the Semiconductor Module and LiveLink for
-MATLAB, adjust the `addpath` line and the file paths at the top of the `.m`
-file, and run it from MATLAB.
+To use the drivers, install COMSOL 6.3 with the Semiconductor Module and
+LiveLink for MATLAB, then edit `addpath`, `input_path`, `mph_path`, `result_dir`
+and the row range at the top of each `.m` file.
 
 ---
 
