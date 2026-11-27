@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.0.6 — 2026-11-27
+
+Documentation and driver packaging only.  No archived data, model, figure or
+published value changed.
+
+* **Independent-cohort wording.**  `docs/SOURCE_VERIFICATION.md` now states that
+  the campaign comprised 300,000 parameter sets of which 153,067 curves were
+  included in the retained dataset.  The previous sentence attributed the
+  remaining rows to the retention filters, which the available records do not
+  establish.
+* **Runnable copies of the main-campaign drivers.**  `code/comsol/main_200k/adapted/`
+  holds four copies of the archived drivers that read the released design file
+  (`…_200000_3.csv`), use relative paths, accept both interface-lifetime column
+  conventions, and name their function after the file.  They differ from the
+  originals only in those four regions; row ranges, ports, parameter assignment,
+  sweep and output format are unchanged.  The originals stay byte-identical.
+* **Static driver check.**  New `code/verify_comsol_scripts.py` reports the
+  function name, port, row range, input/output paths and the columns each
+  script reads, checks the adapted copies against the originals and against the
+  design files, and lists the known defects of the archived originals.  It does
+  not run MATLAB or COMSOL.
+* **Mesh note.**  `docs/COMSOL_REPRODUCIBILITY_GAPS.md` (G1) records the
+  2026-11-27 re-check: geometry and size settings are readable from
+  `dmodel.xml`, no XML member carries element counts, and the archived studies
+  stored only the total element count per mesh grade.
+
 ## v1.0.5 — 2026-11-27
 
 Recovered source material added.  No model, figure or published value changed.
