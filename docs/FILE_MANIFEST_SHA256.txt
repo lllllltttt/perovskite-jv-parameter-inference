@@ -2,14 +2,14 @@
 # Hashes are of the committed tree exported with git archive; .gitattributes sets eol=lf, so a fresh clone
 # matches byte for byte on any platform.
 # Verify with:  python code/verify_manifest.py
-# files: 1314
+# files: 1316
 # Format: <sha256>  <bytes>  <path>
 
 40b408dbe2a2314e1690a32b3259da8d499bd760a4797caa6192427ccd27fe5e  673  .gitattributes
 09472702239964d517dcb0de16a59da4dbd40c9906023c42b9ef0018b8347ac0  311  .gitignore
-70b720f747aa090079d4538933a55cbdf09958c4b2acd4a05e01dcd2d1fce990  4671  CHANGELOG.md
+0f5b99c1e75927c806f611809bedd29f4a90fd10cefc9c91dbb31fc3260cf1f8  5905  CHANGELOG.md
 bce7f76cd5e78b2c7d635954c3ed267f021a36f18ad5b435ff8c88accf770645  1937  LICENSE_STATUS.md
-807800ad43923dd823214c459340ea59dc129851be2798bbfdc636b9493f0db0  13137  README.md
+cfb11f774e8136e44e10e2261db27aeac045f37290691b59c5e0a54223df96ce  12716  README.md
 086b4acaa3ca2b5d665fe016e263436179cee11d3d02334120151cde83b83017  351501  code/analysis/collision_analysis_superseded/collision_analysis.png
 751fd9763bbd6258c05722bf4e02b1153f78b2a2390edfae5cdb864571de6598  9502  code/analysis/collision_analysis_superseded/collision_summary.txt
 a90289efaeb7a3614040ca1371bbc89f2da5975f3aaf7e55527459b369c435b4  3160  code/analysis/collision_analysis_superseded/parameter_ambiguity_summary.csv
@@ -1226,6 +1226,7 @@ ddb6d754492fd4a86e441d4d05b87858b3bee23a06c8304a264eac3a17e0ce0e  9318  code/fig
 66496e1f723c1ec313fe29cf137b861b4bdebe57bfa97406d6030602f85e3f13  5682  code/figures/plot_SI_noise_detail.py
 05a7598a59a32835369c77b1de09728e9e4ce0dddbb47169f7203a1ed8eb2c36  6371  code/figures/vector_export.py
 83c0e04220c447f99ea867584c5c8a2b0eaa0a7e76e5a6d0bef522628b59af46  13706  code/figures/vector_qc.py
+19419e08023a96725aab1bccfe755186aa3a059362bd02876f35028b1a12701f  1960  code/metric_checks.py
 e4c2d50f11a566651b308543ff0e14eeb6cd433ebfe6ea4cab78f0e1ea592764  1227  code/paths.py
 1eb3a490f0345ac60e6207780ffce82137eac449514aa9203b8b0712385c716a  6248  code/pipeline/00_extract_frozen_predictions.py
 ff1fc2cf28214d9dcd662e830bc1f0b50a2861a57f0390a29b8e84c6ee30affc  9304  code/pipeline/AE-v1.py
@@ -1254,7 +1255,8 @@ b4c95d5419dd53c24336f58cf96eaf734b2284fceb611942e5536e51974e117a  4264  code/pip
 bb984902bf819bd753c986999c8c2dd6134c7b85281500b6cf107c4c318df55b  3103  code/pipeline/uncertain_predict.py
 9f3a52e64a914463dde51305cca92cd12d84c081a904c57f0589131db28de0eb  5157  code/quickstart_inference.py
 e0c1c317fe68325fb222302b8923f4a93f02bcc7b1239b853a6575b72ed2fd12  3702  code/tests/test_device_metrics.py
-eb02bd0297a4e2a69b7064d19d91c85a9b62edb5b764a3720cdebdee440087c0  4965  code/verify_frozen_metrics.py
+cf4b9f884df1eb70335b2ea547ed33dc4b716d1887b2ec67e2ba542f676dda2e  3078  code/tests/test_metric_checks.py
+13c03bb9bf45562e8a56c782078d98150daf6df0d2c11ea4e5a976ea0c413328  6859  code/verify_frozen_metrics.py
 718fb2ba43762562eebdde901146870d58898de86aec3e429f5670c5658c4471  3626  code/verify_manifest.py
 f203b8be16802227ef6e0013f43e6646a2524628e059fde92505b000554af78e  913  data/examples/expected_smoke_results.json
 8ff631837240d12e6c8bff0fdd25f3adedd96e826d63fd67c0323ece57b3d69d  309960  data/examples/test_subset_200.npz
@@ -1308,8 +1310,8 @@ e6e0c4fc38244fa45a12d4f3bad24b242032ed1192411fd2cefd76c1917bb9cf  7583  data/tab
 90442f09863b3f7a6a5eb6eb3c3f57e7058c7ebc59fda6fb46130b713244327f  8842  docs/COMSOL_REPRODUCIBILITY_TABLE.md
 3b333e47e15fa7ec630f42a68493a6b222de3e97f46247402447f1a955c727da  11129  docs/DATA_DICTIONARY.md
 e0c6fae97d2a671ef51aa5f3572777a7f98ec915d8b54bd9db411b2dd83f96dc  8637  docs/FIGURE_SOURCE_MAP.md
-236a2b8456d0a8b9c072b5b37b46f9b78fc6e00e774f7ccf26ac6a8eb4029b30  5390  docs/KNOWN_LIMITATIONS.md
-92901002c8bb400e866e88998dde12f0b35e31a93b8addb8d64c98aa23b4bcd3  10469  docs/REPRODUCE.md
+d3af575d55ff8eae2357efde7ad10f1c8c7b437a3518ebabb004333356379e93  5402  docs/KNOWN_LIMITATIONS.md
+259c2d9a32e62734fd19edfa74c4e8539cdee8fc189b4dd1328065dba04adeb7  11618  docs/REPRODUCE.md
 a03f7f415c87657b5bf06fe885d40bd2df23b6fbd054b33f0c1f376d9d91bfcd  282  env/environment.yml
 3b82a2541bd77c5949737886d8725cb350cdfb435392faa06d48c4b3fad13f3b  5738  models/J_scaler.pkl
 70cdc709d7130a75b8b39aebb0e536f5bca609367efbfd7cbe9518d03cbd7025  942  models/param_scaler.pkl
