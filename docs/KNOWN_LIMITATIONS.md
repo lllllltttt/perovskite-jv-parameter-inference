@@ -21,15 +21,15 @@
   evaluated model is `encoder.h5` + `decoder.h5` + `param_head.h5`.
 * The predictive scale follows σ = clip(softplus(raw) + 0.01, 0.01, 1.0).  An older
   script (`code/pipeline/VAE_v6_eval.py`) and `code/pipeline/uncertain_predict.py`
-  use the superseded `exp(0.5·raw)` convention and hard-coded σ values.  They are
-  kept as provenance and **must not** be used to recompute any reported σ.
+  use the earlier `exp(0.5·raw)` convention and hard-coded σ values.  Current
+  results use `VAE_v6_eval_fixed.py`; the older files are kept for provenance.
 
 ## Training records
 
 * The frozen main run trained for 688 epochs with early stopping.  Batch order and
   initial weights of that historical run were not recorded; only the final weights
-  survive.  The reported numbers therefore cannot be regenerated bit-for-bit by
-  retraining — only by loading the frozen weights, which this release supports.
+  survive.  Retraining therefore does not reproduce the reported numbers
+  bit-for-bit; loading the frozen weights does, and this release supports that.
 * The H/L/T preprocessing-scope control used one seed (20260823) with identical
   seeds in L and T.  The paper explicitly does not treat their differences as an
   isolated causal estimate of the scaler effect.
@@ -51,9 +51,9 @@
 ## Analysis conventions that changed during the project
 
 * The nearest-neighbour pair rule was corrected from `i < NN(i)` (7,666 pairs) to
-  the deduplicated undirected rule (11,245 pairs).  The corrected version is what
-  the paper uses.  The old table is kept under
-  `analysis/collision_analysis_superseded/` and must not be cited.
+  the deduplicated undirected rule (11,245 pairs).  Current results use the
+  corrected version; the earlier table is archived under
+  `analysis/collision_analysis_superseded/`.
 * `docs/` in the corrected collision package (`code/collision_revision_v2/report/`)
   states that the parameter scaler was "fit on the training split only".  That
   sentence is wrong: the saved scaler's `data_min_`/`data_max_` equal a fit over all
@@ -82,7 +82,8 @@
   `code/collision_revision_v2/` and `code/figures/build/` are shipped **as they
   were run**, with the original `E:/project/work1` or `/home/student2/...`
   constants at the top of the file; their outputs are shipped alongside them.
-  They were deliberately not rewritten in v1.0.1 — changing them would alter
+  They were deliberately not rewritten in the v1.0.x releases — changing them
+  would alter
   the code that produced published figures without re-running those figures.
   `code/pipeline/pre-process.py` and `VAE-v6.py` also need `CSV_PATH` /
   `OUTPUT_DIR` editing.  Do not describe the repository as "all paths
@@ -92,6 +93,6 @@
   contains a rounded-Voc device block that is superseded (see the
   `SUPERSEDED.md` beside it and `docs/REPRODUCE.md` §3).
 * No open-source licence has been chosen.  See `LICENSE_STATUS.md`.
-* No DOI exists.  The identifiers are the repository URL and the tags
-  `v1.0.1` (code/docs) and `v1.0.0` (data archives).
+* No DOI exists.  The identifiers are the repository URL with its release tag
+  for the code and documentation, and `v1.0.0` for the data archives.
 * Asset archives were compressed with `gzip -3`; unpack before use.

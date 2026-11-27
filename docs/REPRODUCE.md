@@ -1,13 +1,13 @@
 # Reproduction status
 
-This file distinguishes three things honestly:
+This file records three things:
 
-* **verified here** — actually re-run during release preparation and compared
-  against the published values;
+* **verified here** — re-run during release preparation and compared against the
+  published values;
 * **archived only** — the scripts, inputs and outputs are shipped, but the step was
-  not re-run during release preparation;
-* **not reproducible from this release** — requires COMSOL, or a record that was
-  never saved.
+  not re-run;
+* **needs COMSOL or an unrecovered file** — the inputs or the software required to
+  rerun the step are not both available.
 
 Environment used for every check below: Python 3.12.6, TensorFlow 2.20.0,
 Keras 3.15.1, NumPy 2.3.5, scikit-learn 1.8.0, Matplotlib 3.10.8, Windows 11,
@@ -46,9 +46,9 @@ Notes:
   order**, the two-step `train_test_split` (30 % then 50/50) and `random_state
   = 42`.  Knowing the seed alone is not sufficient — the row order and the
   split calls are part of the recipe.  The archived indices were verified to
-  reproduce the frozen arrays element-wise.  The manuscript's Methods now state
-  this (v1.0.1); the earlier sentence "cannot be reproduced from the documented
-  splitting seed" was ambiguous and has been replaced.
+  reproduce the frozen arrays element-wise.  The manuscript's Methods describe
+  this; the earlier sentence stating that membership could not be reproduced
+  from the seed has been replaced in the current manuscript.
 * `Sample_ID` is the 1-based row of the 200,000-row LHS design.  Joining on it
   reproduces `mu_n_pvk`, `mu_p_pvk`, `tau_ETL`, `tau_HTL` and `rad_c` to the three
   significant digits stored in the retained CSV.
@@ -112,13 +112,12 @@ medians are obtained independently from the SI's own per-sample table
 | FF (dimensionless) | 44 | 0.015533 → 1.5533 pp |
 | PCE (percentage points) | 44 | 0.471401 |
 
-**Superseded:** `analysis/forward_validation_unbiased/forward_metrics_summary.csv`
+**Archived version.** `analysis/forward_validation_unbiased/forward_metrics_summary.csv`
 holds a `device_mae` block with Voc median 0.030 V and FF median 0.0141.  That
 block was produced by `forward_validation_postprocess.py`, which rounds Voc to
-0.01 V before differencing and keeps the undefined-FF case in the sample; it is
-therefore *not* the source of any published number and is not a verification
-input.  The file is kept unchanged for provenance (see the `SUPERSEDED.md` next
-to it).  Do not "correct" the paper towards it.
+0.01 V before differencing and keeps the undefined-FF case in the sample.
+Current results use `code/device_metrics.py`, whose values are the ones in the
+table above.  The file is kept unchanged (see the `SUPERSEDED.md` beside it).
 
 **Units.** FF is a dimensionless fraction; multiplying by 100 once gives
 percentage points (1.5533 pp).  PCE is already stored in percentage points, so
@@ -145,20 +144,23 @@ release preparation:
 * figure regeneration — the panel scripts and the composed layout decks are
   included, but no figure was re-rendered during release preparation.
 
-## 6. Not reproducible from this release
+## 6. Steps that need COMSOL or an unrecovered file
 
 * **COMSOL back-substitution, cycle gap, mesh study** (Table S18a–e, Figs. S3–S4,
-  Table S9).  Regenerating these requires COMSOL Multiphysics 6.3 with LiveLink for
-  MATLAB.  The archived outputs are included; the model file and drivers are
-  included; no licence is.
-* **The original 200,000-curve campaign** — the design table and the retained
-  curves are included, but re-solving the 200,000 COMSOL runs is a multi-week
-  cluster job.
-* **Batch order / initial weights of the historical training run** — the paper says
-  this was not recorded, and nothing in this release changes that.  See
-  `docs/KNOWN_LIMITATIONS.md`.
+  Table S9).  The model file, the drivers, the input parameter vectors and the
+  archived outputs are included.  Rerunning them requires COMSOL Multiphysics
+  6.3 with the Semiconductor Module and LiveLink for MATLAB.
+* **Main simulation campaign.**  The 200,000-row sampling design, the 102,046
+  retained curves and the archived analysis are included.  The batch driver that
+  produced the retained database was not recovered, so the campaign cannot be
+  re-solved exactly as it was run.
+* **Independent cohort.**  The 153,067 retained curves and their evaluation are
+  included; the original 300,000-row sampling design was not recovered.
+* **Batch order and initial weights of the historical training run.**  Not
+  recorded.  The final weights are archived, and loading them reproduces the
+  reported numbers.
 
-## 7. Voc extraction (fixed in v1.0.1)
+## 7. Voc extraction (fixed in v1.0.1; unchanged since)
 
 `code/pipeline/00_extract_frozen_predictions.py` used to derive the device
 observables with two defects:
@@ -196,3 +198,24 @@ written to a separate directory and compared item by item.
 
 The boundary cases above are covered by `code/tests/test_device_metrics.py`
 (`python -m unittest discover -s code/tests`).
+
+## 8. Finite-value checks in `verify_frozen_metrics.py`
+
+The verifier checks the test-set inputs (`J_test`, `params_test`), the model
+outputs (`z_mean`, `recon_test`, `param_mu`, `param_sigma`) and every derived
+metric (MSE, Pearson r, 95 % coverage, Spearman rho) for NaN and Inf before
+comparing anything with the published values.  Any non-finite value is named in
+the report and the script exits 1 without printing PASS; a missing or
+malformed input exits 2.  Shape mismatches are reported the same way.
+
+The checks live in `code/metric_checks.py` and are covered by
+`code/tests/test_metric_checks.py`.  A typical failure looks like:
+
+```
+FAIL: non-finite input
+  - J_test: 1 of 2005217 values are not finite
+```
+
+The earlier verifier compared `abs(value - reference) / reference > tol`.
+With `value = NaN` that comparison is False, so a corrupted input produced a
+silent PASS; the explicit check above closes that path.
