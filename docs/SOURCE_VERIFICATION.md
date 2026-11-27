@@ -38,21 +38,17 @@ the release asset `design_independent_300000.tar.gz`.
   where the CSV writer rounded half up and `numpy.round` rounds half to even.
 
 **Confirmed:** the four scripts are the drivers of the 200,000-row campaign that
-produced the main database.  Two constants differ from the archived companions
-and are recorded rather than altered:
-
-* the input file is named `…_200000.csv` (no `_3` suffix) and uses
-  `tau_ETL_in` / `tau_HTL_in`, whereas `script/LHS.py` emits `…_200000_3.csv`
-  with `tau_interface_ETL_in` / `tau_interface_HTL_in`; the values are the same
-  design, as the row-level match above shows;
-* the scripts write `result-9D-interface-lifetimes/`, while `mat-csv.py` reads
-  `result-9D-interface-lifetimes-2/`.  The `-2` suffix is not present in the
-  recovered scripts; we treat it as a later copy or rename of the output
-  directory, and have no file that records that step.
-
-`run_PSC_9D_8.m` declares `function run_PSC_9D_7()` in its first line — a
-copy/paste artefact.  The body is the fourth segment (port 2039, rows
-150,001–200,000).  The file is archived unchanged.
+produced the main database.  The recovered files are archived unchanged in
+`code/comsol/archive/original_200k/`.  The published drivers in
+`code/comsol/main_200k/` differ from them in three places only: the function
+name matches the file name (`run_PSC_9D_8.m` no longer declares
+`run_PSC_9D_7()`); the three path constants resolve to the released design
+table, the model file and `result-main-200k/`; and a four-line block after
+`readtable()` accepts either interface-lifetime column convention
+(`tau_ETL_in` / `tau_HTL_in`, used by the recovered input file, or
+`tau_interface_ETL_in` / `tau_interface_HTL_in`, used by the archived
+`…_200000_3.csv`).  Row ranges, ports, parameter assignment, sweep and output
+format are unchanged in both versions.
 
 ## 2. The 300,000-row table is the independent cohort's design
 
@@ -80,10 +76,8 @@ copy/paste artefact.  The body is the fourth segment (port 2039, rows
 
 ## 3. What is still not archived
 
-* The server-side MATLAB output directories (`result-9D-interface-lifetimes/`,
-  `…-2/`, `…-3/`), i.e. the `Sample_*.mat` files.  The derived CSVs and the 45
-  back-substitution curves are archived.
-* Any record of the `-2` directory rename or copy.
+* The server-side MATLAB output of the two campaigns, i.e. the `Sample_*.mat`
+  files.  The derived CSVs and the 45 back-substitution curves are archived.
 * Per-slab mesh element counts inside the two 0.01 nm interface slabs
   (`docs/COMSOL_REPRODUCIBILITY_GAPS.md`, G1).
 

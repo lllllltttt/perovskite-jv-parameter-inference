@@ -1,5 +1,30 @@
 # Changelog
 
+## v1.0.7 — 2026-11-27
+
+Driver paths unified.  No archived data, model, figure or published value
+changed.
+
+* **`code/comsol/main_200k/`** now holds the published drivers.  Each file
+  resolves its paths from its own location: the design table
+  `data/_assets/PSC_LHS_9D_interface_lifetimes_200000_3.csv`, the model
+  `code/comsol/1D_PSC_wen.mph`, and the output directory
+  `<repo>/result-main-200k/`.  Function names match the file names.  A
+  four-line block after `readtable()` accepts either interface-lifetime column
+  convention.
+* **`code/comsol/archive/original_200k/`** holds the four files as recovered
+  from the server, byte-identical.  The published drivers differ from them only
+  in the header, the function line, the path block and the column alias; row
+  ranges, ports, parameter assignment, sweep and output format are unchanged.
+* **`code/pipeline/mat-csv.py`** takes `--mat-dir` and `--out-csv`, defaulting
+  to `result-main-200k/` and `results/JV_database_9D_interface_lifetimes-main-200k.csv`,
+  so the converter reads what the drivers write and does not overwrite the
+  archived CSV.
+* **`code/verify_comsol_scripts.py`** checks the published drivers against the
+  archived originals and against the design files, including the path constants.
+* README files and `docs/SOURCE_VERIFICATION.md` updated; the earlier notes about
+  output-directory numbering are removed.
+
 ## v1.0.6 — 2026-11-27
 
 Documentation and driver packaging only.  No archived data, model, figure or
