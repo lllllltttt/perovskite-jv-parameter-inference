@@ -1,12 +1,14 @@
 # SHA-256 of the release archives.  They are NOT in the repository.
-# Download from the release page and verify with:
+# Thirteen are served by release v1.0.0; design_independent_300000.tar.gz by v1.0.5.
+# Download from the release pages and verify with:
 #   python code/verify_manifest.py --assets <download dir>
-# assets: 13
+# assets: 14
 # Format: <sha256>  <bytes>  assets/<name>
 
 430b2a16714b0944fbf058ae96ed3d33f1df2ae30e2d6b6dfdf3fe4c7be0009b  11322843  assets/comsol_config.tar.gz
 738b15518ae6ee03a48325919dd8474c55293059559c5049d586b8519cdff490  185132223  assets/dataset_independent_153067.tar.gz
 4c262f7925415f8d8a8df92108d6bd259b0d6311b2eabd72310b6e3d1109a5ec  261886298  assets/dataset_main_102046.tar.gz
+322e143c35c75109adc4521c2012ca079086f3edf47f150dcd48df9a9a688113  15628516  assets/design_independent_300000.tar.gz
 18e264acbe939428a92244e25104d6c8c5eac3a82b1f6a82e480b15068bacd03  462043956  assets/exp1_benchmark.tar.gz
 3c9c573b75ac742490675301a027185ae7f22d0902498465747a1481a080eddd  135765973  assets/exp2_latent.tar.gz
 7b42d3836fc3052aea22a1b8301a84fee0318fd8c023aa02396e1e796f380016  175059985  assets/expanded_ratio.tar.gz
