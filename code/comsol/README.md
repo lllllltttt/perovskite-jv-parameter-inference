@@ -69,6 +69,14 @@ pointing at it.
 Mobilities in m² V⁻¹ s⁻¹, lifetimes in s, densities in m⁻³, and `rad_c` stored
 in cm³ s⁻¹ and passed to COMSOL as `rad_c_in × 1e-6` m³ s⁻¹.
 
+## Reference mesh
+
+`mesh_statistics/` records the element distribution of the saved reference mesh
+(`mesh1`), read in COMSOL 6.3 without re-meshing or solving: 112 elements over
+the six domains as 10 / 1 / 85 / 1 / 10 / 5, so each 0.01 nm interface slab
+carries one element.  The source model's SHA-256 matches the archived
+`1D_PSC_wen.mph`.
+
 ## Requirements
 
 COMSOL Multiphysics 6.3 with the Semiconductor Module, LiveLink for MATLAB and

@@ -1,0 +1,8 @@
+domain,x_range_nm,thickness_nm,layer,material,elements
+1,"[0, 20]",20,HTL,mat3 "HTL",10
+2,"[20, 20.01]",0.01,HTL|PVK interface,mat6 "HTL&PVK",1
+3,"[20.01, 490]",469.99,PVK absorber,mat2 "PVK",85
+4,"[490, 490.01]",0.01,PVK|C60 interface,mat5 "C60&PVK",1
+5,"[490.01, 510]",19.99,C60 ETL,mat1 "C60",10
+6,"[510, 530]",20,SnO2 ETL,mat4 "SnO2",5
+total,,,all domains,,112
