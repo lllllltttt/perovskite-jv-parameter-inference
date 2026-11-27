@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.0.8 — 2026-11-27
+
+Reference-mesh statistics added.  No archived data, model, figure or published
+value changed.
+
+* **`code/comsol/mesh_statistics/`** — the element distribution of the saved
+  reference mesh (`mesh1`), read in COMSOL 6.3 without re-meshing or solving:
+  112 elements over domains 1–6 as 10 / 1 / 85 / 1 / 10 / 5; each 0.01 nm
+  interface slab (domain 2, mat6 "HTL&PVK"; domain 4, mat5 "C60&PVK") carries
+  one element; `hasproblems = 0`.  The source model's SHA-256 matches
+  `code/comsol/1D_PSC_wen.mph`, and the total matches the `nelem = 112` recorded
+  for the reference mesh in the archived mesh study.
+* **`docs/COMSOL_REPRODUCIBILITY_GAPS.md` (G1)** — the "counts not extracted"
+  entry is replaced by the measured distribution, with a scope note: the refined
+  grades (269 / 367 / 501 / 710) keep their archived totals, are not broken down
+  by domain, and no convergence conclusion is added.
+* `code/comsol/README.md` points at the new directory.
+
 ## v1.0.7 — 2026-11-27
 
 Driver paths unified.  No archived data, model, figure or published value
