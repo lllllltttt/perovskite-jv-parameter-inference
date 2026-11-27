@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.0.5 — 2026-11-27
+
+Recovered source material added.  No model, figure or published value changed.
+
+* **Main-campaign drivers.**  The four MATLAB segments that generated the main
+  database (`code/comsol/main_200k/`, rows 1–50,000 / 50,001–100,000 /
+  100,001–150,000 / 150,001–200,000, ports 2036–2039) are now archived.  Their
+  identity is established in `docs/SOURCE_VERIFICATION.md` from the input
+  design, the row coverage, the `.mat` field names read by `script/mat-csv.py`,
+  and a row-level match of all 102,046 retained curves to the 200,000-row
+  design.
+* **Independent-cohort design.**  `PSC_LHS_9D_interface_lifetimes_300000_5.csv`
+  (300,000 rows) is attached as the new asset `design_independent_300000.tar.gz`.
+  Its `Sample_ID` is the row number, and all 153,067 retained curves equal it to
+  three significant digits.
+* **Layout.**  The existing drivers are moved to `code/comsol/independent_300k/`
+  and the recovered ones added at `code/comsol/main_200k/`, so the two campaigns
+  no longer share filenames.  `code/comsol/README.md` documents both.
+* **Checks.**  New `code/verify_source_provenance.py` repeats the join and
+  rounding comparison; `docs/DATA_DICTIONARY.md`, `docs/REPRODUCE.md` §3 and §6,
+  `docs/KNOWN_LIMITATIONS.md` and the README are updated accordingly.
+
 ## v1.0.4 — 2026-11-27
 
 Documentation and verification only.  No archived data, model or published value
