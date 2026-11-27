@@ -1,6 +1,3 @@
-% ADAPTED COPY of the archived driver in the parent directory.
-% Paths are relative names; the column-alias block after readtable() accepts
-% both design-file column conventions. Body unchanged.
 function run_PSC_9D_6()
 
 clear;
@@ -22,13 +19,13 @@ import com.comsol.model.util.*
 %% ==========================================
 
 input_path = ...
-'PSC_LHS_9D_interface_lifetimes_200000_3.csv';  % 新采样文件
+'/home/student2/parameter/PSC_LHS_9D_interface_lifetimes_200000.csv';  % 新采样文件
 
 mph_path = ...
-'1D_PSC_wen.mph';
+'/home/student2/mph/1D_PSC_wen.mph';
 
 result_dir = ...
-'result-main-200k/';                     % 新结果目录
+'/home/student2/result-9D-interface-lifetimes/';                     % 新结果目录
 
 if ~exist(result_dir,'dir')
     mkdir(result_dir);
@@ -39,10 +36,6 @@ end
 %% ==========================================
 
 tbl = readtable(input_path);
-if ~ismember('tau_ETL_in', tbl.Properties.VariableNames)
-    tbl.tau_ETL_in = tbl.tau_interface_ETL_in;
-    tbl.tau_HTL_in = tbl.tau_interface_HTL_in;
-end
 
 N = 100000;                                            % 可根据需要调整
 

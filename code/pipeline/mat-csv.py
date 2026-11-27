@@ -1,3 +1,4 @@
+import argparse
 import os
 import numpy as np
 import pandas as pd
@@ -5,10 +6,26 @@ from scipy.io import loadmat
 from tqdm import tqdm
 
 # =====================================================
-# 路径配置（请根据实际情况调整）
+# 路径配置
 # =====================================================
-MAT_DIR    = r"/home/student2/result-9D-interface-lifetimes-2"   # ← 改为新结果目录
-OUTPUT_CSV = r"/home/student2/result-csv/JV_database_9D_interface_lifetimes-2.csv"  # ← 新文件名
+# Defaults point at the directory written by code/comsol/main_200k/ and at a
+# fresh output file, so a rerun never overwrites the archived CSV.
+_here = os.path.dirname(os.path.abspath(__file__))
+_repo = os.path.dirname(os.path.dirname(_here))          # code/pipeline -> repo root
+
+_ap = argparse.ArgumentParser(description="MAT -> CSV conversion with the "
+                                          "four physical retention filters.")
+_ap.add_argument("--mat-dir", default=os.path.join(_repo, "result-main-200k"),
+                 help="directory holding Sample_*.mat")
+_ap.add_argument("--out-csv",
+                 default=os.path.join(_repo, "results",
+                                      "JV_database_9D_interface_lifetimes-main-200k.csv"),
+                 help="output CSV path")
+_args = _ap.parse_args()
+
+MAT_DIR    = _args.mat_dir
+OUTPUT_CSV = _args.out_csv
+os.makedirs(os.path.dirname(os.path.abspath(OUTPUT_CSV)), exist_ok=True)
 
 # =====================================================
 # 扫描 MAT 文件

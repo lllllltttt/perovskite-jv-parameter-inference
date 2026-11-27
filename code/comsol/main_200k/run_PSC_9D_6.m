@@ -1,3 +1,6 @@
+% Driver for the 200,000-row main campaign (rows 1-200,000 in four segments).
+% Input design: PSC_LHS_9D_interface_lifetimes_200000_3.csv (asset dataset_main_102046).
+% Output: Sample_%05d.mat in <repository>/result-main-200k/.
 function run_PSC_9D_6()
 
 clear;
@@ -18,14 +21,15 @@ import com.comsol.model.util.*
 % path
 %% ==========================================
 
-input_path = ...
-'/home/student2/parameter/PSC_LHS_9D_interface_lifetimes_200000.csv';  % 新采样文件
+here      = fileparts(mfilename('fullpath'));
+repo_root = fileparts(fileparts(fileparts(here)));        % code/comsol/main_200k -> repository root
 
-mph_path = ...
-'/home/student2/mph/1D_PSC_wen.mph';
+input_path = fullfile(repo_root, 'data', '_assets', ...
+                      'PSC_LHS_9D_interface_lifetimes_200000_3.csv');
 
-result_dir = ...
-'/home/student2/result-9D-interface-lifetimes/';                     % 新结果目录
+mph_path   = fullfile(repo_root, 'code', 'comsol', '1D_PSC_wen.mph');
+
+result_dir = fullfile(repo_root, 'result-main-200k');
 
 if ~exist(result_dir,'dir')
     mkdir(result_dir);
@@ -36,6 +40,10 @@ end
 %% ==========================================
 
 tbl = readtable(input_path);
+if ~ismember('tau_ETL_in', tbl.Properties.VariableNames)
+    tbl.tau_ETL_in = tbl.tau_interface_ETL_in;
+    tbl.tau_HTL_in = tbl.tau_interface_HTL_in;
+end
 
 N = 100000;                                            % 可根据需要调整
 

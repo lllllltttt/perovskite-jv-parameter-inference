@@ -205,10 +205,10 @@ campaigns (details in `code/comsol/README.md`):
   Module; FTO / HTL / perovskite / C₆₀ / SnO₂ / Ag, 131-point sweep.
 * `main_200k/run_PSC_9D_5..8.m` — the four segments of the 200,000-row campaign
   that produced the main database (rows 1–50,000 / 50,001–100,000 /
-  100,001–150,000 / 150,001–200,000; ports 2036–2039).  `main_200k/adapted/`
-  holds copies that read the released design file and either column convention;
-  they differ from the originals only in the function name, the three paths and
-  a four-line column alias.
+  100,001–150,000 / 150,001–200,000; ports 2036–2039).  They resolve the design
+  table, the model file and the `result-main-200k/` output from their own
+  location, and accept either interface-lifetime column convention.  The files
+  as recovered from the server are in `archive/original_200k/`.
 * `independent_300k/run_PSC_9D_5..8.m` — the four segments of the independent
   campaign (rows 1–75,000 … 225,001–300,000; ports 2036–2039), whose design
   table is the asset `design_independent_300000.tar.gz`.
