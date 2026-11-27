@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.0.4 — 2026-11-27
+
+Documentation and verification only.  No archived data, model or published value
+changed.
+
+* **Reproduction scope.**  The README section on what can be rerun was rewritten
+  so it matches the files: the archived models, inputs and drivers support
+  rerunning the 45-case back-substitution and the mesh studies with COMSOL 6.3 +
+  Semiconductor Module + LiveLink; for the main campaign the 200,000-row design
+  and retained curves are available but the original batch driver was not
+  recovered; the retained independent-cohort curves are available but its
+  300,000-row design was not recovered.  `docs/REPRODUCE.md` §6, README tier C
+  and `docs/KNOWN_LIMITATIONS.md` were aligned with this.
+* **Finite-value checks.**  `code/verify_frozen_metrics.py` now checks inputs,
+  model outputs and every derived metric for NaN/Inf and for shape before
+  comparing with the published values; a non-finite value is named and the
+  script exits non-zero without PASS.  The earlier comparison
+  `abs(v - ref)/ref > tol` was False for `v = NaN`, so a corrupted input could
+  pass silently.  New `code/metric_checks.py` and
+  `code/tests/test_metric_checks.py` (11 tests).
+* No version number is pinned in the README.
+
 ## v1.0.3 — 2026-11-27
 
 Documentation bookkeeping only; code, data and manifests are identical in

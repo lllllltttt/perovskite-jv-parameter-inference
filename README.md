@@ -16,10 +16,10 @@ per-parameter predictive scale, using 102,046 COMSOL curves retained from a
 200,000-curve Latin hypercube campaign.
 
 **Release status.** Code and documentation: the latest tag (see
-[Releases](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases/latest);
-at the time of writing `v1.0.3`). The large data and model archives are
-unchanged since `v1.0.0` and are downloaded from that release — same files, same
-checksums. No later tag adds a new archive.
+[Releases](https://github.com/lllllltttt/perovskite-jv-parameter-inference/releases)).
+The large data and model archives are unchanged since `v1.0.0` and are
+downloaded from that release — same files, same checksums. No later tag adds a
+new archive.
 
 ---
 
@@ -54,7 +54,7 @@ docs/
   DATA_DICTIONARY.md        every array, column order, unit, shape and scaler scope
   REPRODUCE.md              what was verified, how, and what was not
   FIGURE_SOURCE_MAP.md      paper figure → source data → script → output
-  KNOWN_LIMITATIONS.md      what is not reproducible, and which scripts need editing
+  KNOWN_LIMITATIONS.md      COMSOL/archived-material requirements, path tiers
   FILE_MANIFEST_SHA256.txt  checksums of every tracked file
   ASSET_MANIFEST_SHA256.txt checksums of the release archives
 requirements.txt, env/environment.yml
@@ -158,12 +158,13 @@ the code that produced published figures without re-running those figures).
 To use one, edit the three or four path constants at its head.  Their outputs
 are shipped alongside them.
 
-**Tier C — historical, must not be used for reported numbers.**
-`analysis/collision_analysis_superseded/` (7,666-pair rule),
-`analysis/forward_validation_unbiased/forward_metrics_summary.csv`
-(rounded-Voc device metrics — see `SUPERSEDED.md` beside it), and the σ
-convention in `pipeline/VAE_v6_eval.py` / `pipeline/uncertain_predict.py`
-(`exp(0.5·raw)` and hard-coded σ).  Kept for provenance only.
+**Tier C — archived versions, kept for provenance.**  `analysis/collision_analysis_superseded/`
+holds the earlier 7,666-pair collision rule; current results use
+`collision_revision_v2/` (11,245 pairs).  `analysis/forward_validation_unbiased/forward_metrics_summary.csv`
+holds rounded-Voc device metrics; current results use `code/device_metrics.py`
+(see the `SUPERSEDED.md` beside it).  `pipeline/VAE_v6_eval.py` and
+`pipeline/uncertain_predict.py` use the earlier σ convention `exp(0.5·raw)`;
+current results use `VAE_v6_eval_fixed.py`.
 
 ---
 
@@ -179,24 +180,15 @@ convention in `pipeline/VAE_v6_eval.py` / `pipeline/uncertain_predict.py`
 | Ratio-range comparison (Tables S19–S25) | no | models, both arms' data and all per-run predictions archived; **not re-run** |
 | Leakage-free benchmark (Table S13) | no | 15 trained models and their eval bundles archived; **not re-trained** |
 | Preprocessing-scope control (Tables S15–S17) | no | archived runs and per-sample output; **not re-run** |
-| COMSOL back-substitution, cycle gap, mesh study (Tables S18a–e, Figs. S3–S4) | **yes** | archived outputs and inputs; **regeneration needs a licensed COMSOL** |
-| Data generation from scratch | **yes** | recipe scripts archived; the main-database driver is **missing** (below) |
+| COMSOL back-substitution, cycle gap, mesh study (Tables S18a–e, Figs. S3–S4) | **yes** | models, drivers and archived outputs included; rerun needs COMSOL 6.3 |
+| Data generation from scratch | **yes** | 200,000-row design and drivers included; the main-database batch driver is not available |
 
-Two different kinds of gap are involved and should not be conflated:
-
-* **Complete inputs, commercial software required.**  The 45-case
-  back-substitution, the mesh study and the 200,000-curve campaign have models,
-  inputs, drivers and archived outputs.  Regenerating them needs COMSOL
-  Multiphysics 6.3 with the Semiconductor Module and LiveLink for MATLAB under
-  the user's own licence.  No commercial software or licence file is
-  distributed.
-* **Source material genuinely missing.**  The MATLAB driver that generated the
-  main 102,046-curve database was not archived, and the 300,000-row Latin
-  hypercube design behind the independent cohort is not on disk.  The retained
-  curves themselves, the 200,000-row design of the main dataset (verified to
-  close 102,046/102,046 against the retained rows) and every downstream output
-  are included.  The archived `run_PSC_9D_5..8.m` write the *independent*
-  campaign and are the closest surviving record of the recipe.
+The archived models, inputs and drivers support rerunning the 45-case
+back-substitution and mesh studies with COMSOL Multiphysics 6.3, the
+Semiconductor Module and LiveLink for MATLAB.  For the main simulation campaign,
+the 200,000-row sampling design and retained curves are available, but the
+original batch driver was not recovered.  The retained independent-cohort curves
+are available; its original 300,000-row sampling design was not recovered.
 
 ---
 
