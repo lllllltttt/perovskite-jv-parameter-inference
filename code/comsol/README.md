@@ -36,6 +36,33 @@ knowing when rerunning them:
 The only lines to edit before a rerun are `addpath`, `input_path`, `mph_path`,
 `result_dir`, and `N` / `start_idx` at the top of each file.
 
+### Adapted copies (`main_200k/adapted/`)
+
+The archived originals are kept byte-for-byte.  `main_200k/adapted/` holds four
+copies that differ from them in three places only:
+
+* the function name matches the file name (`run_PSC_9D_8.m` no longer declares
+  `run_PSC_9D_7()`);
+* the three path constants point at relative names: the design file
+  `PSC_LHS_9D_interface_lifetimes_200000_3.csv`, the model `1D_PSC_wen.mph`, and
+  the output directory `result-main-200k/`;
+* a four-line block after `readtable()` aliases `tau_ETL_in` / `tau_HTL_in` to
+  `tau_interface_ETL_in` / `tau_interface_HTL_in` when the design file uses the
+  older column names, so either file convention can be read.
+
+Row ranges, ports, the parameter assignment, the sweep and the output format are
+unchanged.  To run a segment:
+
+```matlab
+cd code/comsol/main_200k/adapted      % or give absolute paths in the header
+run_PSC_9D_5                          % starts the COMSOL server on port 2036
+```
+
+The adapted copies were generated mechanically and checked statically with
+`python code/verify_comsol_scripts.py`; they have **not** been executed here,
+because that requires a COMSOL licence.  The originals are the files that
+produced the database.
+
 ## `independent_300k/` — independent cohort (153,067 retained curves)
 
 | Script | Rows of the design | Port |

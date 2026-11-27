@@ -71,8 +71,9 @@ copy/paste artefact.  The body is the fourth segment (port 2039, rows
   matches and no unmatched rows.  For every one of the nine parameters the
   retained value equals the design value rounded to three significant digits:
   153,067/153,067 exact for all nine (maximum relative difference 2.9e-16,
-  floating-point representation only).  The other 146,933 design rows did not
-  pass the four retention filters and are not in the retained file.
+  floating-point representation only).  The independent campaign comprised
+  300,000 parameter sets, of which 153,067 curves were included in the retained
+  dataset.
 
 **Confirmed:** the table is the sampling design of the independent cohort, and
 `Sample_ID` is its 1-based row number.
